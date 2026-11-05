@@ -1,7 +1,4 @@
-"""App principal: convocatorias (gratis) y generador de propuestas (Pro).
-
-Día 1: solo el feed de convocatorias. El generador se construye el fin de semana.
-"""
+"""App principal: convocatorias (gratis) y generador de propuestas (Pro, en pages/)."""
 import json
 from datetime import date
 from pathlib import Path
@@ -46,9 +43,8 @@ for item in reporte["items"]:
         st.markdown(f"**Quién puede postular:** {item['eligibility']}")
         st.markdown(f"_{item['why']}_")
         st.markdown(" · ".join(f"[{l['label']}]({l['url']})" for l in item["links"]))
-        st.button(
-            "✨ Generar propuesta (Pro)",
-            key=f"gen-{fecha}-{item['title'][:40]}",
-            disabled=True,
-            help="Próximamente: entrevista guiada para co-crear la propuesta técnica y económica.",
-        )
+        if st.button("✨ Generar propuesta (Pro)", key=f"gen-{fecha}-{item['title'][:40]}"):
+            st.session_state["convocatoria"] = item
+            for clave in ("tdr_texto", "tdr_fuente", "tdr_leido", "reglas_tdr", "propuesta"):
+                st.session_state.pop(clave, None)
+            st.switch_page("pages/1_Generar_propuesta.py")
