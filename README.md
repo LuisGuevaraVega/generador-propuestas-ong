@@ -24,7 +24,7 @@ _Por completar._
 - **Pro:** botón "Generar propuesta" que abre una entrevista guiada por secciones. La organización responde (por texto o voz) y aprueba cada sección: la propuesta es suya, la IA la ayuda a escribirla.
 - Valida automáticamente las reglas del donante (topes, contrapartida, indicadores obligatorios) y estima el puntaje según la rúbrica pública.
 
-Primer formato soportado: Fondoempleo (Formato 02 propuesta técnica y Formato 03 propuesta financiera). Reglas en [`data/reglas/fondoempleo_eat.json`](data/reglas/fondoempleo_eat.json).
+Formato base: inspirado en la guía de solicitud del BMZ para ONG ([Leitfaden zum Projektantrag](https://bengo.engagement-global.de/files/2_Mediathek/Mediathek_Microsites/bengo/Service/Dokumente/Handreichungen/de/leitfaden-projektantrag.pdf), nov 2025), en [`data/formatos/formato_base.json`](data/formatos/formato_base.json). Cuando hay TdR, sus reglas (monto, duración, contrapartida, topes) reemplazan a las del formato base. Reglas de Fondoempleo guardadas para un formato específico futuro en [`data/reglas/fondoempleo_eat.json`](data/reglas/fondoempleo_eat.json).
 
 ## 5. Why now
 
