@@ -68,7 +68,42 @@ class Aporte(BaseModel):
 
 
 class Presupuesto(BaseModel):
+    moneda: str = Field(description="Código ISO de la moneda en que están TODOS los montos: PEN, EUR, USD, AUD...")
     duracion_meses: int
     lineas: List[LineaPresupuesto]
     aportes_propios: List[Aporte]
     pendientes: List[str]
+
+
+class SeccionGenerada(BaseModel):
+    seccion_id: str = Field(description="Id de la sección del formato: organizacion, problema, grupo_meta, actividades, riesgos")
+    parrafos: List[Parrafo]
+    pendientes: List[str]
+
+
+class TextosPropuesta(BaseModel):
+    titulo_proyecto: str
+    secciones: List[SeccionGenerada]
+
+
+class ReglasConvocatoria(BaseModel):
+    """Lo que el TdR o las bases exigen, extraído por el modelo (Document AI + salida estructurada)."""
+
+    donante: str
+    nombre_convocatoria: str
+    objetivo: str
+    temas: List[str]
+    quien_puede_postular: str
+    moneda: str = Field(description="Código ISO: PEN, EUR, USD, AUD...")
+    monto_min: Optional[float] = Field(None, description="Monto mínimo a solicitar al donante")
+    monto_max: Optional[float] = Field(None, description="Monto máximo a solicitar al donante")
+    duracion_max_meses: Optional[int] = None
+    contrapartida_min_pct: Optional[float] = Field(None, description="Aporte propio mínimo como fracción (0.10 = 10%)")
+    administrativos_max_pct: Optional[float] = Field(None, description="Tope de gastos administrativos como fracción")
+    imprevistos_pct: Optional[float] = Field(None, description="Reserva o imprevistos como fracción")
+    personal_max_pct: Optional[float] = Field(None, description="Tope del personal del proyecto como fracción del monto solicitado")
+    gastos_no_elegibles: List[str]
+    secciones_requeridas: List[str]
+    criterios_evaluacion: List[str]
+    fecha_cierre: Optional[str] = None
+    otras_reglas: List[str]
