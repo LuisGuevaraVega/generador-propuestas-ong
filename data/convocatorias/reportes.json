@@ -1,0 +1,1114 @@
+{
+ "reports": [
+  {
+   "date": "2026-11-05",
+   "summary": "Sin oportunidades nuevas hoy para equipos u ONG en DEL/MYPE: REDINFOR, COEECI, CEDEPAS y las ONG prioritarias solo publicaron puestos o avisos fuera de tema. Urgente: DAP de Australia vía ONG aliada cierra el domingo 8 nov (enviar a más tardar el sábado 7). Siguen vigentes Producers Direct (15 nov; consultas hasta el 10 nov) y ACNUR 3838 (23 nov, 17:00).",
+   "items": [
+    {
+     "title": "Programa de Ayuda Directa (DAP) 2026-27 – convocatoria abierta",
+     "isNew": false,
+     "donor": "Embajada de Australia en Lima",
+     "type": "Subvención para ONG",
+     "amount": "Hasta AUD 20.000; proyectos de 4 a 18 meses; capacitación, consultorías, alimentación, viajes y viáticos hasta 30% del monto",
+     "eligibility": "ONG, organizaciones de la sociedad civil, organizaciones sociales y entidades académicas o de investigación sin fines de lucro, constituidas en Perú y/o Bolivia, con cuenta bancaria a nombre de la organización. Se valoran alianzas, contrapartida, participación comunitaria y 5+ años de constitución. No pueden postular personas naturales, empresas ni entidades estatales.",
+     "topic": "Crecimiento económico inclusivo, inclusión social y acción climática",
+     "scope": "Perú y Bolivia",
+     "deadline": "2026-11-08",
+     "deadlineNote": "URGENTE: cierra el domingo 8 nov (hora de Perú, GMT-5; la web de la Embajada no indica hora, reconfirmado hoy sin ampliación; días atrás el formulario de SmartyGrants mostraba cierre el lunes 9 nov a las 9:00, hoy no se pudo reconfirmar). Quedan 3 días: enviar a más tardar el sábado 7. Postulación solo en línea en dap.smartygrants.com.au/peru-bolivia2026 (registro previo de la ONG); consultas a dap.lima@dfat.gov.au. Requiere constitución legal de la ONG y cuenta bancaria a su nombre.",
+     "why": "Fondo pequeño para un piloto de emprendimiento o medios de vida con una ONG aliada. El tope de gastos en consultorías y capacitación sube a 30%, lo que deja más espacio para que el equipo participe como asistencia técnica.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "DAP en la web de la Embajada de Australia",
+       "url": "https://peru.embassy.gov.au/limacastellano/Development.html",
+       "linkedin": false
+      },
+      {
+       "label": "Formulario de postulación (SmartyGrants)",
+       "url": "https://dap.smartygrants.com.au/peru-bolivia2026",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría «Evaluación técnica especializada» (PE-T1591): evaluación de una solución de análisis de suelos y de capacidades organizacionales para pilotear un modelo de negocio con pequeños productores",
+     "isNew": false,
+     "donor": "Producers Direct (organización de productores; publicado en REDINFOR el 3 nov)",
+     "type": "Consultoría para firma o consultor (admite firmas consultoras)",
+     "amount": "No indicado (propuesta económica a todo costo)",
+     "eligibility": "Consultores individuales o firmas consultoras. Equipo con jefe de equipo (8+ años en transformación digital o adquisición de soluciones tecnológicas y en evaluación de capacidades organizacionales) y especialista de apoyo. Documentos: propuesta técnica (máx. 3 págs.), plan de trabajo (máx. 5 págs.), CV, referencias, declaración de conflicto de intereses y propuesta económica.",
+     "topic": "Productividad de pequeños productores agrícolas y prácticas climáticamente inteligentes; evaluación de un modelo de negocio sostenible con agtech/datos",
+     "scope": "Perú (región no indicada en el aviso)",
+     "deadline": "2026-11-15",
+     "deadlineNote": "Cierra el domingo 15 nov (sin hora indicada), en 10 días; consultas hasta el martes 10 nov (en 5 días). Enviar a katherine@producersdirect.org (Katherine Bocanegra) con asunto «TDR Evaluación Técnica Especializada – PE-T1591». Reconfirmado hoy en REDINFOR, sin cambios. El TdR está en Google Drive y no se pudo leer desde aquí: revisarlo para alcance, región y plazos de ejecución.",
+     "why": "Única consultoría vigente abierta a firmas que toca pequeños productores y modelo de negocio; encaje parcial (pesa más lo tecnológico), viable si el equipo suma un perfil de agtech o transformación digital.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/03/peru-consultoria-evaluacion-tecnica-especializada/",
+       "linkedin": false
+      },
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/11rf4kRjErL0jMdHYG_mjfKteZJ5RgQ-v/view?usp=sharing",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-23",
+     "deadlineNote": "Ampliada: el encabezado de UNGM indica lunes 23 nov a las 17:00 (GMT-5), en 18 días (reconfirmado hoy). El «Corrigendum No. 1» del 2 nov amplía también el plazo de preguntas, pero su fecha solo está en el adjunto, que no se pudo abrir: revisarlo en UNGM. Se postula solo por supplier-portal.unhcr.org (registro previo); contacto adquisiciones.peru@unhcr.org.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (bases publicadas; postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 7 millones (S/ 250.000–700.000 por proyecto, hasta 10 meses); Línea 6 Fortalecimiento organizacional S/ 3 millones (S/ 150.000–400.000, hasta 6 meses); contrapartida mínima 10%",
+     "eligibility": "Corrección: según las bases, solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones) formalmente constituidas. Una ONG o consultora NO puede postular como proponente; las bases prevén «aliados» (Formato 06), lo que podría abrir un rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea del sábado 21 nov al viernes 4 dic 2026 (sin hora indicada), por formulario Google más los Formatos 01–07 de la web. Consultas (23–27 oct) ya cerradas. Evaluación 5–14 dic; selección 14–15 dic. Sin cambios.",
+     "why": "Encaje limitado: solo sirve si el equipo entra como aliado técnico de un sindicato o federación que postule; útil si ya hay contacto con alguna organización de trabajadores.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      },
+      {
+       "label": "Nota en El Peruano (19 oct)",
+       "url": "https://www.elperuano.pe/noticia/307126-mtpe-relanza-fondoempleo-s-120-millones-para-capacitar-en-los-empleos-que-necesita-cada-region",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar la parte de equipamiento de una iniciativa de cadena productiva que el equipo acompañe técnicamente con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (temas abiertos, incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite (sigue publicado hoy en talentclue). Hoy no hay consultorías vigentes de Ayuda en Acción en Perú: la de planes de negocio CETPRO ya está fuera de plazo y el listado general de talentclue aparece vacío; el estudio de competencias Lima–Piura (DevelopmentAid, publicado 4 ago) sigue sin fecha de cierre y no figura en talentclue.",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF, vencidos o puestos; empleos filtrados por Perú sin ofertas; DevelopmentAid: sistematización de herramienta de vulnerabilidad, 26 jun, individual; Google: TdR de habilidades blandas de Guatemala, vencido; REDINFOR y LinkedIn sin avisos); World Vision Perú (worldvision.pe: 5 puestos de planilla; REDINFOR, etiqueta World Vision: Asistente DMEAL-GRD Piura y Facilitador Mi Perú–Ventanilla, puestos; COEECI: RFP de marcas colectivas INDECOPI cerrado el 1 nov; perutrabajos y LinkedIn sin avisos); CID (Google, LinkedIn vía buscador, REDINFOR, COEECI págs. 1–3: sin avisos); CARE Perú (care.org.pe/consultorias remite al portal; REDINFOR: roster de emergencia y puestos; educación financiera para lideresas indígenas COT2026-0701-S cerró el 14 oct; LinkedIn y DevelopmentAid sin vigentes); Ayuda en Acción (talentclue: CETPRO fuera de plazo, listado vacío, roster vigente, incluido; COEECI: puesto de Especialista de Proyectos Lima; REDINFOR sin avisos de Perú desde el 8 oct; DevelopmentAid: estudio de competencias Lima–Piura sin fecha); CEDEPAS Norte (todo cerrado entre el 11 y el 25 oct); Acción contra el Hambre (solo alerta temprana de incendios en Amazonas, 16 nov, fuera de tema); CooperAcción (último aviso 20 ago); Helvetas (último TdR, cacao San Martín, individual, cerró 30 jun); Plan International, Welthungerhilfe, Cáritas, HIAS, Encuentros SJM, Cuso (solo un puesto), Soluciones Prácticas, Heifer, TechnoServe, COPEME, CESAL, Rikolto, Save the Children, Asociación UNACEM (búsquedas: sin vigentes en tema). Agregadores: REDINFOR convoca págs. 1–4 (29 oct–4 nov; nada del 5 nov: SES/Global Fund monitores VIH, individuales, 8 nov; Más Igualdad Perú voluntariado, sin fecha; resto puestos o fuera de tema), COEECI págs. 1–3, bidsfactory Perú (RFQ operativos de OIT, UNFPA, PNUD y UNOPS; asistencias OIT Llamkasun y SUNAFIL, individuales), Boletín Redesma CEBEM (sin Perú), DevelopmentAid vía buscador (todo de mayo a septiembre, cerrado o individual), perucontrata (solo supervisión de obras), UN Partner Portal (ONUDI GEMINI, 26 nov, mercurio, fuera de tema), fundsforNGOs (Sahee no recibe solicitudes; Embajada Checa cerró 28 oct). Donantes: Embajada de Australia (DAP reconfirmado), Fondo Triangular (29.ª cerrada 31 oct), GIZ, UE, ACNUR, OIM, PNUD/PPD, OIT, UNICEF (e-learning, fuera de tema), FIDA, CAF, AECID (solo cursos), KOICA, JICA, PROCOMPITE, Agroideas, Fondoempleo, R4V: sin nuevas en tema.",
+    "failed": "Portal de compras de CARE (JavaScript; 403), cooperacionsuiza.pe (error del servidor), etiqueta consultorias-2 de REDINFOR (vacía), filtro por país de UNGM y adjunto del corrigendum de ACNUR, ficha DevelopmentAid 1720230 «evaluación externa agricultura familiar» (error; país y fecha sin verificar), plazos de bidsfactory (de pago), uncareer.net (bloqueado), BID Lab, ProInnóvate e IAF (no cargan o bloquean), Idealist, LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes). aecid.pe sigue redirigiendo a un sitio ajeno (usar peru.aecid.es).",
+    "queries": "\"términos de referencia\" consultoría \"planes de negocio\" emprendedores Perú noviembre 2026 · \"persona natural o jurídica\" consultoría \"línea de base\" Perú 2026 emprendimiento OR \"medios de vida\" · \"request for quotation\" OR \"request for proposal\" Peru livelihoods OR \"value chain\" November 2026 · consultoría \"evaluación final\" empleabilidad OR \"medios de vida\" migrantes Perú términos de referencia 2026 · \"integración socioeconómica\" refugiados migrantes Perú consultoría \"solicitud de propuesta\" 2026 · consultoría Piura OR Cajamarca OR \"San Martín\" OR Cusco OR Junín OR Ayacucho \"términos de referencia\" productores emprendimiento noviembre 2026"
+   }
+  },
+  {
+   "date": "2026-11-04",
+   "summary": "Una oportunidad nueva para equipos: Producers Direct busca firma o consultor para una evaluación técnica con pequeños productores (cierra 15 nov; consultas hasta 10 nov). Urgente: DAP de Australia vía ONG aliada cierra el domingo 8 nov (formulario hasta lunes 9, 9:00). ACNUR amplió su RFP 3838 al 23 nov. Las ONG prioritarias siguen sin consultorías vigentes en tema.",
+   "items": [
+    {
+     "title": "Programa de Ayuda Directa (DAP) 2026-27 – convocatoria abierta",
+     "isNew": false,
+     "donor": "Embajada de Australia en Lima",
+     "type": "Subvención para ONG",
+     "amount": "Hasta AUD 20.000; proyectos de 4 a 18 meses; capacitación, consultorías, alimentación, viajes y viáticos hasta 30% del monto",
+     "eligibility": "ONG, organizaciones de la sociedad civil, organizaciones sociales y entidades académicas o de investigación sin fines de lucro, constituidas en Perú y/o Bolivia, con cuenta bancaria a nombre de la organización. Se valoran alianzas, contrapartida, participación comunitaria y 5+ años de constitución. No pueden postular personas naturales, empresas ni entidades estatales.",
+     "topic": "Crecimiento económico inclusivo, inclusión social y acción climática",
+     "scope": "Perú y Bolivia",
+     "deadline": "2026-11-08",
+     "deadlineNote": "URGENTE: cierra el domingo 8 nov (la web de la Embajada no indica hora; el formulario de SmartyGrants cierra el lunes 9 nov a las 9:00, hora de Perú). Quedan 4 días: enviar a más tardar el sábado 7. Postulación solo en línea en dap.smartygrants.com.au/peru-bolivia2026 (registro previo de la ONG); consultas a dap.lima@dfat.gov.au. Requiere constitución legal de la ONG y cuenta bancaria a su nombre. Datos reconfirmados ayer; hoy no se reabrió la web.",
+     "why": "Fondo pequeño para un piloto de emprendimiento o medios de vida con una ONG aliada. El tope de gastos en consultorías y capacitación sube a 30%, lo que deja más espacio para que el equipo participe como asistencia técnica.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "DAP en la web de la Embajada de Australia",
+       "url": "https://peru.embassy.gov.au/limacastellano/Development.html",
+       "linkedin": false
+      },
+      {
+       "label": "Formulario de postulación (SmartyGrants)",
+       "url": "https://dap.smartygrants.com.au/peru-bolivia2026",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría «Evaluación técnica especializada» (PE-T1591): evaluación de una solución de análisis de suelos y de capacidades organizacionales para pilotear un modelo de negocio con pequeños productores",
+     "isNew": true,
+     "donor": "Producers Direct (organización de productores; publicado en REDINFOR el 3 nov)",
+     "type": "Consultoría para firma o consultor (admite firmas consultoras)",
+     "amount": "No indicado (propuesta económica a todo costo)",
+     "eligibility": "Consultores individuales o firmas consultoras. Equipo con jefe de equipo (8+ años en transformación digital o adquisición de soluciones tecnológicas y en evaluación de capacidades organizacionales) y especialista de apoyo. Documentos: propuesta técnica (máx. 3 págs.), plan de trabajo (máx. 5 págs.), CV, referencias, declaración de conflicto de intereses y propuesta económica.",
+     "topic": "Productividad de pequeños productores agrícolas y prácticas climáticamente inteligentes; evaluación de un modelo de negocio sostenible con agtech/datos",
+     "scope": "Perú (región no indicada en el aviso)",
+     "deadline": "2026-11-15",
+     "deadlineNote": "Cierra el domingo 15 nov (sin hora indicada), en 11 días; consultas hasta el martes 10 nov. Enviar a katherine@producersdirect.org (Katherine Bocanegra) con asunto «TDR Evaluación Técnica Especializada – PE-T1591». El TdR está en Google Drive y no se pudo leer desde aquí: revisarlo para alcance, región y plazos de ejecución.",
+     "why": "Única consultoría nueva de la semana abierta a firmas que toca pequeños productores y modelo de negocio; encaje parcial (pesa más lo tecnológico), viable si el equipo suma un perfil de agtech o transformación digital.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/03/peru-consultoria-evaluacion-tecnica-especializada/",
+       "linkedin": false
+      },
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/11rf4kRjErL0jMdHYG_mjfKteZJ5RgQ-v/view?usp=sharing",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-23",
+     "deadlineNote": "Ampliada: el 2 nov ACNUR agregó en UNGM el «Corrigendum No. 1 – Extensión de plazo de preguntas y ofertas»; el encabezado del aviso indica ahora lunes 23 nov a las 17:00 (GMT-5), en 19 días. El texto del corrigendum no se pudo abrir: confirmar en UNGM la nueva fecha de consultas (antes 3 nov). Se postula solo por supplier-portal.unhcr.org (registro previo); contacto adquisiciones.peru@unhcr.org.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (bases publicadas; postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 7 millones (S/ 250.000–700.000 por proyecto, hasta 10 meses); Línea 6 Fortalecimiento organizacional S/ 3 millones (S/ 150.000–400.000, hasta 6 meses); contrapartida mínima 10%",
+     "eligibility": "Corrección: según las bases, solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones) formalmente constituidas. Una ONG o consultora NO puede postular como proponente; las bases prevén «aliados» (Formato 06), lo que podría abrir un rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea del sábado 21 nov al viernes 4 dic 2026 (sin hora indicada), por formulario Google más los Formatos 01–07 de la web. Consultas (23–27 oct) ya cerradas. Evaluación 5–14 dic; selección 14–15 dic. Sin cambios.",
+     "why": "Encaje limitado: solo sirve si el equipo entra como aliado técnico de un sindicato o federación que postule; útil si ya hay contacto con alguna organización de trabajadores.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      },
+      {
+       "label": "Nota en El Peruano (19 oct)",
+       "url": "https://www.elperuano.pe/noticia/307126-mtpe-relanza-fondoempleo-s-120-millones-para-capacitar-en-los-empleos-que-necesita-cada-region",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar la parte de equipamiento de una iniciativa de cadena productiva que el equipo acompañe técnicamente con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (temas abiertos, incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy no hay consultorías vigentes de Ayuda en Acción en Perú: la de planes de negocio CETPRO (Lima y Pucallpa) sigue visible en talentclue y COEECI sin fecha de cierre, pero su cronograma (selección 21 oct, inicio 22 oct) indica que ya se adjudicó.",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF, todos vencidos o puestos; Google y DevelopmentAid sin nuevas); World Vision Perú (worldvision.pe: 5 puestos de planilla; COEECI: solo puestos de Oficial de Desarrollo de Negocios, Corporaciones y Comunicaciones Loreto; REDINFOR sin consultorías); CID (Google, LinkedIn vía buscador, REDINFOR, COEECI: sin avisos); CARE Perú (care.org.pe/consultorias sin avisos, remite al portal; REDINFOR y Google sin procesos nuevos); Ayuda en Acción (búsqueda site:talentclue, DevelopmentAid, CEBEM: sin consultorías vigentes en Perú; el estudio de competencias Lima–Piura sigue sin fecha; roster incluido); CEDEPAS Norte (3 páginas: todas cerradas, última 25 oct); Acción contra el Hambre (nueva: sistema de alerta temprana de incendios en Amazonas, hasta 16 nov, fuera de tema); CooperAcción (todo vencido); Plan International (COEECI: 3 servicios de infraestructura escolar en Acomayo, fuera de tema); Helvetas (huella ambiental mango/quinua cerró 23 oct); Cuso (empleabilidad Arequipa cerró 20 oct, individual); Welthungerhilfe (sistemas alimentarios Madre de Dios cerró 26 oct); Save the Children (gerente de proyecto, puesto); HIAS, Cáritas, Soluciones Prácticas, Heifer, Encuentros SJM, CESAL (búsquedas: sin vigentes en tema). Agregadores: REDINFOR convoca págs. 1–2 (2–3 nov: Producers Direct, incluida; Más Igualdad Perú sistema MERA para organización LGTBIQ+, equipo o persona, sin fecha, fuera de tema; SES/PIH monitores VIH, fuera de tema; resto puestos), COEECI págs. 1–2, bidsfactory Perú (ACNUR 3838; ONUDI GEMINI socio implementador para eliminar mercurio en metales no ferrosos, fuera de tema; PNUD OSPA Arequipa, individuales), UNGM (ACNUR 3838: corrigendum de ampliación del 2 nov), Boletín Redesma CEBEM (3 nov: IICA Bolivia ENANDES+, consultorías individuales, fuera de tema), DevelopmentAid vía buscador (Cacao+ de Canadá, publicada 17 jun, sin fecha visible: descartada). Donantes: Embajada de Australia, Fondoempleo, GIZ, PNUD, OIM, OIT, ACNUR: sin nuevas en tema.",
+    "failed": "Portal de compras de CARE (JavaScript), raíz de talentclue (redirige), corrigendum de ACNUR en UNGM (descarga bloqueada), TdR de Producers Direct y Más Igualdad (Google Drive), plazos de bidsfactory y DevelopmentAid (de pago), COEECI págs. 3–8 (no revisadas), cooperacionsuiza.pe, Idealist, UN Partner Portal, LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes).",
+    "queries": "\"términos de referencia\" consultoría \"persona jurídica\" emprendimiento OR \"planes de negocio\" OR \"cadena de valor\" Perú noviembre 2026 · site:linkedin.com/posts convocatoria consultoría \"términos de referencia\" Perú emprendedores OR migrantes OR \"medios de vida\" noviembre 2026 · Peru \"request for quotation\" OR \"request for proposals\" livelihoods OR \"value chain\" OR MSME OR \"economic inclusion\" November 2026 · \"Ayuda en Acción\" OR \"CARE Perú\" OR \"Colectivo Integral de Desarrollo\" OR \"Plan International\" Perú consultoría noviembre 2026 · \"evaluación final\" OR \"línea de base\" OR sistematización empleabilidad OR emprendimiento Perú \"propuesta técnica y económica\" · OIM OR ACNUR OR PNUD OR OIT Perú integración socioeconómica OR emprendimiento migrantes noviembre 2026"
+   }
+  },
+  {
+   "date": "2026-11-03",
+   "summary": "Sin oportunidades nuevas hoy para equipos u ONG en DEL/MYPE: REDINFOR publicó el 2 nov solo puestos y consultorías fuera de tema, y COEECI, CEDEPAS y las ONG prioritarias no tienen avisos vigentes. Sin urgentes aptas para equipo. Lo más próximo: DAP de Australia vía ONG aliada (8 nov) y ACNUR 3838 (19 nov; consultas solo hasta HOY 23:59). Fondoempleo abre el 21 nov, solo para organizaciones de trabajadores con aliados.",
+   "items": [
+    {
+     "title": "Programa de Ayuda Directa (DAP) 2026-27 – convocatoria abierta",
+     "isNew": false,
+     "donor": "Embajada de Australia en Lima",
+     "type": "Subvención para ONG",
+     "amount": "Hasta AUD 20.000; proyectos de 4 a 18 meses; capacitación, consultorías, alimentación, viajes y viáticos hasta 30% del monto",
+     "eligibility": "ONG, organizaciones de la sociedad civil, organizaciones sociales y entidades académicas o de investigación sin fines de lucro, constituidas en Perú y/o Bolivia, con cuenta bancaria a nombre de la organización. Se valoran alianzas, contrapartida, participación comunitaria y 5+ años de constitución. No pueden postular personas naturales, empresas ni entidades estatales.",
+     "topic": "Crecimiento económico inclusivo, inclusión social y acción climática",
+     "scope": "Perú y Bolivia",
+     "deadline": "2026-11-08",
+     "deadlineNote": "Abierta: la web de la Embajada (reconfirmada hoy) dice domingo 8 nov (hora de Perú, GMT-5), sin hora; el formulario de SmartyGrants cierra el lunes 9 nov a las 9:00. Quedan 5 días: conviene enviar a más tardar el sábado 7. Postulación en línea en dap.smartygrants.com.au/peru-bolivia2026 (registro previo); consultas a dap.lima@dfat.gov.au. Es la única opción con plazo de 5–14 días.",
+     "why": "Fondo pequeño para un piloto de emprendimiento o medios de vida con una ONG aliada. El tope de gastos en consultorías y capacitación sube a 30%, lo que deja más espacio para que el equipo participe como asistencia técnica.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "DAP en la web de la Embajada de Australia",
+       "url": "https://peru.embassy.gov.au/limacastellano/Development.html",
+       "linkedin": false
+      },
+      {
+       "label": "Formulario de postulación (SmartyGrants)",
+       "url": "https://dap.smartygrants.com.au/peru-bolivia2026",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-19",
+     "deadlineNote": "Cierra el jueves 19 nov, en 16 días (el RFP dice 17:00 UTC-5; el encabezado de UNGM dice 00:00 GMT-5: tomar la hora más temprana; reconfirmado hoy en UNGM, sin enmiendas). Consultas: HOY martes 3 nov hasta las 23:59 (UTC-5), último día para preguntar. Se postula solo por supplier-portal.unhcr.org (registro previo); contacto adquisiciones.peru@unhcr.org.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (bases publicadas; postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 7 millones (S/ 250.000–700.000 por proyecto, hasta 10 meses); Línea 6 Fortalecimiento organizacional S/ 3 millones (S/ 150.000–400.000, hasta 6 meses); contrapartida mínima 10%",
+     "eligibility": "Corrección: según las bases, solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones) formalmente constituidas. Una ONG o consultora NO puede postular como proponente; las bases prevén «aliados» (Formato 06), lo que podría abrir un rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea del sábado 21 nov al viernes 4 dic 2026 (sin hora indicada), por formulario Google más los Formatos 01–07 de la web. Consultas (23–27 oct) ya cerradas. Evaluación 5–14 dic; selección 14–15 dic. Sin cambios.",
+     "why": "Encaje limitado: solo sirve si el equipo entra como aliado técnico de un sindicato o federación que postule; útil si ya hay contacto con alguna organización de trabajadores.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      },
+      {
+       "label": "Nota en El Peruano (19 oct)",
+       "url": "https://www.elperuano.pe/noticia/307126-mtpe-relanza-fondoempleo-s-120-millones-para-capacitar-en-los-empleos-que-necesita-cada-region",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar la parte de equipamiento de una iniciativa de cadena productiva que el equipo acompañe técnicamente con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (temas abiertos, incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy no hay consultorías vigentes de Ayuda en Acción en Perú: la de planes de negocio CETPRO (Lima y Pucallpa) sigue visible en talentclue y COEECI sin fecha de cierre, pero su cronograma (selección 21 oct, inicio 22 oct) indica que ya se adjudicó.",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF vencidos o puestos, el más reciente de ago 2025; Google y DevelopmentAid sin nuevas); World Vision Perú (worldvision.pe: 5 puestos de planilla; etiqueta World Vision de REDINFOR sin avisos desde el 28 oct; COEECI: marcas colectivas INDECOPI cerró 1 nov, confección Ayacucho cerró 29 oct); CID (Google y LinkedIn vía buscador, REDINFOR, COEECI: sin avisos); CARE Perú (care.org.pe/consultorias remite al portal; portal ilegible; Google y REDINFOR sin procesos nuevos); Ayuda en Acción (talentclue: CETPRO sin fecha de cierre y ya adjudicada; COEECI, DevelopmentAid, CEBEM: sin consultorías vigentes en Perú; roster incluido); CEDEPAS Norte (págs. 1–2: 7 convocatorias, todas cerradas, última 25 oct); Acción contra el Hambre (último aviso 26 ago); CooperAcción (último aviso 20 ago, vencido); Plan International (COEECI: «Decidiendo Mi Futuro» inclusión económica juvenil Piura–Loreto cerró 16 oct); Cuso (solo puesto de Oficial Financiero); Helvetas, Welthungerhilfe, HIAS, Cáritas, Soluciones Prácticas, Heifer, Encuentros SJM, CESAL, Save the Children (búsquedas y CEBEM: sin vigentes en Perú). Agregadores: REDINFOR convoca págs. 1–3 y etiquetas Consultorías y World Vision (28 avisos del 30 oct al 2 nov: IDMA Huánuco 3 consultorías de perfil individual que cierran hoy sin hora; alerta temprana de incendios Shipibo Konibo, inducción virtual WWF, comunicación institucional, agencia de viajes: fuera de tema; GIZ Ecuador experto en desarrollo empresarial, puesto fuera del Perú), COEECI págs. 1–3 (22 ofertas: puestos, servicios logísticos e infraestructura), bidsfactory Perú (ACNUR 3838; OIT encadenamiento productivo construcción y PNUD OSPA, individuales; OIM alquiler de salones), UNGM (ACNUR 3838 reconfirmado; ACNUR RFQ-2026-016 material impreso, vencida), Boletín Redesma CEBEM (27–30 oct: Helvetas, GIZ Paraguay y Bolivia, ECO Consult; sin Perú), DevelopmentAid vía buscador («Sembrar semillas para vivir bien», Junín, AFD: publicada 3 sep, evaluación prevista desde 12 oct, probablemente adjudicada), unvacancies (PNUD diagnósticos sectoriales, México, cerró 22 oct). Donantes: Embajada de Australia (DAP reconfirmado), Fondo Triangular (29.ª convocatoria cerrada 31 oct; sin nueva), Fondoempleo, GIZ, PNUD, OIM, ACNUR: sin nuevas en tema.",
+    "failed": "Portal de compras de CARE (JavaScript, sin contenido), raíz de talentclue (redirige a talentclue.com), ficha de DevelopmentAid «evaluación externa agricultura familiar» (error), plazos de bidsfactory (de pago), TdR de IDMA (Google Docs, no abiertos), cooperacionsuiza.pe, Idealist, UN Partner Portal, LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes).",
+    "queries": "\"términos de referencia\" consultoría emprendedores Perú noviembre 2026 · \"solicitud de cotización\" OR \"términos de referencia\" \"persona jurídica\" emprendimiento OR \"medios de vida\" OR empleabilidad Perú noviembre 2026 · Peru \"request for proposals\" OR \"request for quotation\" livelihoods OR \"value chain\" OR entrepreneurship consulting firm November 2026 · site:linkedin.com/posts convocatoria consultoría Perú emprendimiento OR migrantes noviembre 2026 · \"Colectivo Integral de Desarrollo\" OR \"CARE Perú\" OR \"Ayuda en Acción\" OR \"Plan International Perú\" consultoría noviembre 2026 · OIM OR ACNUR OR PNUD Perú \"solicitud de cotización\" medios de vida OR integración socioeconómica noviembre 2026"
+   }
+  },
+  {
+   "date": "2026-11-02",
+   "summary": "Sin oportunidades nuevas hoy (lunes) para equipos u ONG en DEL/MYPE: REDINFOR no publica desde el 30 oct y lo reciente son puestos o consultorías individuales (IDMA Huánuco, cierran mañana). Sin urgentes aptas para equipo. Lo más próximo: DAP de Australia vía ONG aliada (8 nov; formulario hasta 9 nov 9:00) y ACNUR 3838 (19 nov; consultas solo hasta mañana 3 nov, 23:59). Fondoempleo abre el 21 nov, solo para organizaciones de trabajadores con aliados.",
+   "items": [
+    {
+     "title": "Programa de Ayuda Directa (DAP) 2026-27 – convocatoria abierta",
+     "isNew": false,
+     "donor": "Embajada de Australia en Lima",
+     "type": "Subvención para ONG",
+     "amount": "Hasta AUD 20.000; proyectos de 4 a 18 meses; capacitación, consultorías, alimentación, viajes y viáticos hasta 30% del monto",
+     "eligibility": "ONG, organizaciones de la sociedad civil, organizaciones sociales y entidades académicas o de investigación sin fines de lucro, constituidas en Perú y/o Bolivia, con cuenta bancaria a nombre de la organización. Se valoran alianzas, contrapartida, participación comunitaria y 5+ años de constitución. No pueden postular personas naturales, empresas ni entidades estatales.",
+     "topic": "Crecimiento económico inclusivo, inclusión social y acción climática",
+     "scope": "Perú y Bolivia",
+     "deadline": "2026-11-08",
+     "deadlineNote": "Abierta: la web de la Embajada (reconfirmada hoy) dice domingo 8 nov, sin hora; el formulario de SmartyGrants cierra el lunes 9 nov a las 9:00 (hora de Perú). Quedan 6 días: conviene enviar a más tardar el sábado 7 o domingo 8. Postulación en línea en dap.smartygrants.com.au/peru-bolivia2026 (registro previo); consultas a dap.lima@dfat.gov.au. Es la única opción con plazo de 5–14 días.",
+     "why": "Fondo pequeño para un piloto de emprendimiento o medios de vida con una ONG aliada. El tope de gastos en consultorías y capacitación sube a 30%, lo que deja más espacio para que el equipo participe como asistencia técnica.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "DAP en la web de la Embajada de Australia",
+       "url": "https://peru.embassy.gov.au/limacastellano/Development.html",
+       "linkedin": false
+      },
+      {
+       "label": "Formulario de postulación (SmartyGrants)",
+       "url": "https://dap.smartygrants.com.au/peru-bolivia2026",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-19",
+     "deadlineNote": "Cierra el jueves 19 nov, en 17 días (el RFP dice 17:00 UTC-5; el encabezado de UNGM dice 00:00 GMT-5: tomar la hora más temprana; reconfirmado hoy en UNGM). Consultas hasta MAÑANA martes 3 nov, 23:59 (UTC-5): último día para preguntar. Se postula solo por supplier-portal.unhcr.org (registro previo); contacto adquisiciones.peru@unhcr.org.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (bases publicadas; postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 7 millones (S/ 250.000–700.000 por proyecto, hasta 10 meses); Línea 6 Fortalecimiento organizacional S/ 3 millones (S/ 150.000–400.000, hasta 6 meses); contrapartida mínima 10%",
+     "eligibility": "Corrección: según las bases, solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones) formalmente constituidas. Una ONG o consultora NO puede postular como proponente; las bases prevén «aliados» (Formato 06), lo que podría abrir un rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea del sábado 21 nov al viernes 4 dic 2026 (sin hora indicada), por formulario Google más los Formatos 01–07 de la web. Consultas (23–27 oct) ya cerradas. Evaluación 5–14 dic; selección 14–15 dic. Sin cambios hoy.",
+     "why": "Encaje limitado: solo sirve si el equipo entra como aliado técnico de un sindicato o federación que postule; útil si ya hay contacto con alguna organización de trabajadores.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      },
+      {
+       "label": "Nota en El Peruano (19 oct)",
+       "url": "https://www.elperuano.pe/noticia/307126-mtpe-relanza-fondoempleo-s-120-millones-para-capacitar-en-los-empleos-que-necesita-cada-region",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar la parte de equipamiento de una iniciativa de cadena productiva que el equipo acompañe técnicamente con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (temas abiertos, incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy no hay consultorías vigentes de Ayuda en Acción en Perú: la de planes de negocio CETPRO (Lima y Pucallpa) sigue visible en talentclue, pero su cronograma (selección 21 oct, inicio 22 oct) indica que ya se adjudicó; el listado general de talentclue no se puede leer automáticamente.",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF vencidos o puestos, incluido el de Coordinador de Servicios Financieros VIPRO, un puesto; Google y DevelopmentAid sin nuevas); World Vision Perú (worldvision.pe: 5 puestos de planilla; perutrabajos sin vacantes; COEECI: el RFP de marcas colectivas INDECOPI cerró ayer 1 nov, se retira; REDINFOR solo puestos); CID (Google y LinkedIn vía buscador, REDINFOR, COEECI: sin avisos); CARE Perú (care.org.pe/consultorias sin avisos, remite al portal; Google solo convocatorias antiguas de practicantes; REDINFOR: roster de emergencia para personas, excluido); Ayuda en Acción (talentclue: CETPRO ya adjudicada; COEECI, DevelopmentAid, CEBEM: sin consultorías vigentes en Perú; roster incluido); CEDEPAS Norte (págs. 1–2: todas cerradas, última 25 oct); Acción contra el Hambre (último aviso 26 ago); CooperAcción (último aviso 20 ago, vencido); Plan International (PPRRD Challabamba en COEECI, fuera de tema); Helvetas (TdR Perú 2026 vencidos); Cuso (solo puesto de Oficial Financiero); Welthungerhilfe, HIAS, Cáritas, Soluciones Prácticas, Heifer, Encuentros SJM, CESAL, Save the Children (búsquedas: sin vigentes en tema). Agregadores: REDINFOR convoca págs. 1–3 y etiqueta Consultorías (28–30 oct; nada del 31 oct al 2 nov: IDMA Huánuco agenda multiactor y comunicadores en agroecología, individuales, cierran 3 nov; estrategias de comunicación y agencia de viajes, fuera de tema), COEECI págs. 1–2 (puestos y servicios logísticos; confección en Ayacucho, fuera de tema), bidsfactory Perú (ACNUR 3838; OIT articulación MYPE–construcción y PNUD OSPA, individuales; OIM alquiler de salones, suministro), UNGM (ACNUR 3838 reconfirmado), Boletín Redesma CEBEM (29–30 oct: Helvetas, GIZ Paraguay, CSF Bolivia; sin Perú), DevelopmentAid vía buscador, unvacancies (OIM Tumbes relacionamiento comunitario: cerrada, individual), WCS Fondo Impacto Bicentenario Loreto (cerró 15 may). Donantes: Embajada de Australia (DAP reconfirmado), Fondoempleo, GIZ, PNUD, OIM, ACNUR: sin nuevas en tema.",
+    "failed": "Portal de compras de CARE (JavaScript, página vacía), listado general de talentclue (JavaScript), cooperacionsuiza.pe (pantalla de verificación), aviso REDINFOR de IDMA «derecho a la alimentación Huánuco» (pantalla de verificación), Idealist (requiere sesión), uncareer.net («Consultoría 006/2026 orientación, intermediación y colocación laboral»: bloqueado por robots, país y elegibilidad sin verificar), ficha de DevelopmentAid «ACNUR open call inclusión socioeconómica Lote 3» (error; probablemente cerrada), plazos de bidsfactory (de pago), UN Partner Portal, LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes).",
+    "queries": "\"términos de referencia\" consultoría emprendedores OR \"planes de negocio\" OR \"medios de vida\" Perú noviembre 2026 · \"persona jurídica\" consultoría \"línea de base\" OR \"evaluación final\" OR sistematización Perú 2026 · Peru \"request for quotation\" OR \"request for proposals\" livelihoods OR \"value chain\" OR MSME consulting firm November 2026 · site:linkedin.com/posts consultoría \"términos de referencia\" Perú emprendimiento OR migrantes noviembre 2026 · \"Colectivo Integral de Desarrollo\" OR \"CARE Perú\" OR \"Ayuda en Acción\" consultoría noviembre 2026 · consultoría \"estudio de mercado\" OR \"articulación comercial\" OR \"cadena de valor\" asociaciones productores Perú TdR"
+   }
+  },
+  {
+   "date": "2026-11-01",
+   "summary": "Sin oportunidades nuevas hoy (domingo) para equipos u ONG en DEL/MYPE: lo publicado del 29 al 31 oct son puestos, comunicaciones o consultorías individuales. Urgente: World Vision (marcas colectivas INDECOPI en Cusco) cierra HOY, sin hora. DAP de Australia hasta el 8 nov (formulario: 9 nov 9:00); ACNUR hasta el 19 nov. Corrección: Fondoempleo (21 nov–4 dic) solo admite organizaciones de trabajadores como proponentes.",
+   "items": [
+    {
+     "title": "Consultoría para el registro y actualización de marcas colectivas ante INDECOPI (asociaciones artesanales de mujeres jóvenes, proyecto «Sipas Warmi Tikarin III»)",
+     "isNew": false,
+     "donor": "World Vision Perú – oficina regional Cusco (proyecto P300641 «Sipas Warmi Tikarin – Mujer Joven Emprendiendo, Fase III»)",
+     "type": "Consultoría / servicio (persona natural o jurídica)",
+     "amount": "No indicado (en soles, a todo costo, incluye gastos de trámite ante INDECOPI); 45 días; pagos 40%/20%/40% por entregables",
+     "eligibility": "Persona natural o jurídica. Profesional con 5+ años de experiencia general y experiencia específica en trámites ante INDECOPI; bachiller o licenciado en Administración, Economía, Ciencias Políticas o afines. Persona jurídica: brochure, CV del equipo, evidencia de servicios similares, propuesta técnica y económica (Anexo 1) y Anexo 2 de experiencia; RUC y CCI.",
+     "topic": "Asociatividad y articulación comercial: registrar 3 marcas colectivas nuevas y actualizar o renovar 3 existentes de asociaciones de mujeres jóvenes artesanas textiles (fibra de alpaca)",
+     "scope": "Zonas rurales altoandinas de Cusco",
+     "deadline": "2026-11-01",
+     "deadlineNote": "URGENTE: cierra HOY domingo 1 nov (el RFP no indica hora: enviar cuanto antes, idealmente esta mañana); reconfirmado hoy en COEECI (RFP emitido el 23 oct). No aparece en worldvision.pe ni perutrabajos. Consultas ya cerradas; entrevistas 2–3 nov y resultados 5 nov. Enviar a eliana_cacha_torres@wvi.org con asunto «4440249_Servicio_registro y actualización de marcas Indecopi»: brochure, CV del equipo, evidencia de servicios similares, propuesta técnica y económica (Anexo 1), Anexo 2, RUC y CCI. Si la oferta es ≥ S/ 52.500, por COUPA. Proveedores nuevos deben pedir precalificación. Ojo: el RFP indica inicio «12/11/2027» (posible errata; aclarar).",
+     "why": "Encargo corto y concreto de fortalecimiento de asociaciones de productoras y articulación comercial con World Vision, organización prioritaria; el equipo puede aportar a la vez el componente legal-INDECOPI y el de gestión de marca colectiva.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en COEECI (fuente: agregador)",
+       "url": "https://coeeci.org.pe/oferta/servicio-de-consultoria-para-el-registro-y-actualizacion-de-marcas-colectivas-ante-indecopi",
+       "linkedin": false
+      },
+      {
+       "label": "RFP (PDF)",
+       "url": "https://coeeci.org.pe/uploads/media/2026/10/4495f89e5c5784ddbe4dd32a756fefa4.pdf",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa de Ayuda Directa (DAP) 2026-27 – convocatoria abierta",
+     "isNew": false,
+     "donor": "Embajada de Australia en Lima",
+     "type": "Subvención para ONG",
+     "amount": "Hasta AUD 20.000; proyectos de 4 a 18 meses; capacitación, consultorías, alimentación, viajes y viáticos hasta 30% del monto",
+     "eligibility": "ONG, organizaciones de la sociedad civil, organizaciones sociales y entidades académicas o de investigación sin fines de lucro, constituidas en Perú y/o Bolivia, con cuenta bancaria a nombre de la organización. Se valoran alianzas, contrapartida, participación comunitaria y 5+ años de constitución. No pueden postular personas naturales, empresas ni entidades estatales.",
+     "topic": "Crecimiento económico inclusivo, inclusión social y acción climática",
+     "scope": "Perú y Bolivia",
+     "deadline": "2026-11-08",
+     "deadlineNote": "Abierta: la web de la Embajada dice domingo 8 nov (sin hora) y el formulario de SmartyGrants dice que cierra el lunes 9 nov a las 9:00 (hora de Perú); conviene enviar a más tardar el 8 nov, en 7 días. Reconfirmado hoy. Postulación en línea en dap.smartygrants.com.au/peru-bolivia2026 (registro previo); consultas a dap.lima@dfat.gov.au. Es la única opción con plazo de 5–14 días.",
+     "why": "Fondo pequeño para un piloto de emprendimiento o medios de vida con una ONG aliada. El tope de gastos en consultorías y capacitación sube a 30%, lo que deja más espacio para que el equipo participe como asistencia técnica.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "DAP en la web de la Embajada de Australia",
+       "url": "https://peru.embassy.gov.au/limacastellano/Development.html",
+       "linkedin": false
+      },
+      {
+       "label": "Formulario de postulación (SmartyGrants)",
+       "url": "https://dap.smartygrants.com.au/peru-bolivia2026",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-19",
+     "deadlineNote": "Cierra el jueves 19 nov, en 18 días (el RFP dice 17:00 UTC-5; el encabezado de UNGM dice 00:00 GMT-5: tomar la hora más temprana). Consultas hasta el martes 3 nov, 23:59 (UTC-5): quedan 2 días para preguntar. Se postula solo por supplier-portal.unhcr.org; contacto adquisiciones.peru@unhcr.org.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (bases publicadas; postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 7 millones (S/ 250.000–700.000 por proyecto, hasta 10 meses); Línea 6 Fortalecimiento organizacional S/ 3 millones (S/ 150.000–400.000, hasta 6 meses); contrapartida mínima 10%",
+     "eligibility": "Corrección: según las bases, solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones) formalmente constituidas. Una ONG o consultora NO puede postular como proponente; las bases prevén «aliados» (Formato 06), lo que podría abrir un rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea del sábado 21 nov al viernes 4 dic 2026 (sin hora indicada), por formulario Google más los Formatos 01–07 de la web. Consultas (23–27 oct) ya cerradas. Evaluación 5–14 dic; selección 14–15 dic.",
+     "why": "Encaje limitado: solo sirve si el equipo entra como aliado técnico de un sindicato o federación que postule; útil si ya hay contacto con alguna organización de trabajadores.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      },
+      {
+       "label": "Nota en El Peruano (19 oct)",
+       "url": "https://www.elperuano.pe/noticia/307126-mtpe-relanza-fondoempleo-s-120-millones-para-capacitar-en-los-empleos-que-necesita-cada-region",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar la parte de equipamiento de una iniciativa de cadena productiva que el equipo acompañe técnicamente con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (temas abiertos, incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy no hay consultorías vigentes de Ayuda en Acción en Perú: la de planes de negocio CETPRO (Lima y Pucallpa) sigue visible en talentclue y COEECI, pero su cronograma (inicio 22 oct) indica que ya se adjudicó; el estudio de competencias Lima-Piura (ago) no muestra fecha.",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF vencidos o puestos; empleos filtrados por Perú sin avisos; cooperacionsuiza.pe solo MAPE, cerrada); World Vision Perú (worldvision.pe y REDINFOR: solo puestos, p. ej. Oficial de Desarrollo de Negocios hasta 9 nov; perutrabajos sin vacantes; en COEECI sigue el RFP de marcas colectivas, incluido; RFQ de Ayacucho cerrados); CID (Google y LinkedIn vía buscador, REDINFOR, COEECI: sin avisos); CARE Perú (care.org.pe remite al portal; búsqueda COT2026 sin resultados; REDINFOR: roster de emergencia para personas, excluido); Ayuda en Acción (talentclue vía aviso CETPRO, COEECI, DevelopmentAid, CEBEM: sin consultorías vigentes en Perú; guía de oportunidades de mercado cerró 30 oct, probablemente Bolivia; roster incluido); CEDEPAS Norte (págs. 1–2: todas cerradas, última 25 oct); Acción contra el Hambre (último aviso 26 ago); CooperAcción (todo vencido); Plan International (PPRRD Challabamba sin fecha, fuera de tema; «Decidiendo Mi Futuro» inclusión económica juvenil cerró 16 oct); Helvetas (sin vacantes; TdR 2026 vencidos); Cuso (solo puesto de Oficial Financiero, 12 nov); Welthungerhilfe, HIAS, Cáritas, Soluciones Prácticas, Heifer, Encuentros SJM, CESAL, Save the Children (búsquedas: sin vigentes en tema). Agregadores: REDINFOR convoca págs. 1–4 y etiqueta Consultorías (27–30 oct: IDMA Huánuco 3 consultorías individuales, 3 nov; CESIP comunicación, 3 nov; AIDESEP agencia de viajes, 2 nov: fuera de tema), COEECI págs. 1–3, bidsfactory Perú, UNGM (ACNUR 3838 confirmado; UNICEF e-learning LRPS-2026-9206550, 9 nov, tema no indicado; OIT articulación MYPE–construcción, individual, 3 nov), Boletín Redesma CEBEM (15–29 oct: sin Perú), DevelopmentAid vía buscador, fundsforNGOs, gestionandote. Donantes: Fondoempleo (bases revisadas), GIZ, UE (última convocatoria OSC cerró ene 2026), IILA/UE Perú Social (cerró 30 sep), PNUD/PPD, OIT, OIM, FIDA, BID Lab, ProInnóvate, PROCOMPITE: sin vigentes en tema.",
+    "failed": "Portal de compras de CARE (JavaScript; descarga 403), raíz de talentclue (redirige), UN Partner Portal (no indexado), buscador de UNGM (dinámico), fichas de DevelopmentAid (error; «ACNUR open call inclusión socioeconómica Lote 3» sin verificar, probablemente cerrada), PDF del concurso de subvenciones OIM 002-2026, ProInnóvate y GORE Lima en gob.pe, convocatorias del BID, R4V (sin contenido), Idealist (no revisado hoy), LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes). aecid.pe sigue redirigiendo a un sitio ajeno.",
+    "queries": "site:linkedin.com/posts \"términos de referencia\" consultoría Perú emprendimiento OR \"medios de vida\" OR migrantes noviembre 2026 · \"persona jurídica\" consultoría \"planes de negocio\" OR \"línea de base\" OR \"evaluación final\" emprendedores Perú noviembre 2026 · Peru \"request for proposals\" OR \"terms of reference\" livelihoods OR \"value chain\" OR entrepreneurship consulting firm November 2026 · site:developmentaid.org/tenders Peru livelihoods OR MSME OR \"value chain\" 2026 · \"Colectivo Integral de Desarrollo\" convocatoria consultoría 2026 · Fondoempleo sectores aportantes 2026 bases"
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "summary": "Sin oportunidades nuevas hoy para equipos u ONG en DEL/MYPE: lo publicado del 29 al 31 oct son puestos, temas ajenos o consultorías de otros países. Urgentes: Cutivalú (evaluación «Juntas por la Igualdad», HOY 23:59), Fondo Triangular GIZ/BMZ (HOY) y World Vision (marcas colectivas INDECOPI en Cusco, mañana domingo 1 nov). DAP de Australia hasta el 8 nov; ACNUR hasta el 19 nov; Fondoempleo abriría concurso el 21 nov.",
+   "items": [
+    {
+     "title": "Evaluación externa del proyecto «Juntas por la Igualdad» (empleabilidad y emprendimiento de mujeres)",
+     "isNew": false,
+     "donor": "Centro Cutivalú – área Incidencia y Desarrollo (Piura); financiador no indicado en el aviso",
+     "type": "Consultoría de evaluación (admite «el equipo o la persona»)",
+     "amount": "No indicado",
+     "eligibility": "Equipo consultor o persona (persona natural o jurídica no especificada; elegibilidad de persona jurídica por confirmar en el TdR). Experiencia en líneas de base o evaluaciones (intermedia, final o de impacto); al menos 5 evaluaciones de proyectos de cooperación internacional, 3 de ellas en igualdad de género, gobernanza o desarrollo local (preferible en Perú); metodologías de evaluación y GpRD; conocimiento de organizaciones de mujeres y de base.",
+     "topic": "Empleabilidad y emprendimiento de mujeres para reducir la violencia de género (ODS 5 y 8); organizaciones de mujeres",
+     "scope": "3 distritos de la región Piura",
+     "deadline": "2026-10-31",
+     "deadlineNote": "URGENTE: cierra HOY sábado 31 oct a las 23:59 (hora de Perú); sigue publicada en REDINFOR sin ampliación. Enviar propuesta a incidenciaydesarrollo@cutivalu.pe con copia a secretaria@cutivalu.pe. El aviso dice «el equipo o la persona»; el TdR (Google Drive, no legible desde aquí) define presupuesto, documentos y si admite persona jurídica.",
+     "why": "Evaluación de emprendimiento y empleabilidad de mujeres en el norte, mismo perfil que la de CEDEPAS: el equipo puede reutilizar metodología y presentarse a ambas.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/10/22/peru-consultoria-para-la-evaluacion-externa-del-proyecto-juntas-por-la-igualdad/",
+       "linkedin": false
+      },
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1U3vbUtnu8yD9sdRXwEx180CsXbn9dZ39/view?usp=sharing",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "29.ª Convocatoria del Fondo Regional para la Cooperación Triangular con socios de América Latina y el Caribe",
+     "isNew": false,
+     "donor": "BMZ, ejecutado por GIZ",
+     "type": "Subvención (cooperación triangular)",
+     "amount": "Hasta 300.000 € por proyecto, máximo 2 años, con aporte propio de cada socio",
+     "eligibility": "Proyectos entre socio solicitante, socio principal y Alemania (mínimo tres socios). Requiere aval de la agencia de cooperación (APCI) y se presenta vía la Embajada de Alemania. Normalmente lideran instituciones públicas; la ONG o el equipo participa como socio técnico.",
+     "topic": "Temática abierta (DEL, MIPYME, migración, entre otros)",
+     "scope": "América Latina y el Caribe",
+     "deadline": "2026-10-31",
+     "deadlineNote": "URGENTE: cierra HOY sábado 31 oct (sin hora indicada). Va vía la Embajada de Alemania con carta de aval de APCI, cuyo plazo interno casi seguro ya venció: solo viable si la contraparte pública ya tiene el aval.",
+     "why": "Instrumento de la cooperación alemana más cercano a tu red, útil para proponer un intercambio DEL con una contraparte pública peruana y otro país de la región.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "fondo-cooperacion-triangular.net",
+       "url": "https://fondo-cooperacion-triangular.net/convocatorias-de-proyecto/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría para el registro y actualización de marcas colectivas ante INDECOPI (asociaciones artesanales de mujeres jóvenes, proyecto «Sipas Warmi Tikarin III»)",
+     "isNew": false,
+     "donor": "World Vision Perú – oficina regional Cusco (proyecto P300641 «Sipas Warmi Tikarin – Mujer Joven Emprendiendo, Fase III»)",
+     "type": "Consultoría / servicio (persona natural o jurídica)",
+     "amount": "No indicado (en soles, a todo costo, incluye gastos de trámite ante INDECOPI); 45 días; pagos 40%/20%/40% por entregables",
+     "eligibility": "Persona natural o jurídica. Profesional con 5+ años de experiencia general y experiencia específica en trámites ante INDECOPI; bachiller o licenciado en Administración, Economía, Ciencias Políticas o afines. Persona jurídica: brochure, CV del equipo, evidencia de servicios similares, propuesta técnica y económica (Anexo 1) y Anexo 2 de experiencia; RUC y CCI.",
+     "topic": "Asociatividad y articulación comercial: registrar 3 marcas colectivas nuevas y actualizar o renovar 3 existentes de asociaciones de mujeres jóvenes artesanas textiles (fibra de alpaca)",
+     "scope": "Zonas rurales altoandinas de Cusco",
+     "deadline": "2026-11-01",
+     "deadlineNote": "URGENTE: cierra MAÑANA domingo 1 nov (sin hora indicada; enviar hoy sábado 31), en 1 día; sigue publicada en COEECI pág. 1 (no aparece en worldvision.pe ni perutrabajos). Consultas ya cerradas; entrevistas 2–3 nov y resultados 5 nov. Enviar a eliana_cacha_torres@wvi.org con asunto «4440249_Servicio_registro y actualización de marcas Indecopi»: brochure, CV del equipo, evidencia de servicios similares, propuesta técnica y económica (Anexo 1), Anexo 2, RUC y CCI. Si la oferta es ≥ S/ 52.500, por COUPA. Proveedores nuevos deben pedir precalificación. Ojo: el RFP indica inicio «12/11/2027» (posible errata; aclarar).",
+     "why": "Encargo corto y concreto de fortalecimiento de asociaciones de productoras y articulación comercial con World Vision, organización prioritaria; el equipo puede aportar a la vez el componente legal-INDECOPI y el de gestión de marca colectiva.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en COEECI (fuente: agregador)",
+       "url": "https://coeeci.org.pe/oferta/servicio-de-consultoria-para-el-registro-y-actualizacion-de-marcas-colectivas-ante-indecopi",
+       "linkedin": false
+      },
+      {
+       "label": "RFP (PDF)",
+       "url": "https://coeeci.org.pe/uploads/media/2026/10/4495f89e5c5784ddbe4dd32a756fefa4.pdf",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa de Ayuda Directa (DAP) 2026-27 – convocatoria abierta",
+     "isNew": false,
+     "donor": "Embajada de Australia en Lima",
+     "type": "Subvención para ONG",
+     "amount": "Hasta AUD 20.000; proyectos de 4 a 18 meses; capacitación, consultorías, alimentación, viajes y viáticos hasta 30% del monto",
+     "eligibility": "ONG, organizaciones de la sociedad civil, organizaciones sociales y entidades académicas o de investigación sin fines de lucro, constituidas en Perú y/o Bolivia, con cuenta bancaria a nombre de la organización. Se valoran alianzas, contrapartida, participación comunitaria y 5+ años de constitución. No pueden postular personas naturales, empresas ni entidades estatales.",
+     "topic": "Crecimiento económico inclusivo, inclusión social y acción climática",
+     "scope": "Perú y Bolivia",
+     "deadline": "2026-11-08",
+     "deadlineNote": "Abierta: cierra el domingo 8 nov (hora de Perú, GMT-5; sin hora exacta), en 8 días; reconfirmado hoy en la web de la Embajada. Postulación en línea en dap.smartygrants.com.au/peru-bolivia2026. Es la única opción con plazo de 5–14 días: conviene coordinar este fin de semana con la ONG aliada.",
+     "why": "Fondo pequeño para un piloto de emprendimiento o medios de vida con una ONG aliada. El tope de gastos en consultorías y capacitación sube a 30%, lo que deja más espacio para que el equipo participe como asistencia técnica.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "DAP en la web de la Embajada de Australia",
+       "url": "https://peru.embassy.gov.au/limacastellano/Development.html",
+       "linkedin": false
+      },
+      {
+       "label": "Formulario de postulación (SmartyGrants)",
+       "url": "https://dap.smartygrants.com.au/peru-bolivia2026",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-19",
+     "deadlineNote": "Cierra el jueves 19 nov, en 19 días (el RFP dice 17:00 UTC-5; el encabezado de UNGM dice 00:00 GMT-5: tomar la hora más temprana). Consultas hasta el martes 3 nov, 23:59 (UTC-5). Se postula solo por supplier-portal.unhcr.org; contacto adquisiciones.peru@unhcr.org.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (próximo a abrir)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones en total para el concurso",
+     "eligibility": "Según la nota oficial: organizaciones de trabajadores y asociaciones sin fines de lucro (ONG aliada como entidad ejecutora). Elegibilidad y cofinanciamiento por confirmar en las bases, aún no publicadas.",
+     "topic": "Capacitación y empleabilidad de trabajadores según la demanda de cada región",
+     "scope": "Perú (regiones)",
+     "deadline": "",
+     "deadlineNote": "Fecha límite por confirmar: según El Peruano (19 oct), la postulación iría del 21 nov al 4 dic 2026. Bases no publicadas todavía; conviene ir armando la alianza con una ONG ejecutora.",
+     "why": "Fondo nacional de empleabilidad donde una ONG aliada puede ser ejecutora y el equipo encargarse del diseño y la asistencia técnica del programa de capacitación.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Nota en El Peruano (19 oct)",
+       "url": "https://www.elperuano.pe/noticia/307126-mtpe-relanza-fondoempleo-s-120-millones-para-capacitar-en-los-empleos-que-necesita-cada-region",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar la parte de equipamiento de una iniciativa de cadena productiva que el equipo acompañe técnicamente con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (temas abiertos, incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy no hay consultorías vigentes de Ayuda en Acción en Perú (CETPRO adjudicada; el estudio de competencias Lima-Piura de agosto no muestra fecha y probablemente cerró).",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF vencidos o puestos; página de empleos sin avisos; cooperacionsuiza.pe solo MAPE, cerrada); World Vision Perú (worldvision.pe: 5 puestos de planilla; REDINFOR solo puestos y una consultoría en Ecuador; perutrabajos sin vacantes; en COEECI pág. 1 sigue el RFP de marcas colectivas, incluido); CID (Google y LinkedIn vía buscador: sin avisos); CARE Perú (care.org.pe remite al portal; REDINFOR: roster de emergencia para personas, excluido); Ayuda en Acción (talentclue vía buscador y DevelopmentAid: sin consultorías vigentes en Perú; roster permanente incluido); CEDEPAS Norte (págs. 1–2: todas cerradas entre 9 sep y 25 oct); Acción contra el Hambre (último aviso 26 ago); CooperAcción (todo vencido); Helvetas (TdR 2026 vencidos); Plan International, Welthungerhilfe, Cáritas, HIAS, Heifer, Encuentros SJM, COPEME, Soluciones Prácticas (búsquedas: sin vigentes en tema). Agregadores: REDINFOR portada págs. 1–2 y categoría convoca págs. 1–5 (29–30 oct: IDMA seguimiento del derecho a la alimentación en Huánuco, individual, 3 nov; CESIP comunicaciones, 3 nov, fuera de tema; WWF Colombia y SDSN Bolivia, fuera del Perú; puestos), COEECI págs. 1–3 (?page=N; temas afines ya cerrados: Cuso empleabilidad Arequipa, Helvetas huella ambiental, Welthungerhilfe Madre de Dios), bidsfactory (plazos tras pago), UNGM (ACNUR RFP 3838 confirmado; OIT articulación MYPE–construcción, individual, 3 nov), Boletín Redesma CEBEM (27–29 oct: solo Bolivia y Paraguay), DevelopmentAid vía buscador, perucontrata (solo infraestructura), trabajohumanitario, Substack Impact Funding (PMA CFEI WFP/PER/2026/009 asistencia alimentaria El Niño para ONG socias, 6 nov: humanitario, fuera de tema y sin verificar en UN Partner Portal). Donantes: GIZ, PNUD/PPD, OIM, OIT, FIDA, BID Lab, AECID, KOICA, Canadá, ProInnóvate, PROCOMPITE: sin vigentes en tema.",
+    "failed": "Portal de compras de CARE (JavaScript), raíz de talentclue (redirige), UN Partner Portal (sin contenido), búsqueda pública de UNGM (dinámica), procurement-notices.undp.org (caché antigua), plazos de bidsfactory (de pago), avisos de Save the Children en savethechildren.net (error), fundsforNGOs (ACNUR inclusión socioeconómica, error), TdR en Google Drive (Cutivalú), descarga directa de PDF (403 del proxy; leídos vía WebFetch), Idealist (no revisado hoy), LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes).",
+    "queries": "site:linkedin.com/posts consultoría \"términos de referencia\" Perú emprendimiento OR \"planes de negocio\" OR \"medios de vida\" noviembre 2026 · \"persona jurídica\" consultoría \"línea de base\" OR \"evaluación final\" emprendimiento OR empleabilidad OR migrantes Perú noviembre 2026 · WFP Peru CFEI 2026 partner unpartnerportal · site:developmentaid.org/tenders Peru livelihoods OR MSME OR \"value chain\" 2026 · Swisscontact OR \"World Vision\" OR CARE OR \"Ayuda en Acción\" OR CEDEPAS consultoría Perú octubre noviembre 2026 · Fondoempleo concurso 2026 asociaciones sin fines de lucro"
+   }
+  },
+  {
+   "date": "2026-10-30",
+   "summary": "Sin oportunidades nuevas hoy para equipos o ONG en DEL/MYPE: lo publicado del 27 al 29 oct son puestos, servicios fuera de tema o consultorías individuales. Urgentes: Cutivalú (evaluación «Juntas por la Igualdad», mañana sábado 31 oct, 23:59), Fondo Triangular GIZ/BMZ (31 oct) y World Vision (marcas colectivas INDECOPI en Cusco, domingo 1 nov). DAP de Australia hasta el 8 nov; ACNUR (call center para refugiados) hasta el 19 nov.",
+   "items": [
+    {
+     "title": "Evaluación externa del proyecto «Juntas por la Igualdad» (empleabilidad y emprendimiento de mujeres)",
+     "isNew": false,
+     "donor": "Centro Cutivalú – área Incidencia y Desarrollo (Piura); financiador no indicado en el aviso",
+     "type": "Consultoría de evaluación (admite «el equipo o la persona»)",
+     "amount": "No indicado",
+     "eligibility": "Equipo consultor o persona (persona natural o jurídica no especificada; elegibilidad de persona jurídica por confirmar en el TdR). Experiencia en líneas de base o evaluaciones (intermedia, final o de impacto); al menos 5 evaluaciones de proyectos de cooperación internacional, 3 de ellas en igualdad de género, gobernanza o desarrollo local (preferible en Perú); metodologías de evaluación y GpRD; conocimiento de organizaciones de mujeres y de base.",
+     "topic": "Empleabilidad y emprendimiento de mujeres para reducir la violencia de género (ODS 5 y 8); organizaciones de mujeres",
+     "scope": "3 distritos de la región Piura",
+     "deadline": "2026-10-31",
+     "deadlineNote": "URGENTE: cierra MAÑANA sábado 31 oct a las 23:59 (hora de Perú), en 1 día (sigue visible en REDINFOR, sin ampliación). Enviar propuesta a incidenciaydesarrollo@cutivalu.pe con copia a secretaria@cutivalu.pe. El aviso dice «el equipo o la persona»; el TdR (Google Drive, no legible desde aquí) define presupuesto, documentos y si admite persona jurídica.",
+     "why": "Evaluación de emprendimiento y empleabilidad de mujeres en el norte, mismo perfil que la de CEDEPAS: el equipo puede reutilizar metodología y presentarse a ambas.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/10/22/peru-consultoria-para-la-evaluacion-externa-del-proyecto-juntas-por-la-igualdad/",
+       "linkedin": false
+      },
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1U3vbUtnu8yD9sdRXwEx180CsXbn9dZ39/view?usp=sharing",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "29.ª Convocatoria del Fondo Regional para la Cooperación Triangular con socios de América Latina y el Caribe",
+     "isNew": false,
+     "donor": "BMZ, ejecutado por GIZ",
+     "type": "Subvención (cooperación triangular)",
+     "amount": "Hasta 300.000 € por proyecto, máximo 2 años, con aporte propio de cada socio",
+     "eligibility": "Proyectos entre socio solicitante, socio principal y Alemania (mínimo tres socios). Requiere aval de la agencia de cooperación (APCI) y se presenta vía la Embajada de Alemania. Normalmente lideran instituciones públicas; la ONG o el equipo participa como socio técnico.",
+     "topic": "Temática abierta (DEL, MIPYME, migración, entre otros)",
+     "scope": "América Latina y el Caribe",
+     "deadline": "2026-10-31",
+     "deadlineNote": "URGENTE: cierra MAÑANA sábado 31 oct (sin hora), en 1 día. Va vía la Embajada de Alemania con carta de aval de APCI, cuyo plazo interno casi seguro ya venció: solo viable si la contraparte pública ya tiene el aval.",
+     "why": "Instrumento de la cooperación alemana más cercano a tu red, útil para proponer un intercambio DEL con una contraparte pública peruana y otro país de la región.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "fondo-cooperacion-triangular.net",
+       "url": "https://fondo-cooperacion-triangular.net/convocatorias-de-proyecto/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría para el registro y actualización de marcas colectivas ante INDECOPI (asociaciones artesanales de mujeres jóvenes, proyecto «Sipas Warmi Tikarin III»)",
+     "isNew": false,
+     "donor": "World Vision Perú – oficina regional Cusco (proyecto P300641 «Sipas Warmi Tikarin – Mujer Joven Emprendiendo, Fase III»)",
+     "type": "Consultoría / servicio (persona natural o jurídica)",
+     "amount": "No indicado (en soles, a todo costo, incluye gastos de trámite ante INDECOPI); 45 días; pagos 40%/20%/40% por entregables",
+     "eligibility": "Persona natural o jurídica. Profesional con 5+ años de experiencia general y experiencia específica en trámites ante INDECOPI; bachiller o licenciado en Administración, Economía, Ciencias Políticas o afines. Persona jurídica: brochure, CV del equipo, evidencia de servicios similares, propuesta técnica y económica (Anexo 1) y Anexo 2 de experiencia; RUC y CCI.",
+     "topic": "Asociatividad y articulación comercial: registrar 3 marcas colectivas nuevas y actualizar o renovar 3 existentes de asociaciones de mujeres jóvenes artesanas textiles (fibra de alpaca)",
+     "scope": "Zonas rurales altoandinas de Cusco",
+     "deadline": "2026-11-01",
+     "deadlineNote": "URGENTE: cierra el domingo 1 nov (sin hora indicada; enviar a más tardar mañana sábado 31), en 2 días; sigue publicada en COEECI. Consultas ya cerradas; entrevistas 2–3 nov y resultados 5 nov. Enviar a eliana_cacha_torres@wvi.org con asunto «4440249_Servicio_registro y actualización de marcas Indecopi»: brochure, CV del equipo, evidencia de servicios similares, propuesta técnica y económica (Anexo 1), Anexo 2, RUC y CCI. Si la oferta es ≥ S/ 52.500, por COUPA. Proveedores nuevos deben pedir precalificación. Ojo: el RFP indica inicio «12/11/2027» (posible errata; aclarar).",
+     "why": "Encargo corto y concreto de fortalecimiento de asociaciones de productoras y articulación comercial con World Vision, organización prioritaria; el equipo puede aportar a la vez el componente legal-INDECOPI y el de gestión de marca colectiva.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en COEECI (fuente: agregador)",
+       "url": "https://coeeci.org.pe/oferta/servicio-de-consultoria-para-el-registro-y-actualizacion-de-marcas-colectivas-ante-indecopi",
+       "linkedin": false
+      },
+      {
+       "label": "RFP (PDF)",
+       "url": "https://coeeci.org.pe/uploads/media/2026/10/4495f89e5c5784ddbe4dd32a756fefa4.pdf",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa de Ayuda Directa (DAP) 2026-27 – convocatoria abierta",
+     "isNew": false,
+     "donor": "Embajada de Australia en Lima",
+     "type": "Subvención para ONG",
+     "amount": "Hasta AUD 20.000; proyectos de 4 a 18 meses; capacitación, consultorías, alimentación, viajes y viáticos hasta 30% del monto",
+     "eligibility": "ONG, organizaciones de la sociedad civil, organizaciones sociales y entidades académicas o de investigación sin fines de lucro, constituidas en Perú y/o Bolivia, con cuenta bancaria a nombre de la organización. Se valoran alianzas, contrapartida, participación comunitaria y 5+ años de constitución. No pueden postular personas naturales, empresas ni entidades estatales.",
+     "topic": "Crecimiento económico inclusivo, inclusión social y acción climática",
+     "scope": "Perú y Bolivia",
+     "deadline": "2026-11-08",
+     "deadlineNote": "Abierta: cierra el domingo 8 nov (hora de Perú, GMT-5; sin hora exacta), en 9 días. Postulación en línea en dap.smartygrants.com.au/peru-bolivia2026. Es la única opción con plazo de 5–14 días esta semana: conviene coordinar ya con la ONG aliada.",
+     "why": "Fondo pequeño para un piloto de emprendimiento o medios de vida con una ONG aliada. El tope de gastos en consultorías y capacitación sube a 30%, lo que deja más espacio para que el equipo participe como asistencia técnica.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "DAP en la web de la Embajada de Australia",
+       "url": "https://peru.embassy.gov.au/limacastellano/Development.html",
+       "linkedin": false
+      },
+      {
+       "label": "Formulario de postulación (SmartyGrants)",
+       "url": "https://dap.smartygrants.com.au/peru-bolivia2026",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-19",
+     "deadlineNote": "Cierra el jueves 19 nov a las 17:00 (UTC-5), en 20 días. Consultas hasta el martes 3 nov, 23:59 (UTC-5). Se postula solo por supplier-portal.unhcr.org; contacto adquisiciones.peru@unhcr.org.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar la parte de equipamiento de una iniciativa de cadena productiva que el equipo acompañe técnicamente con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (temas abiertos, incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. La consultoría de planes de negocio CETPRO ya se adjudicó; los demás avisos de talentclue no se pueden leer automáticamente.",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF, todos vencidos o puestos; Google sin nuevas); World Vision Perú (worldvision.pe: 5 puestos de planilla; perutrabajos sin vacantes; en COEECI sigue el RFP de marcas colectivas INDECOPI, incluido; storytelling STEM+G venció ayer; confección y refrigerios en Ayacucho, fuera de tema); CID (Google y LinkedIn vía buscador: sin avisos); CARE Perú (care.org.pe/consultorias solo redirige al portal; REDINFOR: roster de emergencia para personas naturales, hasta 15 nov, excluido); Ayuda en Acción (talentclue: CETPRO con plazos vencidos; listado de otras ofertas no legible; roster permanente incluido); CEDEPAS Norte (pág. 1: evaluación intermedia, publicable Foc R4T y etiquetas, todas cerradas antes del 25 oct); Acción contra el Hambre (proveedores: último 26 ago); CooperAcción (3 avisos 2026, todos vencidos); Plan International (PPRRD Challabamba y servicios de infraestructura, fuera de tema); HIAS, Helvetas, Welthungerhilfe (búsquedas: sin vigentes en Perú). Agregadores: REDINFOR págs. 1–4 (26–28 oct: ASPROCOAN especialista de campo en cacao, individual, cierra hoy 17:00; sistematización Kandozi, gobernanza territorial, fuera de tema; encuestadores y agua potable), COEECI págs. 1–2, bidsfactory (OIT articulación MYPE–construcción, individual, 3 nov; PNUD asistencia técnica OSPA Arequipa, 4 nov, fuera de tema; resto compras ONU), Boletín Redesma CEBEM (27–29 oct: GIZ Paraguay y Bolivia, sin Perú), DevelopmentAid vía buscador (PNUD-PER-00912 anchoveta, articulación comercial: no se pudo verificar fecha, probablemente cerrada), perutrabajos, LinkedIn vía buscador.",
+    "failed": "Portal de compras de CARE (JavaScript), listado de ofertas de talentclue (JavaScript), ficha de DevelopmentAid y aviso PNUD UNDP-PER-00912 (bloqueados), OIM Perú licitaciones y bases del concurso 002-2026 (error al abrir), TdR de Cutivalú (Google Drive), REDINFOR pág. 5+ y COEECI pág. 3+ (no revisadas hoy), LinkedIn y Facebook (sin publicaciones indexadas recientes).",
+    "queries": "\"términos de referencia\" consultoría \"persona jurídica\" emprendimiento OR \"planes de negocio\" OR \"cadena de valor\" Perú noviembre 2026 · \"línea de base\" OR \"evaluación final\" OR sistematización migrantes OR \"medios de vida\" OR empleabilidad Perú convocatoria noviembre 2026 · Peru \"request for quotation\" OR \"request for proposals\" livelihoods OR \"value chain\" OR MSME November 2026 · Swisscontact OR \"World Vision\" OR \"CARE Perú\" OR \"Ayuda en Acción\" OR CEDEPAS consultoría Perú octubre 2026 · OIM OR ACNUR OR HIAS Perú convocatoria organizaciones socias OR \"expresión de interés\" integración socioeconómica 2026 · site:linkedin.com/posts consultoría \"términos de referencia\" Perú emprendedores OR migrantes"
+   }
+  }
+ ]
+}

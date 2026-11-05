@@ -1,0 +1,98 @@
+{
+  "id": "fondoempleo_eat",
+  "nombre": "Fondoempleo – Eje de Apoyo a Trabajadores de Empresas de Sectores Aportantes",
+  "fuente": "https://fondoempleo.com.pe/wp-content/uploads/2025/04/Bases-Eje-de-Apoyo-a-Trabajadores-de-Sectores-Aportantes.pdf",
+  "nota": "Reglas tomadas de las bases públicas 2025. Verificar contra las bases 2026 (postulación 21 nov – 4 dic 2026).",
+  "proponente": "Organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones). ONG y otras instituciones participan como aliadas.",
+  "lineas": {
+    "capacitacion_laboral": {
+      "nombre": "Línea 5: Capacitación laboral",
+      "monto_min": 250000,
+      "monto_max": 700000,
+      "duracion_max_meses": 10,
+      "inversion_promedio_por_beneficiario": [2100, 4300]
+    },
+    "fortalecimiento_organizacional": {
+      "nombre": "Línea 6: Fortalecimiento organizacional",
+      "monto_min": 150000,
+      "monto_max": 400000,
+      "duracion_max_meses": 6,
+      "inversion_promedio_por_beneficiario": [190, 190]
+    }
+  },
+  "reglas_presupuesto": {
+    "contrapartida_min_pct": 0.10,
+    "contrapartida_base": "costos directos solicitados a Fondoempleo",
+    "equipo_proyecto_max_pct": 0.25,
+    "equipo_proyecto_base": "monto solicitado a Fondoempleo",
+    "administrativos_pct": 0.10,
+    "imprevistos_pct": 0.015,
+    "indirectos_base": "costos directos solicitados a Fondoempleo",
+    "equipamiento_max_uit": 2
+  },
+  "categorias_gasto_directo": [
+    "Servicios profesionales especializados",
+    "Servicios de soporte",
+    "Pasajes o gastos de transporte",
+    "Viáticos",
+    "Alquiler",
+    "Equipo del proyecto",
+    "Equipamiento básico",
+    "Gastos de funcionamiento",
+    "Gastos bancarios"
+  ],
+  "no_financiable": [
+    "Gastos antes del inicio o después del término del proyecto",
+    "Impuesto a la renta de tercera categoría",
+    "Vehículos, terrenos e inmuebles, y obras o refacciones asociadas",
+    "Bienes inscribibles en Registros Públicos",
+    "Gastos de procedimientos penales, administrativos y judiciales",
+    "Desarrollo o adquisición de software, páginas web u otras aplicaciones",
+    "Diagnósticos o manuales que no contribuyan al propósito",
+    "Categorías no especificadas en las bases"
+  ],
+  "indicadores_obligatorios": {
+    "fin": [
+      "Nº de beneficiarios capacitados y aprobados que mejoran sus beneficios laborales",
+      "Nº de beneficiarios con competencias que incrementaron ingresos netos"
+    ],
+    "proposito": [
+      "Nº de beneficiarios capacitados y aprobados"
+    ]
+  },
+  "formato_02_secciones": [
+    "Situación problemática",
+    "Análisis de involucrados",
+    "Análisis de problemas",
+    "Análisis de objetivos",
+    "Análisis e identificación de alternativas",
+    "Análisis de alternativas para la selección de la solución óptima",
+    "Estructura analítica del proyecto",
+    "Árbol de problemas y soluciones",
+    "Matriz de marco lógico",
+    "Equipo del proyecto",
+    "Sistema de seguimiento y monitoreo",
+    "Mapeo de riesgos"
+  ],
+  "formato_02_estilo": {"fuente": "Arial", "tamano": 10, "hoja": "A4", "paginas_max_sugeridas": 20},
+  "rubrica": {
+    "viabilidad_tecnica": {
+      "peso": 0.60,
+      "subcriterios": {
+        "coherencia": 0.20,
+        "innovacion": 0.10,
+        "indicadores": 0.15,
+        "riesgos": 0.15
+      }
+    },
+    "viabilidad_financiera": {
+      "peso": 0.40,
+      "subcriterios": {
+        "aporte_fondoempleo": 0.10,
+        "contrapartida": 0.10,
+        "costo_beneficio": 0.20
+      }
+    },
+    "puntaje_minimo_seleccion": 8
+  }
+}

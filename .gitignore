@@ -1,0 +1,17 @@
+# Secretos: nunca subir el .env real
+.env
+.streamlit/secrets.toml
+
+# Indicaciones del curso (incluyen la lista de alumnos: no publicar)
+indicaciones/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Archivos generados por la app
+salidas/
+*.tmp
