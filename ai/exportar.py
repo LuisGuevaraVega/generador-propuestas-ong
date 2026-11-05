@@ -1,4 +1,8 @@
-"""Exporta la propuesta a Word (técnica) y Excel (económica, con fórmulas editables)."""
+"""Exporta la propuesta a Word (técnica) y Excel (económica, con fórmulas editables).
+
+Los reportes son para el donante: no incluyen la huella de autoría, que solo se
+muestra dentro de la app para el usuario.
+"""
 import io
 from datetime import date
 
@@ -9,7 +13,6 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
-from ai.generador import MODOS
 from ai.reglas import SIMBOLOS
 
 NOMBRES_FUENTE = {"TDR": "TdR", "IA": "Sugerencia IA"}
@@ -76,8 +79,7 @@ def a_word(propuesta, formato, convocatoria="", resumen=None) -> bytes:
     doc.add_heading(textos.titulo_proyecto, level=0)
     p = doc.add_paragraph()
     p.add_run("BORRADOR — ").bold = True
-    p.add_run(f"generado el {date.today():%d/%m/%Y} en modo «{MODOS[propuesta['modo']]}». "
-              "Revise, complete y valide cada sección antes de postular.")
+    p.add_run(f"versión del {date.today():%d/%m/%Y}. Revise, complete y valide cada sección antes de postular.")
     if convocatoria:
         doc.add_paragraph(f"Convocatoria: {convocatoria}")
 
@@ -114,10 +116,6 @@ def a_word(propuesta, formato, convocatoria="", resumen=None) -> bytes:
         _titulo(doc, "Pendientes por completar", 1)
         for item in dict.fromkeys(pendientes):
             doc.add_paragraph(item, style="List Bullet")
-
-    _titulo(doc, "Anexo: huella de autoría", 1)
-    doc.add_paragraph("Origen de cada párrafo, indicador y línea de presupuesto de este borrador:")
-    _tabla(doc, ["Origen", "Piezas"], list(huella_autoria(propuesta).items()))
 
     salida = io.BytesIO()
     doc.save(salida)
@@ -168,7 +166,7 @@ def a_excel(propuesta, resumen, reglas) -> bytes:
     hoja["A1"].font = Font(bold=True, size=13)
     hoja.append([f"Moneda: {moneda} · Duración: {resumen['duracion_meses']} meses · Reglas: {reglas['origen']}"])
     hoja.append([])
-    encabezados = ["Objetivo", "Categoría", "Descripción", "Unidad", "Cantidad", "Costo unitario", "Total", "Origen"]
+    encabezados = ["Objetivo", "Categoría", "Descripción", "Unidad", "Cantidad", "Costo unitario", "Total"]
     hoja.append(encabezados)
     for celda in hoja[4]:
         celda.font, celda.fill = negrita, verde
@@ -177,7 +175,7 @@ def a_excel(propuesta, resumen, reglas) -> bytes:
     for l in resumen["lineas"]:
         fila = hoja.max_row + 1
         hoja.append([l["objetivo"], l["categoria"], l["descripcion"], l["unidad"], l["cantidad"],
-                     l["costo_unitario"], f"=E{fila}*F{fila}", ", ".join(etiqueta_fuente(f) for f in l["fuentes"])])
+                     l["costo_unitario"], f"=E{fila}*F{fila}"])
     fin = hoja.max_row
 
     def fila_total(etiqueta, formula):
@@ -209,7 +207,7 @@ def a_excel(propuesta, resumen, reglas) -> bytes:
     for fila in hoja.iter_rows(min_row=inicio, max_row=f_sol, min_col=6, max_col=7):
         for celda in fila:
             celda.number_format = "#,##0.00"
-    anchos = [9, 13, 48, 12, 10, 14, 15, 30]
+    anchos = [9, 13, 48, 12, 10, 14, 15]
     for i, ancho in enumerate(anchos, start=1):
         hoja.column_dimensions[get_column_letter(i)].width = ancho
     for fila in hoja.iter_rows(min_row=inicio, max_row=fin, min_col=3, max_col=3):

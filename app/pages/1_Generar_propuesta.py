@@ -13,6 +13,7 @@ from ai.documentos import Recuperador, descargar_tdr, leer_documento, trocear  #
 from ai.exportar import a_excel, a_word, etiqueta_fuente, huella_autoria  # noqa: E402
 from ai.generador import MODOS, extraer_reglas, generar_propuesta  # noqa: E402
 from ai.reglas import SIMBOLOS, calcular_presupuesto, reglas_efectivas, validar_matriz  # noqa: E402
+from ai.voz import transcribir  # noqa: E402
 
 st.set_page_config(page_title="Generar propuesta", page_icon="✨", layout="wide")
 
@@ -125,12 +126,28 @@ if modo == "entrevista":
             estado[f"resp_{qid}"] = texto
 
     st.button("Rellenar con el caso de ejemplo (ficticio)", on_click=rellenar_ejemplo)
+    st.caption("Responde escribiendo o con 🎙️: tu nota de voz se transcribe con Whisper en esta computadora; "
+               "el audio no se envía a internet.")
     respuestas = {}
     for seccion in FORMATO["secciones"]:
         with st.expander(seccion["titulo"]):
             st.caption(seccion["proposito"])
             for pregunta in seccion["preguntas"]:
-                respuestas[pregunta["id"]] = st.text_area(pregunta["texto"], key=f"resp_{pregunta['id']}", height=80)
+                qid = pregunta["id"]
+                col_texto, col_voz = st.columns([7, 1], vertical_alignment="bottom")
+                # La voz se procesa antes de dibujar el cuadro de texto para poder escribir en él.
+                with col_voz.popover("🎙️", help="Responder por voz"):
+                    audio = st.audio_input("Graba tu respuesta", key=f"voz_{qid}")
+                if audio is not None:
+                    contenido = audio.getvalue()
+                    huella = hash(contenido)
+                    if estado.get(f"voz_hecha_{qid}") != huella:
+                        with st.spinner("Transcribiendo con Whisper…"):
+                            texto = transcribir(contenido)
+                        previo = estado.get(f"resp_{qid}", "").strip()
+                        estado[f"resp_{qid}"] = f"{previo} {texto}".strip()
+                        estado[f"voz_hecha_{qid}"] = huella
+                respuestas[qid] = col_texto.text_area(pregunta["texto"], key=f"resp_{qid}", height=80)
     respondidas = sum(1 for v in respuestas.values() if v.strip())
     st.progress(respondidas / len(respuestas), text=f"{respondidas} de {len(respuestas)} preguntas respondidas")
 

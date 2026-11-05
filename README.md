@@ -32,15 +32,19 @@ _Por completar._
 
 ## 6. Demo
 
-Correr en local:
+Por ahora corre solo en local:
 
 ```bash
 pip install -r requirements.txt
-cp .env.example .env   # y completar la clave
+cp .env.example .env   # y completar GEMINI_API_KEY
 streamlit run app/streamlit_app.py
 ```
 
-_URL pública, capturas y diagrama de arquitectura: por completar._
+Flujo: feed de convocatorias → **✨ Generar propuesta** → leer el TdR → elegir modo
+(borrador desde el TdR, desde propuestas anteriores o entrevista por texto/voz) →
+semáforo de reglas del donante → descargar Word (técnica) y Excel (económica).
+
+_Capturas y diagrama de arquitectura: por completar._
 
 ## 7. Modelo de negocio
 
@@ -48,11 +52,12 @@ _Por completar._
 
 ## 8. Herramientas del curso
 
-| Herramienta | Sesión | Dónde está |
-|---|---|---|
-| Scraping y APIs (feed de convocatorias) | 03 | `data/convocatorias/` |
-| LLM con salidas estructuradas y RAG | 08 | `ai/` _(en construcción)_ |
-| Voz a texto con Whisper | 13 | `ai/` _(en construcción)_ |
+| Herramienta | Sesión | Para qué la usa el producto | Dónde está |
+|---|---|---|---|
+| Scraping y APIs | 03 | Feed de convocatorias y descarga del TdR desde el enlace (PDF, Word, HTML, Google Drive) | `data/convocatorias/`, `ai/documentos.py` |
+| LLM con salidas estructuradas | 08 | Extraer las reglas del TdR y redactar propuesta, matriz y presupuesto en JSON validado | `ai/esquemas.py`, `ai/generador.py`, `ai/llm.py` |
+| RAG | 08 | Reutilizar ideas de propuestas anteriores de la organización, citando cada fragmento | `ai/documentos.py` (`Recuperador`), `ai/generador.py` |
+| Voz a texto con Whisper | 13 | Responder la entrevista hablando; corre en la laptop, el audio no sale de ella | `ai/voz.py` |
 
 ## 9. Qué hizo el agente
 
