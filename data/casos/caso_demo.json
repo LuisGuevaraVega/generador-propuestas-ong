@@ -1,0 +1,26 @@
+{
+  "nota": "Caso 100% ficticio para el demo. Organizaciones, cifras y nombres son inventados; las cifras marcadas como 'de ejemplo' no son estadísticas reales.",
+  "proyecto": "Emprende Joven Norte: empleabilidad y capital semilla para jóvenes de Chiclayo",
+  "respuestas": {
+    "org_1": "Somos la Asociación Juventud Emprende Norte (organización ficticia), una ONG de Chiclayo fundada en 2017. Trabajamos empleabilidad juvenil, emprendimiento y voluntariado con jóvenes de barrios periurbanos.",
+    "org_2": "Entre 2022 y 2024 ejecutamos 'Primer Empleo Norte': 180 jóvenes capacitados en habilidades blandas y 62 consiguieron empleo formal en 6 meses. También acompañamos a 40 emprendimientos en ferias distritales.",
+    "org_3": "Postulamos con Zukunft Jugend e.V. (ficticia), una ONG alemana con la que trabajamos desde 2020 en dos proyectos pequeños. Ellos presentan la solicitud al BMZ y nosotros ejecutamos en campo.",
+    "pro_1": "Muchos jóvenes de 18 a 29 años de José Leonardo Ortiz y La Victoria (Chiclayo) no estudian ni tienen empleo formal. Los que emprenden lo hacen sin plan de negocio ni capital, y cierran en pocos meses.",
+    "pro_2": "En nuestro diagnóstico 2025 con 300 jóvenes (dato de ejemplo), 6 de cada 10 trabajaban en la informalidad y 7 de cada 10 emprendimientos juveniles cerraron antes del año. Podemos complementar con datos de la ENAHO para Lambayeque.",
+    "pro_3": "Las causas son: poca formación en gestión de negocios, falta de acceso a crédito porque no tienen historial, y redes de apoyo débiles. Los programas públicos llegan poco a estos distritos y sin acompañamiento posterior.",
+    "gm_1": "120 jóvenes de 18 a 29 años, al menos 60% mujeres, que tienen una idea de negocio o un emprendimiento de menos de un año.",
+    "gm_2": "Unas 480 personas de sus familias, y 30 jóvenes voluntarios que se forman como mentores pares.",
+    "gm_3": "Convocatoria abierta con municipalidades y colegios, entrevista y un bootcamp de 2 semanas. Los jóvenes votan las reglas del fondo de capital semilla y eligen representantes en el comité del proyecto.",
+    "mat_1": "Que los jóvenes manejen sus negocios con registros de ventas y costos, y que sus emprendimientos sigan funcionando y generen más ingresos.",
+    "mat_2": "Componente 1: formación en plan de negocio y finanzas. Componente 2: capital semilla con mentoría. Componente 3: red de voluntarios jóvenes que acompañan a otros jóvenes y hacen incidencia con la municipalidad.",
+    "mat_3": "Hoy, según nuestro diagnóstico de ejemplo, solo 15% lleva registros de ventas, el ingreso mensual promedio del negocio es de S/ 600, y 30% de los emprendimientos sigue activo al año.",
+    "act_1": "C1: bootcamp, 8 talleres de plan de negocio y finanzas, concurso de planes. C2: capital semilla de 800 euros por emprendimiento para 60 ganadores, más 6 mentorías individuales. C3: formación de 30 voluntarios mentores, ferias trimestrales y una mesa de trabajo con la municipalidad.",
+    "act_2": "18 meses. Meses 1 a 4 convocatoria y formación, meses 5 a 6 concurso y entrega de capital, meses 6 a 16 mentorías y ferias, meses 17 a 18 evaluación y cierre.",
+    "act_3": "Una coordinadora a tiempo completo, línea de base al inicio y medición al final, reportes trimestrales con un tablero de seguimiento y reuniones mensuales con el comité juvenil.",
+    "rie_1": "Deserción de jóvenes que consiguen trabajo: lo mitigamos con horarios flexibles y clases virtuales. Uso del capital para otros fines: entregamos en bienes y con plan aprobado. Cambio de autoridades municipales: firmamos convenio temprano.",
+    "rie_2": "La red de voluntarios mentores sigue activa con apoyo de la municipalidad, y los negocios más fuertes se vinculan con cajas municipales para crédito.",
+    "pre_1": "Coordinadora del proyecto a tiempo completo con 1,100 euros al mes durante 18 meses; especialista en emprendimiento a medio tiempo, 450 euros al mes durante 16 meses; asistente administrativo a medio tiempo, 300 euros al mes durante 18 meses.",
+    "pre_2": "Capital semilla 800 euros por 60 emprendimientos. Talleres: 8 talleres a 350 euros cada uno. Bootcamp 2,500 euros. Mentorías 6 por emprendimiento a 25 euros. Ferias 6 a 900 euros. Formación de voluntarios 3,000 euros. Movilidad local 150 euros al mes por 18 meses. Línea de base y evaluación final 6,000 euros. Un viaje de acompañamiento del socio alemán 2,800 euros.",
+    "pre_3": "La ONG local aporta 8,000 euros (local y personal parcial), Zukunft Jugend aporta 20,000 euros de donaciones privadas, la municipalidad aporta 4,000 euros en ambientes para ferias. El resto se pide al BMZ."
+  }
+}

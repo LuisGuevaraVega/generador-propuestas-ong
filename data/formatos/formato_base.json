@@ -1,0 +1,104 @@
+{
+  "id": "formato_base",
+  "nombre": "Formato base de propuesta técnica y económica",
+  "inspirado_en": "BMZ – Fomento de proyectos de ONG privadas (Leitfaden zum Projektantrag, Engagement Global/bengo, versión noviembre 2025)",
+  "fuente": "https://bengo.engagement-global.de/files/2_Mediathek/Mediathek_Microsites/bengo/Service/Dokumente/Handreichungen/de/leitfaden-projektantrag.pdf",
+  "moneda": "EUR",
+  "estilo": {"fuente": "Arial", "tamano": 11, "paginas_max": 30},
+  "secciones": [
+    {
+      "id": "organizacion",
+      "titulo": "1. Organización local y alianza",
+      "tipo": "texto",
+      "proposito": "Mostrar que la organización local tiene capacidad y experiencia para ejecutar el proyecto.",
+      "preguntas": [
+        {"id": "org_1", "texto": "¿Cómo se llama tu organización, desde cuándo existe y en qué temas trabaja?"},
+        {"id": "org_2", "texto": "¿Qué proyectos parecidos han ejecutado antes y qué lograron? Da uno o dos ejemplos con cifras."},
+        {"id": "org_3", "texto": "¿Con qué socio internacional postulan y cómo es la relación entre ambos?"}
+      ]
+    },
+    {
+      "id": "problema",
+      "titulo": "2. Situación inicial y análisis del problema",
+      "tipo": "texto",
+      "proposito": "Explicar el problema concreto, sus causas y por qué el proyecto es relevante.",
+      "preguntas": [
+        {"id": "pro_1", "texto": "¿Cuál es el problema principal que quieren resolver y dónde ocurre (distritos, región)?"},
+        {"id": "pro_2", "texto": "¿Qué datos o evidencias tienen del problema? (encuestas, ENAHO, INEI, diagnósticos propios)"},
+        {"id": "pro_3", "texto": "¿Cuáles son las causas principales y qué ya se ha intentado antes en la zona?"}
+      ]
+    },
+    {
+      "id": "grupo_meta",
+      "titulo": "3. Grupo meta",
+      "tipo": "texto",
+      "proposito": "Definir con precisión a quién beneficia el proyecto, cuántas personas y cómo se seleccionan.",
+      "preguntas": [
+        {"id": "gm_1", "texto": "¿Quiénes son las personas participantes directas? (edad, género, situación, cuántas)"},
+        {"id": "gm_2", "texto": "¿Quiénes se benefician de forma indirecta y cuántos son, aproximadamente?"},
+        {"id": "gm_3", "texto": "¿Cómo las van a seleccionar y cómo participan en el diseño del proyecto?"}
+      ]
+    },
+    {
+      "id": "matriz",
+      "titulo": "4. Matriz de impacto",
+      "tipo": "matriz",
+      "proposito": "Objetivo del proyecto, objetivos específicos e indicadores SMART con línea de base y meta.",
+      "preguntas": [
+        {"id": "mat_1", "texto": "Al terminar el proyecto, ¿qué cambio concreto verán en las personas participantes? (qué harán distinto)"},
+        {"id": "mat_2", "texto": "¿Qué capacidades o recursos nuevos tendrán? Piensa en 2 o 3 componentes del proyecto."},
+        {"id": "mat_3", "texto": "¿Cómo está hoy la situación que quieren cambiar? Da cifras de partida aunque sean estimadas."}
+      ]
+    },
+    {
+      "id": "actividades",
+      "titulo": "5. Actividades y cronograma",
+      "tipo": "texto",
+      "proposito": "Describir qué se hará para lograr cada objetivo específico, con qué métodos y en qué meses.",
+      "preguntas": [
+        {"id": "act_1", "texto": "¿Qué actividades principales harán en cada componente? (talleres, mentorías, capital semilla, ferias…)"},
+        {"id": "act_2", "texto": "¿Cuánto dura el proyecto y en qué orden van las actividades?"},
+        {"id": "act_3", "texto": "¿Cómo harán el monitoreo y quién coordina el proyecto?"}
+      ]
+    },
+    {
+      "id": "riesgos",
+      "titulo": "6. Riesgos y sostenibilidad",
+      "tipo": "texto",
+      "proposito": "Identificar riesgos con medidas de mitigación y explicar qué queda después del proyecto.",
+      "preguntas": [
+        {"id": "rie_1", "texto": "¿Qué podría salir mal? (deserción, economía, clima, política) ¿Cómo lo evitarían?"},
+        {"id": "rie_2", "texto": "¿Qué queda funcionando cuando el proyecto termine y quién lo sostiene?"}
+      ]
+    },
+    {
+      "id": "presupuesto",
+      "titulo": "7. Plan de financiamiento",
+      "tipo": "presupuesto",
+      "proposito": "Presupuesto por objetivo específico y actividad, con fuentes de financiamiento.",
+      "preguntas": [
+        {"id": "pre_1", "texto": "¿Qué personal necesita el proyecto? (cargos, dedicación y sueldo mensual aproximado)"},
+        {"id": "pre_2", "texto": "¿Cuáles son los costos principales de las actividades? (capital semilla por persona, talleres, materiales, movilidad)"},
+        {"id": "pre_3", "texto": "¿Cuánto aportan ustedes, el socio y otros (dinero o especie)? ¿Cuánto piden al donante?"}
+      ]
+    }
+  ],
+  "reglas": {
+    "financiamiento_max_pct": 0.75,
+    "financiamiento_max_excepcional_pct": 0.90,
+    "aporte_propio_min_pct": 0.25,
+    "reserva_max_pct": 0.035,
+    "reserva_min_meses_proyecto": 13,
+    "administrativos_max_pct": 0.12,
+    "objetivo_superior_obligatorio_desde_eur": 100000,
+    "indicadores_por_objetivo_especifico": [1, 2],
+    "paginas_max": 30,
+    "categorias_gasto": {
+      "inversiones": "Inversiones (equipos, capital semilla en bienes)",
+      "operativos": "Gastos operativos (talleres, materiales, movilidad, servicios)",
+      "personal": "Personal del proyecto",
+      "viajes": "Viajes de acompañamiento",
+      "evaluacion": "Evaluación o estudios"
+    }
+  }
+}
