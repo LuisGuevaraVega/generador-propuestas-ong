@@ -180,11 +180,15 @@ if modo == "entrevista":
                             previo = estado.get(f"resp_{qid}", "").strip()
                             estado[f"resp_{qid}"] = f"{previo} {texto}".strip()
                         estado[f"voz_hecha_{qid}"] = huella
-                        estado[f"voz_msg_{qid}"] = (nivel_msg, mensaje)
+                        # Solo se avisa si hubo un problema; si salió bien, el texto ya está en el cuadro.
+                        if nivel_msg == "ok":
+                            estado.pop(f"voz_msg_{qid}", None)
+                        else:
+                            estado[f"voz_msg_{qid}"] = (nivel_msg, mensaje)
                 respuestas[qid] = col_texto.text_area(pregunta["texto"], key=f"resp_{qid}", height=80)
                 if f"voz_msg_{qid}" in estado:
                     nivel_msg, mensaje = estado[f"voz_msg_{qid}"]
-                    {"ok": st.caption, "alerta": st.warning, "error": st.error}[nivel_msg](mensaje)
+                    {"alerta": st.warning, "error": st.error}[nivel_msg](mensaje)
     respondidas = sum(1 for v in respuestas.values() if v.strip())
     st.progress(respondidas / len(respuestas), text=f"{respondidas} de {len(respuestas)} preguntas respondidas")
 
