@@ -24,8 +24,31 @@ VOCABULARIO = (
 )
 
 
+def analizar_audio(audio: bytes) -> dict:
+    """Duración y volumen de una grabación WAV, para avisar si llegó en silencio."""
+    import array
+    import io
+    import wave
+
+    try:
+        with wave.open(io.BytesIO(audio)) as w:
+            frames, tasa, ancho = w.readframes(w.getnframes()), w.getframerate(), w.getsampwidth()
+            duracion = w.getnframes() / float(tasa or 1)
+    except Exception:
+        return {"duracion": None, "pico": None, "rms": None}
+    if ancho != 2 or not frames:
+        return {"duracion": duracion, "pico": None, "rms": None}
+    muestras = array.array("h", frames)
+    pico = max(abs(m) for m in muestras) / 32768
+    rms = (sum(m * m for m in muestras) / len(muestras)) ** 0.5 / 32768
+    return {"duracion": duracion, "pico": pico, "rms": rms}
+
+
 def transcribir(audio: bytes, idioma: str = "es", tiempo_max: int = 180) -> str:
     """Convierte una nota de voz (wav, mp3, ogg, m4a…) en texto, en un proceso aparte."""
+    pico = analizar_audio(audio)["pico"]
+    if pico is not None and pico < 0.01:  # silencio: Whisper inventaría texto
+        return ""
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as archivo:
         archivo.write(audio)
         ruta = archivo.name
@@ -47,10 +70,16 @@ def _transcribir_aqui(ruta: str, idioma: str) -> str:
     from faster_whisper import WhisperModel
 
     modelo = WhisperModel(os.environ.get("WHISPER_MODEL", "base"), device="cpu", compute_type="int8")
-    segmentos, _info = modelo.transcribe(
-        ruta, language=idioma, initial_prompt=VOCABULARIO, vad_filter=True, beam_size=5
-    )
-    return " ".join(s.text.strip() for s in segmentos).strip()
+    # Primero con filtro de voz (ignora silencios); si descarta todo, por ejemplo
+    # porque la voz llegó con poco volumen, se reintenta sin el filtro.
+    for filtro in (True, False):
+        segmentos, _info = modelo.transcribe(
+            ruta, language=idioma, initial_prompt=VOCABULARIO if filtro else None, vad_filter=filtro, beam_size=5
+        )
+        texto = " ".join(s.text.strip() for s in segmentos).strip()
+        if texto and texto not in VOCABULARIO:  # evita devolver el vocabulario como "alucinación"
+            return texto
+    return ""
 
 
 if __name__ == "__main__":

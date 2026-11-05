@@ -13,7 +13,7 @@ from ai.documentos import Recuperador, descargar_tdr, leer_documento, trocear  #
 from ai.exportar import a_excel, a_word, etiqueta_fuente, huella_autoria  # noqa: E402
 from ai.generador import MODOS, extraer_reglas, generar_propuesta  # noqa: E402
 from ai.reglas import SIMBOLOS, calcular_presupuesto, reglas_efectivas, validar_matriz  # noqa: E402
-from ai.voz import transcribir  # noqa: E402
+from ai.voz import analizar_audio, transcribir  # noqa: E402
 
 st.set_page_config(page_title="Generar propuesta", page_icon="✨", layout="wide")
 
@@ -125,9 +125,41 @@ if modo == "entrevista":
         for qid, texto in CASO["respuestas"].items():
             estado[f"resp_{qid}"] = texto
 
+    def procesar_voz(contenido):
+        """Transcribe y devuelve (texto, mensaje para el usuario, nivel)."""
+        nivel = analizar_audio(contenido)
+        dur, pico = nivel["duracion"], nivel["pico"]
+        print(f"[voz] {len(contenido)} bytes · {dur} s · pico {pico} · rms {nivel['rms']}", flush=True)
+        if pico is not None and pico < 0.01:
+            return "", (f"La grabación ({dur:.1f} s) llegó en silencio: Chrome está usando un micrófono que no te "
+                        "capta. Cámbialo en el ícono de la barra de direcciones → Micrófono."), "error"
+        try:
+            texto = transcribir(contenido)
+        except Exception as error:
+            return "", f"Whisper falló: {error}", "error"
+        print(f"[voz] texto: {texto!r}", flush=True)
+        if not texto:
+            return "", (f"Grabé {dur or 0:.1f} s con volumen bajo (pico {pico or 0:.0%}) y no reconocí palabras. "
+                        "Acércate al micrófono o revisa cuál usa Chrome."), "alerta"
+        return texto, f"Transcrito ({dur or 0:.1f} s): «{texto}»", "ok"
+
     st.button("Rellenar con el caso de ejemplo (ficticio)", on_click=rellenar_ejemplo)
     st.caption("Responde escribiendo o con 🎙️: tu nota de voz se transcribe con Whisper en esta computadora; "
                "el audio no se envía a internet.")
+
+    with st.expander("🎙️ Probar micrófono"):
+        st.caption("Graba 3 a 5 segundos diciendo cualquier frase. Verás el volumen y lo que entendió Whisper.")
+        prueba = st.audio_input("Prueba de micrófono", key="voz_prueba")
+        if prueba is not None:
+            datos = analizar_audio(prueba.getvalue())
+            with st.spinner("Transcribiendo con Whisper…"):
+                texto, mensaje, nivel_msg = procesar_voz(prueba.getvalue())
+            c1, c2 = st.columns(2)
+            c1.metric("Duración", f"{datos['duracion'] or 0:.1f} s")
+            c2.metric("Volumen máximo", f"{datos['pico'] or 0:.0%}",
+                      help="Por debajo de 1% es silencio: el micrófono elegido en Chrome no te escucha.")
+            {"ok": st.success, "alerta": st.warning, "error": st.error}[nivel_msg](mensaje)
+
     respuestas = {}
     for seccion in FORMATO["secciones"]:
         with st.expander(seccion["titulo"]):
@@ -143,11 +175,16 @@ if modo == "entrevista":
                     huella = hash(contenido)
                     if estado.get(f"voz_hecha_{qid}") != huella:
                         with st.spinner("Transcribiendo con Whisper…"):
-                            texto = transcribir(contenido)
-                        previo = estado.get(f"resp_{qid}", "").strip()
-                        estado[f"resp_{qid}"] = f"{previo} {texto}".strip()
+                            texto, mensaje, nivel_msg = procesar_voz(contenido)
+                        if texto:
+                            previo = estado.get(f"resp_{qid}", "").strip()
+                            estado[f"resp_{qid}"] = f"{previo} {texto}".strip()
                         estado[f"voz_hecha_{qid}"] = huella
+                        estado[f"voz_msg_{qid}"] = (nivel_msg, mensaje)
                 respuestas[qid] = col_texto.text_area(pregunta["texto"], key=f"resp_{qid}", height=80)
+                if f"voz_msg_{qid}" in estado:
+                    nivel_msg, mensaje = estado[f"voz_msg_{qid}"]
+                    {"ok": st.caption, "alerta": st.warning, "error": st.error}[nivel_msg](mensaje)
     respondidas = sum(1 for v in respuestas.values() if v.strip())
     st.progress(respondidas / len(respuestas), text=f"{respondidas} de {len(respuestas)} preguntas respondidas")
 
