@@ -1,51 +1,60 @@
 # Guía de entrevista: gerentes de ONG como usuarios potenciales
 
-**Duración máxima: 15 minutos.** Basada en "How to Talk to Users" de Y Combinator: preguntar por lo que **ya pasó**, no por opiniones sobre el futuro. No se habla de precios.
+**Duración máxima: 15 minutos.** Basada en "How to Talk to Users" de Y Combinator: preguntar por **hechos pasados y concretos** ("la última vez que…"), no por opiniones sobre el futuro ("¿lo usaría?"). No se habla del precio del producto.
 
-## Qué quiero aprender
+## Qué debe salir de cada entrevista
 
-1. ¿Cuánto les cuesta hoy armar una propuesta técnica y económica? (horas, personas, consultor)
-2. ¿Qué parte es la más difícil? ¿El presupuesto cuadrado con el marco lógico y el TdR?
-3. ¿Les sirve el MVP y cuál de los 3 modos usarían?
-4. ¿Sienten como propia una propuesta hecha con este apoyo?
+Lo que pide la sección 3 del README y la rúbrica ("Problema y usuario", 3 puntos):
+
+1. **Quién lo sufre, con precisión:** cargo, tipo de organización, región y cuántas propuestas hacen al año.
+2. **Cuánto les cuesta:** horas, días, personas, soles (consultor externo) y errores (observaciones, rechazos, convocatorias perdidas).
+3. **Cómo lo resuelven hoy:** Word, Excel, propuestas anteriores, consultores, ChatGPT, WhatsApp.
+4. **Una frase textual y una cifra** para los primeros 30 segundos del pitch.
 
 ## Apertura (1 min)
 
-> "Es para el proyecto final de mi diplomatura en la PUCP. Quiero entender cómo arman sus propuestas y mostrarte un prototipo. Son 15 minutos. ¿Puedo grabar el audio solo para mis notas? No pondré tu nombre ni el de la organización."
+> "Muchas gracias por su tiempo. Esta conversación es para el proyecto final de mi diplomatura en la PUCP. Quisiera entender cómo arman ustedes sus propuestas y, al final, mostrarle un prototipo. Le tomará unos 15 minutos. ¿Me permite grabar el audio solo para mis notas? No mencionaré su nombre ni el de su organización."
 
-## Parte 1. Cómo lo hacen hoy (6 min): sin mostrar nada
+## Parte 1. Su organización (2 min)
 
-1. Cuéntame la **última propuesta** que armaron: ¿cuántas personas y cuántos días les tomó?
-2. ¿Qué parte les cuesta más: el marco lógico, los indicadores o el presupuesto? ¿Por qué?
-3. ¿Parten de una propuesta anterior o empiezan de cero?
-4. ¿Alguna vez les **observaron o rechazaron** una propuesta? ¿Por qué fue?
-5. ¿Usan ChatGPT u otra IA para esto? ¿Qué no les gustó?
+1. ¿Cuál es su cargo y **quién se encarga de armar las propuestas** en su organización?
+2. ¿Qué tipo de organización es (tamaño, región, temas) y **a qué fondos** suelen postular?
+3. ¿Cuántas propuestas presentan **al año**, y cuántas ganan, más o menos?
 
-## Parte 2. Prototipo (7 min)
+## Parte 2. La última propuesta (7 min): sin mostrar nada
 
-Muestra **un solo flujo** con la convocatoria del DAP de Australia: botón "Generar propuesta" → leer TdR → modo "Borrador desde el TdR" → semáforo → abrir el Word. Si hay tiempo, déjalos tocar el semáforo o el Excel.
+4. ¿Podría contarme cómo armaron **la última propuesta**, de principio a fin? ¿Quiénes participaron, cuántos días les tomó y cuántas horas le dedicaron, aproximadamente?
+5. ¿**Con qué herramientas** la prepararon? (Word, Excel, una propuesta anterior, un consultor, ChatGPT, WhatsApp con el equipo)
+6. ¿Qué parte le resultó **más difícil** o les tomó más tiempo: el marco lógico, los indicadores, el presupuesto o cuadrar todo con el TdR? ¿A qué se debe?
+7. ¿Alguna vez **dejaron pasar una convocatoria** por falta de tiempo, o les **observaron o rechazaron** una propuesta? ¿Qué ocurrió?
+8. ¿Han contratado alguna vez a un **consultor externo** para formular una propuesta? Aproximadamente, ¿cuánto le pagaron: **menos de S/ 3,000, entre S/ 3,000 y 8,000, o más de S/ 8,000?** ¿O le pagan un porcentaje si ganan?
 
-6. ¿Qué fue lo **más útil** y qué **sobra**?
-7. De los 3 modos (desde el TdR, desde propuestas anteriores, entrevista por voz), ¿cuál usarías y en qué momento?
-8. Este borrador, ¿te ahorra trabajo o te da más trabajo corregirlo? ¿Cuántas horas crees que ahorraría?
-9. ¿Sentirías esta propuesta como **de tu organización**? ¿Qué le falta para que lo sea?
+## Parte 3. Prototipo (4 min)
+
+Mostrar **un solo flujo** con la convocatoria del DAP de Australia: botón "Generar propuesta" (el TdR se lee solo) → modo "Borrador desde el TdR" → "Generar propuesta" → aviso de "Qué revisar" → abrir el Word. No explicar de más: dejar que la persona mire y comente.
+
+9. ¿Qué es **lo primero que haría** con este borrador? ¿Qué le resulta útil y qué le sobra?
+10. ¿Sentiría esta propuesta como **de su organización**? ¿Qué le faltaría para que lo sea?
 
 ## Cierre (1 min)
 
-10. ¿Qué tendría que tener para que lo usaras en la próxima convocatoria?
-11. ¿A quién más me recomiendas preguntarle?
+11. ¿Hay **alguien más** a quien me recomendaría hacerle estas preguntas?
+
+> "Le agradezco mucho su tiempo y su experiencia. Me ha sido de gran ayuda."
 
 ## Una pregunta extra según la persona (si sobra tiempo)
 
-- **Gerente de desarrollo económico:** ¿qué hace que una propuesta suya gane?
-- **Gerente general:** ¿qué errores de presupuesto les han costado una observación o dinero?
-- **Especialista que formula para Fondoempleo:** ¿qué parte de los Formatos 02 y 03 te cuesta más?
+- **Gerente de desarrollo económico:** En su experiencia, ¿qué hace que una propuesta gane?
+- **Gerente general:** ¿Qué errores de presupuesto les han costado una observación o dinero?
+- **Especialista que formula para Fondoempleo:** ¿Qué parte de los Formatos 02 y 03 le cuesta más?
 
-## Recuerda
+## Recordatorios para la entrevista
 
-- **No expliques de más.** Si se confunden con algo del prototipo, anótalo: es información útil.
-- **Los elogios no cuentan.** Valen las cifras concretas (días, personas) y las historias reales.
-- **Conflicto de interés:** preséntalo como tarea del diplomado, no pidas documentos internos y anonimiza las notas.
+- **Pedir historias, no opiniones.** Si la respuesta es "normalmente…", preguntar "¿y la última vez?".
+- **Pedir cifras aunque sean aproximadas:** días, horas, personas, soles, propuestas al año.
+- **Los elogios no cuentan.** Valen las cifras y las historias reales.
+- **No explicar de más.** Si algo del prototipo confunde, anotarlo: es información útil.
+- **Conflicto de interés:** presentarlo como tarea del diplomado, no pedir documentos internos y anonimizar las notas.
 
 ---
 
@@ -55,21 +64,44 @@ Guardar como `docs/research/entrevista_1.md`, `entrevista_2.md` y `entrevista_3.
 
 ```
 Fecha:
-Perfil (anónimo): p. ej. "Gerente de desarrollo económico, ONG de Lima"
-Medio: presencial / llamada / videollamada
+Medio: presencial / llamada / WhatsApp
 
-Última propuesta (personas y días):
+QUIÉN
+Cargo (anónimo):
+Tipo de organización, tamaño y región:
+Fondos a los que postulan:
+Propuestas al año / ganadas:
+
+CUÁNTO LES CUESTA
+Última propuesta: personas / días / horas:
+Consultor externo (rango en S/ o %):
+Observaciones, rechazos o convocatorias perdidas:
+
+CÓMO LO RESUELVEN HOY
+Herramientas:
 Parte más difícil y por qué:
-¿Parten de una propuesta anterior?:
-Observaciones o rechazos:
-Uso de IA:
 
-Lo más útil del prototipo:
+PROTOTIPO
+Lo primero que haría / lo que le sirve:
 Lo que sobra o confundió:
-Modo que usaría y cuándo:
-Horas que ahorraría:
 ¿La siente como propia? ¿Qué le falta?:
 
-Frase textual:
+CIERRE
 A quién me recomendó:
+Frase textual para el pitch:
 ```
+
+## Síntesis de las 3 entrevistas (para el README)
+
+| Dato | Entrevista 1 | Entrevista 2 | Entrevista 3 |
+|---|---|---|---|
+| Cargo y organización | | | |
+| Propuestas al año / ganadas | | | |
+| Personas y días por propuesta | | | |
+| Horas por propuesta | | | |
+| Consultor externo (S/ o %) | | | |
+| Herramientas de hoy | | | |
+| Parte más difícil | | | |
+| Errores o convocatorias perdidas | | | |
+| ¿La siente como propia? | | | |
+| Frase textual | | | |
