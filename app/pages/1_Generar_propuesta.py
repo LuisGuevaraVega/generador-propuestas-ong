@@ -11,7 +11,7 @@ sys.path.insert(0, str(RAIZ))
 
 from ai import enaho, fondoempleo, historial  # noqa: E402
 from ai.auditor import auditar_presupuesto, chequeos_auditoria, evaluar, puntaje_total  # noqa: E402
-from ai.documentos import Recuperador, descargar_tdr, leer_documento, trocear  # noqa: E402
+from ai.documentos import Recuperador, descargar_archivo_tdr, leer_documento, trocear  # noqa: E402
 from ai.esquemas import Aporte, LineaPresupuesto, Parrafo  # noqa: E402
 from ai.exportar import a_excel, a_word, etiqueta_fuente, huella_autoria  # noqa: E402
 from ai.generador import MODOS, extraer_reglas, generar_propuesta, regenerar_seccion  # noqa: E402
@@ -71,19 +71,30 @@ col_a, col_b = st.columns(2)
 with col_a:
     if conv and conv.get("links"):
         enlaces = {l["label"]: l["url"] for l in conv["links"]}
-        etiqueta = st.selectbox("Leer el TdR desde el enlace de la convocatoria", list(enlaces))
-        if st.button("📥 Descargar y leer TdR", width="stretch"):
+        etiqueta = st.selectbox("Enlace de la convocatoria", list(enlaces))
+        st.link_button("🔗 Abrir la página original", enlaces[etiqueta], width="stretch")
+        if st.button("📥 Leer TdR desde el enlace", width="stretch",
+                     help="La app descarga el TdR, lo lee y extrae sus reglas: monto, plazo, topes y criterios."):
             with st.spinner("Descargando y leyendo el TdR…"):
                 try:
-                    estado.tdr_texto = descargar_tdr(enlaces[etiqueta])
+                    archivo_tdr = descargar_archivo_tdr(enlaces[etiqueta])
+                    estado.tdr_texto = archivo_tdr["texto"]
                     estado.tdr_fuente = etiqueta
+                    estado.tdr_archivo = archivo_tdr if archivo_tdr["es_documento"] else None
                 except Exception as error:
-                    st.error(f"No se pudo descargar ({error}). Sube el archivo a la derecha.")
+                    st.error(f"No se pudo descargar ({error}). Ábrelo con el botón de arriba y súbelo a la derecha.")
+        if estado.get("tdr_archivo"):
+            arch = estado.tdr_archivo
+            st.download_button(f"⬇️ Guardar el TdR en mi computadora ({arch['nombre']})", arch["contenido"],
+                               file_name=arch["nombre"], mime=arch["mime"], width="stretch")
+        elif estado.get("tdr_fuente") == etiqueta:
+            st.caption("Este enlace es una página web, no un PDF: ábrela con «Abrir la página original».")
 with col_b:
     archivo = st.file_uploader("…o sube el TdR / bases (PDF, Word, Excel)", type=["pdf", "docx", "xlsx", "txt", "html"])
     if archivo and st.button("📄 Leer archivo subido", width="stretch"):
         estado.tdr_texto = leer_documento(archivo.name, archivo.getvalue())
         estado.tdr_fuente = archivo.name
+        estado.tdr_archivo = None
 
 if estado.get("tdr_texto") and estado.get("tdr_leido") != estado.get("tdr_fuente"):
     with st.spinner("Extrayendo las reglas del TdR…"):
@@ -110,7 +121,7 @@ if reglas_tdr:
         with st.expander("Ver todas las reglas extraídas"):
             st.json(reglas_tdr.model_dump())
     if st.button("Quitar TdR y usar el formato base BMZ"):
-        for k in ("tdr_texto", "tdr_fuente", "tdr_leido", "reglas_tdr"):
+        for k in ("tdr_texto", "tdr_fuente", "tdr_leido", "reglas_tdr", "tdr_archivo"):
             estado.pop(k, None)
         st.rerun()
 else:

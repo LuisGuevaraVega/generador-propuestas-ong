@@ -82,20 +82,36 @@ def _url_descarga(url: str) -> str:
     return url
 
 
-def descargar_tdr(url: str) -> str:
-    """Descarga el TdR o la página de la convocatoria y devuelve su texto."""
+def descargar_archivo_tdr(url: str) -> dict:
+    """Descarga el TdR y devuelve {'texto', 'contenido', 'nombre', 'mime', 'es_documento'}.
+
+    `es_documento` es True si es un PDF o Word que el usuario puede guardar; si el enlace
+    es una página web, solo se extrae su texto.
+    """
     respuesta = requests.get(_url_descarga(url), headers=CABECERAS, timeout=30)
     respuesta.raise_for_status()
     tipo = respuesta.headers.get("Content-Type", "").lower()
-    if "pdf" in tipo or respuesta.content[:4] == b"%PDF":
-        return leer_documento("tdr.pdf", respuesta.content)
+    contenido = respuesta.content
+    nombre_url = re.sub(r"[?#].*$", "", url).rstrip("/").rsplit("/", 1)[-1] or "tdr"
+    if "pdf" in tipo or contenido[:4] == b"%PDF":
+        nombre = nombre_url if nombre_url.lower().endswith(".pdf") else "tdr.pdf"
+        return {"texto": leer_documento("tdr.pdf", contenido), "contenido": contenido, "nombre": nombre,
+                "mime": "application/pdf", "es_documento": True}
     if "wordprocessingml" in tipo:
-        return leer_documento("tdr.docx", respuesta.content)
+        nombre = nombre_url if nombre_url.lower().endswith(".docx") else "tdr.docx"
+        return {"texto": leer_documento("tdr.docx", contenido), "contenido": contenido, "nombre": nombre,
+                "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "es_documento": True}
     try:
-        html = respuesta.content.decode("utf-8")
+        html = contenido.decode("utf-8")
     except UnicodeDecodeError:
-        html = respuesta.content.decode(respuesta.apparent_encoding or "latin-1", errors="ignore")
-    return _limpiar_html(html)
+        html = contenido.decode(respuesta.apparent_encoding or "latin-1", errors="ignore")
+    return {"texto": _limpiar_html(html), "contenido": contenido, "nombre": "convocatoria.html",
+            "mime": "text/html", "es_documento": False}
+
+
+def descargar_tdr(url: str) -> str:
+    """Descarga el TdR o la página de la convocatoria y devuelve su texto."""
+    return descargar_archivo_tdr(url)["texto"]
 
 
 def recortar(texto: str, maximo: int = MAX_CARACTERES) -> str:

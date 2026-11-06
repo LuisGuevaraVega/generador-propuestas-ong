@@ -46,6 +46,6 @@ for item in reporte["items"]:
         st.markdown(" · ".join(f"[{l['label']}]({l['url']})" for l in item["links"]))
         if st.button("✨ Generar propuesta (Pro)", key=f"gen-{fecha}-{item['title'][:40]}"):
             st.session_state["convocatoria"] = item
-            for clave in ("tdr_texto", "tdr_fuente", "tdr_leido", "reglas_tdr", "propuesta"):
+            for clave in ("tdr_texto", "tdr_fuente", "tdr_leido", "reglas_tdr", "tdr_archivo", "propuesta"):
                 st.session_state.pop(clave, None)
             st.switch_page("pages/1_Generar_propuesta.py")
