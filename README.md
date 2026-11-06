@@ -81,7 +81,9 @@ Hace tres años esto no era posible ni barato:
 
 ## 6. Demo
 
-**Cómo correrlo** (por ahora en local):
+**Demo en línea:** **https://generador-propuestas-ong.streamlit.app/** (Streamlit Community Cloud; cada visitante ve solo sus propias propuestas).
+
+**Cómo correrlo en local:**
 
 ```bash
 pip install -r requirements.txt
@@ -119,7 +121,7 @@ flowchart TB
         GEM[API de Gemini]
         BCRP[API del BCRP]
     end
-    subgraph laptop["Laptop del usuario"]
+    subgraph laptop["App: Streamlit Cloud o laptop del usuario"]
         UI[App Streamlit<br/>app/] --> GEN[Generador<br/>ai/generador.py]
         UI --> DOC[Lectura de TdR y documentos<br/>ai/documentos.py]
         UI --> VOZ[Whisper local<br/>ai/voz.py]
@@ -140,7 +142,7 @@ flowchart TB
 |---|---|---|
 | Redacción, reglas del TdR y puntaje | Gemini 3.6 Flash, con modelos de respaldo | Salidas estructuradas (JSON validado con Pydantic), contexto largo y bajo costo; si un modelo se satura, pasa al siguiente. |
 | OCR de PDF escaneados y fotos | Gemini Flash-Lite (multimodal) | Lee tablas y documentos torcidos sin instalar nada; cuesta menos de un décimo de centavo por página. |
-| Voz a texto | faster-whisper en la laptop | Las respuestas y entrevistas de la organización son confidenciales: el audio no sale de su computadora. |
+| Voz a texto | faster-whisper, dentro de la propia app | No se envía el audio a ningún servicio de terceros. En la versión local, el audio ni siquiera sale de la laptop: útil para entrevistas confidenciales. |
 | Búsqueda en documentos | TF-IDF (scikit-learn) | Encuentra los fragmentos relevantes sin costo de API y sin enviar todo el documento. |
 | Tipo de cambio | API del BCRP | Convierte el presupuesto a la moneda del TdR y a soles con el dato oficial del día. |
 | Boletín diario | Rutinas de Claude en la nube | Revisan decenas de fuentes cada mañana sin intervención. |
