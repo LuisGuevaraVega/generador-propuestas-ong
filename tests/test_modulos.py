@@ -146,3 +146,13 @@ def test_silencio_no_se_transcribe():
     audio = _wav(b"\x00\x00" * 16000)
     assert voz.analizar_audio(audio)["pico"] == 0
     assert voz.transcribir(audio) == ""          # no llama a Whisper: evita textos inventados
+
+
+# ---------- ENAHO
+def test_enaho_detecta_departamento_y_arma_contexto():
+    from ai import enaho
+    assert enaho.detectar("Proyecto con jóvenes de Chiclayo") == "14"
+    assert enaho.detectar("Trabajamos en San Martín") == "22"
+    bloque = enaho.contexto("14")
+    assert "Lambayeque: pobreza monetaria 14.0%" in bloque and "Perú (nacional)" in bloque
+    assert enaho.contexto("") == ""

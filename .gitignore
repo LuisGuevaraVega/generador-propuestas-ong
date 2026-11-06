@@ -19,3 +19,6 @@ salidas/
 # Caché local (tipo de cambio, etc.) e historial de propuestas del usuario
 .cache/
 historial/
+
+# Microdatos descargados del INEI (pesados; se bajan con la skill datos-enaho-propuesta)
+datos/

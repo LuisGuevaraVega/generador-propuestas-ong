@@ -25,7 +25,8 @@ MODOS = {
 BASE = """Eres un asistente experto en formular proyectos de desarrollo para ONG del Perú y Latinoamérica.
 Escribes en español técnico, claro, en tercera persona, como en una propuesta a la cooperación internacional.
 En cada párrafo, indicador, línea de presupuesto o aporte, llena `fuentes` con etiquetas exactas:
-"TDR" si sale del TdR o las bases; "IA" si es una sugerencia tuya; las etiquetas DOC:... de los fragmentos
+"TDR" si sale del TdR o las bases; "ENAHO" si es un dato público de la ENAHO; "IA" si es una sugerencia tuya;
+las etiquetas DOC:... de los fragmentos
 de propuestas anteriores que uses; o los ids de las respuestas de la organización (p. ej. "pro_1").
 Nunca inventes datos de la organización (nombre, años, resultados pasados, cifras de diagnóstico):
 si no los tienes, escribe [POR COMPLETAR: qué dato] en el texto y anótalo en `pendientes`."""
@@ -76,8 +77,10 @@ def extraer_reglas(texto_tdr: str, ficha: str = "") -> ReglasConvocatoria:
     return generar_estructurado(prompt, ReglasConvocatoria, instrucciones, temperatura=0.0)
 
 
-def _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuestas, recuperador):
+def _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuestas, recuperador, datos_publicos=""):
     partes = []
+    if datos_publicos:
+        partes.append(datos_publicos)
     if reglas_tdr is not None:
         partes.append("REGLAS DEL TdR:\n" + reglas_tdr.model_dump_json(indent=1))
     if texto_tdr and modo in ("tdr", "previos"):
@@ -103,13 +106,14 @@ def _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuest
 
 
 def generar_propuesta(modo, formato, reglas_tdr=None, texto_tdr="", idea="", organizacion="",
-                      respuestas=None, recuperador=None, al_avanzar=None):
+                      respuestas=None, recuperador=None, al_avanzar=None, datos_publicos=""):
     """Genera textos, matriz y presupuesto. `al_avanzar(paso, total, mensaje)` informa el progreso.
 
     Devuelve también el contexto usado (para regenerar secciones después) y el
     registro de tokens de cada llamada (para calcular el costo).
     """
-    contexto = _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuestas, recuperador)
+    contexto = _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuestas, recuperador,
+                         datos_publicos)
     with medir_costo() as llamadas:
         propuesta = _generar(modo, formato, reglas_tdr, contexto, al_avanzar)
     propuesta.update({"contexto": contexto, "reglas_tdr": reglas_tdr, "llamadas": llamadas,

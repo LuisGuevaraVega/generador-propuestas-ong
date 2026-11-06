@@ -9,7 +9,7 @@ import streamlit as st
 RAIZ = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RAIZ))
 
-from ai import historial  # noqa: E402
+from ai import enaho, historial  # noqa: E402
 from ai.auditor import auditar_presupuesto, chequeos_auditoria, evaluar, puntaje_total  # noqa: E402
 from ai.documentos import Recuperador, descargar_tdr, leer_documento, trocear  # noqa: E402
 from ai.esquemas import Aporte, LineaPresupuesto, Parrafo  # noqa: E402
@@ -132,6 +132,21 @@ organizacion = col_org.text_input("Tu organización (nombre y en qué trabaja)",
 idea = col_idea.text_input("Tu idea en una línea (opcional)",
                            placeholder="Emprendimiento juvenil con capital semilla y voluntariado en Chiclayo")
 
+lista_dep = enaho.departamentos()
+if lista_dep:
+    sugerido = enaho.detectar(idea, organizacion, conv.get("scope", "") if conv else "")
+    codigos = [""] + [c for c, _ in lista_dep]
+    nombres = dict(lista_dep)
+    dep = st.selectbox(f"Departamento del proyecto (datos de la ENAHO {enaho.ANIO} para el problema)", codigos,
+                       index=codigos.index(sugerido) if sugerido in codigos else 0,
+                       format_func=lambda c: nombres.get(c, "Sin datos de la ENAHO"))
+    datos_publicos = enaho.contexto(dep)
+    if datos_publicos:
+        with st.expander("Ver los datos de la ENAHO que se usarán"):
+            st.text(datos_publicos)
+else:
+    datos_publicos = ""
+
 recuperador, respuestas = None, None
 if modo == "previos":
     previas = st.file_uploader("Propuestas anteriores (PDF, Word o Excel)", type=["pdf", "docx", "xlsx"],
@@ -227,6 +242,7 @@ if st.button("✨ Generar propuesta", type="primary", disabled=not listo, width=
             nueva = generar_propuesta(
                 modo, FORMATO, reglas_tdr=reglas_tdr, texto_tdr=estado.get("tdr_texto", ""), idea=idea,
                 organizacion=organizacion, respuestas=respuestas, recuperador=recuperador,
+                datos_publicos=datos_publicos,
                 al_avanzar=lambda paso, total, msg: status.update(label=f"[{paso}/{total}] {msg}"),
             )
             if reglas_tdr is not None:

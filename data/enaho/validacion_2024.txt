@@ -1,0 +1,31 @@
+Validación ENAHO 2024 (código 966)
+
+Pobreza nacional: 27.6% (INEI: 27.6%)
+OK  AMAZONAS        calculado  25.7%  INEI  25.7%
+OK  ANCASH          calculado  22.8%  INEI  22.8%
+OK  APURIMAC        calculado  24.0%  INEI  24.0%
+OK  AREQUIPA        calculado  15.8%  INEI  15.8%
+OK  AYACUCHO        calculado  32.8%  INEI  32.8%
+OK  CAJAMARCA       calculado  45.0%  INEI  45.0%
+OK  CALLAO          calculado  33.9%  INEI  33.9%
+OK  CUSCO           calculado  18.5%  INEI  18.5%
+OK  HUANCAVELICA    calculado  33.4%  INEI  33.4%
+OK  HUANUCO         calculado  39.0%  INEI  39.0%
+OK  ICA             calculado   6.0%  INEI   6.0%
+OK  JUNIN           calculado  18.5%  INEI  18.5%
+OK  LA LIBERTAD     calculado  30.2%  INEI  30.2%
+OK  LAMBAYEQUE      calculado  14.0%  INEI  14.0%
+OK  LIMA            calculado  27.1%  INEI  27.1%
+OK  LORETO          calculado  43.0%  INEI  43.0%
+OK  MADRE DE DIOS   calculado  11.1%  INEI  11.1%
+OK  MOQUEGUA        calculado  11.0%  INEI  11.0%
+OK  PASCO           calculado  39.0%  INEI  39.0%
+OK  PIURA           calculado  31.9%  INEI  31.9%
+OK  PUNO            calculado  39.9%  INEI  39.9%
+OK  SAN MARTIN      calculado  22.0%  INEI  22.0%
+OK  TACNA           calculado  24.0%  INEI  24.0%
+OK  TUMBES          calculado  26.9%  INEI  26.9%
+OK  UCAYALI         calculado  27.1%  INEI  27.1%
+
+Residentes habituales: 108,664 · jóvenes 18-29 en módulo 05: 17,645
+Informalidad: aproximada como ocupados sin afiliación a un sistema de pensiones (p558a5 == 5).
