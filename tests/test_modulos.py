@@ -156,3 +156,20 @@ def test_enaho_detecta_departamento_y_arma_contexto():
     bloque = enaho.contexto("14")
     assert "Lambayeque: pobreza monetaria 14.0%" in bloque and "Perú (nacional)" in bloque
     assert enaho.contexto("") == ""
+
+
+# ---------- feed de convocatorias
+def test_actualizar_feed_acumula_sin_borrar_dias(tmp_path):
+    import json as _json
+    from scripts.actualizar_feed import main as actualizar
+    item = {"title": "T", "donor": "D", "type": "Subvención", "deadline": "", "links": []}
+    destino = tmp_path / "reportes.json"
+    destino.write_text(_json.dumps({"reports": [{"date": "2026-11-04", "summary": "a", "items": [item]}]}), encoding="utf-8")
+    html = tmp_path / "artefacto.html"
+    nuevo = {"reports": [{"date": "2026-11-05", "summary": "b", "items": [item]},
+                         {"date": "mal", "summary": "x", "items": []}]}
+    html.write_text('<p>x</p><script id="report-data" type="application/json">' + _json.dumps(nuevo) + "</script>",
+                    encoding="utf-8")
+    actualizar([html], destino=destino)
+    fechas = [r["date"] for r in _json.loads(destino.read_text(encoding="utf-8"))["reports"]]
+    assert fechas == ["2026-11-05", "2026-11-04"]          # agrega el nuevo, conserva el viejo, omite el inválido

@@ -27,6 +27,7 @@ st.caption("Versión gratuita: convocatorias de desarrollo económico local, act
 
 reportes = cargar_reportes()
 fechas = [r["date"] for r in reportes]
+st.caption(f"Última actualización: {fechas[0]} · {len(fechas)} días en el historial del feed")
 fecha = st.selectbox("Reporte del día", fechas)
 reporte = next(r for r in reportes if r["date"] == fecha)
 hoy = date.fromisoformat(fecha)
