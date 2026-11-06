@@ -22,3 +22,10 @@ historial/
 
 # Microdatos descargados del INEI (pesados; se bajan con la skill datos-enaho-propuesta)
 datos/
+
+# Material privado de investigación (audios y transcripciones de entrevistas): nunca subir
+privado/
+*.m4a
+*.mp3
+*.ogg
+*.opus
