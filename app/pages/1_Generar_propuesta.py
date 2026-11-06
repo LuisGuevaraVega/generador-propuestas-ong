@@ -9,10 +9,16 @@ import streamlit as st
 RAIZ = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RAIZ))
 
+from ai import historial  # noqa: E402
+from ai.auditor import auditar_presupuesto, chequeos_auditoria, evaluar, puntaje_total  # noqa: E402
 from ai.documentos import Recuperador, descargar_tdr, leer_documento, trocear  # noqa: E402
+from ai.esquemas import Aporte, LineaPresupuesto, Parrafo  # noqa: E402
 from ai.exportar import a_excel, a_word, etiqueta_fuente, huella_autoria  # noqa: E402
-from ai.generador import MODOS, extraer_reglas, generar_propuesta  # noqa: E402
+from ai.generador import MODOS, extraer_reglas, generar_propuesta, regenerar_seccion  # noqa: E402
+from ai.llm import resumen_costo  # noqa: E402
 from ai.reglas import SIMBOLOS, calcular_presupuesto, reglas_efectivas, validar_matriz  # noqa: E402
+from ai.tipo_cambio import factor, soles_por  # noqa: E402
+from ai.verificador import verificar  # noqa: E402
 from ai.voz import analizar_audio, transcribir  # noqa: E402
 
 st.set_page_config(page_title="Generar propuesta", page_icon="✨", layout="wide")
@@ -29,6 +35,26 @@ CASO = cargar_json("data/casos/caso_demo.json")
 PREVIA = RAIZ / "data" / "casos" / "propuesta_previa_ficticia.docx"
 ICONO = {"ok": "✅", "alerta": "⚠️", "error": "❌"}
 estado = st.session_state
+
+
+def abrir_propuesta(propuesta):
+    """Pone una propuesta en pantalla y renueva las claves de los editores."""
+    estado.propuesta = propuesta
+    estado.version = estado.get("version", 0) + 1
+
+
+with st.sidebar:
+    st.markdown("### 📂 Historial")
+    guardadas = historial.listar()
+    if not guardadas:
+        st.caption("Aún no hay propuestas guardadas.")
+    else:
+        opciones = {f"{titulo[:45]} · {fecha[:16].replace('T', ' ')}": ruta for ruta, titulo, fecha, _ in guardadas}
+        elegida = st.selectbox("Propuestas guardadas", list(opciones), label_visibility="collapsed")
+        if st.button("Abrir propuesta", width="stretch"):
+            abrir_propuesta(historial.abrir(opciones[elegida]))
+            st.rerun()
+        st.caption(f"{len(guardadas)} propuesta(s) en tu computadora (carpeta historial/).")
 
 st.title("✨ Generar propuesta técnica y económica")
 st.caption("Plan Pro · Borrador para revisar y completar: la propuesta final es de tu organización.")
@@ -192,104 +218,251 @@ if modo == "entrevista":
     respondidas = sum(1 for v in respuestas.values() if v.strip())
     st.progress(respondidas / len(respuestas), text=f"{respondidas} de {len(respuestas)} preguntas respondidas")
 
+
 listo = not (modo == "previos" and recuperador is None) and not (modo == "entrevista" and not any(
     v.strip() for v in (respuestas or {}).values()))
 if st.button("✨ Generar propuesta", type="primary", disabled=not listo, width="stretch"):
     with st.status("Generando la propuesta…", expanded=True) as status:
         try:
-            propuesta = generar_propuesta(
+            nueva = generar_propuesta(
                 modo, FORMATO, reglas_tdr=reglas_tdr, texto_tdr=estado.get("tdr_texto", ""), idea=idea,
                 organizacion=organizacion, respuestas=respuestas, recuperador=recuperador,
                 al_avanzar=lambda paso, total, msg: status.update(label=f"[{paso}/{total}] {msg}"),
             )
-            estado.propuesta = propuesta
-            status.update(label="Propuesta lista", state="complete", expanded=False)
+            if reglas_tdr is not None:
+                status.update(label="Revisando el presupuesto contra el TdR…")
+                nueva["auditoria"], llamadas = auditar_presupuesto(nueva["presupuesto"], reglas_tdr)
+                nueva["llamadas"] += llamadas
+            nueva["convocatoria"] = conv["title"] if conv else (reglas_tdr.nombre_convocatoria if reglas_tdr else "")
+            historial.guardar(nueva)
+            abrir_propuesta(nueva)
+            status.update(label="Propuesta lista y guardada en el historial", state="complete", expanded=False)
         except Exception as error:
             status.update(label="No se pudo generar", state="error")
-            st.error(f"El modelo de IA no respondió. Intenta de nuevo en un minuto. Detalle: {error}")
+            st.error(f"El modelo de IA no respondió. Intenta de nuevo en un minuto o abre una propuesta del "
+                     f"historial. Detalle: {error}")
 
 # ---------------------------------------------------------------- Paso 3: resultado
 propuesta = estado.get("propuesta")
 if not propuesta:
     st.stop()
 
-reglas = reglas_efectivas(FORMATO, reglas_tdr)
-resumen, chequeos_pre = calcular_presupuesto(propuesta["presupuesto"], reglas)
-chequeos = chequeos_pre + validar_matriz(propuesta["matriz"], reglas, resumen["solicitado"])
+version = estado.get("version", 0)
+reglas_prop = propuesta.get("reglas_tdr")
+reglas = reglas_efectivas(FORMATO, reglas_prop)
+resumen, chequeos = calcular_presupuesto(propuesta["presupuesto"], reglas, conversor=factor)
+chequeos += validar_matriz(propuesta["matriz"], reglas, resumen["solicitado"])
+chequeos += chequeos_auditoria(propuesta.get("auditoria"), resumen, reglas_prop) if reglas_prop else []
+hallazgos = verificar(propuesta, resumen)
 simbolo = SIMBOLOS.get(resumen["moneda"], resumen["moneda"])
+try:
+    tc_usd = soles_por("USD")
+except Exception:
+    tc_usd = None
+costo = resumen_costo(propuesta.get("llamadas", []), tc_usd["valor"] if tc_usd else None)
+
+
+def guardar_y_recargar():
+    historial.guardar(propuesta)
+    estado.version = estado.get("version", 0) + 1
+    st.rerun()
+
 
 st.divider()
 st.subheader(f"3. {propuesta['textos'].titulo_proyecto}")
-st.caption(f"Modo: {MODOS[propuesta['modo']]} · Reglas: {reglas['origen']}")
+st.caption(f"Modo: {MODOS[propuesta['modo']]} · Reglas: {reglas['origen']} · "
+           f"Guardada en el historial: {propuesta.get('archivo', '')}")
 
 errores = sum(1 for n, _ in chequeos if n == "error")
-alertas = sum(1 for n, _ in chequeos if n == "alerta")
-m1, m2, m3, m4 = st.columns(4)
+alertas = sum(1 for n, _ in chequeos if n == "alerta") + (1 if hallazgos else 0)
+m1, m2, m3, m4, m5 = st.columns(5)
 m1.metric("Total del proyecto", f"{simbolo} {resumen['total']:,.0f}")
 m2.metric("Monto solicitado", f"{simbolo} {resumen['solicitado']:,.0f}")
 m3.metric("Aporte propio", f"{resumen['pct_propio']:.1%}")
 m4.metric("Semáforo", "❌ Corregir" if errores else ("⚠️ Revisar" if alertas else "✅ Cumple"),
           f"{errores} errores · {alertas} alertas", delta_color="off")
+m5.metric("Puntaje estimado", f"{puntaje_total(propuesta['evaluacion']):.0%}" if propuesta.get("evaluacion") else "—")
 
-convocatoria_txt = conv["title"] if conv else (reglas_tdr.nombre_convocatoria if reglas_tdr else "")
+notas = []
+if resumen["moneda"] != "PEN":
+    try:
+        tc = soles_por(resumen["moneda"])
+        notas.append(f"Total ≈ S/ {resumen['total'] * tc['valor']:,.0f} (1 {resumen['moneda']} = S/ {tc['valor']:.3f}, "
+                     f"{tc['fuente']}, {tc['fecha']})")
+    except Exception:
+        pass
+notas.append(f"Costo de IA de esta propuesta: US$ {costo['costo_usd']:.3f}"
+             + (f" (S/ {costo['costo_pen']:.2f})" if costo["costo_pen"] is not None else "")
+             + f" · {costo['llamadas']} llamadas · {costo['tokens_entrada'] + costo['tokens_salida']:,} tokens")
+st.caption(" · ".join(notas))
+
 d1, d2 = st.columns(2)
-d1.download_button("⬇️ Propuesta técnica (Word)", a_word(propuesta, FORMATO, convocatoria_txt, resumen),
+d1.download_button("⬇️ Propuesta técnica (Word)", a_word(propuesta, FORMATO, propuesta.get("convocatoria", ""), resumen),
                    file_name="propuesta_tecnica.docx", width="stretch",
                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
 d2.download_button("⬇️ Propuesta económica (Excel)", a_excel(propuesta, resumen, reglas),
                    file_name="propuesta_economica.xlsx", width="stretch",
                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 
-tab_reglas, tab_tecnica, tab_matriz, tab_pre, tab_huella = st.tabs(
-    ["🚦 Reglas del donante", "📝 Propuesta técnica", "🎯 Matriz de impacto", "💰 Presupuesto", "🖐️ Huella de autoría"])
+tab_rev, tab_tecnica, tab_matriz, tab_pre, tab_huella = st.tabs(
+    ["🚦 Revisión", "📝 Propuesta técnica", "🎯 Matriz de impacto", "💰 Presupuesto", "🖐️ Huella de autoría"])
 
-with tab_reglas:
+# ---------- Revisión: reglas, cifras y puntaje
+with tab_rev:
+    st.markdown("##### Reglas del donante")
     for nivel, mensaje in sorted(chequeos, key=lambda c: ["error", "alerta", "ok"].index(c[0])):
         st.markdown(f"{ICONO[nivel]} {mensaje}")
 
+    st.markdown("##### 🔎 Cifras a validar")
+    if hallazgos:
+        st.caption("Estos números no aparecen en tus respuestas, tus documentos, el TdR ni el presupuesto. "
+                   "Pueden ser propuestas de la IA: confírmalos o corrígelos.")
+        for h in hallazgos:
+            st.markdown(f"- **{h['cifra']}** · {h['seccion']} · _{h['fragmento']}_")
+    else:
+        st.markdown("✅ Todas las cifras del borrador tienen respaldo en tus fuentes.")
+
+    st.markdown("##### 📊 Puntaje estimado")
+    if st.button("Calcular puntaje con los criterios del donante" if not propuesta.get("evaluacion")
+                 else "Volver a calcular el puntaje"):
+        with st.spinner("Evaluando como lo haría el comité del donante…"):
+            try:
+                propuesta["evaluacion"], llamadas = evaluar(propuesta, FORMATO, resumen)
+                propuesta.setdefault("llamadas", []).extend(llamadas)
+                guardar_y_recargar()
+            except Exception as error:
+                st.error(f"El modelo de IA no respondió: {error}")
+    evaluacion = propuesta.get("evaluacion")
+    if evaluacion:
+        st.dataframe(pd.DataFrame([{"Criterio": c.criterio, "Puntaje": f"{c.puntaje}/4", "Por qué": c.justificacion,
+                                    "Cómo subirlo": c.mejora} for c in evaluacion.criterios]),
+                     hide_index=True, width="stretch")
+        f1, f2 = st.columns(2)
+        f1.markdown("**Fortalezas**\n" + "\n".join(f"- {x}" for x in evaluacion.fortalezas))
+        f2.markdown("**Debilidades**\n" + "\n".join(f"- {x}" for x in evaluacion.debilidades))
+        st.caption("Estimación de la IA con los criterios del TdR; no reemplaza la evaluación real del donante.")
+
+# ---------- Propuesta técnica: editable y regenerable por sección
 with tab_tecnica:
     titulos = {s["id"]: s["titulo"] for s in FORMATO["secciones"]}
+    st.caption("Edita directamente cada sección. Separa los párrafos con una línea en blanco. "
+               "Lo que guardes aquí es lo que sale en el Word.")
+    ediciones = {}
     for seccion in propuesta["textos"].secciones:
-        st.markdown(f"#### {titulos.get(seccion.seccion_id, seccion.seccion_id)}")
-        for parrafo in seccion.parrafos:
-            st.markdown(parrafo.texto)
-            st.caption("📌 " + " · ".join(etiqueta_fuente(f) for f in parrafo.fuentes))
+        sid = seccion.seccion_id
+        original = "\n\n".join(p.texto for p in seccion.parrafos)
+        ediciones[sid] = st.text_area(titulos.get(sid, sid), value=original, key=f"edit_{version}_{sid}",
+                                      height=max(150, min(450, len(original) // 3)))
+        fuentes = dict.fromkeys(etiqueta_fuente(f) for p in seccion.parrafos for f in p.fuentes)
+        st.caption("📌 " + " · ".join(fuentes))
         for pendiente in seccion.pendientes:
             st.warning(f"Pendiente: {pendiente}")
+        with st.popover("🔄 Regenerar esta sección con una instrucción"):
+            instruccion = st.text_input("¿Qué quieres cambiar?", key=f"instr_{version}_{sid}",
+                                        placeholder="Ej.: agrega un enfoque de género y acorta a 3 párrafos")
+            if st.button("Regenerar", key=f"regen_{version}_{sid}", disabled=not instruccion):
+                with st.spinner("Reescribiendo…"):
+                    try:
+                        regenerar_seccion(propuesta, FORMATO, sid, instruccion)
+                        guardar_y_recargar()
+                    except Exception as error:
+                        st.error(f"El modelo de IA no respondió: {error}")
 
+    if st.button("💾 Guardar cambios de la propuesta técnica", type="primary"):
+        for seccion in propuesta["textos"].secciones:
+            texto = ediciones[seccion.seccion_id].strip()
+            if texto == "\n\n".join(p.texto for p in seccion.parrafos):
+                continue
+            previos = {p.texto: p.fuentes for p in seccion.parrafos}
+            seccion.parrafos = [Parrafo(texto=t.strip(), fuentes=previos.get(t.strip(), ["USUARIO"]))
+                                for t in texto.split("\n\n") if t.strip()]
+        guardar_y_recargar()
+
+# ---------- Matriz de impacto: editable
 with tab_matriz:
     m = propuesta["matriz"]
-    if m.objetivo_superior:
-        st.markdown(f"**Objetivo superior:** {m.objetivo_superior}")
-    st.markdown(f"**Objetivo del proyecto:** {m.objetivo_proyecto}")
+    sup = st.text_area("Objetivo superior", value=m.objetivo_superior or "", key=f"sup_{version}", height=70)
+    obj = st.text_area("Objetivo del proyecto", value=m.objetivo_proyecto, key=f"obj_{version}", height=70)
     filas = [{"Nivel": "Proyecto", "Código": i.codigo, "Indicador": i.indicador, "Línea de base": i.linea_base,
               "Meta": i.meta, "Medio de verificación": i.medio_verificacion} for i in m.indicadores_proyecto]
     for oe in m.objetivos_especificos:
         filas += [{"Nivel": f"{oe.codigo}: {oe.texto}", "Código": i.codigo, "Indicador": i.indicador,
                    "Línea de base": i.linea_base, "Meta": i.meta, "Medio de verificación": i.medio_verificacion}
                   for i in oe.indicadores]
-    st.dataframe(pd.DataFrame(filas), hide_index=True, width="stretch")
-    actividades = [{"Objetivo": oe.codigo, "Actividad": f"{a.codigo} {a.descripcion}", "Inicio": a.mes_inicio,
-                    "Fin": a.mes_fin} for oe in m.objetivos_especificos for a in oe.actividades]
+    tabla_ind = st.data_editor(pd.DataFrame(filas), hide_index=True, width="stretch", key=f"ind_{version}",
+                               disabled=["Nivel", "Código"])
+    actividades = [{"Objetivo": oe.codigo, "Código": a.codigo, "Actividad": a.descripcion, "Inicio (mes)": a.mes_inicio,
+                    "Fin (mes)": a.mes_fin} for oe in m.objetivos_especificos for a in oe.actividades]
     st.markdown("**Actividades y cronograma**")
-    st.dataframe(pd.DataFrame(actividades), hide_index=True, width="stretch")
+    tabla_act = st.data_editor(pd.DataFrame(actividades), hide_index=True, width="stretch", key=f"act_{version}",
+                               disabled=["Objetivo", "Código"])
+    if st.button("💾 Guardar cambios de la matriz", type="primary"):
+        m.objetivo_superior, m.objetivo_proyecto = sup.strip() or None, obj.strip()
+        por_codigo = {i.codigo: i for i in list(m.indicadores_proyecto) +
+                      [i for oe in m.objetivos_especificos for i in oe.indicadores]}
+        for _, fila in tabla_ind.iterrows():
+            ind = por_codigo.get(fila["Código"])
+            nuevos = (fila["Indicador"], fila["Línea de base"], fila["Meta"], fila["Medio de verificación"])
+            if ind and nuevos != (ind.indicador, ind.linea_base, ind.meta, ind.medio_verificacion):
+                ind.indicador, ind.linea_base, ind.meta, ind.medio_verificacion = nuevos
+                ind.fuentes = list(dict.fromkeys(ind.fuentes + ["USUARIO"]))
+        acts = {a.codigo: a for oe in m.objetivos_especificos for a in oe.actividades}
+        for _, fila in tabla_act.iterrows():
+            a = acts.get(fila["Código"])
+            if a:
+                a.descripcion = fila["Actividad"]
+                a.mes_inicio, a.mes_fin = int(fila["Inicio (mes)"]), int(fila["Fin (mes)"])
+        guardar_y_recargar()
 
+# ---------- Presupuesto: editable
 with tab_pre:
-    tabla = pd.DataFrame([{
-        "Objetivo": l["objetivo"], "Categoría": l["categoria"], "Descripción": l["descripcion"],
-        "Cantidad": l["cantidad"], "Costo unitario": l["costo_unitario"], "Total": l["total"],
-        "Origen": ", ".join(etiqueta_fuente(f) for f in l["fuentes"]),
-    } for l in resumen["lineas"]])
-    st.dataframe(tabla, hide_index=True, width="stretch",
-                 column_config={c: st.column_config.NumberColumn(format="%.0f") for c in ["Costo unitario", "Total"]})
+    pres = propuesta["presupuesto"]
+    st.caption(f"Edita cantidades, costos o agrega filas (montos en {pres.moneda}). Totales, reserva, gastos "
+               f"administrativos y topes se recalculan solos.")
+    categorias = list(FORMATO["reglas"]["categorias_gasto"])
+    tabla_lin = st.data_editor(
+        pd.DataFrame([{"Objetivo": l.objetivo, "Categoría": l.categoria, "Descripción": l.descripcion,
+                       "Unidad": l.unidad, "Cantidad": l.cantidad, "Costo unitario": l.costo_unitario}
+                      for l in pres.lineas]),
+        num_rows="dynamic", hide_index=True, width="stretch", key=f"lin_{version}",
+        column_config={"Categoría": st.column_config.SelectboxColumn(options=categorias),
+                       "Cantidad": st.column_config.NumberColumn(min_value=0, format="%.1f"),
+                       "Costo unitario": st.column_config.NumberColumn(min_value=0, format="%.2f")})
+    st.markdown("**Aportes propios** (organización, socios, municipalidad…)")
+    tabla_ap = st.data_editor(
+        pd.DataFrame([{"Fuente": a.fuente, "Tipo": a.tipo, "Monto": a.monto} for a in pres.aportes_propios]),
+        num_rows="dynamic", hide_index=True, width="stretch", key=f"ap_{version}",
+        column_config={"Tipo": st.column_config.SelectboxColumn(options=["monetario", "especie"]),
+                       "Monto": st.column_config.NumberColumn(min_value=0, format="%.2f")})
     st.markdown(
         f"Gastos: **{simbolo} {resumen['gastos']:,.0f}** · Reserva: {simbolo} {resumen['reserva']:,.0f} · "
-        f"Administrativos: {simbolo} {resumen['administrativos']:,.0f} · **Total: {simbolo} {resumen['total']:,.0f}**")
-    for a in propuesta["presupuesto"].aportes_propios:
-        st.markdown(f"- Aporte de {a.fuente} ({a.tipo}): {simbolo} {a.monto:,.0f}")
+        f"Administrativos: {simbolo} {resumen['administrativos']:,.0f} · **Total: {simbolo} {resumen['total']:,.0f}** · "
+        f"Solicitado: {simbolo} {resumen['solicitado']:,.0f}")
+    if st.button("💾 Guardar cambios del presupuesto", type="primary"):
+        previas = {(l.descripcion, l.cantidad, l.costo_unitario): l.fuentes for l in pres.lineas}
+        nuevas = []
+        for _, f in tabla_lin.dropna(subset=["Descripción"]).iterrows():
+            clave = (str(f["Descripción"]), float(f["Cantidad"] or 0), float(f["Costo unitario"] or 0))
+            nuevas.append(LineaPresupuesto(
+                objetivo=str(f["Objetivo"] or "GEN"), categoria=str(f["Categoría"] or "operativos"),
+                descripcion=clave[0], unidad=str(f["Unidad"] or "unidad"), cantidad=clave[1],
+                costo_unitario=clave[2], fuentes=previas.get(clave, ["USUARIO"])))
+        pres.lineas = nuevas
+        pres.aportes_propios = [Aporte(fuente=str(f["Fuente"]), tipo=str(f["Tipo"] or "monetario"),
+                                       monto=float(f["Monto"] or 0), fuentes=["USUARIO"])
+                                for _, f in tabla_ap.dropna(subset=["Fuente"]).iterrows()]
+        if reglas_prop is not None:
+            with st.spinner("Revisando de nuevo contra el TdR…"):
+                try:
+                    propuesta["auditoria"], llamadas = auditar_presupuesto(pres, reglas_prop)
+                    propuesta.setdefault("llamadas", []).extend(llamadas)
+                except Exception:
+                    st.warning("No se pudo revisar contra el TdR ahora; los topes generales sí se recalcularon.")
+        guardar_y_recargar()
 
+# ---------- Huella de autoría (solo en la app)
 with tab_huella:
     st.markdown("De dónde salió cada párrafo, indicador y línea de presupuesto de este borrador:")
-    huella = huella_autoria(propuesta)
-    st.bar_chart(pd.DataFrame({"Piezas": huella}), horizontal=True)
-    st.caption("Mientras más pese «Tus respuestas» y «Tus propuestas previas», más tuya es la propuesta.")
+    st.bar_chart(pd.DataFrame({"Piezas": huella_autoria(propuesta)}), horizontal=True)
+    st.caption("Mientras más pesen «Tus respuestas» y «Tus propuestas previas», más tuya es la propuesta. "
+               "Las ediciones que guardas cuentan como tuyas. Esta información no aparece en el Word ni en el Excel.")
