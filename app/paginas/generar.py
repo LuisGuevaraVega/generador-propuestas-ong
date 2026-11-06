@@ -6,6 +6,7 @@
 """
 import json
 import sys
+import uuid
 from pathlib import Path
 
 import pandas as pd
@@ -22,7 +23,7 @@ from ai.esquemas import Aporte, LineaPresupuesto, Parrafo  # noqa: E402
 from ai.exportar import a_excel, a_word, etiqueta_fuente, huella_autoria  # noqa: E402
 from ai.generador import (MAX_FRAGMENTOS_PREVIOS, MODOS, extraer_reglas, generar_propuesta,  # noqa: E402
                           paginas, preparar_documentos_apoyo, regenerar_seccion, titulos_secciones)
-from ai.llm import resumen_costo  # noqa: E402
+from ai.llm import _leer_config, resumen_costo  # noqa: E402
 from ai.reglas import SIMBOLOS, calcular_presupuesto, reglas_efectivas, validar_matriz  # noqa: E402
 from ai.tipo_cambio import factor, soles_por  # noqa: E402
 from ai.verificador import verificar  # noqa: E402
@@ -68,6 +69,15 @@ def leer_cacheado(nombre, contenido):
     return leer_documento(nombre, contenido)
 
 
+def carpeta_historial():
+    """En la versión publicada, cada visitante ve solo sus propuestas; en la laptop, el historial completo."""
+    if _leer_config("HISTORIAL_POR_SESION") or _leer_config("APP_CLAVE"):
+        if "id_sesion" not in estado:
+            estado.id_sesion = uuid.uuid4().hex[:12]
+        return historial.CARPETA / "sesiones" / estado.id_sesion
+    return historial.CARPETA
+
+
 def ir(paso):
     estado.paso = paso
     st.rerun()
@@ -92,7 +102,7 @@ def nueva_propuesta():
 with st.sidebar:
     st.button("＋ Nueva propuesta", width="stretch", type="primary", on_click=nueva_propuesta)
     st.markdown("#### 📂 Mis propuestas")
-    guardadas = historial.listar()
+    guardadas = historial.listar(carpeta_historial())
     if not guardadas:
         st.caption("Aún no hay propuestas guardadas.")
     else:
@@ -436,7 +446,7 @@ def paso_proyecto():
                 nueva["auditoria"], llamadas = auditar_presupuesto(nueva["presupuesto"], reglas_tdr)
                 nueva["llamadas"] += llamadas
             nueva["convocatoria"] = conv["title"] if conv else (reglas_tdr.nombre_convocatoria if reglas_tdr else "")
-            historial.guardar(nueva)
+            historial.guardar(nueva, carpeta_historial())
             status.update(label="Propuesta lista", state="complete", expanded=False)
         except Exception as error:
             status.update(label="No se pudo generar", state="error")
@@ -459,7 +469,7 @@ def paso_resultado(propuesta):
     simbolo = SIMBOLOS.get(resumen["moneda"], resumen["moneda"])
 
     def guardar_y_recargar():
-        historial.guardar(propuesta)
+        historial.guardar(propuesta, carpeta_historial())
         estado.version = estado.get("version", 0) + 1
         st.rerun()
 
