@@ -252,6 +252,10 @@ def test_enaho_detecta_departamento_y_arma_contexto():
     from ai import enaho
     assert enaho.detectar("Proyecto con jóvenes de Chiclayo") == "14"
     assert enaho.detectar("Trabajamos en San Martín") == "22"
+    # Solo palabras completas: "agroecológicas" contiene "ica", pero no es Ica.
+    assert enaho.detectar("Biohuertos y ferias agroecológicas con mujeres en Lambayeque") == "14"
+    assert enaho.detectar("Proyecto en Huancavelica") == "09"
+    assert enaho.detectar("Idea en Piura", "ONG de Chiclayo") == "20"          # manda lo que se menciona primero
     bloque = enaho.contexto("14")
     assert "Lambayeque: pobreza monetaria 14.0%" in bloque and "Perú (nacional)" in bloque
     assert enaho.contexto("") == ""

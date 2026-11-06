@@ -5,6 +5,7 @@ La tabla `data/enaho/indicadores_<anio>.csv` la genera y valida la skill de Clau
 que recibe el generador, con la fuente "ENAHO" para que cada cifra quede citada.
 """
 import csv
+import re
 import unicodedata
 from pathlib import Path
 
@@ -30,15 +31,23 @@ def departamentos():
     return sorted(((c, f["departamento"]) for c, f in cargar().items() if c != "00"), key=lambda x: _normal(x[1]))
 
 
+CIUDADES = {"chiclayo": "14", "trujillo": "13", "piura": "20", "arequipa": "04", "huancayo": "12",
+            "iquitos": "16", "pucallpa": "25", "tarapoto": "22", "lima": "15", "cusco": "08"}
+
+
 def detectar(*textos) -> str:
-    """Código del primer departamento mencionado en los textos (idea, organización, ámbito), o ''."""
+    """Código del departamento que se menciona primero en los textos (idea, organización, ámbito), o ''.
+
+    Solo cuenta palabras completas: "agroecológicas" no es Ica, ni "Huancavelica" es Ica.
+    """
     junto = _normal(" ".join(t for t in textos if t))
-    for ccdd, nombre in departamentos():
-        if _normal(nombre) in junto:
-            return ccdd
-    ciudades = {"chiclayo": "14", "trujillo": "13", "piura": "20", "arequipa": "04", "huancayo": "12",
-                "iquitos": "16", "pucallpa": "25", "tarapoto": "22", "lima": "15", "cusco": "08"}
-    return next((c for ciudad, c in ciudades.items() if ciudad in junto), "")
+    candidatos = [(c, _normal(n)) for c, n in departamentos()] + [(c, ciudad) for ciudad, c in CIUDADES.items()]
+    mejor = None
+    for ccdd, nombre in candidatos:
+        encontrado = re.search(rf"\b{re.escape(nombre)}\b", junto)
+        if encontrado and (mejor is None or encontrado.start() < mejor[0]):
+            mejor = (encontrado.start(), ccdd)
+    return mejor[1] if mejor else ""
 
 
 def contexto(ccdd: str) -> str:

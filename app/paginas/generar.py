@@ -111,7 +111,8 @@ with st.sidebar:
         if st.button("Abrir", width="stretch"):
             abrir_propuesta(historial.abrir(opciones[elegida]))
             st.rerun()
-        st.caption(f"{len(guardadas)} guardada(s) en esta computadora.")
+        donde = "en esta computadora" if carpeta_historial() == historial.CARPETA else "en esta sesión del navegador"
+        st.caption(f"{len(guardadas)} guardada(s) {donde}.")
 
 # ---------------------------------------------------------------- Cabecera y pasos
 paso = estado.get("paso", 1)
