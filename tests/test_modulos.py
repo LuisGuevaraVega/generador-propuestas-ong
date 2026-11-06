@@ -173,3 +173,24 @@ def test_actualizar_feed_acumula_sin_borrar_dias(tmp_path):
     actualizar([html], destino=destino)
     fechas = [r["date"] for r in _json.loads(destino.read_text(encoding="utf-8"))["reports"]]
     assert fechas == ["2026-11-05", "2026-11-04"]          # agrega el nuevo, conserva el viejo, omite el inválido
+
+
+# ---------- Fondoempleo
+def test_fondoempleo_personal_cuenta_como_equipo_y_aplica_topes(propuesta):
+    from ai import fondoempleo as fe
+    from ai.fondoempleo import AdaptacionFE, LineaFE
+    lineas = [LineaFE(descripcion=l.descripcion, categoria_fe="Servicios profesionales especializados",
+                      financiable=l.descripcion != "Viaje del socio", motivo="")
+              for l in propuesta["presupuesto"].lineas]
+    ad = AdaptacionFE(linea_fondoempleo="capacitacion_laboral", participantes=120, fin="f", proposito="p",
+                      situacion_problematica="s", involucrados=[], problema_central="pc", causas=[], efectos=[],
+                      objetivo_central="oc", medios=[], fines=[], alternativas=[], alternativa_elegida="a",
+                      demanda_competencias="d", oferta_competencias="o", costos_oferta="c", equipo=[], monitoreo="m",
+                      riesgos=[], lineas=lineas)
+    calc = fe.calcular(propuesta, ad, factor_a_soles=4.0)
+    assert calc["administrativos"] == round(calc["directos_fe"] * 0.10, 2)
+    assert calc["imprevistos"] == round(calc["directos_fe"] * 0.015, 2)
+    textos = " ".join(m for _, m in fe.chequeos(calc, ad))
+    assert "Equipo del proyecto:" in textos and "0.0%" not in textos.split("Equipo del proyecto:")[1][:8]
+    assert "Duración: 18 meses (máximo 10)" in textos
+    assert "No financiable por Fondoempleo: «Viaje del socio»" in textos

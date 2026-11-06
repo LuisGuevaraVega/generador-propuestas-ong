@@ -18,6 +18,11 @@ MODELOS = {"textos": TextosPropuesta, "matriz": MatrizImpacto, "presupuesto": Pr
            "reglas_tdr": ReglasConvocatoria, "auditoria": AuditoriaPresupuesto, "evaluacion": Evaluacion}
 
 
+def _modelos():
+    from ai.fondoempleo import AdaptacionFE  # import diferido: evita un ciclo de imports
+    return {**MODELOS, "fondoempleo": AdaptacionFE}
+
+
 def _a_json(propuesta: dict) -> dict:
     salida = {}
     for clave, valor in propuesta.items():
@@ -27,7 +32,7 @@ def _a_json(propuesta: dict) -> dict:
 
 def _desde_json(datos: dict) -> dict:
     propuesta = dict(datos)
-    for clave, modelo in MODELOS.items():
+    for clave, modelo in _modelos().items():
         if propuesta.get(clave) is not None:
             propuesta[clave] = modelo.model_validate(propuesta[clave])
     return propuesta

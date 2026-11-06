@@ -10,25 +10,33 @@
       "monto_min": 250000,
       "monto_max": 700000,
       "duracion_max_meses": 10,
-      "inversion_promedio_por_beneficiario": [2100, 4300]
+      "inversion_promedio_por_beneficiario": [
+        2100,
+        4300
+      ]
     },
     "fortalecimiento_organizacional": {
       "nombre": "Línea 6: Fortalecimiento organizacional",
       "monto_min": 150000,
       "monto_max": 400000,
       "duracion_max_meses": 6,
-      "inversion_promedio_por_beneficiario": [190, 190]
+      "inversion_promedio_por_beneficiario": [
+        190,
+        190
+      ]
     }
   },
   "reglas_presupuesto": {
-    "contrapartida_min_pct": 0.10,
+    "contrapartida_min_pct": 0.1,
     "contrapartida_base": "costos directos solicitados a Fondoempleo",
     "equipo_proyecto_max_pct": 0.25,
     "equipo_proyecto_base": "monto solicitado a Fondoempleo",
-    "administrativos_pct": 0.10,
+    "administrativos_pct": 0.1,
     "imprevistos_pct": 0.015,
     "indirectos_base": "costos directos solicitados a Fondoempleo",
-    "equipamiento_max_uit": 2
+    "equipamiento_max_uit": 2,
+    "uit_soles": 5350,
+    "uit_nota": "UIT 2025 (S/ 5,350). Actualizar con el valor de la UIT del año de postulación."
   },
   "categorias_gasto_directo": [
     "Servicios profesionales especializados",
@@ -74,25 +82,31 @@
     "Sistema de seguimiento y monitoreo",
     "Mapeo de riesgos"
   ],
-  "formato_02_estilo": {"fuente": "Arial", "tamano": 10, "hoja": "A4", "paginas_max_sugeridas": 20},
+  "formato_02_estilo": {
+    "fuente": "Arial",
+    "tamano": 10,
+    "hoja": "A4",
+    "paginas_max_sugeridas": 20
+  },
   "rubrica": {
     "viabilidad_tecnica": {
-      "peso": 0.60,
+      "peso": 0.6,
       "subcriterios": {
-        "coherencia": 0.20,
-        "innovacion": 0.10,
+        "coherencia": 0.2,
+        "innovacion": 0.1,
         "indicadores": 0.15,
         "riesgos": 0.15
       }
     },
     "viabilidad_financiera": {
-      "peso": 0.40,
+      "peso": 0.4,
       "subcriterios": {
-        "aporte_fondoempleo": 0.10,
-        "contrapartida": 0.10,
-        "costo_beneficio": 0.20
+        "aporte_fondoempleo": 0.1,
+        "contrapartida": 0.1,
+        "costo_beneficio": 0.2
       }
     },
     "puntaje_minimo_seleccion": 8
-  }
+  },
+  "moneda": "PEN"
 }

@@ -9,7 +9,7 @@ import streamlit as st
 RAIZ = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RAIZ))
 
-from ai import enaho, historial  # noqa: E402
+from ai import enaho, fondoempleo, historial  # noqa: E402
 from ai.auditor import auditar_presupuesto, chequeos_auditoria, evaluar, puntaje_total  # noqa: E402
 from ai.documentos import Recuperador, descargar_tdr, leer_documento, trocear  # noqa: E402
 from ai.esquemas import Aporte, LineaPresupuesto, Parrafo  # noqa: E402
@@ -319,6 +319,39 @@ d1.download_button("⬇️ Propuesta técnica (Word)", a_word(propuesta, FORMATO
 d2.download_button("⬇️ Propuesta económica (Excel)", a_excel(propuesta, resumen, reglas),
                    file_name="propuesta_economica.xlsx", width="stretch",
                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+
+with st.expander("📑 Exportar en formato Fondoempleo (Formatos 02 y 03)"):
+    st.caption("Adapta esta propuesta a la estructura de Fondoempleo y revisa sus reglas en soles: monto por línea, "
+               "duración, equipo ≤ 25 %, contrapartida ≥ 10 %, equipamiento ≤ 2 UIT y gastos no financiables.")
+    linea_fe = st.radio("Línea", ["capacitacion_laboral", "fortalecimiento_organizacional"], horizontal=True,
+                        format_func=lambda x: fondoempleo.REGLAS["lineas"][x]["nombre"], key=f"linea_fe_{version}")
+    if st.button("Adaptar al formato Fondoempleo" if not propuesta.get("fondoempleo") else "Volver a adaptar"):
+        with st.spinner("Adaptando a los Formatos 02 y 03…"):
+            try:
+                propuesta["fondoempleo"], llamadas = fondoempleo.adaptar(propuesta, linea_fe)
+                propuesta.setdefault("llamadas", []).extend(llamadas)
+                guardar_y_recargar()
+            except Exception as error:
+                st.error(f"El modelo de IA no respondió: {error}")
+    adaptacion = propuesta.get("fondoempleo")
+    if adaptacion is not None:
+        try:
+            factor_soles = factor(propuesta["presupuesto"].moneda, "PEN")
+        except Exception:
+            factor_soles = None
+        if factor_soles is None:
+            st.error("No se pudo obtener el tipo de cambio para pasar el presupuesto a soles.")
+        else:
+            calculo_fe = fondoempleo.calcular(propuesta, adaptacion, factor_soles)
+            for nivel, mensaje in fondoempleo.chequeos(calculo_fe, adaptacion):
+                st.markdown(f"{ICONO[nivel]} {mensaje}")
+            e1, e2 = st.columns(2)
+            e1.download_button("⬇️ Formato 02 (Word)", fondoempleo.a_word_formato02(propuesta, adaptacion),
+                               file_name="formato_02_fondoempleo.docx", width="stretch",
+                               mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+            e2.download_button("⬇️ Formato 03 (Excel)", fondoempleo.a_excel_formato03(propuesta, calculo_fe),
+                               file_name="formato_03_fondoempleo.xlsx", width="stretch",
+                               mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 
 tab_rev, tab_tecnica, tab_matriz, tab_pre, tab_huella = st.tabs(
     ["🚦 Revisión", "📝 Propuesta técnica", "🎯 Matriz de impacto", "💰 Presupuesto", "🖐️ Huella de autoría"])
