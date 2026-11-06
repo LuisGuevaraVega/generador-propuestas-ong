@@ -58,6 +58,37 @@ def matriz():
 
 
 @pytest.fixture
+def tecnica():
+    """Diseño mínimo de propuesta técnica (estructura de postor), sin estructura del TdR."""
+    from ai.esquemas import (AspectoTdR, Componente, DatosReferencia, Entregable, FilaCronograma, Momento,
+                             ObjetivoTecnico, PropuestaTecnica, Riesgo, Rol, Salvaguarda)
+    return PropuestaTecnica(
+        datos=DatosReferencia(nombre_servicio="Emprende Joven Norte", presentado_a="Fondo X",
+                              sistema_contratacion="Suma alzada", plazo_ejecucion="12 meses",
+                              ambito="Chiclayo, Lambayeque", postor="ONG ficticia", otros=[]),
+        aspectos_tdr=[AspectoTdR(aspecto="Resultados mínimos esperados", lectura="120 jóvenes con plan de negocio.")],
+        objetivo_general="Mejorar la gestión de negocios de jóvenes de Chiclayo.",
+        objetivos_especificos=[ObjetivoTecnico(codigo="OE1", texto="Capacidades de gestión")],
+        principios=["Enfoque de género"],
+        momentos=[Momento(nombre="Diagnóstico", contenido_tecnico=["levantamiento de información"],
+                          productos=["fichas de padrón"])],
+        palabras_clave_monitoreo=["indicadores"],
+        componentes=[Componente(codigo="C1", nombre="Formación", objetivo="OE1", lineas_accion=["Talleres"],
+                                actividades=["Bootcamp"], resultados=["80% con registro de ventas"])],
+        entregables=[Entregable(codigo="E1", nombre="Plan de trabajo", plazo="Día 15", contenido="Metodología.")],
+        cronograma=[FilaCronograma(actividad="Planificación", periodo="Mes 1", mes_inicio=1, mes_fin=1,
+                                   resultado="Plan aprobado")],
+        resumen_equipo="Un equipo de tres personas.",
+        equipo=[Rol(rol="Coordinadora", perfil="Economista", dedicacion="Tiempo completo",
+                    responsabilidades=["Coordinar"])],
+        criterios_calidad=["Transparencia"],
+        riesgos=[Riesgo(riesgo="Deserción", efecto="Menos egresados", mitigacion="Horarios flexibles")],
+        salvaguardas=[Salvaguarda(tipo="Social", medidas=["Consentimiento informado"])],
+        estructura_tdr=[], pendientes=["Confirmar RUC"],
+    )
+
+
+@pytest.fixture
 def propuesta(matriz, presupuesto_bmz):
     textos = TextosPropuesta(titulo_proyecto="Emprende Joven Norte", secciones=[
         SeccionGenerada(seccion_id="problema", pendientes=[], parrafos=[

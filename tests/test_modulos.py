@@ -85,6 +85,32 @@ def test_leer_docx_incluye_tablas():
     assert "Párrafo de prueba" in texto and "Rubro | Monto" in texto
 
 
+def _pdf_de_imagen():
+    """PDF escaneado de mentira: una página que es solo una imagen, sin texto seleccionable."""
+    from PIL import Image, ImageDraw
+    imagen = Image.new("RGB", (600, 300), "white")
+    ImageDraw.Draw(imagen).text((20, 20), "Ana Perez - Economista", fill="black")
+    salida = io.BytesIO()
+    imagen.save(salida, format="PDF")
+    return salida.getvalue(), imagen
+
+
+def test_pdf_escaneado_y_fotos_pasan_por_ocr_y_los_pdf_con_texto_no(monkeypatch):
+    import ai.llm
+    from ai.documentos import MARCA_OCR, es_escaneado
+    llamadas = []
+    monkeypatch.setattr(ai.llm, "transcribir_documento",
+                        lambda contenido, mime: llamadas.append(mime) or "Ana Pérez, economista")
+    pdf, imagen = _pdf_de_imagen()
+    assert leer_documento("cv.pdf", pdf) == f"{MARCA_OCR}\nAna Pérez, economista"
+    foto = io.BytesIO()
+    imagen.save(foto, format="PNG")
+    assert leer_documento("cv.png", foto.getvalue()).startswith(MARCA_OCR)
+    assert llamadas == ["application/pdf", "image/png"]
+    assert "escaneado" in leer_documento("cv.pdf", pdf, ocr=False) and len(llamadas) == 2   # sin OCR, solo avisa
+    assert not es_escaneado("texto " * 100, 2) and es_escaneado("   ", 1)
+
+
 def test_enlace_de_google_drive_se_convierte_en_descarga():
     url = _url_descarga("https://drive.google.com/file/d/ABC123/view?usp=sharing")
     assert url == "https://drive.google.com/uc?export=download&id=ABC123"
@@ -96,9 +122,82 @@ def test_word_sin_huella_de_autoria_y_excel_con_formulas(formato, propuesta):
     resumen, _ = calcular_presupuesto(propuesta["presupuesto"], reglas)
     texto = leer_documento("p.docx", a_word(propuesta, formato, "Convocatoria X", resumen)).lower()
     assert "emprende joven norte" in texto and "huella" not in texto and "autoría" not in texto
-    hoja = load_workbook(io.BytesIO(a_excel(propuesta, resumen, reglas))).active
-    assert hoja["G5"].value == "=E5*F5"
-    assert "Origen" not in [c.value for c in hoja[4]]
+    libro = load_workbook(io.BytesIO(a_excel(propuesta, resumen, reglas)))
+    assert libro.sheetnames == ["Resumen", "Detalle"]
+    detalle = libro["Detalle"]
+    assert "Origen" not in [c.value for c in detalle[4]]
+    formulas = [c.value for c in detalle["G"] if isinstance(c.value, str) and c.value.startswith("=E")]
+    assert len(formulas) == len(propuesta["presupuesto"].lineas)          # una fórmula por línea de gasto
+    agrupado = [c.value for c in detalle["A"] if isinstance(c.value, str)]
+    assert any(v.startswith("OE1 · ") for v in agrupado)                  # líneas agrupadas por objetivo
+    resumen_hoja = [c.value for c in libro["Resumen"]["C"] if isinstance(c.value, str)]
+    assert any(v.startswith("=Detalle!G") for v in resumen_hoja)          # el resumen lee del detalle
+
+
+def test_word_nuevo_sigue_la_estructura_base_y_no_lleva_montos(formato, propuesta, tecnica):
+    propuesta = {**propuesta, "tecnica": tecnica}
+    reglas = reglas_efectivas(formato)
+    resumen, _ = calcular_presupuesto(propuesta["presupuesto"], reglas)
+    doc = Document(io.BytesIO(a_word(propuesta, formato, "Convocatoria X", resumen)))
+    titulos = [p.text for p in doc.paragraphs if p.style.name.startswith("Heading 1")]
+    assert titulos[:3] == ["1. Resumen ejecutivo", "2. Antecedentes y comprensión del servicio",
+                           "3. Objetivos de la propuesta"]
+    assert "7. Entregables y productos verificables" in titulos and "11. Salvaguardas" in titulos
+    texto = leer_documento("p.docx", a_word(propuesta, formato, "Convocatoria X", resumen))
+    assert "PROPUESTA TÉCNICA" in texto and "Presentado a" in texto and "E1 | Plan de trabajo" in texto
+    assert "€" not in texto and "Monto solicitado" not in texto           # la técnica no lleva precios
+
+
+def _informe_largo(paginas_relleno=40):
+    """Informe largo de mentira: portada, mucho relleno y, al final, los resultados que importan."""
+    relleno = "\n".join(f"Anexo {i}: listado de asistencia y fotografías del taller número {i}."
+                        for i in range(paginas_relleno * 30))
+    final = ("Resultados del proyecto: 85 mujeres instalaron biohuertos y 62% aumentó sus ingresos.\n"
+             "Lecciones aprendidas: el acompañamiento quincenal redujo la deserción.")
+    return "INFORME FINAL Mujeres que Cosechan\n" + relleno + "\n" + final
+
+
+def test_documentos_de_apoyo_cortos_van_completos_y_los_largos_por_relevancia():
+    from ai.generador import MAX_POR_DOCUMENTO, bloque_documentos_apoyo, preparar_documentos_apoyo
+    largo = _informe_largo()
+    assert len(largo) > MAX_POR_DOCUMENTO
+    bloque, informe = preparar_documentos_apoyo([("cv_ana.pdf", "Ana Pérez, economista, 10 años en DEL."),
+                                                 ("vacio.docx", "   "), ("informe.pdf", largo)])
+    assert "[DOC:cv_ana.pdf]\nAna Pérez" in bloque and "DOC:vacio.docx" not in bloque
+    assert informe[0]["detalle"] == "completo"
+    assert "fragmentos relevantes" in informe[1]["detalle"] and informe[1]["usados"] <= MAX_POR_DOCUMENTO
+    assert "INFORME FINAL Mujeres que Cosechan" in bloque            # el comienzo siempre va
+    assert "62% aumentó sus ingresos" in bloque                       # y los resultados del final también
+    assert bloque_documentos_apoyo([]) == ""
+
+
+def test_documentos_de_apoyo_avisan_cuando_ya_no_entran():
+    from ai.generador import MAX_DOCUMENTOS_APOYO, MAX_POR_DOCUMENTO, preparar_documentos_apoyo
+    cantidad = MAX_DOCUMENTOS_APOYO // MAX_POR_DOCUMENTO + 2
+    _, informe = preparar_documentos_apoyo([(f"informe_{i}.pdf", _informe_largo()) for i in range(cantidad)])
+    assert sum(d["usados"] for d in informe) <= MAX_DOCUMENTOS_APOYO
+    assert informe[-1]["usados"] == 0 and "no entra" in informe[-1]["detalle"]
+
+
+def test_propuestas_anteriores_aportan_hasta_40_fragmentos_de_todos_los_temas(formato):
+    from ai.generador import MAX_FRAGMENTOS_PREVIOS, fragmentos_previos
+    texto = _informe_largo(10)
+    recuperador = Recuperador(trocear("previa.docx", texto))
+    elegidos = fragmentos_previos(recuperador, formato, "biohuertos")
+    assert 0 < len(elegidos) <= MAX_FRAGMENTOS_PREVIOS
+    assert len({f.etiqueta for f in elegidos}) == len(elegidos)      # sin repetidos
+    assert any("62% aumentó" in f.texto for f in elegidos)
+
+
+def test_word_nuevo_sigue_el_indice_del_tdr(formato, propuesta, tecnica):
+    from ai.esquemas import SeccionTdR
+    tecnica.estructura_tdr = [SeccionTdR(titulo="Metodología", bloques=["metodologia", "estrategia"], nota=""),
+                              SeccionTdR(titulo="Plan de trabajo", bloques=["cronograma"], nota=""),
+                              SeccionTdR(titulo="Declaración jurada", bloques=[], nota="firma del representante")]
+    doc = Document(io.BytesIO(a_word({**propuesta, "tecnica": tecnica}, formato)))
+    titulos = [p.text for p in doc.paragraphs if p.style.name.startswith("Heading 1")]
+    assert titulos[:3] == ["1. Metodología", "2. Plan de trabajo", "3. Declaración jurada"]
+    assert any("[POR COMPLETAR: firma del representante]" in p.text for p in doc.paragraphs)
 
 
 # ---------- historial

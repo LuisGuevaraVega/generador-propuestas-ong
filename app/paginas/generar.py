@@ -16,10 +16,12 @@ sys.path.insert(0, str(RAIZ))
 
 from ai import enaho, fondoempleo, historial  # noqa: E402
 from ai.auditor import auditar_presupuesto, chequeos_auditoria, evaluar, puntaje_total  # noqa: E402
-from ai.documentos import Recuperador, descargar_archivo_tdr, leer_documento, trocear  # noqa: E402
+from ai.documentos import (MARCA_OCR, MAX_CARACTERES, Recuperador, descargar_archivo_tdr,  # noqa: E402
+                           leer_documento, trocear)
 from ai.esquemas import Aporte, LineaPresupuesto, Parrafo  # noqa: E402
 from ai.exportar import a_excel, a_word, etiqueta_fuente, huella_autoria  # noqa: E402
-from ai.generador import MODOS, extraer_reglas, generar_propuesta, regenerar_seccion  # noqa: E402
+from ai.generador import (MAX_FRAGMENTOS_PREVIOS, MODOS, extraer_reglas, generar_propuesta,  # noqa: E402
+                          paginas, preparar_documentos_apoyo, regenerar_seccion, titulos_secciones)
 from ai.llm import resumen_costo  # noqa: E402
 from ai.reglas import SIMBOLOS, calcular_presupuesto, reglas_efectivas, validar_matriz  # noqa: E402
 from ai.tipo_cambio import factor, soles_por  # noqa: E402
@@ -55,6 +57,15 @@ def monto(simbolo, valor):
     if abs(valor) >= 1_000_000:
         return f"{simbolo} {valor / 1_000_000:,.1f} M"
     return f"{simbolo} {valor:,.0f}"
+
+
+TIPOS_DOCUMENTO = ["pdf", "docx", "xlsx", "txt", "jpg", "jpeg", "png"]
+
+
+@st.cache_data(show_spinner=False, max_entries=50)
+def leer_cacheado(nombre, contenido):
+    """Lee un archivo una sola vez: los escaneados y las fotos pasan por OCR (cuesta una llamada a la IA)."""
+    return leer_documento(nombre, contenido)
 
 
 def ir(paso):
@@ -141,9 +152,10 @@ def tarjeta_convocatoria():
             if len(nombres) > 1:
                 st.selectbox("Leer desde el enlace", nombres, key="enlace_tdr")
             archivo = st.file_uploader("Sube el TdR o las bases (PDF, Word, Excel)",
-                                       type=["pdf", "docx", "xlsx", "txt", "html"])
+                                       type=TIPOS_DOCUMENTO + ["html"])
             if archivo and st.button("Leer este archivo", width="stretch"):
-                estado.tdr_texto = leer_documento(archivo.name, archivo.getvalue())
+                with st.spinner("Leyendo el archivo (si es escaneado, con OCR)…"):
+                    estado.tdr_texto = leer_cacheado(archivo.name, archivo.getvalue())
                 estado.tdr_fuente = archivo.name
                 estado.tdr_archivo = None
             if estado.get("reglas_tdr") and st.button("Quitar el TdR y usar el formato base", width="stretch"):
@@ -185,7 +197,10 @@ def tarjeta_convocatoria():
             c3.metric("Contrapartida mínima", f"{reglas_tdr.contrapartida_min_pct:.0%}"
                       if reglas_tdr.contrapartida_min_pct is not None else "No indica")
             c4.metric("Cierre", reglas_tdr.fecha_cierre or "No indica")
-            st.caption(f"Resumen del TdR ({estado.tdr_fuente}). La propuesta se ajusta a estas reglas.")
+            st.caption(f"Resumen del TdR ({estado.tdr_fuente}, ~{paginas(len(estado.tdr_texto))} pág.). "
+                       "La propuesta se ajusta a estas reglas.")
+            if len(estado.tdr_texto) > MAX_CARACTERES:
+                st.warning(f"El TdR es muy largo: la IA lee sus primeras ~{paginas(MAX_CARACTERES)} páginas.")
         elif estado.get("tdr_error"):
             st.warning("No se pudo leer el TdR desde el enlace. Ábrelo y súbelo con «Cambiar TdR».")
         elif conv:
@@ -203,7 +218,7 @@ def tarjeta_convocatoria():
 
 # ---------------------------------------------------------------- Paso 1: tu proyecto
 DESCRIPCION_MODO = {
-    "tdr": "La IA arma un primer borrador completo con el TdR. Es lo más rápido para empezar.",
+    "tdr": "La IA arma un primer borrador completo con el TdR. Puedes sumar CVs y proyectos anteriores.",
     "previos": "Subes propuestas anteriores y la IA reutiliza tus ideas y tu estilo.",
     "entrevista": "Respondes preguntas cortas, escribiendo o hablando, y la IA redacta con tus respuestas.",
 }
@@ -298,18 +313,57 @@ def panel_entrevista():
 
 
 def panel_previos():
-    previas = st.file_uploader("Sube propuestas anteriores (PDF, Word o Excel)", type=["pdf", "docx", "xlsx"],
+    previas = st.file_uploader("Sube propuestas anteriores (PDF, Word, Excel o fotos)", type=TIPOS_DOCUMENTO,
                                accept_multiple_files=True)
     usar_ejemplo = st.checkbox("Usar también la propuesta anterior de ejemplo (ficticia)", value=not previas)
     fragmentos = []
     for f in previas or []:
-        fragmentos += trocear(f.name, leer_documento(f.name, f.getvalue()))
+        fragmentos += trocear(f.name, leer_cacheado(f.name, f.getvalue()))
     if usar_ejemplo:
         fragmentos += trocear(PREVIA.name, leer_documento(PREVIA.name, PREVIA.read_bytes()))
     if not fragmentos:
         return None
-    st.caption(f"📚 {len(fragmentos)} fragmentos listos para consultar. Cada idea reutilizada cita su documento.")
+    documentos = len({f.doc for f in fragmentos})
+    st.caption(f"📚 {documentos} documento(s) leídos completos, en {len(fragmentos)} fragmentos. A la IA van hasta "
+               f"{MAX_FRAGMENTOS_PREVIOS}: los más útiles para cada parte de la propuesta (experiencia, metodología, "
+               "equipo, resultados, riesgos…). Cada idea reutilizada cita su documento.")
     return Recuperador(fragmentos)
+
+
+
+
+def panel_documentos_apoyo():
+    """Archivos opcionales para enriquecer el borrador: CVs, proyectos anteriores u otro contexto."""
+    st.markdown("**📎 Documentos de apoyo (opcional)**")
+    st.caption("Sube CVs del equipo, proyectos o informes anteriores, o cualquier contexto de tu organización. "
+               "La IA usa los CVs para el equipo técnico (con nombres y experiencia reales) y los proyectos para la "
+               "experiencia del postor y los antecedentes. Los PDF escaneados y las fotos se leen con OCR. Se envían "
+               "al modelo de IA solo para redactar.")
+    archivos = st.file_uploader("Documentos de apoyo", type=TIPOS_DOCUMENTO,
+                                accept_multiple_files=True, label_visibility="collapsed", key="apoyo_tdr")
+    documentos = []
+    for archivo in archivos or []:
+        with st.spinner(f"Leyendo «{archivo.name}» (si es escaneado o una foto, con OCR)…"):
+            texto = leer_cacheado(archivo.name, archivo.getvalue())
+        if texto.strip():
+            documentos.append((archivo.name, texto))
+        else:
+            st.warning(f"No se pudo leer texto de «{archivo.name}».")
+    if documentos:
+        _, informe = preparar_documentos_apoyo(documentos)
+        ocr = {n for n, t in documentos if t.startswith(MARCA_OCR)}
+        lineas = []
+        for d in informe:
+            icono = "⚠️" if not d["usados"] else "✅"
+            extra = ", leído con OCR" if d["nombre"] in ocr else ""
+            lineas.append(f"{icono} **{d['nombre']}** · ~{paginas(d['caracteres'])} pág.{extra} · {d['detalle']}")
+        st.markdown("\n".join(f"- {linea}" for linea in lineas))
+        if any(not d["usados"] for d in informe):
+            st.warning("Algunos archivos no entran: el total para la IA es de ~60 páginas. Quita los menos útiles "
+                       "o sube solo las partes que importan.")
+    elif not archivos:
+        st.caption("Sin documentos, la IA propone el equipo y la experiencia como sugerencias para que los completes.")
+    return documentos
 
 
 def paso_proyecto():
@@ -347,7 +401,7 @@ def paso_proyecto():
     modo = st.radio("Modo", list(MODOS), key="w_modo", format_func=lambda m: MODOS[m], horizontal=True,
                     captions=[DESCRIPCION_MODO[m] for m in MODOS], label_visibility="collapsed")
 
-    recuperador, respuestas = None, None
+    recuperador, respuestas, documentos_apoyo = None, None, []
     with st.container(border=True):
         if modo == "tdr":
             if reglas_tdr:
@@ -355,7 +409,7 @@ def paso_proyecto():
             else:
                 st.markdown("ℹ️ No hay TdR: el borrador seguirá el formato base. Puedes subir uno arriba, en "
                             "«Cambiar TdR».")
-            st.caption("No necesitas nada más. Pulsa «Generar propuesta».")
+            documentos_apoyo = panel_documentos_apoyo()
         elif modo == "previos":
             recuperador = panel_previos()
         else:
@@ -374,7 +428,7 @@ def paso_proyecto():
             nueva = generar_propuesta(
                 modo, FORMATO, reglas_tdr=reglas_tdr, texto_tdr=estado.get("tdr_texto", ""), idea=idea,
                 organizacion=organizacion, respuestas=respuestas, recuperador=recuperador,
-                datos_publicos=datos_publicos,
+                datos_publicos=datos_publicos, documentos_apoyo=documentos_apoyo,
                 al_avanzar=lambda paso_, total, msg: status.update(label=f"[{paso_}/{total}] {msg}"),
             )
             if reglas_tdr is not None:
@@ -487,11 +541,13 @@ def paso_resultado(propuesta):
 
     # ---------- Texto: una sección a la vez
     with tab_texto:
-        titulos = {s["id"]: s["titulo"] for s in FORMATO["secciones"]}
+        titulos = titulos_secciones(FORMATO)
         secciones = {s.seccion_id: s for s in propuesta["textos"].secciones}
         nav, editor = st.columns([1, 3], gap="large")
         sid = nav.radio("Sección", list(secciones), format_func=lambda s: titulos.get(s, s), key=f"sec_{version}")
-        nav.caption("Tus cambios se conservan al pasar de una sección a otra. Pulsa «Guardar» al terminar.")
+        nav.caption("Tus cambios se conservan al pasar de una sección a otra. Pulsa «Guardar» al terminar. "
+                    "Los cuadros (objetivos, metodología, componentes, entregables, cronograma, equipo, riesgos "
+                    "y salvaguardas) van en el Word: ajústalos allí.")
         with editor:
             seccion = secciones[sid]
             clave = f"edit_{version}_{sid}"
@@ -615,8 +671,11 @@ def paso_resultado(propuesta):
     # ---------- Descargar
     with tab_desc:
         with st.container(border=True):
-            st.markdown("##### Formato base (cooperación alemana, BMZ)")
-            st.caption("Listos para el donante: sin notas internas ni huella de autoría.")
+            st.markdown("##### Propuesta técnica y económica")
+            st.caption("La técnica sigue el índice del TdR si lo tiene; si no, la estructura base (datos de "
+                       "referencia, resumen, comprensión del servicio, objetivos, metodología, componentes, "
+                       "entregables, cronograma, equipo, riesgos y salvaguardas). No lleva montos. La económica "
+                       "trae un resumen por objetivo y por rubro y el detalle con fórmulas. Sin huella de autoría.")
             d1, d2 = st.columns(2)
             d1.download_button("⬇️ Propuesta técnica (Word)",
                                a_word(propuesta, FORMATO, propuesta.get("convocatoria", ""), resumen),

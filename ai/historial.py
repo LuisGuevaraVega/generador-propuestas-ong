@@ -9,12 +9,12 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-from ai.esquemas import (AuditoriaPresupuesto, Evaluacion, MatrizImpacto, Presupuesto, ReglasConvocatoria,
-                         TextosPropuesta)
+from ai.esquemas import (AuditoriaPresupuesto, Evaluacion, MatrizImpacto, Presupuesto, PropuestaTecnica,
+                         ReglasConvocatoria, TextosPropuesta)
 
 RAIZ = Path(__file__).resolve().parent.parent
 CARPETA = RAIZ / "historial"
-MODELOS = {"textos": TextosPropuesta, "matriz": MatrizImpacto, "presupuesto": Presupuesto,
+MODELOS = {"tecnica": PropuestaTecnica, "textos": TextosPropuesta, "matriz": MatrizImpacto, "presupuesto": Presupuesto,
            "reglas_tdr": ReglasConvocatoria, "auditoria": AuditoriaPresupuesto, "evaluacion": Evaluacion}
 
 

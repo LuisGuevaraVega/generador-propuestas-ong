@@ -13,14 +13,25 @@ from typing import List
 import requests
 
 CABECERAS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GeneradorPropuestas/0.1"}
-MAX_CARACTERES = 60000
+CARACTERES_POR_PAGINA = 2500
+MAX_CARACTERES = 200_000  # ~80 páginas: el TdR o las bases se leen completos salvo casos extremos
 
 
-def leer_documento(nombre: str, contenido: bytes) -> str:
-    """Devuelve el texto de un archivo según su extensión."""
+MARCA_OCR = "[Texto leído con OCR]"
+IMAGENES = {"jpg": "image/jpeg", "jpeg": "image/jpeg", "png": "image/png", "webp": "image/webp"}
+MIN_CARACTERES_POR_PAGINA = 100
+
+
+def leer_documento(nombre: str, contenido: bytes, ocr: bool = True) -> str:
+    """Devuelve el texto de un archivo según su extensión.
+
+    Los PDF escaneados y las imágenes se leen con OCR (Gemini) si `ocr` es True.
+    """
     ext = nombre.lower().rsplit(".", 1)[-1]
+    if ext in IMAGENES:
+        return _ocr(contenido, IMAGENES[ext]) if ocr else ""
     if ext == "pdf":
-        return _leer_pdf(contenido)
+        return _leer_pdf(contenido, ocr)
     if ext == "docx":
         return _leer_docx(contenido)
     if ext in ("xlsx", "xlsm"):
@@ -30,14 +41,31 @@ def leer_documento(nombre: str, contenido: bytes) -> str:
     return contenido.decode("utf-8", errors="ignore")
 
 
-def _leer_pdf(contenido: bytes) -> str:
+def _ocr(contenido: bytes, mime: str) -> str:
+    from ai.llm import transcribir_documento  # import diferido: leer Word o Excel no necesita la API
+
+    return f"{MARCA_OCR}\n{transcribir_documento(contenido, mime)}"
+
+
+def es_escaneado(texto: str, paginas: int) -> bool:
+    """Un PDF con menos de ~100 caracteres seleccionables por página es, en la práctica, una imagen."""
+    return len(texto.strip()) < MIN_CARACTERES_POR_PAGINA * max(paginas, 1)
+
+
+def _leer_pdf(contenido: bytes, ocr: bool = True) -> str:
     import fitz  # PyMuPDF
 
     with fitz.open(stream=contenido, filetype="pdf") as doc:
         texto = "\n".join(pagina.get_text() for pagina in doc)
-    if len(texto.strip()) < 200:
-        texto += "\n[Aviso: el PDF parece escaneado; casi no tiene texto seleccionable.]"
-    return texto
+        paginas = len(doc)
+    if not es_escaneado(texto, paginas):
+        return texto
+    if ocr:
+        try:
+            return _ocr(contenido, "application/pdf")
+        except Exception as error:
+            return texto + f"\n[Aviso: el PDF parece escaneado y el OCR falló: {error}]"
+    return texto + "\n[Aviso: el PDF parece escaneado; casi no tiene texto seleccionable.]"
 
 
 def _leer_docx(contenido: bytes) -> str:
@@ -131,7 +159,10 @@ class Fragmento:
 
 def trocear(nombre: str, texto: str, tamano: int = 1200, solape: int = 200) -> List[Fragmento]:
     """Parte un documento en fragmentos de ~1200 caracteres, respetando párrafos."""
-    parrafos = [p.strip() for p in texto.split("\n") if p.strip()]
+    parrafos = []
+    for p in (p.strip() for p in texto.split("\n")):
+        # Un "párrafo" enorme (p. ej. un PDF sin saltos de línea) se parte en trozos del tamaño del fragmento.
+        parrafos += [p[i:i + tamano] for i in range(0, len(p), tamano)] if p else []
     fragmentos, actual = [], ""
     for parrafo in parrafos:
         if len(actual) + len(parrafo) > tamano and actual:
@@ -159,3 +190,9 @@ class Recuperador:
         puntajes = cosine_similarity(self.vectorizador.transform([consulta]), self.matriz)[0]
         orden = puntajes.argsort()[::-1][:k]
         return [self.fragmentos[i] for i in orden if puntajes[i] > 0]
+
+    def puntajes(self, consultas: List[str]):
+        """Relevancia de cada fragmento: su mayor parecido con cualquiera de las consultas."""
+        from sklearn.metrics.pairwise import cosine_similarity
+
+        return cosine_similarity(self.vectorizador.transform(consultas), self.matriz).max(axis=0)

@@ -83,6 +83,24 @@
       ]
     }
   ],
+  "documento": [
+    {"id": "resumen", "titulo": "Resumen ejecutivo",
+     "proposito": "2 a 3 párrafos: qué es el servicio o programa, a quién atiende, cómo se trabajará (momentos) y qué se entregará. Sin montos."},
+    {"id": "antecedentes", "titulo": "Antecedentes",
+     "proposito": "2 a 3 párrafos: contexto del territorio y del problema con datos (ENAHO u otros citados), la iniciativa del convocante y por qué se contrata el servicio."},
+    {"id": "comprension", "titulo": "Comprensión del servicio",
+     "proposito": "1 a 2 párrafos que muestren que el postor leyó el TdR: alcance, población, productos y condiciones del servicio con sus propias palabras."},
+    {"id": "postor", "titulo": "Experiencia del postor",
+     "proposito": "1 a 2 párrafos sobre la organización que postula: trayectoria, servicios similares y valor agregado. Sin inventar datos: usa [POR COMPLETAR]."},
+    {"id": "estrategia", "titulo": "Estrategia metodológica general",
+     "proposito": "Un párrafo por cada momento de la metodología, en el mismo orden, que empiece con 'Nombre del momento:' y explique de forma puntual qué se hace, con quién, con qué herramientas y qué producto deja."},
+    {"id": "monitoreo", "titulo": "Monitoreo y evaluación",
+     "proposito": "1 a 2 párrafos: cómo se hará el seguimiento (indicadores, frecuencia, instrumentos, responsables), cómo se usará la información para mejorar y cómo se evaluará el cierre."},
+    {"id": "riesgos", "titulo": "Enfoque general de calidad y riesgos",
+     "proposito": "1 párrafo con el enfoque de gestión de la calidad y de los riesgos del servicio."},
+    {"id": "salvaguardas", "titulo": "Seguimiento de las salvaguardas",
+     "proposito": "Exactamente 3 párrafos que empiecen con 'Mecanismos de seguimiento:', 'Respuesta ante incidentes:' y 'Resultados esperados:'."}
+  ],
   "reglas": {
     "financiamiento_max_pct": 0.75,
     "financiamiento_max_excepcional_pct": 0.90,

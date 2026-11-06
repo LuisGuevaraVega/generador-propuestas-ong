@@ -105,6 +105,39 @@ def _registrar(modelo, respuesta):
     })
 
 
+INSTRUCCION_OCR = (
+    "Transcribe fielmente TODO el texto de este documento escaneado o fotografiado (OCR), en su idioma original. "
+    "Respeta el orden, los títulos, los párrafos y las listas. Escribe las tablas fila por fila, con las celdas "
+    "separadas por ' | '. No resumas, no corrijas, no traduzcas y no agregues comentarios. Si una parte es "
+    "ilegible, escribe [ilegible]."
+)
+MAX_BYTES_OCR = 18 * 1024 * 1024
+
+
+def transcribir_documento(contenido: bytes, mime: str) -> str:
+    """OCR con Gemini: devuelve el texto de un PDF escaneado o de una imagen (JPG, PNG).
+
+    Usa primero los modelos "lite" (más baratos): transcribir no necesita razonar.
+    """
+    if len(contenido) > MAX_BYTES_OCR:
+        raise ValueError("El archivo pesa más de 18 MB: divídelo o redúcelo antes de subirlo.")
+    modelos = [m for m in MODELOS if "lite" in m] + [m for m in MODELOS if "lite" not in m]
+    partes = [types.Part.from_bytes(data=contenido, mime_type=mime), INSTRUCCION_OCR]
+    config = types.GenerateContentConfig(temperature=0.0)
+    ultimo_error = None
+    for ronda in range(2):
+        for modelo in modelos:
+            try:
+                respuesta = cliente().models.generate_content(model=modelo, contents=partes, config=config)
+                _registrar(modelo, respuesta)
+                if respuesta.text and respuesta.text.strip():
+                    return respuesta.text.strip()
+            except Exception as error:  # 503, 429: probar el siguiente modelo
+                ultimo_error = error
+        time.sleep(3 * (ronda + 1))
+    raise RuntimeError(f"No se pudo leer el documento con OCR: {ultimo_error}")
+
+
 def generar_estructurado(prompt: str, esquema, instrucciones: str, temperatura: float = 0.4):
     """Llama al modelo y devuelve una instancia del esquema Pydantic indicado."""
     config = types.GenerateContentConfig(

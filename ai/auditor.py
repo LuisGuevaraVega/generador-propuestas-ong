@@ -84,12 +84,15 @@ def evaluar(propuesta, formato, resumen):
     """Puntaje estimado por criterio. Devuelve (Evaluacion, llamadas)."""
     reglas_tdr = propuesta.get("reglas_tdr")
     criterios = (reglas_tdr.criterios_evaluacion if reglas_tdr and reglas_tdr.criterios_evaluacion else CRITERIOS_BASE)
-    titulos = {s["id"]: s["titulo"] for s in formato["secciones"]}
+    titulos = {s["id"]: s["titulo"] for s in list(formato["secciones"]) + list(formato.get("documento", []))}
     texto = "\n\n".join(f"## {titulos.get(s.seccion_id, s.seccion_id)}\n" + "\n".join(p.texto for p in s.parrafos)
                         for s in propuesta["textos"].secciones)
+    diseno = propuesta.get("tecnica")
+    cuadros = (f"CUADROS DE LA PROPUESTA TÉCNICA (objetivos, metodología, entregables, equipo, riesgos):\n"
+               f"{diseno.model_dump_json(indent=1)}\n\n" if diseno else "")
     prompt = (
         f"CRITERIOS DE EVALUACIÓN:\n" + "\n".join(f"- {c}" for c in criterios) + "\n\n"
-        f"PROPUESTA TÉCNICA:\n{texto}\n\n"
+        f"PROPUESTA TÉCNICA:\n{texto}\n\n{cuadros}"
         f"MATRIZ DE IMPACTO:\n{propuesta['matriz'].model_dump_json(indent=1)}\n\n"
         f"PRESUPUESTO: total {resumen['total']:,.0f} {resumen['moneda']}, solicitado {resumen['solicitado']:,.0f}, "
         f"aporte propio {resumen['pct_propio']:.0%}, {len(resumen['lineas'])} líneas, {resumen['duracion_meses']} meses.\n\n"

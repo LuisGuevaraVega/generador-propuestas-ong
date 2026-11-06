@@ -8,7 +8,7 @@ import re
 
 OK, ALERTA, ERROR = "ok", "alerta", "error"
 
-SIMBOLOS = {"EUR": "€", "PEN": "S/", "USD": "US$", "AUD": "A$"}
+SIMBOLOS = {"EUR": "€", "PEN": "S/", "USD": "US$", "AUD": "A$", "CAD": "C$", "JPY": "¥", "GBP": "£"}
 
 _META_ES_ACTIVIDAD = re.compile(
     r"(se (realizaron|ejecutaron|desarrollaron|dictaron)|talleres? (realizados?|ejecutados?)|n[uú]mero de (talleres|capacitaciones|sesiones))",
