@@ -93,7 +93,11 @@ streamlit run app/streamlit_app.py
 
 Pruebas automáticas, sin llamar a APIs: `python -m pytest` (30 pruebas).
 
-_Capturas del flujo principal: pendientes._
+**Capturas del flujo principal** (tomadas de la versión publicada):
+
+| 1. Boletín de convocatorias | 2. Tu proyecto: el TdR ya resumido | 3. Revisa y descarga |
+|---|---|---|
+| ![Boletín diario de convocatorias con plazo en color y botón Generar propuesta](docs/img/captura_1_boletin.png) | ![Paso Tu proyecto con el resumen del TdR del DAP: monto, duración, contrapartida y cierre](docs/img/captura_2_tu_proyecto.png) | ![Propuesta generada con el aviso de qué corregir, los montos y las pestañas de revisión](docs/img/captura_3_revisa_y_descarga.png) |
 
 **Flujo principal:**
 
