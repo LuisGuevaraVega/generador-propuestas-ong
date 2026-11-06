@@ -112,14 +112,14 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    subgraph Nube
+    subgraph nube["Nube"]
         R1[Rutina diaria de Claude:<br/>busca convocatorias] --> P[Página del boletín]
         R2[Rutina diaria de Claude:<br/>sincroniza el boletín] --> GH[(Repo en GitHub:<br/>reportes.json)]
         P --> R2
         GEM[API de Gemini]
         BCRP[API del BCRP]
     end
-    subgraph Laptop del usuario
+    subgraph laptop["Laptop del usuario"]
         UI[App Streamlit<br/>app/] --> GEN[Generador<br/>ai/generador.py]
         UI --> DOC[Lectura de TdR y documentos<br/>ai/documentos.py]
         UI --> VOZ[Whisper local<br/>ai/voz.py]
