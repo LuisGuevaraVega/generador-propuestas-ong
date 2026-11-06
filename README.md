@@ -51,9 +51,13 @@ cp .env.example .env   # y completar GEMINI_API_KEY
 streamlit run app/streamlit_app.py
 ```
 
-Flujo: feed de convocatorias → **✨ Generar propuesta** → leer el TdR → elegir modo
-(borrador desde el TdR, desde propuestas anteriores o entrevista por texto/voz) → revisión
-(reglas del donante, cifras a validar, puntaje) → editar → descargar Word y Excel.
+Flujo: feed de convocatorias (con buscador y filtro de microfinanzas) → **✨ Generar propuesta** → asistente
+de 2 pasos:
+1. **Tu proyecto:** el TdR de la convocatoria se lee solo y se resume arriba (monto, duración, contrapartida,
+   cierre); luego organización, idea, departamento y modo (borrador desde el TdR, desde propuestas anteriores
+   o entrevista por texto/voz).
+2. **Revisa y descarga:** qué corregir (reglas del donante, cifras a validar, puntaje), edición del texto por
+   sección, matriz y presupuesto, y descarga en Word y Excel (formato base o Fondoempleo).
 
 Pruebas automáticas (sin llamar a APIs): `python -m pytest` (24 pruebas).
 
