@@ -67,10 +67,33 @@ def _dinero(monto, moneda):
     return f"{SIMBOLOS.get(moneda, moneda)} {monto:,.0f}"
 
 
-def calcular_presupuesto(presupuesto, reglas):
-    """Calcula totales, reserva, gastos administrativos y fuentes; devuelve (resumen, chequeos)."""
+def calcular_presupuesto(presupuesto, reglas, conversor=None):
+    """Calcula totales, reserva, gastos administrativos y fuentes; devuelve (resumen, chequeos).
+
+    `conversor(de, a)` devuelve el factor de cambio entre monedas (p. ej. del BCRP).
+    Si los montos están en otra moneda que la del TdR, se convierten con él.
+    """
     moneda = reglas["moneda"]
-    lineas = [{**l.model_dump(), "total": round(l.cantidad * l.costo_unitario, 2)} for l in presupuesto.lineas]
+    moneda_montos = (presupuesto.moneda or moneda).upper()
+    chequeos, tasa = [], 1.0
+    if moneda_montos != moneda.upper():
+        try:
+            tasa = conversor(moneda_montos, moneda) if conversor else None
+        except Exception:
+            tasa = None
+        if tasa:
+            chequeos.append((ALERTA, f"Tus montos estaban en {moneda_montos}; se convirtieron a {moneda} "
+                                     f"(1 {moneda_montos} = {tasa:.4f} {moneda}, tipo de cambio BCRP)."))
+        else:
+            chequeos.append((ERROR, f"Los montos están en {moneda_montos} y la convocatoria pide {moneda}: "
+                                    f"convierte el presupuesto antes de comparar con los topes."))
+            moneda, tasa = moneda_montos, 1.0
+    lineas = []
+    for l in presupuesto.lineas:
+        datos = l.model_dump()
+        datos["costo_unitario"] = round(datos["costo_unitario"] * tasa, 2)
+        datos["total"] = round(datos["cantidad"] * datos["costo_unitario"], 2)
+        lineas.append(datos)
 
     gastos = round(sum(l["total"] for l in lineas), 2)
     meses = presupuesto.duracion_meses
@@ -79,7 +102,7 @@ def calcular_presupuesto(presupuesto, reglas):
     administrativos = round((gastos + reserva) * reglas["admin_pct"], 2)
     total = round(gastos + reserva + administrativos, 2)
 
-    aporte_propio = round(sum(a.monto for a in presupuesto.aportes_propios), 2)
+    aporte_propio = round(sum(a.monto for a in presupuesto.aportes_propios) * tasa, 2)
     solicitado = round(total - aporte_propio, 2)
     pct_propio = aporte_propio / total if total else 0
     personal = sum(l["total"] for l in lineas if l["categoria"] == "personal")
@@ -89,12 +112,6 @@ def calcular_presupuesto(presupuesto, reglas):
         por_categoria[l["categoria"]] = por_categoria.get(l["categoria"], 0) + l["total"]
         por_objetivo[l["objetivo"]] = por_objetivo.get(l["objetivo"], 0) + l["total"]
 
-    chequeos = []
-    moneda_montos = (presupuesto.moneda or moneda).upper()
-    if moneda_montos != moneda.upper():
-        chequeos.append((ERROR, f"Los montos están en {moneda_montos} y la convocatoria pide {moneda}: "
-                                f"convierte el presupuesto antes de comparar con los topes."))
-        moneda = moneda_montos
     minimo = reglas["aporte_min_pct"]
     if minimo:
         if pct_propio >= minimo:
@@ -138,6 +155,7 @@ def calcular_presupuesto(presupuesto, reglas):
         "administrativos": administrativos, "total": total, "aporte_propio": aporte_propio,
         "solicitado": solicitado, "pct_propio": pct_propio, "pct_solicitado": 1 - pct_propio if total else 0,
         "por_categoria": por_categoria, "por_objetivo": por_objetivo, "duracion_meses": meses,
+        "tasa_conversion": tasa, "moneda_original": moneda_montos,
     }
     return resumen, chequeos
 

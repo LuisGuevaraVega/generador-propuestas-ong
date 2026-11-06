@@ -15,7 +15,7 @@ from openpyxl.utils import get_column_letter
 
 from ai.reglas import SIMBOLOS
 
-NOMBRES_FUENTE = {"TDR": "TdR", "IA": "Sugerencia IA"}
+NOMBRES_FUENTE = {"TDR": "TdR", "IA": "Sugerencia IA", "USUARIO": "Editado por ti", "ENAHO": "ENAHO (INEI)"}
 
 
 def etiqueta_fuente(fuente: str) -> str:
@@ -28,7 +28,7 @@ def etiqueta_fuente(fuente: str) -> str:
 
 def huella_autoria(propuesta):
     """Cuenta de dónde salió cada pieza: TdR, IA, propuestas previas o respuestas del usuario."""
-    conteo = {"Tus respuestas": 0, "Tus propuestas previas": 0, "TdR": 0, "Sugerencia IA": 0}
+    conteo = {"Tus respuestas": 0, "Tus propuestas previas": 0, "TdR y datos públicos": 0, "Sugerencia IA": 0}
     piezas = [p for s in propuesta["textos"].secciones for p in s.parrafos]
     m = propuesta["matriz"]
     piezas += list(m.indicadores_proyecto) + [i for oe in m.objetivos_especificos for i in oe.indicadores]
@@ -36,8 +36,8 @@ def huella_autoria(propuesta):
     for pieza in piezas:
         tipos = set()
         for f in pieza.fuentes:
-            if f == "TDR":
-                tipos.add("TdR")
+            if f in ("TDR", "ENAHO"):
+                tipos.add("TdR y datos públicos")
             elif f == "IA":
                 tipos.add("Sugerencia IA")
             elif f.startswith("DOC:"):
@@ -197,7 +197,7 @@ def a_excel(propuesta, resumen, reglas) -> bytes:
     hoja.cell(row=hoja.max_row, column=3).font = negrita
     ini_ap = hoja.max_row + 1
     for a in propuesta["presupuesto"].aportes_propios:
-        hoja.append(["", "", f"{a.fuente} ({a.tipo})", "", "", "", a.monto])
+        hoja.append(["", "", f"{a.fuente} ({a.tipo})", "", "", "", round(a.monto * resumen.get("tasa_conversion", 1.0), 2)])
     fin_ap = hoja.max_row
     f_aporte = fila_total("Total aporte propio", f"=SUM(G{ini_ap}:G{fin_ap})" if fin_ap >= ini_ap else "=0")
     f_sol = fila_total("MONTO SOLICITADO AL DONANTE", f"=G{f_total}-G{f_aporte}")

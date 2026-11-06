@@ -13,8 +13,8 @@ Cada pieza guarda sus `fuentes`, que forman la huella de autoría:
 import json
 
 from ai.documentos import recortar
-from ai.esquemas import MatrizImpacto, Presupuesto, ReglasConvocatoria, TextosPropuesta
-from ai.llm import generar_estructurado
+from ai.esquemas import MatrizImpacto, Presupuesto, ReglasConvocatoria, SeccionGenerada, TextosPropuesta
+from ai.llm import generar_estructurado, medir_costo
 
 MODOS = {
     "tdr": "Borrador desde el TdR",
@@ -103,10 +103,44 @@ def _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuest
 
 def generar_propuesta(modo, formato, reglas_tdr=None, texto_tdr="", idea="", organizacion="",
                       respuestas=None, recuperador=None, al_avanzar=None):
-    """Genera textos, matriz y presupuesto. `al_avanzar(paso, total, mensaje)` informa el progreso."""
+    """Genera textos, matriz y presupuesto. `al_avanzar(paso, total, mensaje)` informa el progreso.
+
+    Devuelve también el contexto usado (para regenerar secciones después) y el
+    registro de tokens de cada llamada (para calcular el costo).
+    """
+    contexto = _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuestas, recuperador)
+    with medir_costo() as llamadas:
+        propuesta = _generar(modo, formato, reglas_tdr, contexto, al_avanzar)
+    propuesta.update({"contexto": contexto, "reglas_tdr": reglas_tdr, "llamadas": llamadas,
+                      "organizacion": organizacion, "idea": idea})
+    return propuesta
+
+
+def regenerar_seccion(propuesta, formato, seccion_id, instruccion):
+    """Reescribe una sección de texto siguiendo una instrucción del usuario."""
+    seccion_formato = next(s for s in formato["secciones"] if s["id"] == seccion_id)
+    actual = next(s for s in propuesta["textos"].secciones if s.seccion_id == seccion_id)
+    texto_actual = "\n\n".join(p.texto for p in actual.parrafos)
+    prompt = (
+        f"{propuesta['contexto']}\n\n=====\n\n"
+        f"SECCIÓN A REESCRIBIR: {seccion_formato['titulo']} (id: {seccion_id}) — {seccion_formato['proposito']}\n\n"
+        f"VERSIÓN ACTUAL (puede incluir ediciones del usuario, respétalas salvo que la instrucción diga otra cosa):\n"
+        f"{texto_actual}\n\n"
+        f"INSTRUCCIÓN DEL USUARIO: {instruccion}\n\n"
+        f"Devuelve la sección completa reescrita, con seccion_id='{seccion_id}'. "
+        f"Lo que venga de la instrucción del usuario lleva la fuente 'USUARIO'."
+    )
+    with medir_costo() as llamadas:
+        nueva = generar_estructurado(prompt, SeccionGenerada, BASE + "\n\n" + POR_MODO[propuesta["modo"]])
+    nueva.seccion_id = seccion_id
+    propuesta["textos"].secciones = [nueva if s.seccion_id == seccion_id else s for s in propuesta["textos"].secciones]
+    propuesta.setdefault("llamadas", []).extend(llamadas)
+    return nueva
+
+
+def _generar(modo, formato, reglas_tdr, contexto, al_avanzar):
     avisar = al_avanzar or (lambda *a: None)
     instrucciones = BASE + "\n\n" + POR_MODO[modo]
-    contexto = _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuestas, recuperador)
     moneda = reglas_tdr.moneda if reglas_tdr is not None else formato["moneda"]
     textos_ids = [s for s in formato["secciones"] if s["tipo"] == "texto"]
 

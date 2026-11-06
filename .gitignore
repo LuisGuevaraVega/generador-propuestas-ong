@@ -15,3 +15,7 @@ venv/
 # Archivos generados por la app
 salidas/
 *.tmp
+
+# Caché local (tipo de cambio, etc.) e historial de propuestas del usuario
+.cache/
+historial/
