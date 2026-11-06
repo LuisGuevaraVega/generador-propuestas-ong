@@ -69,7 +69,8 @@ def extraer_reglas(texto_tdr: str, ficha: str = "") -> ReglasConvocatoria:
         f"Ficha de la convocatoria (resumen del boletín):\n{ficha}\n\n"
         f"Texto del TdR o de las bases:\n{recortar(texto_tdr)}\n\n"
         "Extrae las reglas de la convocatoria. Usa null cuando el documento no diga un dato; no lo supongas. "
-        "Los porcentajes van como fracción (10% = 0.10)."
+        "Los porcentajes van como fracción (10% = 0.10). En topes_por_rubro pon cada límite por tipo de gasto "
+        "(p. ej. 'consultorías y capacitación hasta 30% del monto') con su base: 'total' o 'solicitado'."
     )
     instrucciones = "Eres un analista que lee bases y términos de referencia de convocatorias para ONG. Eres preciso y literal."
     return generar_estructurado(prompt, ReglasConvocatoria, instrucciones, temperatura=0.0)

@@ -9,12 +9,13 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-from ai.esquemas import MatrizImpacto, Presupuesto, ReglasConvocatoria, TextosPropuesta
+from ai.esquemas import (AuditoriaPresupuesto, Evaluacion, MatrizImpacto, Presupuesto, ReglasConvocatoria,
+                         TextosPropuesta)
 
 RAIZ = Path(__file__).resolve().parent.parent
 CARPETA = RAIZ / "historial"
 MODELOS = {"textos": TextosPropuesta, "matriz": MatrizImpacto, "presupuesto": Presupuesto,
-           "reglas_tdr": ReglasConvocatoria}
+           "reglas_tdr": ReglasConvocatoria, "auditoria": AuditoriaPresupuesto, "evaluacion": Evaluacion}
 
 
 def _a_json(propuesta: dict) -> dict:

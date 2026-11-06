@@ -86,6 +86,12 @@ class TextosPropuesta(BaseModel):
     secciones: List[SeccionGenerada]
 
 
+class TopeRubro(BaseModel):
+    rubro: str = Field(description="Rubro tal como lo nombra el TdR, p. ej. 'consultorías y capacitación'")
+    max_pct: float = Field(description="Tope como fracción (0.30 = 30%)")
+    base: str = Field(description="'total' si el tope es sobre el costo total, 'solicitado' si es sobre el monto pedido")
+
+
 class ReglasConvocatoria(BaseModel):
     """Lo que el TdR o las bases exigen, extraído por el modelo (Document AI + salida estructurada)."""
 
@@ -103,7 +109,32 @@ class ReglasConvocatoria(BaseModel):
     imprevistos_pct: Optional[float] = Field(None, description="Reserva o imprevistos como fracción")
     personal_max_pct: Optional[float] = Field(None, description="Tope del personal del proyecto como fracción del monto solicitado")
     gastos_no_elegibles: List[str]
+    topes_por_rubro: List[TopeRubro] = Field(default_factory=list)
     secciones_requeridas: List[str]
     criterios_evaluacion: List[str]
     fecha_cierre: Optional[str] = None
     otras_reglas: List[str]
+
+
+class RevisionLinea(BaseModel):
+    descripcion: str = Field(description="Descripción exacta de la línea de presupuesto revisada")
+    elegible: bool
+    motivo: str = Field(description="Por qué no es elegible, citando el TdR; vacío si es elegible")
+    rubros_tdr: List[str] = Field(description="Rubros con tope del TdR a los que pertenece esta línea")
+
+
+class AuditoriaPresupuesto(BaseModel):
+    lineas: List[RevisionLinea]
+
+
+class PuntajeCriterio(BaseModel):
+    criterio: str
+    puntaje: int = Field(description="1 insuficiente, 2 regular, 3 bueno, 4 muy bueno")
+    justificacion: str
+    mejora: str = Field(description="Una mejora concreta para subir el puntaje")
+
+
+class Evaluacion(BaseModel):
+    criterios: List[PuntajeCriterio]
+    fortalezas: List[str]
+    debilidades: List[str]
