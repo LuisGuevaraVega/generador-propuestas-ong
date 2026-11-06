@@ -4,7 +4,7 @@
 
 ## 1. One-liner
 
-**Hacemos propuestas técnicas y económicas listas para revisar para ONG del Perú, a partir del TdR de cada convocatoria, mediante IA que lee las bases, los documentos de la organización y su voz.**
+**Hacemos propuestas técnicas y económicas listas para postular a convocatorias de proyectos sociales lideradas por ONG del Perú, a partir del TdR de cada convocatoria, mediante IA que lee las bases, los documentos de la organización y su voz.**
 
 ## 2. Founder
 
