@@ -1,6 +1,215 @@
 {
  "reports": [
   {
+   "date": "2026-11-08",
+   "summary": "Una oportunidad nueva para equipos: INFANT busca persona natural o jurídica para evaluar sus capacidades organizacionales (OCA) y formular su plan OCD 2027-2028 (fecha límite por confirmar en el TdR). Urgente: DAP de Australia vía ONG aliada cierra HOY domingo 8 nov. Lo más próximo: Producers Direct (15 nov; consultas hasta el martes 10) y SOCODEVI CACAO+ (20 nov; consultas hasta el jueves 12). ACNUR 3838 sigue al 23 nov, 17:00.",
+   "items": [
+    {
+     "title": "Programa de Ayuda Directa (DAP) 2026-27 – convocatoria abierta",
+     "isNew": false,
+     "donor": "Embajada de Australia en Lima",
+     "type": "Subvención para ONG",
+     "amount": "Hasta AUD 20.000; proyectos de 4 a 18 meses; capacitación, consultorías, alimentación, viajes y viáticos hasta 30% del monto",
+     "eligibility": "ONG, organizaciones de la sociedad civil, organizaciones sociales y entidades académicas o de investigación sin fines de lucro, constituidas en Perú y/o Bolivia, con cuenta bancaria a nombre de la organización. Se valoran alianzas, contrapartida, participación comunitaria y 5+ años de constitución. No pueden postular personas naturales, empresas ni entidades estatales.",
+     "topic": "Crecimiento económico inclusivo, inclusión social y acción climática",
+     "scope": "Perú y Bolivia",
+     "deadline": "2026-11-08",
+     "deadlineNote": "URGENTE: cierra HOY domingo 8 nov (hora de Perú, GMT-5); la web de la Embajada no indica hora y no se ha anunciado ampliación. Días atrás el formulario de SmartyGrants mostraba cierre el lunes 9 nov a las 9:00, pero no conviene contar con eso: enviar HOY. Postulación solo en línea en dap.smartygrants.com.au/peru-bolivia2026 (registro previo de la ONG); consultas a dap.lima@dfat.gov.au. Requiere constitución legal de la ONG y cuenta bancaria a su nombre. Solo vale si una ONG aliada ya tiene la propuesta casi lista.",
+     "why": "Fondo pequeño para un piloto de emprendimiento o medios de vida con una ONG aliada. El tope de gastos en consultorías y capacitación sube a 30%, lo que deja más espacio para que el equipo participe como asistencia técnica.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "DAP en la web de la Embajada de Australia",
+       "url": "https://peru.embassy.gov.au/limacastellano/Development.html",
+       "linkedin": false
+      },
+      {
+       "label": "Formulario de postulación (SmartyGrants)",
+       "url": "https://dap.smartygrants.com.au/peru-bolivia2026",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría «Evaluación técnica especializada» (PE-T1591): evaluación de una solución de análisis de suelos y de capacidades organizacionales para pilotear un modelo de negocio con pequeños productores",
+     "isNew": false,
+     "donor": "Producers Direct (organización de productores; publicado en REDINFOR el 3 nov)",
+     "type": "Consultoría para firma o consultor (admite firmas consultoras)",
+     "amount": "No indicado (propuesta económica a todo costo)",
+     "eligibility": "Consultores individuales o firmas consultoras. Equipo con jefe de equipo (8+ años en transformación digital o adquisición de soluciones tecnológicas y en evaluación de capacidades organizacionales) y especialista de apoyo. Documentos: propuesta técnica (máx. 3 págs.), plan de trabajo (máx. 5 págs.), CV, referencias, declaración de conflicto de intereses y propuesta económica.",
+     "topic": "Productividad de pequeños productores agrícolas y prácticas climáticamente inteligentes; evaluación de un modelo de negocio sostenible con agtech/datos",
+     "scope": "Perú (región no indicada en el aviso)",
+     "deadline": "2026-11-15",
+     "deadlineNote": "Cierra el domingo 15 nov (sin hora indicada), en 7 días; consultas hasta el martes 10 nov (en 2 días). Enviar a katherine@producersdirect.org (Katherine Bocanegra) con asunto «TDR Evaluación Técnica Especializada – PE-T1591». Sigue publicada en REDINFOR. El TdR está en Google Drive y no se pudo leer desde aquí: revisarlo para alcance, región y plazos de ejecución. Requiere inglés profesional.",
+     "why": "Consultoría abierta a firmas con pequeños productores y modelo de negocio; encaje parcial (pesa más lo tecnológico), viable si el equipo suma un perfil de agtech o transformación digital.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/03/peru-consultoria-evaluacion-tecnica-especializada/",
+       "linkedin": false
+      },
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/11rf4kRjErL0jMdHYG_mjfKteZJ5RgQ-v/view?usp=sharing",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría para un estudio de mercado e identificación de compradores de cacao y derivados en Canadá – Proyecto CACAO+",
+     "isNew": false,
+     "donor": "SOCODEVI – Proyecto CACAO+ (cooperación canadiense; publicado en REDINFOR el 5 nov)",
+     "type": "Consultoría para firma o consultor (persona natural o jurídica)",
+     "amount": "No indicado (propuesta económica a todo costo); 120 días efectivos de trabajo, contrato de 140 días",
+     "eligibility": "Personas naturales o jurídicas: admite firma consultora o equipo. Requisito clave: al menos 3 servicios en los últimos 5 años de estudios de mercado de cacao o derivados en Canadá o Norteamérica, acreditados con contratos, órdenes de servicio, constancias o comprobantes de pago. Propuesta técnica y económica; cumplir políticas de SOCODEVI y del gobierno canadiense.",
+     "topic": "Cadena de valor del cacao y articulación comercial: estudio de mercado y mapeo de compradores para la oferta exportable de organizaciones de productores peruanas",
+     "scope": "Perú (proyecto CACAO+; regiones no indicadas en el aviso) con trabajo sobre el mercado canadiense",
+     "deadline": "2026-11-20",
+     "deadlineNote": "Propuestas hasta el viernes 20 nov (sin hora indicada), en 12 días; consultas hasta el jueves 12 nov (en 4 días). Según el aviso de REDINFOR (releído hoy), propuestas técnica y económica y consultas van a peru@socodevi.org, asunto «Análisis de mercado Cacao y derivados Canadá». Evaluación 27 nov; adjudicación y firma 4 dic. TdR en Google Drive (no leído desde aquí).",
+     "why": "Encaja con cadenas de valor y articulación comercial de asociaciones de productores, y admite firmas. Exige experiencia específica en el mercado norteamericano: si el equipo no la tiene, conviene asociarse con un consultor o firma de comercio exterior que sí la acredite.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/05/peru-consultoria-para-la-realizacion-de-un-estudio-de-mercado-e-identificacion-de-compradores-para-cacao-y-derivados-en-canada-proyecto-cacao/",
+       "linkedin": false
+      },
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1fKB29ZrnubAPiPgJPj7vHdXfLqnJQXTn/view?usp=sharing",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría para la evaluación de capacidades organizacionales (OCA) y formulación del plan de desarrollo de capacidades organizacionales (OCD) 2027-2028 de INFANT",
+     "isNew": true,
+     "donor": "INFANT (ONG peruana; publicado en REDINFOR el 6 nov)",
+     "type": "Consultoría (persona natural o jurídica)",
+     "amount": "No indicado (propuesta técnica y económica)",
+     "eligibility": "Personas naturales o jurídicas: admite firma o equipo consultor. Perfil: formación en ciencias sociales, administración, economía, gestión pública o desarrollo organizacional; experiencia demostrada en diagnóstico organizacional, fortalecimiento institucional, planificación estratégica o evaluación de capacidades, y en facilitación participativa y planificación con indicadores y presupuesto. Conocimiento de OSC y enfoques de derechos de la niñez, género e interculturalidad; deseable experiencia en Amazonía.",
+     "topic": "Fortalecimiento institucional de una ONG: evaluación OCA y plan OCD 2027-2028 (encaje parcial con fortalecimiento de organizaciones)",
+     "scope": "Perú (INFANT trabaja con niñez trabajadora; deseable experiencia amazónica)",
+     "deadline": "",
+     "deadlineNote": "Fecha límite por confirmar: el aviso no la indica y el TdR (Google Drive) no se pudo leer desde aquí; abrirlo pronto porque estos avisos suelen cerrar en 7–10 días. Enviar propuesta técnica y económica en PDF con los documentos del TdR a infant@infant.org.pe, con copia a esther.diaz@infant.org.pe y diana.hernandez@infant.org.pe.",
+     "why": "Encargo de fortalecimiento organizacional abierto a equipos, con metodología participativa que el equipo domina; útil como referencia de trabajo con OSC aunque no sea DEL puro.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/06/peru-consultoria-para-la-evaluacion-de-capacidades-organizacionales-oca-y-formulacion-del-plan-de-desarrollo-de-capacidades-organizacionales-ocd-2027-2028-de-infant/",
+       "linkedin": false
+      },
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1pAHSg9gFujSZ7vezFjD63fHH52t63a2o/view?usp=sharing",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-23",
+     "deadlineNote": "Ampliada: el encabezado de UNGM sigue indicando lunes 23 nov a las 17:00 (GMT-5), en 15 días (reconfirmado hoy); el cuerpo aún muestra la fecha original 19 nov, así que rige el «Corrigendum No. 1» del 2 nov (adjunto no abierto). Se postula solo por supplier-portal.unhcr.org (registro previo); ofertas por otras vías se descalifican; contacto adquisiciones.peru@unhcr.org.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (bases publicadas; postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 7 millones (S/ 250.000–700.000 por proyecto, hasta 10 meses); Línea 6 Fortalecimiento organizacional S/ 3 millones (S/ 150.000–400.000, hasta 6 meses); contrapartida mínima 10%",
+     "eligibility": "Corrección: según las bases, solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones) formalmente constituidas. Una ONG o consultora NO puede postular como proponente; las bases prevén «aliados» (Formato 06), lo que podría abrir un rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea del sábado 21 nov al viernes 4 dic 2026 (sin hora indicada), por formulario Google más los Formatos 01–07 de la web. Consultas (23–27 oct) ya cerradas. Evaluación 5–14 dic; selección 14–15 dic. Sin cambios.",
+     "why": "Encaje limitado: solo sirve si el equipo entra como aliado técnico de un sindicato o federación que postule; útil si ya hay contacto con alguna organización de trabajadores.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      },
+      {
+       "label": "Nota en El Peruano (19 oct)",
+       "url": "https://www.elperuano.pe/noticia/307126-mtpe-relanza-fondoempleo-s-120-millones-para-capacitar-en-los-empleos-que-necesita-cada-region",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar la parte de equipamiento de una iniciativa de cadena productiva que el equipo acompañe técnicamente con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (temas abiertos, incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy tampoco hay consultorías vigentes de Ayuda en Acción en Perú: el estudio de competencias Lima–Piura de DevelopmentAid se publicó el 4 ago y no muestra fecha (más de 45 días: descartado); lo reciente en CEBEM y DevelopmentAid es de Bolivia.",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 avisos ya verificados como vencidos o puestos; el TdR-06-2026 de habilidades blandas es de Guatemala y cerró el 22 jul; DevelopmentAid y REDINFOR sin nuevas); World Vision Perú (COEECI: puestos DMEAL Piura, Facilitador Mi Perú y Facilitador E-Commerce Lima–Cusco; REDINFOR y Google sin consultorías); CID (Google y REDINFOR, COEECI: sin avisos); CARE Perú (Google y REDINFOR sin procesos nuevos; care.org.pe solo avisos antiguos); Ayuda en Acción (DevelopmentAid: estudio de competencias Lima–Piura del 4 ago sin fecha, descartado; CEBEM y DevelopmentAid: solo Bolivia; roster incluido); CEDEPAS Norte (7 avisos, todos cerrados en octubre); Acción contra el Hambre (COEECI: alerta temprana de incendios, fuera de tema); Plan International (COEECI: kits humanitarios y eventos en Loreto, fuera de tema); WWF (COEECI: módulos de inducción, fuera de tema); Helvetas, Welthungerhilfe, Cáritas, HIAS, Encuentros SJM, Cuso, Soluciones Prácticas, Heifer, TechnoServe, COPEME, CESAL, Rikolto, Save the Children, CooperAcción, Asociación UNACEM (búsquedas: sin vigentes en tema). Agregadores: REDINFOR convoca págs. 1–3 (27 avisos del 5–6 nov: INFANT OCA/OCD, incluida; CACAO+, incluida; fitotoldos; resto puestos o fuera del Perú; nada del 7–8 nov), COEECI (10 ofertas vigentes, ninguna en tema), UNGM (ACNUR 3838 reconfirmado; avisos OIT/PNUD Integramos Perú, PROCOMPITE y Cusco: antiguos o individuales), DevelopmentAid vía buscador, CEBEM (solo Bolivia), bidsfactory vía buscador. Donantes: Embajada de Australia, GIZ, PNUD, OIM, ACNUR, OIT, Fondoempleo: sin nuevas en tema.",
+    "failed": "TdR de INFANT, CACAO+ y Producers Direct (Google Drive: requiere sesión), ficha DevelopmentAid 1720230 «evaluación externa agricultura familiar» (error del sitio), datos ocultos de DevelopmentAid (solo miembros), adjuntos de UNGM, portal de compras de CARE (JavaScript), talentclue, cooperacionsuiza.pe, Idealist, UN Partner Portal, LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes).",
+    "queries": "\"términos de referencia\" \"persona natural o jurídica\" emprendedores OR \"planes de negocio\" Perú noviembre 2026 · \"request for quotation\" OR \"request for proposals\" Peru livelihoods OR \"value chain\" OR \"market assessment\" November 2026 · \"evaluación final\" OR \"línea de base\" consultoría Perú empleabilidad OR \"medios de vida\" OR migrantes noviembre 2026 · site:linkedin.com/posts convocatoria consultoría Perú productores OR emprendedoras OR refugiados · \"solicitud de cotización\" consultoría Perú \"integración socioeconómica\" OR \"inclusión financiera\" OR \"articulación comercial\" 2026 · consultoría \"asociaciones de productores\" OR cooperativas Cajamarca OR Piura OR \"San Martín\" OR Junín OR Cusco TdR noviembre 2026"
+   }
+  },
+  {
    "date": "2026-11-07",
    "summary": "Sin oportunidades nuevas hoy (sábado) para equipos u ONG en DEL/MYPE: REDINFOR no publicó nada en tema desde el 5 nov y COEECI, CEDEPAS y las ONG prioritarias solo tienen puestos o avisos fuera de tema. Urgente: DAP de Australia vía ONG aliada cierra MAÑANA domingo 8 nov (enviar hoy). Lo más próximo para el equipo: Producers Direct (15 nov; consultas hasta el martes 10) y SOCODEVI CACAO+ (20 nov; consultas hasta el jueves 12). ACNUR 3838 sigue al 23 nov, 17:00.",
    "items": [
