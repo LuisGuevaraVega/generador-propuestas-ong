@@ -49,8 +49,8 @@
 
 | | Entrevista 1 | Entrevista 2 | Entrevista 3 |
 |---|---|---|---|
-| Perfil | Gerente general y de microfinanzas, ONG peruana | Gerente de una ONG pequeña (MYPE y microfinanzas) | _pendiente_ |
-| Propuestas al año / ganadas | ~4 / ~2 | ~6 / 3 (2026) | |
+| Perfil | Gerente general y de microfinanzas, ONG peruana | Gerente de desarrollo económico, ONG pequeña | _pendiente_ |
+| Propuestas al año / ganadas | ~4 / ~2 | 10 en total; 6 de proyectos (sin consultorías) / 3 (2026) | |
 | Tiempo por propuesta | hasta 2 semanas | casi 1 semana solo la nota conceptual | |
 | Herramientas de hoy | Word; consultores externos | Word, Excel; IA para buscar datos secundarios; sin consultores | |
 | Dolor principal | falta de tiempo; convocatorias perdidas | sustentar el problema con datos oficiales; enterarse tarde | |

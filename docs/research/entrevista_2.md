@@ -1,4 +1,4 @@
-# Entrevista 2: gerente de una ONG peruana pequeña (MYPE y microfinanzas)
+# Entrevista 2: gerente de desarrollo económico de una ONG peruana pequeña
 
 - **Fecha:** 9 de noviembre de 2026
 - **Medio:** virtual, con el prototipo publicado (el entrevistado lo usó desde el link)
@@ -8,11 +8,11 @@
 
 ## Quién
 
-- **Cargo:** gerente de la organización (cargo exacto por confirmar).
+- **Cargo:** gerente de desarrollo económico.
 - **Organización:** ONG peruana **muy pequeña** que trabaja con pequeña y microempresa y microfinanzas.
 - **Quién arma las propuestas:** él mismo, con un asistente. No hay un formulador dedicado.
 - **Fondos a los que postulan:** fondos de todo tamaño ligados a MYPE y microfinanzas; entre ellos, agencias de Naciones Unidas y la cooperación alemana (BMZ). Postulan solos o en consorcio, a veces con hasta cuatro socios.
-- **Propuestas al año / ganadas:** en 2026 presentaron **unas 6 propuestas de proyecto y ganaron 3**, "la mitad más o menos" (el detalle por donante no se entendió en el audio).
+- **Propuestas al año / ganadas:** en 2026 presentaron **10 propuestas en total**; **sin contar consultorías, 6 de proyectos, y ganaron 3**, "la mitad más o menos".
 
 ## Cuánto les cuesta
 
@@ -46,10 +46,6 @@
 **Lo primero que haría con el borrador:** "Revisar y ver lo que yo pueda trabajar", y completar lo que falta.
 
 **¿Qué hace que una propuesta gane?** La relación con el donante y, sobre todo, **responder a lo que el donante quiere**: leer bien las bases y también su política institucional.
-
-## Cierre
-
-- **Recomendó a:** no se llegó a hacer la pregunta.
 
 ## Frases textuales para el pitch
 
