@@ -189,15 +189,30 @@ def test_propuestas_anteriores_aportan_hasta_40_fragmentos_de_todos_los_temas(fo
     assert any("62% aumentó" in f.texto for f in elegidos)
 
 
-def test_word_nuevo_sigue_el_indice_del_tdr(formato, propuesta, tecnica):
+def test_word_fusiona_indice_del_tdr_con_la_estructura_base(formato, propuesta, tecnica):
     from ai.esquemas import SeccionTdR
-    tecnica.estructura_tdr = [SeccionTdR(titulo="Metodología", bloques=["metodologia", "estrategia"], nota=""),
-                              SeccionTdR(titulo="Plan de trabajo", bloques=["cronograma"], nota=""),
+    tecnica.estructura_tdr = [SeccionTdR(titulo="II. Metodología", bloques=["metodologia", "estrategia"], nota=""),
+                              SeccionTdR(titulo="3.1 Plan de trabajo", bloques=["cronograma"], nota=""),
                               SeccionTdR(titulo="Declaración jurada", bloques=[], nota="firma del representante")]
     doc = Document(io.BytesIO(a_word({**propuesta, "tecnica": tecnica}, formato)))
     titulos = [p.text for p in doc.paragraphs if p.style.name.startswith("Heading 1")]
-    assert titulos[:3] == ["1. Metodología", "2. Plan de trabajo", "3. Declaración jurada"]
+    # lo que pide el TdR, con su título y en su orden, más lo que la base exige y el TdR no cubre
+    assert titulos[:4] == ["1. Resumen ejecutivo", "2. Antecedentes y comprensión del servicio",
+                           "3. Objetivos de la propuesta", "4. Metodología"]
+    assert titulos.index("5. Monitoreo y evaluación") < titulos.index("8. Plan de trabajo")
+    i = titulos.index("10. Monitoreo de la calidad y gestión de riesgos")
+    assert titulos[i:i + 3] == ["10. Monitoreo de la calidad y gestión de riesgos", "11. Salvaguardas",
+                                "12. Declaración jurada"]
     assert any("[POR COMPLETAR: firma del representante]" in p.text for p in doc.paragraphs)
+
+
+def test_indice_fusionado_sin_tdr_es_la_base_y_no_repite_bloques():
+    from ai.esquemas import SeccionTdR
+    from ai.exportar import ESTRUCTURA_BASE, indice_fusionado
+    assert [t for t, _, _ in indice_fusionado([])] == [t for t, _ in ESTRUCTURA_BASE]
+    fusion = indice_fusionado([SeccionTdR(titulo="Resumen", bloques=["resumen", "resumen", "objetivos"], nota="")])
+    bloques = [b for _, partes, _ in fusion for _, b in partes]
+    assert len(bloques) == len(set(bloques)) == sum(len(p) for _, p in ESTRUCTURA_BASE)
 
 
 # ---------- historial

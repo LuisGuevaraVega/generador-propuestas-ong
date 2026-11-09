@@ -179,7 +179,8 @@ BLOQUES = ["resumen", "antecedentes", "comprension", "postor", "objetivos", "met
 
 
 class SeccionTdR(BaseModel):
-    titulo: str = Field(description="Título de la sección tal como lo pide el TdR")
+    titulo: str = Field(description="Título tal como lo pide el TdR o la organización; si es una sección de la "
+                                    "estructura base que ellos no piden, su título en la base")
     bloques: List[str] = Field(description="Bloques de contenido que van en esta sección, en orden, elegidos de: "
                                            + ", ".join(BLOQUES))
     nota: str = Field(description="Si ningún bloque calza, qué debe completar el postor en esta sección; si no, vacío")
@@ -205,8 +206,9 @@ class PropuestaTecnica(BaseModel):
                                                      "mejora continua; cada uno con una frase")
     riesgos: List[Riesgo] = Field(description="5 a 7 riesgos principales")
     salvaguardas: List[Salvaguarda] = Field(description="Social, Financiera, Digital e Institucional")
-    estructura_tdr: List[SeccionTdR] = Field(description="Solo si el TdR exige un índice para la propuesta "
-                                                         "técnica; si no, lista vacía")
+    estructura_tdr: List[SeccionTdR] = Field(description="Índice FUSIONADO: las secciones que exige el TdR (o el "
+                                                         "formato de la organización) más las de la estructura "
+                                                         "base que no cubren; lista vacía si no hay índice que fusionar")
     pendientes: List[str] = Field(description="Datos que el postor debe completar")
     referencias: List[ReferenciaUsada] = Field(default_factory=list, description=(
         "Proyectos de referencia del BID o del BMZ que usaste para diseñar esta propuesta (solo los de la lista "

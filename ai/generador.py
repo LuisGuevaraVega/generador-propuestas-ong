@@ -311,14 +311,29 @@ def _guia_citas(tecnica):
             "demostró, logró, fue exitoso o fortaleció algo.")
 
 
+def _estructura_base_texto():
+    from ai.exportar import ESTRUCTURA_BASE
+
+    return "\n".join(f"- {titulo}: {', '.join(b for _, b in partes)}" for titulo, partes in ESTRUCTURA_BASE)
+
+
 def _guia_formato_tdr(reglas_tdr):
-    if reglas_tdr is None or not reglas_tdr.secciones_requeridas:
-        return "El TdR no fija un índice para la propuesta técnica: deja estructura_tdr como lista vacía."
-    indice = "\n".join(f"{i}. {s}" for i, s in enumerate(reglas_tdr.secciones_requeridas, 1))
-    return ("El TdR EXIGE este índice para la propuesta técnica. Llena estructura_tdr con una SeccionTdR por cada "
-            "título, en el mismo orden y con el título tal cual, y asigna a cada una los bloques de contenido que "
-            "le corresponden (cada bloque una sola vez). Si ninguna calza, deja bloques vacío y explica en nota qué "
-            f"debe completar el postor.\n{indice}")
+    """Cómo armar el índice: la estructura base de referencia, fusionada con el que pida el TdR o la organización."""
+    base = "ESTRUCTURA BASE (referencia mínima; sección: bloques que lleva):\n" + _estructura_base_texto()
+    fusion = ("Arma estructura_tdr como un índice FUSIONADO: (1) incluye TODAS las secciones que exige el TdR o el "
+              "formato, con su título tal cual y en su orden, asignando a cada una SOLO los bloques que responden a lo "
+              "que esa sección pide por su tema (p. ej., «Plan de trabajo con cronograma» lleva componentes y "
+              "cronograma, no equipo ni salvaguardas); (2) agrega como secciones propias, con su título de la base y "
+              "donde encajen con lógica, las secciones de la ESTRUCTURA BASE cuyos bloques no calzan en ninguna "
+              "sección del TdR (p. ej., Resumen ejecutivo al inicio, Equipo técnico, Riesgos y Salvaguardas al final). Cada bloque una sola vez y todos los bloques deben aparecer (la "
+              "matriz puede ir como anexo). Si una sección del TdR no calza con ningún bloque, deja bloques vacío y "
+              "explica en nota qué debe completar el postor.")
+    if reglas_tdr is not None and reglas_tdr.secciones_requeridas:
+        indice = "\n".join(f"{i}. {s}" for i, s in enumerate(reglas_tdr.secciones_requeridas, 1))
+        return f"{base}\n\nEl TdR EXIGE este índice para la propuesta técnica:\n{indice}\n\n{fusion}"
+    return (f"{base}\n\nEl TdR no fija un índice. Si los DOCUMENTOS DE APOYO traen un formato o índice de la "
+            f"organización o del donante, fusiónalo con la base así: {fusion} Si no hay ningún formato que "
+            "fusionar, deja estructura_tdr como lista vacía (se usará la estructura base).")
 
 
 def _generar(modo, formato, reglas_tdr, contexto, al_avanzar):

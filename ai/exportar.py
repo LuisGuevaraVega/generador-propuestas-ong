@@ -296,8 +296,56 @@ ESTRUCTURA_BASE = [
 ]
 
 
+_NUMERACION = re.compile(r"^\s*(?:(?:\d+(?:\.\d+)*|[IVXLC]+)\s*[.)\-–:]*|[A-Za-z][.)])\s+")
+
+
+def _sin_numero(titulo: str) -> str:
+    """Quita la numeración del TdR ("3.", "II.", "2.1") para numerar parejo el índice fusionado."""
+    return _NUMERACION.sub("", titulo).strip() or titulo
+
+
+def indice_fusionado(estructura_tdr):
+    """Fusiona la estructura base con el índice que exige el TdR (o el formato de la organización).
+
+    Las secciones del TdR van con su título tal cual y en su orden. Cada parte de la estructura base
+    que el TdR no cubre se inserta después de la sección donde quedó el bloque que la precede en la
+    base (o al inicio), así la propuesta siempre trae el contenido mínimo de la estructura base.
+    Devuelve [(título, [(subtítulo o None, bloque)], nota)].
+    """
+    if not estructura_tdr:
+        return [(titulo, list(partes), "") for titulo, partes in ESTRUCTURA_BASE]
+    orden = [b for _, partes in ESTRUCTURA_BASE for _, b in partes]
+
+    secciones, usados = [], set()  # cada sección: {"titulo", "partes", "nota", "base"}
+    for sec in estructura_tdr:
+        bloques = [b for b in dict.fromkeys(sec.bloques) if b in TITULOS_BLOQUE and b not in usados]
+        usados.update(bloques)
+        secciones.append({"titulo": sec.titulo, "nota": sec.nota, "base": False,
+                          "partes": [(TITULOS_BLOQUE[b] if len(bloques) > 1 else None, b) for b in bloques]})
+
+    def posicion(bloque):
+        """Dónde insertar: después de la sección con el bloque previo en la base y de las ya insertadas allí."""
+        previos = set(orden[:orden.index(bloque)])
+        ultima = max((i for i, s in enumerate(secciones) if any(b in previos for _, b in s["partes"])), default=-1)
+        return ultima + 1
+
+    for titulo, partes in ESTRUCTURA_BASE:
+        faltan = [(sub, b) for sub, b in partes if b not in usados]
+        if not faltan:
+            continue
+        if len(faltan) == len(partes):
+            nuevas = [(titulo, list(partes))]
+        else:
+            nuevas = [(TITULOS_BLOQUE[b], [(None, b)]) for _, b in faltan]
+        for titulo_nuevo, partes_nuevas in nuevas:
+            secciones.insert(posicion(partes_nuevas[0][1]),
+                             {"titulo": titulo_nuevo, "partes": partes_nuevas, "nota": "", "base": True})
+            usados.update(b for _, b in partes_nuevas)
+    return [(s["titulo"], s["partes"], s["nota"]) for s in secciones]
+
+
 def a_word(propuesta, formato, convocatoria="", resumen=None) -> bytes:
-    """Propuesta técnica en Word: sigue el índice del TdR si lo hay; si no, la estructura base."""
+    """Propuesta técnica en Word: fusiona la estructura base con el índice del TdR (ver `indice_fusionado`)."""
     if propuesta.get("tecnica") is None:
         return _a_word_anterior(propuesta, formato, convocatoria, resumen)
 
@@ -316,25 +364,15 @@ def a_word(propuesta, formato, convocatoria="", resumen=None) -> bytes:
     _portada(doc, tecnica, convocatoria)
 
     usados = set()
-    if tecnica.estructura_tdr:
-        for n, sec in enumerate(tecnica.estructura_tdr, 1):
-            _titulo(doc, sec.titulo if re.match(r"^\d", sec.titulo) else f"{n}. {sec.titulo}", 1)
-            bloques = [b for b in sec.bloques if b in TITULOS_BLOQUE and b not in usados]
-            for b in bloques:
-                if len(bloques) > 1:
-                    _titulo(doc, TITULOS_BLOQUE[b], 2)
-                _bloque(doc, b, ctx, 3 if len(bloques) > 1 else 2)
-                usados.add(b)
-            if not bloques:
-                doc.add_paragraph(f"[POR COMPLETAR: {sec.nota or 'contenido que pide el TdR para esta sección'}]")
-    else:
-        for n, (titulo, partes) in enumerate(ESTRUCTURA_BASE, 1):
-            _titulo(doc, f"{n}. {titulo}", 1)
-            for m, (subtitulo, b) in enumerate(partes, 1):
-                if subtitulo:
-                    _titulo(doc, f"{n}.{m}. {subtitulo}", 2)
-                _bloque(doc, b, ctx, 3 if subtitulo else 2)
-                usados.add(b)
+    for n, (titulo, partes, nota) in enumerate(indice_fusionado(tecnica.estructura_tdr), 1):
+        _titulo(doc, f"{n}. {_sin_numero(titulo)}", 1)
+        for m, (subtitulo, b) in enumerate(partes, 1):
+            if subtitulo:
+                _titulo(doc, f"{n}.{m}. {subtitulo}", 2)
+            _bloque(doc, b, ctx, 3 if subtitulo else 2)
+            usados.add(b)
+        if not partes:
+            doc.add_paragraph(f"[POR COMPLETAR: {nota or 'contenido que pide el TdR para esta sección'}]")
 
     if "matriz" not in usados:
         doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
