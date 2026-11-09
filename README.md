@@ -38,7 +38,9 @@
 
 - **Hasta dos semanas** de trabajo para preparar una propuesta (entrevista 1).
 - **Convocatorias perdidas:** "Hemos dejado pasar [convocatorias] por falta de tiempo, sí" (entrevista 1).
-- **Consultores externos** cuando no llegan: un costo que depende del tamaño de la convocatoria y que la institución adelanta antes de saber si gana.
+- **Enterarse tarde:** "¿Se han enterado tarde de alguna convocatoria?" — "Un montón de veces" (entrevista 2).
+- **Propuestas hechas a la carrera:** cuando no alcanza el tiempo, "terminamos teniendo propuestas muy malas" (entrevista 2).
+- **Consultores externos** cuando no llegan: un costo que depende del tamaño de la convocatoria y que la institución adelanta antes de saber si gana (entrevista 1). En las ONG más pequeñas no hay consultor: el costo es el tiempo del propio gerente (entrevista 2).
 - **Observaciones y rechazos** por no cumplir el formato o los topes de las bases.
 
 **Cómo lo resuelven hoy:** Word, Excel, propuestas anteriores copiadas y adaptadas, consultores externos y coordinación por WhatsApp. Cada donante pide su propio formato: "Cada proyecto tiene un formato" (entrevista 1).
@@ -47,11 +49,11 @@
 
 | | Entrevista 1 | Entrevista 2 | Entrevista 3 |
 |---|---|---|---|
-| Perfil | Gerente general y de microfinanzas, ONG peruana | _pendiente_ | _pendiente_ |
-| Propuestas al año / ganadas | ~4 / ~2 | | |
-| Tiempo por propuesta | hasta 2 semanas | | |
-| Herramientas de hoy | Word; consultores externos | | |
-| Dolor principal | falta de tiempo; convocatorias perdidas | | |
+| Perfil | Gerente general y de microfinanzas, ONG peruana | Gerente de una ONG pequeña (MYPE y microfinanzas) | _pendiente_ |
+| Propuestas al año / ganadas | ~4 / ~2 | ~6 / 3 (2026) | |
+| Tiempo por propuesta | hasta 2 semanas | casi 1 semana solo la nota conceptual | |
+| Herramientas de hoy | Word; consultores externos | Word, Excel; IA para buscar datos secundarios; sin consultores | |
+| Dolor principal | falta de tiempo; convocatorias perdidas | sustentar el problema con datos oficiales; enterarse tarde | |
 
 ## 4. Solución e insight
 
