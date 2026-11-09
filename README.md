@@ -71,6 +71,7 @@
 - **Reglas verificadas con código, no con el prompt:** topes del TdR (financiamiento, contrapartida, reserva, administrativos, duración, personal, rubros y gastos no elegibles), indicadores SMART y un verificador que marca toda cifra del borrador sin fuente.
 - **La propuesta es de la organización:** cada sección se edita o se reescribe con una instrucción. La "huella de autoría", visible solo en la app, muestra cuánto salió de la ONG y cuánto de la IA; no aparece en los documentos para el donante.
 - **Datos públicos:** indicadores de la ENAHO 2024 por departamento para la sección del problema y tipo de cambio del BCRP.
+- **Proyectos similares del BID:** la app busca entre los proyectos que el BID financió en Perú los más parecidos a la convocatoria y a tu idea, los muestra con su enlace y se los pasa a la IA como referencia de objetivos y montos (sin copiar su texto). Pedido en la entrevista 1.
 
 ## 5. Why now
 
@@ -150,6 +151,7 @@ flowchart TB
 | OCR de PDF escaneados y fotos | Gemini Flash-Lite (multimodal) | Lee tablas y documentos torcidos sin instalar nada; cuesta menos de un décimo de centavo por página. |
 | Voz a texto | faster-whisper, dentro de la propia app | No se envía el audio a ningún servicio de terceros. En la versión local, el audio ni siquiera sale de la laptop: útil para entrevistas confidenciales. |
 | Búsqueda en documentos | TF-IDF (scikit-learn) | Encuentra los fragmentos relevantes sin costo de API y sin enviar todo el documento. |
+| Proyectos de referencia | Datos abiertos del BID (CSV oficial, CC BY 4.0) | La web de proyectos del BID bloquea el scraping; el CSV oficial trae objetivo, monto y estado de cada proyecto y se actualiza a diario. |
 | Tipo de cambio | API del BCRP | Convierte el presupuesto a la moneda del TdR y a soles con el dato oficial del día. |
 | Boletín diario | Rutinas de Claude en la nube | Revisan decenas de fuentes cada mañana sin intervención. |
 
@@ -185,6 +187,7 @@ Referencia de valor: hoy una propuesta toma hasta dos semanas de trabajo de un p
 |---|---|---|---|
 | Scraping y APIs | 03 | Boletín de convocatorias y descarga del TdR desde el enlace (PDF, Word, HTML, Google Drive) | `data/convocatorias/`, `scripts/actualizar_feed.py`, `ai/documentos.py` |
 | APIs públicas (BCRP) | 03 / 04 | Tipo de cambio diario para convertir el presupuesto a la moneda del TdR y a soles | `ai/tipo_cambio.py` |
+| Datos abiertos (BID) | 03 / 04 | Descargar y filtrar los proyectos del BID en Perú, y buscar los más parecidos con TF-IDF como referencia | `scripts/actualizar_referencias_bid.py`, `ai/referencias.py` |
 | Document AI (OCR) | 10 | Leer TdR, CVs e informes escaneados o fotografiados. En el curso se vio PaddleOCR; aquí se usa Gemini multimodal porque ya está conectado, lee tablas y no requiere instalar nada | `ai/llm.py` (`transcribir_documento`), `ai/documentos.py` |
 | LLM con salidas estructuradas | 08 | Extraer las reglas del TdR y redactar el diseño técnico, los textos, la matriz y el presupuesto en JSON validado | `ai/esquemas.py`, `ai/generador.py`, `ai/llm.py` |
 | RAG | 08 | Reutilizar ideas de propuestas anteriores y tomar los fragmentos más relevantes de informes largos (resultados, metodología, equipo, lecciones), citando cada fuente | `ai/documentos.py` (`Recuperador`), `ai/generador.py` (`fragmentos_previos`, `seleccionar_texto`) |
@@ -208,7 +211,7 @@ Claude Code (Claude Opus) fue el co-founder técnico. **Luis** definió el probl
 
 ## Datos y privacidad
 
-Solo datos públicos (bases de Fondoempleo y del BMZ, convocatorias publicadas, ENAHO 2024 agregada por departamento, tipo de cambio del BCRP) y casos de ejemplo sintéticos. No se suben al repo los microdatos de la ENAHO (`datos/`), el historial de propuestas (`historial/`) ni los audios y transcripciones de entrevistas (`privado/`). Las notas de entrevistas están anonimizadas y se tomaron con consentimiento.
+Solo datos públicos (bases de Fondoempleo y del BMZ, convocatorias publicadas, ENAHO 2024 agregada por departamento, tipo de cambio del BCRP, proyectos del BID desde sus datos abiertos) y casos de ejemplo sintéticos. No se suben al repo los microdatos de la ENAHO (`datos/`), el historial de propuestas (`historial/`) ni los audios y transcripciones de entrevistas (`privado/`). Las notas de entrevistas están anonimizadas y se tomaron con consentimiento.
 
 ## Licencia
 

@@ -297,3 +297,42 @@ def test_fondoempleo_personal_cuenta_como_equipo_y_aplica_topes(propuesta):
     assert "Equipo del proyecto:" in textos and "0.0%" not in textos.split("Equipo del proyecto:")[1][:8]
     assert "Duración: 18 meses (máximo 10)" in textos
     assert "No financiable por Fondoempleo: «Viaje del socio»" in textos
+
+
+# ---------- proyectos similares del BID
+CSV_BID = """\ufeffoper_num,oper_nm,apprvl_dt,cntry_cd,publc_sts_nm,sector_nm,subsector_nm,opertyp_nm,objtv,orig_apprvd_useq_amnt,totl_cost_orig,loc_cntrprt
+PE-T1,Inclusión financiera de mujeres microempresarias rurales,2020-05-01T00:00,PE,Cerrado,MERCADOS FINANCIEROS,MICROFINANZAS,Cooperación Técnica,Ampliar el crédito y el ahorro de mujeres microempresarias rurales.,500000.0,600000.0,100000.0
+PE-L2,Carretera regional,2021-01-01T00:00,PE,Implementación,TRANSPORTE,CARRETERAS,Operación de Préstamo,Mejorar la carretera.,90000000.0,90000000.0,
+PE-T3,Empleo juvenil y emprendimiento,NULL,PE,Cancelado,INVERSIONES SOCIALES,EMPLEO,Cooperación Técnica,Promover el empleo juvenil.,300000.0,300000.0,
+CO-T4,Microfinanzas en Colombia,2020-01-01T00:00,CO,Cerrado,MERCADOS FINANCIEROS,MICROFINANZAS,Cooperación Técnica,Crédito rural.,100.0,100.0,
+PE-T5,Capacitación laboral de jóvenes,2019-03-01T00:00,PE,Cerrado,INVERSIONES SOCIALES,EMPLEO,Cooperación Técnica,Formar a jóvenes en oficios con empleo.,200000.0,200000.0,
+"""
+
+
+def test_bid_filtra_peru_vigente_sin_infraestructura(tmp_path):
+    from scripts.actualizar_referencias_bid import filtrar, guardar
+    filas = filtrar(CSV_BID)
+    assert [f["codigo"] for f in filas] == ["PE-T1", "PE-T5"]  # sin Colombia, carreteras ni cancelados
+    assert filas[0]["monto_bid_usd"] == "500000" and filas[0]["aprobacion"] == "2020-05-01"
+    guardar(filas, tmp_path / "bid.csv")
+    assert (tmp_path / "bid.csv").read_text(encoding="utf-8").startswith("codigo,nombre,")
+
+
+def test_bid_similares_por_tema_y_contexto(monkeypatch, tmp_path):
+    from ai import referencias
+    from scripts.actualizar_referencias_bid import filtrar, guardar
+    guardar(filtrar(CSV_BID), tmp_path / "bid.csv")
+    monkeypatch.setattr(referencias, "TABLA", tmp_path / "bid.csv")
+    referencias.cargar.cache_clear()
+    referencias._indice.cache_clear()
+    try:
+        encontrados = referencias.similares("Crédito para mujeres microempresarias en Lambayeque", minimo=0.05)
+        assert encontrados[0]["codigo"] == "PE-T1"
+        assert encontrados[0]["enlace"].endswith("/proyecto/PE-T1")
+        assert referencias.similares("Lambayeque") == []  # el lugar solo no basta para parecerse
+        texto = referencias.contexto(encontrados[:1])
+        assert "fuente 'BID'" in texto and "US$ 500,000" in texto and "No copies" in texto
+        assert referencias.contexto([]) == ""
+    finally:
+        referencias.cargar.cache_clear()
+        referencias._indice.cache_clear()
