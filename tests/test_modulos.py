@@ -389,3 +389,32 @@ def test_word_anexo_de_proyectos_de_referencia(formato, propuesta, tecnica, tabl
     assert "Anexo. Proyectos de referencia" in titulos
     celdas = [c.text for tabla in doc.tables for fila in tabla.rows for c in fila.cells]
     assert any("Enfoque de ahorro grupal" in c for c in celdas)
+
+
+# ---------- datos públicos del INEI por tema (skill datos-publicos-propuesta)
+PAGINA_ENDES = "\n".join(["Departamento", "Total", "12.2", "12.1", "11.5", "11.7", "11.5", "12.1", "11.5", "12.8", "2.8",
+                          "19,511", "-0.1", "Amazonas", "17.9", "17.6", "19.2", "21.7", "19.9", "20.4", "16.4", "24.4",
+                          "10.0", "816", "2.5", "Arequipa", "(6,1)", "(6,0)", "(4,9)", "(4,8)", "(4,7)", "(5,6)", "3.7",
+                          "7.5", "20.1", "380", "Lima Metropolitana  1/", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"])
+
+
+def test_endes_lee_ultimo_anio_y_marca_referenciales():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("endes", ".claude/skills/datos-publicos-propuesta/scripts/endes.py")
+    endes = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(endes)
+    valores = endes.leer_cuadro(PAGINA_ENDES)
+    assert valores["00"] == (12.1, False) and valores["01"] == (20.4, False)
+    assert valores["04"] == (5.6, True)       # entre paréntesis en el informe: referencial
+    assert "15" not in valores                # fila sin datos ("-")
+
+
+def test_contexto_publico_elige_indicadores_por_tema():
+    from ai import contexto_publico
+    assert contexto_publico.temas("Biohuertos con madres para combatir la anemia infantil")[:3] == [
+        "pobreza", "territorio", "nutrición e infancia"]
+    assert "educación" not in contexto_publico.temas("Crédito para microempresas")
+    texto = contexto_publico.contexto("06", "Programa contra la anemia y la desnutrición infantil")
+    assert "Anemia" in texto and "Desnutrición" in texto and "INEI, ENDES 2024" in texto and "(Perú:" in texto
+    assert "Desnutrición" not in contexto_publico.contexto("06", "Crédito para microempresas")
+    assert contexto_publico.contexto("", "anemia") == ""

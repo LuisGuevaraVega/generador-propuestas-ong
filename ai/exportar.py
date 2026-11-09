@@ -21,7 +21,7 @@ from openpyxl.utils import get_column_letter
 
 from ai.reglas import SIMBOLOS
 
-NOMBRES_FUENTE = {"TDR": "TdR", "IA": "Sugerencia IA", "USUARIO": "Editado por ti", "ENAHO": "ENAHO (INEI)",
+NOMBRES_FUENTE = {"TDR": "TdR", "IA": "Sugerencia IA", "USUARIO": "Editado por ti", "ENAHO": "ENAHO (INEI)", "ENDES": "ENDES (INEI)",
                   "BID": "Proyecto similar del BID", "BMZ": "Proyecto similar de la cooperación alemana"}
 VERDE = "0F6B5C"
 VERDE_CLARO = "E3F1ED"
@@ -46,7 +46,7 @@ def huella_autoria(propuesta):
     for pieza in piezas:
         tipos = set()
         for f in pieza.fuentes:
-            if f in ("TDR", "ENAHO", "BID", "BMZ"):
+            if f in ("TDR", "ENAHO", "ENDES", "BID", "BMZ"):
                 tipos.add("TdR y datos públicos")
             elif f == "IA":
                 tipos.add("Sugerencia IA")

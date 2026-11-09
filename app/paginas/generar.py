@@ -15,7 +15,7 @@ import streamlit as st
 RAIZ = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RAIZ))
 
-from ai import enaho, fondoempleo, historial, referencias  # noqa: E402
+from ai import contexto_publico, enaho, fondoempleo, historial, referencias  # noqa: E402
 from ai.auditor import auditar_presupuesto, chequeos_auditoria, evaluar, puntaje_total  # noqa: E402
 from ai.documentos import (MARCA_OCR, MAX_CARACTERES, Recuperador, descargar_archivo_tdr,  # noqa: E402
                            leer_documento, trocear)
@@ -420,11 +420,17 @@ def paso_proyecto():
             estado.w_dep = sugerido if sugerido in codigos else ""
         dep = c1.selectbox("Departamento del proyecto", codigos, key="w_dep",
                            format_func=lambda c: nombres.get(c, "— Elige un departamento —"),
-                           help=f"Con él se citan datos de pobreza y empleo juvenil de la ENAHO {enaho.ANIO} (INEI) "
-                                "en la sección del problema.")
-        datos_publicos = enaho.contexto(dep)
+                           help=f"Con él se citan datos públicos del INEI (ENAHO y ENDES {enaho.ANIO}) en la sección del "
+                                "problema: pobreza, empleo juvenil y los que calcen con el tema (nutrición, "
+                                "salud materna, género, educación, agua).")
+        temas_texto = [idea, conv.get("title", "") if conv else "", conv.get("topic", "") if conv else ""]
+        if reglas_tdr is not None:
+            temas_texto += [reglas_tdr.objetivo, " ".join(reglas_tdr.temas)]
+        datos_publicos = "\n\n".join(x for x in (enaho.contexto(dep), contexto_publico.contexto(dep, *temas_texto)) if x)
         if datos_publicos:
-            with c2.popover(f"📊 Ver datos de la ENAHO {enaho.ANIO}", width="stretch"):
+            with c2.popover("📊 Ver datos públicos del INEI", width="stretch"):
+                st.caption("Elegidos según el tema de la convocatoria y tu idea (ENAHO y ENDES 2024). La IA los "
+                           "cita en la sección del problema.")
                 st.text(datos_publicos)
 
     similares = proyectos_referencia(idea, conv, reglas_tdr)

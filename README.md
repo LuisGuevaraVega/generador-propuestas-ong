@@ -70,7 +70,7 @@
   - **Propuesta económica en Excel** con un resumen por objetivo y por rubro y el detalle con fórmulas.
 - **Reglas verificadas con código, no con el prompt:** topes del TdR (financiamiento, contrapartida, reserva, administrativos, duración, personal, rubros y gastos no elegibles), indicadores SMART y un verificador que marca toda cifra del borrador sin fuente.
 - **La propuesta es de la organización:** cada sección se edita o se reescribe con una instrucción. La "huella de autoría", visible solo en la app, muestra cuánto salió de la ONG y cuánto de la IA; no aparece en los documentos para el donante.
-- **Datos públicos:** indicadores de la ENAHO 2024 por departamento para la sección del problema y tipo de cambio del BCRP.
+- **Datos públicos según el tema:** para el departamento del proyecto, la app elige los indicadores del INEI que calzan con la convocatoria y los cita en la sección del problema: pobreza y empleo juvenil (ENAHO) siempre, y según el tema anemia, desnutrición crónica y controles CRED, salud materna, violencia de género, agua y saneamiento (ENDES 2024), ruralidad, jefatura femenina y secundaria completa (ENAHO 2024). Tipo de cambio del BCRP.
 - **Proyectos de referencia del BID y de la cooperación alemana (BMZ):** antes de generar, la app busca entre ~400 proyectos del BID y ~500 del BMZ en Perú (muchos ejecutados por ONG) los más parecidos a la convocatoria y a tu idea. La IA los usa como base del diseño (enfoques, componentes, población y escala de montos), sin copiar su texto, y declara cuáles usó y qué tomó de cada uno; esa lista sale como **anexo «Proyectos de referencia»** en el Word, con enlaces. Los datos se actualizan solos el día 1 de cada mes. Pedido en la entrevista 1.
 
 ## 5. Why now
@@ -158,6 +158,8 @@ flowchart TB
 
 **Datos de la ENAHO:** la skill de Claude Code `datos-enaho-propuesta` (`.claude/skills/`) baja los microdatos del INEI, calcula los indicadores y los valida contra las cifras oficiales (pobreza 2024: 27.6 % nacional y los 25 departamentos exactos).
 
+**Más datos públicos:** la skill `datos-publicos-propuesta` lee los cuadros por departamento del informe oficial de la ENDES 2024 (sin recalcular: valida que cada cifra caiga en su intervalo de confianza y que anemia 43.7 % y desnutrición 12.1 % coincidan con el INEI) y calcula con la ENAHO pobreza extrema (validada: 5.5 %), ruralidad, jefatura femenina y secundaria completa. `ai/contexto_publico.py` elige los indicadores por tema.
+
 ## 7. Modelo de negocio
 
 **Quién paga:** la ONG, con una suscripción mensual. El boletín gratuito atrae usuarios; la formulación es de pago.
@@ -195,6 +197,7 @@ Referencia de valor: hoy una propuesta toma hasta dos semanas de trabajo de un p
 | Evaluación de productos de datos | 12 | Pruebas automáticas, verificador de cifras sin fuente y puntaje con los criterios del donante | `tests/`, `ai/verificador.py`, `ai/auditor.py` |
 | Voz a texto con Whisper | 13 | Responder la entrevista hablando y transcribir las entrevistas con usuarios, sin que el audio salga de la laptop | `ai/voz.py` |
 | Skills de Claude Code con la ENAHO | 16 | Indicadores de pobreza, desempleo e informalidad juvenil por departamento, validados contra el INEI | `.claude/skills/datos-enaho-propuesta/`, `ai/enaho.py` |
+| Skill de datos públicos (ENDES y ENAHO) | 16 | Anemia, desnutrición, salud materna, violencia de género, agua, ruralidad y educación por departamento, elegidos según el tema de cada convocatoria | `.claude/skills/datos-publicos-propuesta/`, `ai/contexto_publico.py`, `data/contexto/` |
 | Claude Code como socio técnico | 16 | Construcción del producto y rutinas en la nube para el boletín | todo el repo; ver la sección 9 |
 
 ## 9. Qué hizo el agente

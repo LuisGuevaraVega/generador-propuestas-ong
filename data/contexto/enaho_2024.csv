@@ -1,0 +1,105 @@
+ccdd,departamento,tema,indicador,valor,unidad,fuente,anio,referencial,nota
+00,Perú (nacional),pobreza,Población en pobreza extrema,5.5,%,"INEI, ENAHO 2024",2024,0,
+01,Amazonas,pobreza,Población en pobreza extrema,6.0,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+02,Áncash,pobreza,Población en pobreza extrema,5.8,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+03,Apurímac,pobreza,Población en pobreza extrema,5.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+04,Arequipa,pobreza,Población en pobreza extrema,1.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+05,Ayacucho,pobreza,Población en pobreza extrema,9.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+06,Cajamarca,pobreza,Población en pobreza extrema,19.7,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+07,Callao,pobreza,Población en pobreza extrema,5.0,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+08,Cusco,pobreza,Población en pobreza extrema,2.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+09,Huancavelica,pobreza,Población en pobreza extrema,11.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+10,Huánuco,pobreza,Población en pobreza extrema,12.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+11,Ica,pobreza,Población en pobreza extrema,0.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+12,Junín,pobreza,Población en pobreza extrema,3.8,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+13,La Libertad,pobreza,Población en pobreza extrema,6.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+14,Lambayeque,pobreza,Población en pobreza extrema,0.5,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+15,Lima,pobreza,Población en pobreza extrema,3.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+16,Loreto,pobreza,Población en pobreza extrema,15.0,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+17,Madre de Dios,pobreza,Población en pobreza extrema,1.5,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+18,Moquegua,pobreza,Población en pobreza extrema,2.4,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+19,Pasco,pobreza,Población en pobreza extrema,8.3,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+20,Piura,pobreza,Población en pobreza extrema,4.4,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+21,Puno,pobreza,Población en pobreza extrema,12.5,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+22,San Martín,pobreza,Población en pobreza extrema,4.4,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+23,Tacna,pobreza,Población en pobreza extrema,2.7,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+24,Tumbes,pobreza,Población en pobreza extrema,1.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+25,Ucayali,pobreza,Población en pobreza extrema,3.3,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+00,Perú (nacional),territorio,Población que vive en zona rural,19.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+01,Amazonas,territorio,Población que vive en zona rural,42.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+02,Áncash,territorio,Población que vive en zona rural,33.5,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+03,Apurímac,territorio,Población que vive en zona rural,51.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+04,Arequipa,territorio,Población que vive en zona rural,7.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+05,Ayacucho,territorio,Población que vive en zona rural,38.3,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+06,Cajamarca,territorio,Población que vive en zona rural,57.8,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+07,Callao,territorio,Población que vive en zona rural,0.0,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+08,Cusco,territorio,Población que vive en zona rural,37.4,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+09,Huancavelica,territorio,Población que vive en zona rural,71.5,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+10,Huánuco,territorio,Población que vive en zona rural,57.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+11,Ica,territorio,Población que vive en zona rural,4.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+12,Junín,territorio,Población que vive en zona rural,30.5,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+13,La Libertad,territorio,Población que vive en zona rural,17.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+14,Lambayeque,territorio,Población que vive en zona rural,15.0,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+15,Lima,territorio,Población que vive en zona rural,1.4,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+16,Loreto,territorio,Población que vive en zona rural,28.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+17,Madre de Dios,territorio,Población que vive en zona rural,13.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+18,Moquegua,territorio,Población que vive en zona rural,17.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+19,Pasco,territorio,Población que vive en zona rural,28.8,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+20,Piura,territorio,Población que vive en zona rural,18.5,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+21,Puno,territorio,Población que vive en zona rural,35.5,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+22,San Martín,territorio,Población que vive en zona rural,28.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+23,Tacna,territorio,Población que vive en zona rural,12.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+24,Tumbes,territorio,Población que vive en zona rural,1.8,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+25,Ucayali,territorio,Población que vive en zona rural,15.3,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+00,Perú (nacional),género,Hogares con jefatura femenina,37.3,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+01,Amazonas,género,Hogares con jefatura femenina,33.9,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+02,Áncash,género,Hogares con jefatura femenina,36.7,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+03,Apurímac,género,Hogares con jefatura femenina,32.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+04,Arequipa,género,Hogares con jefatura femenina,39.3,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+05,Ayacucho,género,Hogares con jefatura femenina,38.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+06,Cajamarca,género,Hogares con jefatura femenina,28.9,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+07,Callao,género,Hogares con jefatura femenina,45.7,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+08,Cusco,género,Hogares con jefatura femenina,33.8,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+09,Huancavelica,género,Hogares con jefatura femenina,31.4,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+10,Huánuco,género,Hogares con jefatura femenina,31.4,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+11,Ica,género,Hogares con jefatura femenina,43.4,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+12,Junín,género,Hogares con jefatura femenina,36.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+13,La Libertad,género,Hogares con jefatura femenina,40.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+14,Lambayeque,género,Hogares con jefatura femenina,36.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+15,Lima,género,Hogares con jefatura femenina,40.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+16,Loreto,género,Hogares con jefatura femenina,25.5,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+17,Madre de Dios,género,Hogares con jefatura femenina,44.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+18,Moquegua,género,Hogares con jefatura femenina,39.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+19,Pasco,género,Hogares con jefatura femenina,30.7,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+20,Piura,género,Hogares con jefatura femenina,31.4,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+21,Puno,género,Hogares con jefatura femenina,42.0,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+22,San Martín,género,Hogares con jefatura femenina,27.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+23,Tacna,género,Hogares con jefatura femenina,44.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+24,Tumbes,género,Hogares con jefatura femenina,30.8,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+25,Ucayali,género,Hogares con jefatura femenina,38.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+00,Perú (nacional),educación,Jóvenes de 20 a 24 años con secundaria completa o más,90.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+01,Amazonas,educación,Jóvenes de 20 a 24 años con secundaria completa o más,81.0,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+02,Áncash,educación,Jóvenes de 20 a 24 años con secundaria completa o más,88.9,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+03,Apurímac,educación,Jóvenes de 20 a 24 años con secundaria completa o más,93.8,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+04,Arequipa,educación,Jóvenes de 20 a 24 años con secundaria completa o más,97.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+05,Ayacucho,educación,Jóvenes de 20 a 24 años con secundaria completa o más,91.3,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+06,Cajamarca,educación,Jóvenes de 20 a 24 años con secundaria completa o más,88.1,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+07,Callao,educación,Jóvenes de 20 a 24 años con secundaria completa o más,95.5,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+08,Cusco,educación,Jóvenes de 20 a 24 años con secundaria completa o más,94.4,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+09,Huancavelica,educación,Jóvenes de 20 a 24 años con secundaria completa o más,91.4,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+10,Huánuco,educación,Jóvenes de 20 a 24 años con secundaria completa o más,82.0,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+11,Ica,educación,Jóvenes de 20 a 24 años con secundaria completa o más,94.8,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+12,Junín,educación,Jóvenes de 20 a 24 años con secundaria completa o más,92.2,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+13,La Libertad,educación,Jóvenes de 20 a 24 años con secundaria completa o más,84.6,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+14,Lambayeque,educación,Jóvenes de 20 a 24 años con secundaria completa o más,92.0,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+15,Lima,educación,Jóvenes de 20 a 24 años con secundaria completa o más,94.0,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+16,Loreto,educación,Jóvenes de 20 a 24 años con secundaria completa o más,73.1,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+17,Madre de Dios,educación,Jóvenes de 20 a 24 años con secundaria completa o más,91.4,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+18,Moquegua,educación,Jóvenes de 20 a 24 años con secundaria completa o más,98.7,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+19,Pasco,educación,Jóvenes de 20 a 24 años con secundaria completa o más,89.5,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+20,Piura,educación,Jóvenes de 20 a 24 años con secundaria completa o más,86.3,%,"INEI, ENAHO 2024",2024,0,cálculo propio con microdatos
+21,Puno,educación,Jóvenes de 20 a 24 años con secundaria completa o más,95.3,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+22,San Martín,educación,Jóvenes de 20 a 24 años con secundaria completa o más,81.4,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+23,Tacna,educación,Jóvenes de 20 a 24 años con secundaria completa o más,97.1,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+24,Tumbes,educación,Jóvenes de 20 a 24 años con secundaria completa o más,90.5,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
+25,Ucayali,educación,Jóvenes de 20 a 24 años con secundaria completa o más,73.0,%,"INEI, ENAHO 2024",2024,1,cálculo propio con microdatos
