@@ -377,8 +377,8 @@ def panel_documentos_apoyo():
     return documentos
 
 
-def proyectos_bid(idea, conv, reglas_tdr):
-    """Proyectos del BID en Perú más parecidos a la idea y a la convocatoria (la idea pesa doble)."""
+def proyectos_referencia(idea, conv, reglas_tdr):
+    """Proyectos del BID y del BMZ en Perú más parecidos a la idea y a la convocatoria (la idea pesa doble)."""
     textos = [idea, idea]
     if conv:
         textos += [conv.get("title", ""), conv.get("topic", "")]
@@ -387,13 +387,15 @@ def proyectos_bid(idea, conv, reglas_tdr):
     return referencias.similares(*textos)
 
 
-def lista_proyectos_bid(proyectos):
+def lista_referencias(proyectos, con_aporte=False):
     for p in proyectos:
-        anio = (p.get("aprobacion") or "")[:4] or "s/f"
-        st.markdown(f"**[{p['codigo']}]({p['enlace']})** · {p['nombre']}  \n"
-                    f":gray[{anio} · {p['estado']} · {p['tipo']} · {referencias.monto(p.get('monto_bid_usd'))}]")
-    st.caption(f"Fuente: {referencias.FUENTE}. La IA los usa como referencia de objetivos y montos; no copia su "
-               "texto ni los presenta como experiencia tuya.")
+        detalle = " · ".join(x for x in (p["fuente"], referencias.anio(p), p["estado"], referencias.monto(p),
+                                         p.get("ejecutor", "")) if x)
+        st.markdown(f"**[{p['nombre']}]({p['enlace']})**  \n:gray[{detalle}]"
+                    + (f"  \n↳ {p['aporte']}" if con_aporte and p.get("aporte") else ""))
+    st.caption("Fuentes: datos abiertos del BID y de la cooperación alemana (BMZ, IATI), actualizados cada mes. "
+               "La IA los usa como base de enfoques, componentes y montos; no copia su texto ni los presenta "
+               "como experiencia tuya.")
 
 
 def paso_proyecto():
@@ -425,11 +427,11 @@ def paso_proyecto():
             with c2.popover(f"📊 Ver datos de la ENAHO {enaho.ANIO}", width="stretch"):
                 st.text(datos_publicos)
 
-    similares = proyectos_bid(idea, conv, reglas_tdr)
+    similares = proyectos_referencia(idea, conv, reglas_tdr)
     if similares:
         etiqueta = "1 proyecto similar" if len(similares) == 1 else f"{len(similares)} proyectos similares"
-        with c2.popover(f"🏦 {etiqueta} del BID", width="stretch"):
-            lista_proyectos_bid(similares)
+        with c2.popover(f"🏦 {etiqueta} (BID y BMZ)", width="stretch"):
+            lista_referencias(similares)
 
     st.markdown("##### ¿Cómo quieres redactarla?")
     if "w_modo" not in estado:
@@ -465,14 +467,13 @@ def paso_proyecto():
                 modo, FORMATO, reglas_tdr=reglas_tdr, texto_tdr=estado.get("tdr_texto", ""), idea=idea,
                 organizacion=organizacion, respuestas=respuestas, recuperador=recuperador,
                 datos_publicos=datos_publicos, documentos_apoyo=documentos_apoyo,
-                referencias=referencias.contexto(similares),
+                referencias=similares,
                 al_avanzar=lambda paso_, total, msg: status.update(label=f"[{paso_}/{total}] {msg}"),
             )
             if reglas_tdr is not None:
                 status.update(label="Revisando el presupuesto contra el TdR…")
                 nueva["auditoria"], llamadas = auditar_presupuesto(nueva["presupuesto"], reglas_tdr)
                 nueva["llamadas"] += llamadas
-            nueva["referencias_bid"] = similares
             nueva["convocatoria"] = conv["title"] if conv else (reglas_tdr.nombre_convocatoria if reglas_tdr else "")
             historial.guardar(nueva, carpeta_historial())
             status.update(label="Propuesta lista", state="complete", expanded=False)
@@ -571,9 +572,10 @@ def paso_resultado(propuesta):
                 st.markdown("**Fortalezas**\n" + "\n".join(f"- {x}" for x in evaluacion.fortalezas))
                 st.markdown("**Debilidades**\n" + "\n".join(f"- {x}" for x in evaluacion.debilidades))
 
-            if propuesta.get("referencias_bid"):
-                with st.expander(f"🏦 Proyectos similares del BID ({len(propuesta['referencias_bid'])})"):
-                    lista_proyectos_bid(propuesta["referencias_bid"])
+            if propuesta.get("referencias"):
+                with st.expander(f"🏦 Proyectos de referencia usados ({len(propuesta['referencias'])})"):
+                    lista_referencias(propuesta["referencias"], con_aporte=True)
+                    st.caption("También van como anexo en el Word.")
 
             with st.expander("🖐️ ¿Cuánto de esta propuesta es tuyo?"):
                 st.bar_chart(pd.DataFrame({"Piezas": huella_autoria(propuesta)}), horizontal=True)

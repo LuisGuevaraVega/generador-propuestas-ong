@@ -168,6 +168,12 @@ class Salvaguarda(BaseModel):
     medidas: List[str]
 
 
+class ReferenciaUsada(BaseModel):
+    codigo: str = Field(description="Código exacto del proyecto de referencia, tal como aparece en la lista")
+    aporte: str = Field(description="Qué se tomó de él para esta propuesta, en una frase (enfoque, componente, "
+                                    "tipo de actividad, población o escala de montos)")
+
+
 BLOQUES = ["resumen", "antecedentes", "comprension", "postor", "objetivos", "metodologia", "estrategia",
            "monitoreo", "componentes", "entregables", "cronograma", "equipo", "riesgos", "salvaguardas", "matriz"]
 
@@ -202,6 +208,9 @@ class PropuestaTecnica(BaseModel):
     estructura_tdr: List[SeccionTdR] = Field(description="Solo si el TdR exige un índice para la propuesta "
                                                          "técnica; si no, lista vacía")
     pendientes: List[str] = Field(description="Datos que el postor debe completar")
+    referencias: List[ReferenciaUsada] = Field(default_factory=list, description=(
+        "Proyectos de referencia del BID o del BMZ que usaste para diseñar esta propuesta (solo los de la lista "
+        "PROYECTOS DE REFERENCIA; vacío si no hay lista)"))
 
 
 class TopeRubro(BaseModel):

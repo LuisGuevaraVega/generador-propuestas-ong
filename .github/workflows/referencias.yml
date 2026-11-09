@@ -1,0 +1,42 @@
+# Actualiza cada mes los proyectos de referencia del BID y de la cooperación alemana (BMZ).
+# Corre el día 1 de cada mes a las 6:00 de Lima (11:00 UTC) y se puede lanzar a mano desde
+# la pestaña Actions ("Run workflow"). Necesita el secreto GEMINI_API_KEY para traducir al
+# español los proyectos nuevos del BMZ; sin él, el BID se actualiza igual.
+name: Referencias mensuales (BID y BMZ)
+
+on:
+  schedule:
+    - cron: "0 11 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar dependencias mínimas
+        run: pip install "google-genai>=1.0" "pydantic>=2.0" "python-dotenv>=1.0"
+      - name: Descargar y traducir
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-3.6-flash
+          GEMINI_MODELOS_RESPALDO: gemini-3.1-flash-lite,gemini-3-flash-preview
+        run: python scripts/actualizar_referencias.py
+      - name: Subir los cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/referencias/
+          if git diff --cached --quiet; then
+            echo "Sin cambios este mes."
+          else
+            git commit -m "Referencias: proyectos del BID y del BMZ al $(date +%Y-%m-%d)"
+            git push
+          fi

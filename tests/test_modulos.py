@@ -309,30 +309,83 @@ PE-T5,Capacitación laboral de jóvenes,2019-03-01T00:00,PE,Cerrado,INVERSIONES 
 """
 
 
+XML_BMZ = b"""<iati-activities>
+<iati-activity default-currency="EUR"><iati-identifier>DE-1-1</iati-identifier>
+ <title><narrative xml:lang="EN">Savings groups for rural women microentrepreneurs</narrative></title>
+ <description type="1"><narrative xml:lang="EN">Rural women microentrepreneurs improve credit and savings.</narrative></description>
+ <participating-org role="3"><narrative xml:lang="EN">Caritas International e.V.</narrative></participating-org>
+ <activity-status code="2"/><activity-date iso-date="2024-03-01" type="2"/>
+ <transaction><transaction-type code="2"/><value>250000</value></transaction></iati-activity>
+<iati-activity><iati-identifier>DE-1-2</iati-identifier>
+ <title><narrative xml:lang="EN">Water supply</narrative></title>
+ <participating-org role="3"><narrative xml:lang="EN">KfW Bankengruppe (KfW)</narrative></participating-org>
+ <activity-status code="4"/><activity-date iso-date="2015-01-01" type="2"/></iati-activity>
+<iati-activity><iati-identifier>DE-1-3</iati-identifier>
+ <title><narrative xml:lang="EN">Old project</narrative></title>
+ <activity-status code="4"/><activity-date iso-date="2003-01-01" type="2"/></iati-activity>
+</iati-activities>"""
+
+
 def test_bid_filtra_peru_vigente_sin_infraestructura(tmp_path):
-    from scripts.actualizar_referencias_bid import filtrar, guardar
-    filas = filtrar(CSV_BID)
+    from scripts.actualizar_referencias import filtrar_bid, guardar
+    filas = filtrar_bid(CSV_BID)
     assert [f["codigo"] for f in filas] == ["PE-T1", "PE-T5"]  # sin Colombia, carreteras ni cancelados
-    assert filas[0]["monto_bid_usd"] == "500000" and filas[0]["aprobacion"] == "2020-05-01"
+    assert filas[0]["monto"] == "500000" and filas[0]["aprobacion"] == "2020-05-01" and filas[0]["fuente"] == "BID"
     guardar(filas, tmp_path / "bid.csv")
-    assert (tmp_path / "bid.csv").read_text(encoding="utf-8").startswith("codigo,nombre,")
+    assert (tmp_path / "bid.csv").read_text(encoding="utf-8").startswith("fuente,codigo,nombre,")
 
 
-def test_bid_similares_por_tema_y_contexto(monkeypatch, tmp_path):
+def test_bmz_filtra_ong_y_reutiliza_traducciones():
+    from scripts.actualizar_referencias import filtrar_bmz, traducir
+    filas = filtrar_bmz(XML_BMZ)
+    assert [f["codigo"] for f in filas] == ["DE-1-1"]  # sin KfW ni proyectos anteriores a 2010
+    assert filas[0]["monto"] == "250000" and filas[0]["moneda"] == "EUR" and filas[0]["ejecutor"].startswith("Caritas")
+    previas = {"DE-1-1": {"codigo": "DE-1-1", "nombre": "Grupos de ahorro de mujeres rurales", "idioma": "es",
+                          "objetivo": "Mujeres rurales microempresarias mejoran su ahorro.", "sector": "Microfinanzas"}}
+    traducidas = traducir(filas, previas)  # ya traducido: no llama a la IA
+    assert traducidas[0]["nombre"] == "Grupos de ahorro de mujeres rurales" and traducidas[0]["idioma"] == "es"
+
+
+@pytest.fixture
+def tablas_referencia(monkeypatch, tmp_path):
     from ai import referencias
-    from scripts.actualizar_referencias_bid import filtrar, guardar
-    guardar(filtrar(CSV_BID), tmp_path / "bid.csv")
-    monkeypatch.setattr(referencias, "TABLA", tmp_path / "bid.csv")
-    referencias.cargar.cache_clear()
-    referencias._indice.cache_clear()
-    try:
-        encontrados = referencias.similares("Crédito para mujeres microempresarias en Lambayeque", minimo=0.05)
-        assert encontrados[0]["codigo"] == "PE-T1"
-        assert encontrados[0]["enlace"].endswith("/proyecto/PE-T1")
-        assert referencias.similares("Lambayeque") == []  # el lugar solo no basta para parecerse
-        texto = referencias.contexto(encontrados[:1])
-        assert "fuente 'BID'" in texto and "US$ 500,000" in texto and "No copies" in texto
-        assert referencias.contexto([]) == ""
-    finally:
-        referencias.cargar.cache_clear()
-        referencias._indice.cache_clear()
+    from scripts.actualizar_referencias import filtrar_bid, filtrar_bmz, guardar, traducir
+    guardar(filtrar_bid(CSV_BID), tmp_path / "bid.csv")
+    previas = {"DE-1-1": {"codigo": "DE-1-1", "nombre": "Grupos de ahorro de mujeres microempresarias rurales",
+                          "idioma": "es", "objetivo": "Crédito y ahorro para mujeres microempresarias rurales.",
+                          "sector": "Microfinanzas"}}
+    guardar(traducir(filtrar_bmz(XML_BMZ), previas), tmp_path / "bmz.csv")
+    monkeypatch.setattr(referencias, "TABLAS", {"BID": tmp_path / "bid.csv", "BMZ": tmp_path / "bmz.csv"})
+    referencias._cache.clear()
+    yield referencias
+    referencias._cache.clear()
+
+
+def test_referencias_similares_de_ambas_fuentes(tablas_referencia):
+    r = tablas_referencia
+    encontrados = r.similares("Crédito para mujeres microempresarias en Lambayeque", minimo=0.05)
+    assert {p["codigo"] for p in encontrados[:2]} == {"PE-T1", "DE-1-1"}
+    assert {p["fuente"] for p in encontrados} == {"BID", "BMZ"}
+    assert r.similares("Lambayeque") == []  # el lugar solo no basta para parecerse
+    texto = r.contexto(encontrados[:2])
+    assert "[PE-T1]" in texto and "US$ 500,000" in texto and "€ 250,000" in texto and "No copies" in texto
+    assert r.contexto([]) == ""
+
+
+def test_referencias_usadas_descarta_codigos_inventados(tablas_referencia):
+    from ai.esquemas import ReferenciaUsada
+    candidatos = tablas_referencia.similares("microempresarias rurales crédito ahorro", minimo=0.01)
+    usadas = tablas_referencia.usadas([ReferenciaUsada(codigo="[PE-T1]", aporte="Componente de ahorro"),
+                                       ReferenciaUsada(codigo="PE-X999", aporte="inventado")], candidatos)
+    assert [(u["codigo"], u["aporte"]) for u in usadas] == [("PE-T1", "Componente de ahorro")]
+
+
+def test_word_anexo_de_proyectos_de_referencia(formato, propuesta, tecnica, tablas_referencia):
+    candidatos = tablas_referencia.similares("microempresarias rurales crédito ahorro", minimo=0.01)
+    propuesta = {**propuesta, "tecnica": tecnica,
+                 "referencias": [{**candidatos[0], "aporte": "Enfoque de ahorro grupal"}]}
+    doc = Document(io.BytesIO(a_word(propuesta, formato, "Convocatoria X")))
+    titulos = [p.text for p in doc.paragraphs if p.style.name.startswith("Heading")]
+    assert "Anexo. Proyectos de referencia" in titulos
+    celdas = [c.text for tabla in doc.tables for fila in tabla.rows for c in fila.cells]
+    assert any("Enfoque de ahorro grupal" in c for c in celdas)

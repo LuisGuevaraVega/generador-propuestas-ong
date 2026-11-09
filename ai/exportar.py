@@ -22,7 +22,7 @@ from openpyxl.utils import get_column_letter
 from ai.reglas import SIMBOLOS
 
 NOMBRES_FUENTE = {"TDR": "TdR", "IA": "Sugerencia IA", "USUARIO": "Editado por ti", "ENAHO": "ENAHO (INEI)",
-                  "BID": "Proyecto similar del BID"}
+                  "BID": "Proyecto similar del BID", "BMZ": "Proyecto similar de la cooperación alemana"}
 VERDE = "0F6B5C"
 VERDE_CLARO = "E3F1ED"
 GRIS = "F3F5F4"
@@ -46,7 +46,7 @@ def huella_autoria(propuesta):
     for pieza in piezas:
         tipos = set()
         for f in pieza.fuentes:
-            if f in ("TDR", "ENAHO", "BID"):
+            if f in ("TDR", "ENAHO", "BID", "BMZ"):
                 tipos.add("TdR y datos públicos")
             elif f == "IA":
                 tipos.add("Sugerencia IA")
@@ -341,6 +341,10 @@ def a_word(propuesta, formato, convocatoria="", resumen=None) -> bytes:
         _titulo(doc, "Anexo. Matriz de indicadores", 1)
         _matriz_word(doc, propuesta["matriz"])
 
+    if propuesta.get("referencias"):
+        _titulo(doc, "Anexo. Proyectos de referencia", 1)
+        _referencias_word(doc, propuesta["referencias"])
+
     pendientes = list(tecnica.pendientes) + [p for s in propuesta["textos"].secciones for p in s.pendientes]
     if pendientes:
         _titulo(doc, "Pendientes por completar (borrar antes de presentar)", 1)
@@ -349,6 +353,50 @@ def a_word(propuesta, formato, convocatoria="", resumen=None) -> bytes:
     salida = io.BytesIO()
     doc.save(salida)
     return salida.getvalue()
+
+
+FINANCIADORES = {"BID": "BID", "BMZ": "Cooperación alemana (BMZ)"}
+
+
+def _hipervinculo(parrafo, url, texto, tamano=9):
+    """Enlace clicable en Word (python-docx no trae uno propio)."""
+    rel = parrafo.part.relate_to(url, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
+                                 is_external=True)
+    enlace = OxmlElement("w:hyperlink")
+    enlace.set(qn("r:id"), rel)
+    run = OxmlElement("w:r")
+    props = OxmlElement("w:rPr")
+    for etiqueta, valor in (("w:color", "0563C1"), ("w:u", "single"), ("w:sz", str(tamano * 2))):
+        el = OxmlElement(etiqueta)
+        el.set(qn("w:val"), valor)
+        props.append(el)
+    run.append(props)
+    texto_el = OxmlElement("w:t")
+    texto_el.text = texto
+    run.append(texto_el)
+    enlace.append(run)
+    parrafo._p.append(enlace)
+
+
+def _referencias_word(doc, referencias):
+    """Tabla de los proyectos financiados por la cooperación que sirvieron de base al diseño."""
+    from ai.referencias import anio, monto
+
+    intro = doc.add_paragraph("El diseño toma como referencia proyectos similares financiados por la cooperación "
+                              "internacional en el Perú, según los datos abiertos del BID y del BMZ.")
+    intro.paragraph_format.keep_with_next = True
+    filas = [[f"{r['nombre']} ({r['codigo']})",
+              f"{FINANCIADORES.get(r['fuente'], r['fuente'])}, {anio(r)}" + (f". Ejecutor: {r['ejecutor']}"
+                                                                           if r.get("ejecutor") else ""),
+              monto(r), r.get("aporte", "")] for r in referencias]
+    tabla = _tabla(doc, ["Proyecto", "Financiador y año", "Monto", "Qué se tomó para esta propuesta"], filas,
+                   anchos=[5.5, 3.5, 2.5, 4.5])
+    for celda in tabla.rows[0].cells:  # que el encabezado no quede solo al pie de una página
+        for par in celda.paragraphs:
+            par.paragraph_format.keep_with_next = True
+    for fila, r in zip(tabla.rows[1:], referencias):
+        if r.get("enlace"):
+            _hipervinculo(fila.cells[0].add_paragraph(), r["enlace"], "Ver ficha del proyecto")
 
 
 def _matriz_word(doc, matriz):

@@ -138,8 +138,11 @@ def transcribir_documento(contenido: bytes, mime: str) -> str:
     raise RuntimeError(f"No se pudo leer el documento con OCR: {ultimo_error}")
 
 
-def generar_estructurado(prompt: str, esquema, instrucciones: str, temperatura: float = 0.4):
-    """Llama al modelo y devuelve una instancia del esquema Pydantic indicado."""
+def generar_estructurado(prompt: str, esquema, instrucciones: str, temperatura: float = 0.4, modelos=None):
+    """Llama al modelo y devuelve una instancia del esquema Pydantic indicado.
+
+    `modelos` cambia el orden de la cadena (p. ej. los "lite" primero para tareas simples como traducir).
+    """
     config = types.GenerateContentConfig(
         system_instruction=instrucciones,
         response_mime_type="application/json",
@@ -148,7 +151,7 @@ def generar_estructurado(prompt: str, esquema, instrucciones: str, temperatura: 
     )
     ultimo_error = None
     for ronda in range(3):  # hasta 3 rondas por toda la cadena de modelos, con espera creciente
-        for modelo in MODELOS:
+        for modelo in modelos or MODELOS:
             try:
                 respuesta = cliente().models.generate_content(model=modelo, contents=prompt, config=config)
                 _registrar(modelo, respuesta)

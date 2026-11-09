@@ -8,7 +8,8 @@ Flujo: diseño técnico (cuadros y listas) -> textos -> matriz de indicadores ->
 
 Cada pieza guarda sus `fuentes`, que forman la huella de autoría:
   "TDR"           -> sale del TdR o las bases
-  "ENAHO", "BID"  -> dato público de la ENAHO o proyecto similar financiado por el BID
+  "ENAHO"         -> dato público de la ENAHO
+  "BID", "BMZ"    -> proyecto similar financiado por el BID o la cooperación alemana (ai/referencias.py)
   "IA"            -> sugerencia del asistente, a validar
   "DOC:nombre#n"  -> fragmento n de una propuesta anterior
   "org_1", ...    -> respuesta de la organización en la entrevista
@@ -19,6 +20,8 @@ from ai.documentos import CARACTERES_POR_PAGINA, Recuperador, recortar, trocear
 from ai.esquemas import (MatrizImpacto, Presupuesto, PropuestaTecnica, ReglasConvocatoria, SeccionGenerada,
                          TextosPropuesta)
 from ai.llm import generar_estructurado, medir_costo
+from ai.referencias import contexto as contexto_referencias
+from ai.referencias import usadas as referencias_usadas
 
 MODOS = {
     "tdr": "Borrador desde el TdR",
@@ -29,8 +32,8 @@ MODOS = {
 BASE = """Eres un asistente experto en formular proyectos de desarrollo para ONG del Perú y Latinoamérica.
 Escribes en español técnico, claro, en tercera persona, como en una propuesta a la cooperación internacional.
 En cada párrafo, indicador, línea de presupuesto o aporte, llena `fuentes` con etiquetas exactas:
-"TDR" si sale del TdR o las bases; "ENAHO" si es un dato público de la ENAHO; "BID" si tomas como referencia
-un proyecto similar financiado por el BID; "IA" si es una sugerencia tuya;
+"TDR" si sale del TdR o las bases; "ENAHO" si es un dato público de la ENAHO; "BID" o "BMZ" si tomas como
+referencia un proyecto similar financiado por el BID o por la cooperación alemana; "IA" si es una sugerencia tuya;
 las etiquetas DOC:... de los fragmentos
 de propuestas anteriores que uses; o los ids de las respuestas de la organización (p. ej. "pro_1").
 Nunca inventes datos de la organización (nombre, años, resultados pasados, cifras de diagnóstico):
@@ -213,12 +216,12 @@ def paginas(caracteres):
 
 
 def _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuestas, recuperador, datos_publicos="",
-              documentos_apoyo=None, referencias=""):
+              documentos_apoyo=None, referencias=None):
     partes = []
     if datos_publicos:
         partes.append(datos_publicos)
     if referencias:
-        partes.append(referencias)
+        partes.append(contexto_referencias(referencias))
     if reglas_tdr is not None:
         partes.append("REGLAS DEL TdR:\n" + reglas_tdr.model_dump_json(indent=1))
     if texto_tdr and modo in ("tdr", "previos"):
@@ -242,7 +245,7 @@ def _contexto(modo, formato, reglas_tdr, texto_tdr, idea, organizacion, respuest
 
 def generar_propuesta(modo, formato, reglas_tdr=None, texto_tdr="", idea="", organizacion="",
                       respuestas=None, recuperador=None, al_avanzar=None, datos_publicos="", documentos_apoyo=None,
-                      referencias=""):
+                      referencias=None):
     """Genera textos, matriz y presupuesto. `al_avanzar(paso, total, mensaje)` informa el progreso.
 
     Devuelve también el contexto usado (para regenerar secciones después) y el
@@ -253,7 +256,8 @@ def generar_propuesta(modo, formato, reglas_tdr=None, texto_tdr="", idea="", org
     with medir_costo() as llamadas:
         propuesta = _generar(modo, formato, reglas_tdr, contexto, al_avanzar)
     propuesta.update({"contexto": contexto, "reglas_tdr": reglas_tdr, "llamadas": llamadas,
-                      "organizacion": organizacion, "idea": idea})
+                      "organizacion": organizacion, "idea": idea,
+                      "referencias": referencias_usadas(propuesta["tecnica"].referencias, referencias or [])})
     return propuesta
 
 
@@ -294,6 +298,19 @@ def regenerar_seccion(propuesta, formato, seccion_id, instruccion):
     return nueva
 
 
+def _guia_citas(tecnica):
+    """Pide citar en el texto los proyectos de referencia que el diseño declaró haber usado."""
+    if not tecnica.referencias:
+        return ""
+    codigos = ", ".join(r.codigo for r in tecnica.referencias)
+    return ("\nEn antecedentes (o comprensión del servicio) y en la estrategia metodológica, menciona en una frase "
+            "cada uno de estos proyectos de referencia que inspiraron el diseño, citándolo como «BID, proyecto "
+            f"<código>» o «cooperación alemana (BMZ), proyecto <código>», y pon \"BID\" o \"BMZ\" en fuentes: "
+            f"{codigos}. Preséntalos como experiencias de la cooperación en el país, no de la organización. Di solo qué "
+            "buscaba o hacía cada uno (su objetivo o enfoque): no tenemos sus resultados, así que nunca escribas que "
+            "demostró, logró, fue exitoso o fortaleció algo.")
+
+
 def _guia_formato_tdr(reglas_tdr):
     if reglas_tdr is None or not reglas_tdr.secciones_requeridas:
         return "El TdR no fija un índice para la propuesta técnica: deja estructura_tdr como lista vacía."
@@ -321,7 +338,7 @@ def _generar(modo, formato, reglas_tdr, contexto, al_avanzar):
         f"{contexto}\n\n=====\n\nDISEÑO DE LA PROPUESTA TÉCNICA (síguelo; no lo contradigas):\n"
         f"{tecnica.model_dump_json(indent=1)}\n\n=====\n\n"
         f"Redacta estas secciones (una SeccionGenerada por id). Usa como titulo_proyecto el nombre del servicio "
-        f"del diseño. Sé concreto y específico: nada de frases genéricas.\n{guia}",
+        f"del diseño. Sé concreto y específico: nada de frases genéricas.{_guia_citas(tecnica)}\n{guia}",
         TextosPropuesta, instrucciones,
     )
     textos.titulo_proyecto = tecnica.datos.nombre_servicio or textos.titulo_proyecto
