@@ -179,7 +179,6 @@ Referencia de valor: hoy una propuesta toma hasta dos semanas de trabajo de un p
 | Generar una propuesta completa | 4 | US$ 0.03 a 0.09 con documentos normales; hasta ~0.30 con TdR y documentos al máximo |
 | OCR de un documento escaneado | 1 | menos de US$ 0.001 por página |
 | Auditoría del presupuesto y puntaje estimado | 2 | US$ 0.01 a 0.02 |
-| Adaptar al formato Fondoempleo | 1 | US$ 0.01 a 0.03 |
 | Voz (Whisper) | 0 | US$ 0: corre en la laptop |
 
 **Margen de contribución:** en el peor caso (US$ 0.30 por propuesta), el plan Pro cuesta US$ 1.50 al mes en IA (margen ≈ 94 %) y el Institucional US$ 4.50 (≈ 91 %), antes del servidor. El servidor de la etapa de validación es gratuito (Streamlit Community Cloud).
