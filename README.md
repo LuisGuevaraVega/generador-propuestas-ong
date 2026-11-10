@@ -37,10 +37,12 @@
 **Cuánto les cuesta:**
 
 - **Hasta dos semanas** de trabajo para preparar una propuesta (entrevista 1).
-- **Convocatorias perdidas:** "Hemos dejado pasar [convocatorias] por falta de tiempo, sí" (entrevista 1).
+- **Convocatorias perdidas:** "Hemos dejado pasar [convocatorias] por falta de tiempo, sí" (entrevista 1); "Por falta de tiempo sí, hay veces, varias" (entrevista 3).
 - **Enterarse tarde:** "¿Se han enterado tarde de alguna convocatoria?" — "Un montón de veces" (entrevista 2).
 - **Propuestas hechas a la carrera:** cuando no alcanza el tiempo, "terminamos teniendo propuestas muy malas" (entrevista 2).
-- **Consultores externos** cuando no llegan: un costo que depende del tamaño de la convocatoria y que la institución adelanta antes de saber si gana (entrevista 1). En las ONG más pequeñas no hay consultor: el costo es el tiempo del propio gerente (entrevista 2).
+- **Consultores externos** cuando no llegan: un costo que depende del tamaño de la convocatoria y que la institución adelanta antes de saber si gana (entrevista 1). En las ONG más pequeñas no hay consultor: el costo es el tiempo del propio gerente (entrevista 2), o los consultores no cobran por formular y "apuestan a que se gane" (entrevista 3).
+- **Empezar desde cero:** "Para mí es un cuello de botella". La experiencia de la organización no está ordenada y hay que buscarla entre colegas y consultores (entrevista 3).
+- **Nadie vigila las convocatorias:** "No hay nadie que esté haciendo seguimiento de eso… este es un gol para nosotros" (entrevista 3).
 - **Observaciones y rechazos** por no cumplir el formato o los topes de las bases.
 
 **Cómo lo resuelven hoy:** Word, Excel, propuestas anteriores copiadas y adaptadas, consultores externos y coordinación por WhatsApp. Cada donante pide su propio formato: "Cada proyecto tiene un formato" (entrevista 1).
@@ -49,11 +51,11 @@
 
 | | Entrevista 1 | Entrevista 2 | Entrevista 3 |
 |---|---|---|---|
-| Perfil | Gerente general y de microfinanzas, ONG peruana | Gerente de desarrollo económico, ONG pequeña | _pendiente_ |
-| Propuestas al año / ganadas | ~4 / ~2 | 10 en total; 6 de proyectos (sin consultorías) / 3 (2026) | |
-| Tiempo por propuesta | hasta 2 semanas | casi 1 semana solo la nota conceptual | |
-| Herramientas de hoy | Word; consultores externos | Word, Excel; IA para buscar datos secundarios; sin consultores | |
-| Dolor principal | falta de tiempo; convocatorias perdidas | sustentar el problema con datos oficiales; enterarse tarde | |
+| Perfil | Gerente general y de microfinanzas, ONG peruana | Gerente de desarrollo económico, ONG pequeña | Coordinador de inteligencia comercial (microfinanzas), ONG pequeña |
+| Propuestas al año / ganadas | ~4 / ~2 | 10 en total; 6 de proyectos (sin consultorías) / 3 (2026) | ~15 / la mitad |
+| Tiempo por propuesta | hasta 2 semanas | casi 1 semana solo la nota conceptual | 4 días (estudio) a 2 semanas (proyecto grande) |
+| Herramientas de hoy | Word; consultores externos | Word, Excel; IA para buscar datos secundarios; sin consultores | Word, Excel; experiencias anteriores; red de consultores que no cobra por formular |
+| Dolor principal | falta de tiempo; convocatorias perdidas | sustentar el problema con datos oficiales; enterarse tarde | empezar desde cero; anexos; nadie sigue las convocatorias |
 
 ## 4. Solución e insight
 
