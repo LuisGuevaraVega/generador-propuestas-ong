@@ -41,6 +41,8 @@ def plazo(dias):
         return "Cerrada", "gray"
     if dias == 0:
         return "Cierra hoy", "red"
+    if dias == 1:
+        return "Cierra mañana", "red"
     color = "red" if dias <= 7 else "orange" if dias <= 21 else "green"
     return f"Cierra en {dias} días", color
 

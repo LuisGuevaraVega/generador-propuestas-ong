@@ -21,7 +21,7 @@
 | Frente | Cómo lo cubro |
 |---|---|
 | Producto | Claude Code me ayuda a diseñar la guía de entrevistas, transcribir y sintetizar las conversaciones con usuarios y convertir sus pedidos en tareas. |
-| Ingeniería | Claude Code escribe y prueba el código (30 pruebas automáticas); dentro de la app, Gemini redacta y Whisper transcribe. |
+| Ingeniería | Claude Code escribe y prueba el código (39 pruebas automáticas); dentro de la app, Gemini redacta y Whisper transcribe. |
 | Diseño | Claude Code itera la interfaz y la revisa con capturas de un navegador automático antes de cada cambio. |
 | Ventas | Una rutina de Claude en la nube arma cada mañana el boletín gratuito de convocatorias, que es el canal de entrada al plan de pago. |
 
@@ -96,13 +96,13 @@ cp .env.example .env   # y completar GEMINI_API_KEY
 streamlit run app/streamlit_app.py
 ```
 
-Pruebas automáticas, sin llamar a APIs: `python -m pytest` (30 pruebas).
+Pruebas automáticas, sin llamar a APIs: `python -m pytest` (39 pruebas).
 
 **Capturas del flujo principal** (tomadas de la versión publicada):
 
 | 1. Boletín de convocatorias | 2. Tu proyecto: el TdR ya resumido | 3. Revisa y descarga |
 |---|---|---|
-| ![Boletín diario de convocatorias con plazo en color y botón Generar propuesta](docs/img/captura_1_boletin.png) | ![Paso Tu proyecto con el resumen del TdR del DAP: monto, duración, contrapartida y cierre](docs/img/captura_2_tu_proyecto.png) | ![Propuesta generada con el aviso de qué corregir, los montos y las pestañas de revisión](docs/img/captura_3_revisa_y_descarga.png) |
+| ![Boletín diario de convocatorias con buscador, filtros por temática, plazo en color y botón Generar propuesta](docs/img/captura_1_boletin.png) | ![Paso Tu proyecto con el resumen del TdR leído solo, los datos públicos del INEI y los proyectos similares del BID y el BMZ](docs/img/captura_2_tu_proyecto.png) | ![Propuesta generada con el aviso de qué corregir, los montos y las pestañas de revisión](docs/img/captura_3_revisa_y_descarga.png) |
 
 **Flujo principal:**
 
@@ -206,7 +206,7 @@ Referencia de valor: hoy una propuesta toma hasta dos semanas de trabajo de un p
 Claude Code (Claude Opus) fue el co-founder técnico. **Luis** definió el problema, las decisiones de producto y de negocio, hizo las entrevistas y revisó cada entrega. **Claude Code**:
 
 - **Escribió el código del producto:** la app de Streamlit (`app/`), el motor de generación, las reglas, el verificador, la lectura de documentos con OCR y la exportación a Word y Excel (`ai/`).
-- **Escribió las 30 pruebas automáticas** (`tests/`) y las corrió después de cada cambio.
+- **Escribió las 39 pruebas automáticas** (`tests/`) y las corrió después de cada cambio.
 - **Construyó la skill de la ENAHO** (`.claude/skills/datos-enaho-propuesta/`): descarga, cálculo y validación contra el INEI.
 - **Armó la automatización del boletín:** el script `scripts/actualizar_feed.py` y la rutina en la nube que lo sincroniza cada mañana.
 - **Iteró el diseño:** revisó la interfaz con capturas de un navegador automático y corrigió lo que se veía mal (cifras cortadas, anchos, textos confusos).
