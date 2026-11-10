@@ -149,7 +149,7 @@ flowchart TB
 
 | Pieza | Qué usamos | Por qué |
 |---|---|---|
-| Redacción, reglas del TdR y puntaje | Gemini 3.6 Flash, con modelos de respaldo | Salidas estructuradas (JSON validado con Pydantic), contexto largo y bajo costo; si un modelo se satura, pasa al siguiente. |
+| Redacción, reglas del TdR y puntaje | Gemini 3 Flash, con modelos de respaldo | Salidas estructuradas (JSON validado con Pydantic), contexto largo y bajo costo. Se eligió por velocidad: la misma propuesta tardó 90 s con Gemini 3 Flash y 272 s con Gemini 3.6 Flash (prueba del 10 de noviembre). Si un modelo se satura, pasa al siguiente. |
 | OCR de PDF escaneados y fotos | Gemini Flash-Lite (multimodal) | Lee tablas y documentos torcidos sin instalar nada; cuesta menos de un décimo de centavo por página. |
 | Voz a texto | faster-whisper, dentro de la propia app | No se envía el audio a ningún servicio de terceros. En la versión local, el audio ni siquiera sale de la laptop: útil para entrevistas confidenciales. |
 | Búsqueda en documentos | TF-IDF (scikit-learn) | Encuentra los fragmentos relevantes sin costo de API y sin enviar todo el documento. |

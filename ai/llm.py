@@ -34,10 +34,10 @@ def _leer_config(nombre, por_defecto=None):
         return por_defecto
 
 
-MODELO = _leer_config("GEMINI_MODEL", "gemini-3.6-flash")
+MODELO = _leer_config("GEMINI_MODEL", "gemini-3-flash-preview")
 RESPALDOS = [
     m.strip()
-    for m in _leer_config("GEMINI_MODELOS_RESPALDO", "gemini-3.1-flash-lite,gemini-3-flash-preview").split(",")
+    for m in _leer_config("GEMINI_MODELOS_RESPALDO", "gemini-3.1-flash-lite,gemini-3.6-flash").split(",")
     if m.strip()
 ]
 MODELOS = [MODELO] + [m for m in RESPALDOS if m != MODELO]
