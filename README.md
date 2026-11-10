@@ -63,7 +63,7 @@
 
 **Qué construimos:**
 
-- **Gratis: boletín diario de convocatorias.** Una rutina revisa cada mañana las páginas de donantes, agregadores y LinkedIn; la app acumula el historial y permite buscar y filtrar (por ejemplo, microfinanzas). Las tarjetas muestran el plazo en color.
+- **Gratis: boletín diario de convocatorias.** Una rutina revisa cada mañana las páginas de donantes, agregadores y LinkedIn; la app acumula el historial y permite buscar por palabra y filtrar con un clic por temática (microfinanzas, cadenas de valor, estudios, empleo, emprendimiento y otras; solo aparecen las que trae el boletín del día, con cuántas hay de cada una). Los filtros por temática se pidieron en la entrevista 3. Las tarjetas muestran el plazo en color.
 - **Pro: "Generar propuesta" en un clic desde la convocatoria.**
   - **El TdR se lee solo** y se resume (monto, duración, contrapartida, cierre). Si es un PDF escaneado, pasa por OCR.
   - **Tres modos:** borrador desde el TdR, desde propuestas anteriores (RAG) o entrevista guiada por texto o voz.

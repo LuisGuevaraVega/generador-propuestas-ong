@@ -1,5 +1,6 @@
 """Versión gratuita: convocatorias del día en tarjetas compactas."""
 import json
+import sys
 import unicodedata
 from datetime import date
 from pathlib import Path
@@ -8,6 +9,9 @@ import streamlit as st
 
 RAIZ = Path(__file__).resolve().parents[2]
 REPORTES = RAIZ / "data" / "convocatorias" / "reportes.json"
+sys.path.insert(0, str(RAIZ))
+
+from ai.temas import sugeridos, temas_de  # noqa: E402
 
 st.markdown("<style>[data-testid='stMainBlockContainer']{max-width:980px}</style>", unsafe_allow_html=True)
 
@@ -24,22 +28,9 @@ def dias_restantes(deadline: str, hoy: date):
     return (date.fromisoformat(deadline) - hoy).days
 
 
-# Palabras que identifican una convocatoria de microfinanzas (sin tildes, en minúsculas).
-MICROFINANZAS = ("microfinanz", "microcredit", "microfinance", "inclusion financiera", "financial inclusion",
-                 "inclusive finance", "finanzas inclusivas", "educacion financiera", "financial education",
-                 "financial capability", "bancos comunales", "banca comunal", "grupos de ahorro", "savings group",
-                 "vsla", "unicas", "ahorro y credito", "caja municipal", "cajas municipales", "caja rural",
-                 "edpyme", "fintech", "remesas", "seguros inclusivos")
-
-
 def normalizar(texto: str) -> str:
     sin_tildes = unicodedata.normalize("NFKD", texto).encode("ascii", "ignore").decode()
     return sin_tildes.lower()
-
-
-def es_microfinanzas(item) -> bool:
-    campos = normalizar(" ".join(str(item.get(k, "")) for k in ("title", "topic", "type", "why", "amount")))
-    return any(palabra in campos for palabra in MICROFINANZAS)
 
 
 def plazo(dias):
@@ -67,27 +58,30 @@ hoy = date.fromisoformat(fecha)
 with st.expander("📰 Resumen del día", expanded=False):
     st.write(reporte["summary"])
 
-buscar, tema, abiertas = st.columns([2.6, 1.2, 1], vertical_alignment="center")
+buscar, abiertas = st.columns([3.8, 1], vertical_alignment="center")
 texto = buscar.text_input("Buscar", placeholder="Buscar por tema, donante o lugar…", label_visibility="collapsed")
-solo_micro = tema.pills("Tema", ["💰 Microfinanzas"], label_visibility="collapsed") is not None
 solo_abiertas = abiertas.toggle("Solo abiertas", value=True)
 
+vigentes = [item for item in reporte["items"]
+            if not (solo_abiertas and (d := dias_restantes(item.get("deadline"), hoy)) is not None and d < 0)]
+conteo = sugeridos(vigentes)
+elegidos = st.pills("Temáticas", list(conteo), selection_mode="multi", format_func=lambda t: f"{t} · {conteo[t]}",
+                    help="Temáticas que aparecen en este boletín. Elige una o varias para ver solo esas.")
+
 items = []
-for item in reporte["items"]:
+for item in vigentes:
     dias = dias_restantes(item.get("deadline"), hoy)
-    if solo_abiertas and dias is not None and dias < 0:
-        continue
     campos = " ".join(str(item.get(k, "")) for k in ("title", "donor", "topic", "scope", "type", "amount")).lower()
     if texto and normalizar(texto) not in normalizar(campos):
         continue
-    if solo_micro and not es_microfinanzas(item):
+    if elegidos and not set(elegidos) & set(temas_de(item)):
         continue
     items.append((dias if dias is not None else 10_000, item))
 items.sort(key=lambda par: par[0])
 
 st.caption(f"{len(items)} convocatoria(s) · ordenadas por fecha de cierre")
-if not items and solo_micro:
-    st.info("Este boletín no tiene convocatorias de microfinanzas. Prueba con otro día en «Boletín del día».")
+if not items and elegidos:
+    st.info("No hay convocatorias de esas temáticas con ese filtro. Prueba con otro día en «Boletín del día».")
 elif not items:
     st.info("No hay convocatorias con ese filtro.")
 

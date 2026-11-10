@@ -433,3 +433,14 @@ def test_contexto_publico_elige_indicadores_por_tema():
     assert "Anemia" in texto and "Desnutrición" in texto and "INEI, ENDES 2024" in texto and "(Perú:" in texto
     assert "Desnutrición" not in contexto_publico.contexto("06", "Crédito para microempresas")
     assert contexto_publico.contexto("", "anemia") == ""
+
+
+def test_temas_clasifica_convocatorias_y_sugiere_solo_las_presentes():
+    from ai.temas import sugeridos, temas_de
+    cacao = {"title": "Estudio de mercado de cacao", "topic": "Cadena de valor y articulación comercial"}
+    banca = {"title": "Bancos comunales para mujeres", "why": "Inclusión financiera rural"}
+    assert temas_de(cacao) == ["🌱 Cadenas de valor y productores", "📊 Estudios y evaluaciones"]
+    assert temas_de(banca) == ["💰 Microfinanzas e inclusión financiera", "👩 Mujeres y género"]
+    assert temas_de({"title": "Convocatoria general"}) == []
+    conteo = sugeridos([cacao, banca, {"title": "Evaluación final"}])
+    assert conteo["📊 Estudios y evaluaciones"] == 2 and "🧳 Migración" not in conteo

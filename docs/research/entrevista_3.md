@@ -11,7 +11,7 @@
 - **Cargo:** coordinador de inteligencia comercial y gestión de información estratégica en el **área de microfinanzas**.
 - **Organización:** ONG peruana con un **equipo pequeño**. Tiene además un área de desarrollo económico con una cartera de fondos más amplia.
 - **Quién arma las propuestas:** **nadie tiene esa responsabilidad asignada.** Cada persona, según su especialidad, se encarga "de manera proactiva" de las propuestas de su tema.
-- **Fondos a los que postulan:** cooperación internacional e instituciones de microfinanzas. Los temas son inclusión financiera, finanzas "plateadas" (por confirmar), responsabilidad social y estudios de mercado.
+- **Fondos a los que postulan:** cooperación internacional e instituciones de microfinanzas. Los temas son inclusión financiera, responsabilidad social, estudios de mercado y los de proyectos propios del área.
 - **Dos vías de entrada:**
   - convocatorias abiertas;
   - **invitaciones directas por correo** de instituciones con las que ya trabajaron. Con estas es con las que más ganan.
