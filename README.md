@@ -88,6 +88,8 @@ Hace tres años esto no era posible ni barato:
 
 **Demo en línea:** **https://generador-propuestas-ong.streamlit.app/** (Streamlit Community Cloud; cada visitante ve solo sus propias propuestas).
 
+**Video de respaldo:** [`docs/video/demo.mp4`](docs/video/demo.mp4) (1 min 54 s): el flujo completo en la app publicada, del boletín al Word descargado.
+
 **Cómo correrlo en local:**
 
 ```bash
