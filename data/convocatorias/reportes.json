@@ -1,6 +1,231 @@
 {
  "reports": [
   {
+   "date": "2026-11-14",
+   "summary": "Sin oportunidades nuevas en tema hoy (sábado): REDINFOR del 12–13 nov solo trae consultorías ambientales o individuales y las ONG prioritarias siguen sin consultorías en DEL/MYPE. Urgentes: CESAL (gestión comercial y marketing, Apurímac), Producers Direct (PE-T1591) y Terra Nuova (CONCAR, 23:59) cierran MAÑANA domingo 15 nov: enviar hoy. CCCP ELIDE cierra el miércoles 18 nov. Siguen SOCODEVI CACAO+ (20 nov) y ACNUR 3838 (23 nov, 17:00; prudencia: 19 nov).",
+   "items": [
+    {
+     "title": "Consultoría: programa de capacitación en gestión comercial y marketing para el equipo técnico del CITE Agroindustrial Apurímac",
+     "isNew": false,
+     "donor": "CESAL – proyecto «Economía circular y transformación tecnológica de las MIPYMES y organizaciones de productores de las cadenas de quinua y palta en Apurímac» (AEXCID, Junta de Extremadura); publicado en COEECI",
+     "type": "Consultoría para consultor o equipo consultor",
+     "amount": "No indicado (propuesta a todo costo); 22 días calendario; pagos 15% / 20% / 65%",
+     "eligibility": "El TdR habla de «consultor/equipo consultor». Título en administración, ingeniería industrial, agronegocios, economía o afines (deseable maestría en marketing o desarrollo empresarial); 3+ años en marketing, gestión comercial o desarrollo de negocios y 2+ años específicos en comercialización y canales, preferentemente agroindustria; experiencia conduciendo talleres para técnicos, emprendedores y productores. Evaluación: CV 20%, propuesta técnica 50%, económica 30%.",
+     "topic": "Desarrollo empresarial de MIPYME y articulación comercial: 4 sesiones presenciales (segmentación, propuesta de valor, marketing mix, estrategias comerciales) y una herramienta de diagnóstico de brechas comerciales para MIPYME de palta y quinua",
+     "scope": "Abancay, Apurímac (oficina CESAL/CITE)",
+     "deadline": "2026-11-15",
+     "deadlineNote": "URGENTE: cierra MAÑANA domingo 15 nov (sin hora indicada: enviar HOY sábado 14), en 1 día. Consultas y propuestas a ruth.sinchi@cesal.org: CV del consultor/equipo con referencias, propuesta técnica (plan de trabajo, sílabo, metodología) y propuesta económica a todo costo. Aviso sigue en COEECI pág. 1.",
+     "why": "Muy alineado con MYPE, cadenas de valor y articulación comercial, de CESAL (organización listada), encargo corto y abierto a equipo consultor.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (PDF en COEECI)",
+       "url": "https://coeeci.org.pe/uploads/media/2026/11/2f308ae86843cfa47969af8c1d8b726d.pdf",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en COEECI (fuente: agregador)",
+       "url": "https://coeeci.org.pe/oferta/consultoria-capacitacion-en-gestion-comercial-y-marketing",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría «Evaluación técnica especializada» (PE-T1591): capacidades de Producers Direct para adquirir y gestionar soluciones tecnológicas, lecciones aprendidas y hoja de ruta con pequeños productores",
+     "isNew": false,
+     "donor": "Producers Direct (ONG con sucursal en Perú), proyecto «Cultivando Prosperidad» financiado por BID Lab (ATN/JF-21128-PE), con la Cooperativa Agraria Norandino",
+     "type": "Consultoría para firma o consultor (admite firmas consultoras)",
+     "amount": "USD 15.000–20.000 a todo costo (según experiencia del equipo); suma alzada por productos, 11 semanas (inicio 1.ª semana de dic, informe final fines de ene 2027); pagos 30/30/40%",
+     "eligibility": "Consultores individuales o firmas consultoras. Líder con título en sistemas, informática, ciencia de datos, gestión de tecnología o economía y 8+ años en transformación digital o adquisición de soluciones tecnológicas, con experiencia en evaluación de capacidades organizacionales; deseable agtech/cooperativas y proyectos BID; inglés profesional. Gobernanza de datos y contratos puede cubrirlo un especialista de apoyo. BID Lab hará debida diligencia de integridad al seleccionado.",
+     "topic": "Evaluación institucional y sistematización de lecciones de un proyecto agtech con 2.700 productores de café y caña panelera; brechas de capacidades de la ONG y de la cooperativa; opciones y hoja de ruta",
+     "scope": "Piura, Lambayeque y Cajamarca (socios de Norandino); entrevistas presenciales o virtuales",
+     "deadline": "2026-11-15",
+     "deadlineNote": "URGENTE: cierra MAÑANA domingo 15 nov (el TdR no indica hora: enviar HOY sábado 14), en 1 día; consultas cerradas. Enviar a katherine@producersdirect.org (Katherine Bocanegra), asunto «TDR Evaluación Técnica Especializada – PE-T1591»: propuesta técnica (máx. 3 págs.), plan de trabajo (máx. 5 págs.), CV, experiencias con referencias, declaración jurada sin conflicto de interés y propuesta económica. Evaluación: experiencia 30, metodología 35, equipo 20, precio 15.",
+     "why": "Evaluación con cooperativa de productores en el norte, abierta a firmas y con presupuesto conocido. Pesa lo tecnológico: viable si el equipo suma un líder con perfil de transformación digital.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/11rf4kRjErL0jMdHYG_mjfKteZJ5RgQ-v/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/03/peru-consultoria-evaluacion-tecnica-especializada/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Servicio de capacitación y asesoría en gestión administrativa, contable y tributaria (incluye software CONCAR CB) para la Cooperativa Agraria Achuar Shakaim",
+     "isNew": false,
+     "donor": "Terra Nuova – Proyecto BLF Andes Amazónico (Fondo de Paisajes Biodiversos, Reino Unido), consorcio liderado por Practical Action; TdR fechado 9 nov",
+     "type": "Servicio especializado (elegibilidad por confirmar: el TdR pide un/a especialista)",
+     "amount": "S/ 7.000 a todo costo (incluye desplazamientos); 45 días; pagos 20/40/40%",
+     "eligibility": "Elegibilidad por confirmar: el TdR pide 1 especialista (bachiller en contabilidad, economía, administración, finanzas o afines; 5+ años en análisis económico-financiero de empresas o cooperativas y uso de CONCAR; 2+ años como capacitador en CONCAR con cooperativas). Postulación con CV descriptivo; conviene preguntar si acepta a una consultora con un especialista designado.",
+     "topic": "Fortalecimiento de una cooperativa agraria indígena (100 familias Achuar): diagnóstico administrativo y contable, 8 sesiones presenciales (64 h) y 4 semanas virtuales, formatos de control y manual de CONCAR",
+     "scope": "San Lorenzo, Datem del Marañón (Loreto)",
+     "deadline": "2026-11-15",
+     "deadlineNote": "URGENTE: cierra MAÑANA domingo 15 nov a las 23:59, en 1 día. Enviar CV descriptivo a administracionlima@terranuova.org.pe con asunto «Especialista en Análisis Económico financiero TN - BLF». Solo se contacta a finalistas. Aviso sigue en COEECI pág. 1.",
+     "why": "Tema de fortalecimiento de cooperativas en cadena de valor, pero perfil muy contable y monto pequeño: útil solo si el equipo cuenta con un contador con dominio de CONCAR dispuesto a viajar a Loreto.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (PDF en COEECI)",
+       "url": "https://coeeci.org.pe/uploads/media/2026/11/c61799db0b2965fd3d85e13f3ad83e8e.pdf",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en COEECI (fuente: agregador)",
+       "url": "https://coeeci.org.pe/oferta/servicio-de-capacitacion-y-asesoria-en-gestion-administrativa-contable-y-tributaria-loreto",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Servicio de capacitación: facilitación del programa de formación de lideresas «Escuela de Lideresas para el Desarrollo – ELIDE» (actividad 1.3.2, proyecto C2410)",
+     "isNew": false,
+     "donor": "Central de Organizaciones de Productores de Café y Cacao del Perú (CCCP) – proyecto C2410 de incremento de ingresos formales de cooperativas de café de excelencia en Junín (financiador no indicado; publicado en REDINFOR el 11 nov)",
+     "type": "Servicio de capacitación para persona natural o jurídica",
+     "amount": "No indicado (propuesta técnico-económica)",
+     "eligibility": "Personas naturales o jurídicas con RUC activo; se contrata un solo facilitador. Si postula una persona jurídica, debe presentar al menos un profesional que cumpla los requisitos: título o bachiller en sociología, psicología, comunicación o afines; especialización en desarrollo rural con enfoque de género; al menos un servicio similar de facilitación, capacitación o asistencia técnica. Se valoran conocimientos de cooperativas y café/cacao, enfoque por competencias y educación de adultos. Disponibilidad para viajar.",
+     "topic": "Liderazgo y empoderamiento de mujeres en cooperativas cafetaleras (fortalecimiento de organizaciones de productores, mujeres)",
+     "scope": "Presencial en 6 cooperativas beneficiarias de Junín",
+     "deadline": "2026-11-18",
+     "deadlineNote": "URGENTE: cierra el miércoles 18 nov (sin hora indicada: enviar a más tardar el martes 17), en 4 días. CV documentado y propuesta técnico-económica a convocatorias@centralcafeycacao.org con asunto «FACILITADOR PROGRAMA ELIDE». Entrevistas 19 nov, selección 20 nov y firma 25 nov. El TdR está en Google Drive (no leído desde aquí): revisarlo para monto y número de sesiones. Aviso sigue en REDINFOR (pág. 2).",
+     "why": "Admite persona jurídica y combina cooperativas de productores con mujeres, dos temas del equipo. Encaje parcial: el perfil pide formación en ciencias sociales con enfoque de género, así que conviene presentar a una especialista del equipo con ese perfil.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar TdR en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/11/peru-contratacion-servicio-de-capacitacion-del-programa-de-formacion-de-lideresas-escuela-de-lideresas-para-el-desarrollo-elide/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría para un estudio de mercado e identificación de compradores de cacao y derivados en Canadá – Proyecto CACAO+",
+     "isNew": false,
+     "donor": "SOCODEVI – Proyecto CACAO+ (Affaires mondiales Canada), con comité de Agromercado, PromPerú y APPCACAO",
+     "type": "Consultoría para firma o consultor (persona natural o jurídica)",
+     "amount": "No indicado; propuesta económica en dólares canadienses a todo costo; 120 días de servicio (contrato de 140); pagos 10/30/40/20%",
+     "eligibility": "Personas naturales o jurídicas (el TdR pide CV del consultor principal y del equipo de apoyo). Requisito excluyente: al menos 3 servicios en los últimos 5 años de estudios de mercado de cacao o derivados en Canadá o Norteamérica, acreditados. Evaluación: experiencia 50%, propuesta técnica 30%, precio 20%.",
+     "topic": "Cadena de valor del cacao y articulación comercial: base de 40 compradores canadienses, 20 entrevistas en profundidad (preferentemente presenciales en Canadá) y 20 perfiles; estudio de mercado completo para cooperativas",
+     "scope": "Cooperativas de San Martín, Amazonas y Cajamarca; trabajo de campo en Canadá",
+     "deadline": "2026-11-20",
+     "deadlineNote": "Propuestas hasta el viernes 20 nov (sin hora indicada), en 6 días; consultas ya cerradas (12 nov). Enviar a peru@socodevi.org con asunto «Análisis de mercado Cacao y derivados Canadá». Evaluación 27 nov; adjudicación y firma 4 dic. Sin cambios.",
+     "why": "Encaja con cadenas de valor y articulación comercial de cooperativas, pero exige experiencia acreditada en el mercado norteamericano y trabajo de campo en Canadá: solo en consorcio con una firma de comercio exterior que la tenga.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1fKB29ZrnubAPiPgJPj7vHdXfLqnJQXTn/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/05/peru-consultoria-para-la-realizacion-de-un-estudio-de-mercado-e-identificacion-de-compradores-para-cacao-y-derivados-en-canada-proyecto-cacao/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en UNGM (nivel 2) y en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-23",
+     "deadlineNote": "Ampliada: el encabezado de UNGM indica lunes 23 nov a las 17:00 (GMT-5), en 9 días; la Sección 2 aún muestra 19 nov 17:00 y rige el «Corrigendum No. 1» del 2 nov (adjunto no abierto). Por prudencia, si alguna ONG aliada se presenta, apuntar al jueves 19 nov. Se postula solo por el Portal de Proveedores del ACNUR (supplier-portal.unhcr.org); contacto adquisiciones.peru@unhcr.org. Sigue en bidsfactory.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 7 millones (S/ 250.000–700.000 por proyecto, hasta 10 meses); Línea 6 Fortalecimiento organizacional S/ 3 millones (S/ 150.000–400.000, hasta 6 meses); contrapartida mínima 10%",
+     "eligibility": "Solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones). Una ONG o consultora no puede postular como proponente; las bases prevén «aliados» (Formato 06), posible rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea del sábado 21 nov al viernes 4 dic 2026 (sin hora indicada), por formulario Google más los Formatos 01–07; la ventana abre en 7 días. Consultas ya cerradas. Evaluación 5–14 dic. Sin cambios.",
+     "why": "Encaje limitado: solo sirve si el equipo entra como aliado técnico de un sindicato o federación que postule.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar el equipamiento de una iniciativa de cadena productiva que el equipo acompañe con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy tampoco hay consultorías vigentes de Ayuda en Acción en Perú (Google, site:talentclue, unjobs, COEECI y REDINFOR: solo el estudio Lima–Piura de agosto, descartado por antigüedad).",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF ya verificados como vencidos o puestos; Google y DevelopmentAid: solo avisos antiguos; sin convocatorias vigentes); World Vision Perú (worldvision.pe: 4 puestos y una práctica; COEECI pág. 2: servicio FONDEP-Ayacucho cerró el 12 nov y puestos Facer Empresarial, Asistente de Desarrollo, Facilitadores; sin consultorías vigentes en tema); CID (Google, REDINFOR, COEECI: sin avisos); CARE Perú (Google: solo PDF de puestos antiguos; REDINFOR sin procesos nuevos); Ayuda en Acción (Google, site:talentclue, unjobs, COEECI, REDINFOR: sin consultorías vigentes en Perú; roster incluido); CEDEPAS Norte (pág. 1: GRD Piura cerró el 12 nov; resto cerrado en octubre); CESAL y Terra Nuova (COEECI pág. 1, incluidas); Helvetas (PDF de 2026 en su web: SEDAPAL, Concytec y PSC, ninguno nuevo en tema); Plan International, Welthungerhilfe, Acción contra el Hambre, CooperAcción, Cáritas, HIAS, Encuentros SJM, Cuso, Soluciones Prácticas, Heifer, TechnoServe, COPEME, Rikolto, Save the Children, Asociación UNACEM (búsquedas: sin vigentes en tema). Agregadores: REDINFOR convoca págs. 1–2 (13 nov: especialista en siembra y cosecha de agua, Amarilis; 12 nov: SAT-C bosques y ríos, salvaguardas Puna Resiliente, contenidos para comité de vigilancia comunal, estudio de abonos orgánicos CIPCA en Alto Piura —consultor individual, agronomía—, fortalecimiento de equipos autogestionados LATAM de Svenska Kyrkan —20 nov, desarrollo organizacional, fuera de tema—, mercados de carbono en Bolivia; 11 nov: CCCP ELIDE, incluida; ASPROCOAN, ReLAC; resto puestos o fuera del Perú), COEECI págs. 1–2 (CESAL y Terra Nuova; diseño gráfico «Consejos Wawa», influencers, mini bosque comestible: fuera de tema; resto puestos), bidsfactory Perú (ACNUR 3838; ONUDI GEMINI socio implementador, mercurio; BID PE-L1268 educación; resto servicios de oficina), UNGM (OIT articulación productiva en construcción, individual y vencida 3 nov), DevelopmentAid y unvacancies vía buscador (OIM: consultorías individuales). Donantes: OIT, PNUD, OIM, ACNUR, ONUDI, Fondoempleo: sin nuevas en tema.",
+    "failed": "Portal de compras de CARE y care.org.pe/consultorias (no abiertos: JavaScript, sin contenido en días anteriores), TdR de CCCP ELIDE, Svenska Kyrkan y CIPCA (Google Drive), adjunto del corrigendum de ACNUR, plazos de bidsfactory (de pago), talentclue (sin listado), Idealist, UN Partner Portal, CEBEM, LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes).",
+    "queries": "\"términos de referencia\" consultoría emprendimiento OR \"planes de negocio\" OR \"cadena de valor\" Perú noviembre 2026 \"persona jurídica\" · consultoría Perú noviembre 2026 \"términos de referencia\" emprendedores OR \"medios de vida\" OR migrantes OR \"inclusión financiera\" \"equipo consultor\" · Peru \"request for proposals\" OR \"request for quotation\" OR \"expression of interest\" livelihoods OR \"value chain\" OR \"socioeconomic integration\" November 2026 · site:linkedin.com/posts consultoría Perú \"términos de referencia\" noviembre 2026 · \"CARE Perú\" OR \"Plan International\" OR \"Ayuda en Acción\" OR Helvetas OR Welthungerhilfe consultoría Perú noviembre 2026 · \"Colectivo Integral de Desarrollo\" OR Swisscontact Perú consultoría noviembre 2026"
+   }
+  },
+  {
    "date": "2026-11-13",
    "summary": "Una oportunidad nueva: la Central de Café y Cacao (CCCP) busca persona natural o jurídica para facilitar su escuela de lideresas en 6 cooperativas de Junín (cierra el miércoles 18 nov). Urgentes: CESAL (gestión comercial y marketing, Apurímac), Producers Direct (PE-T1591) y Terra Nuova (CONCAR, 23:59) cierran el domingo 15 nov: enviar hoy. Siguen SOCODEVI CACAO+ (20 nov) y ACNUR 3838 (23 nov, 17:00; la Sección 2 aún dice 19 nov).",
    "items": [
