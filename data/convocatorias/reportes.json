@@ -1,6 +1,241 @@
 {
  "reports": [
   {
+   "date": "2026-11-19",
+   "summary": "Sin oportunidades nuevas en tema hoy: lo publicado el 18 nov en REDINFOR son puestos o consultorías fuera de tema. Urgentes: DESCOCENTRO (módulos de innovación y emprendimiento, Huancavelica) cierra HOY; World Vision Huancavelica (cotización 4470687, emprendimiento textil) y SOCODEVI CACAO+ cierran MAÑANA viernes 20, sin hora: enviar hoy. La CCCP (cáscara de café) cierra el domingo 22 y ACNUR 3838 el lunes 23 a las 17:00 (prudencia: hoy 17:00). La ventana de Fondoempleo abre el sábado 21.",
+   "items": [
+    {
+     "title": "Servicio de desarrollo de módulos de aprendizaje del Curso de Formación de Formadores (innovación, emprendimiento y Áreas de Especialización Inteligente) – Proyecto DER Huancavelica",
+     "isNew": false,
+     "donor": "DESCOCENTRO (según los correos de contacto) – Proyecto DER Huancavelica (financiador no indicado); publicado en REDINFOR el 17 nov",
+     "type": "Servicio de consultoría para persona natural o jurídica",
+     "amount": "No indicado; 30 días calendario desde la firma",
+     "eligibility": "Admite persona jurídica con RUC activo y habido, sin impedimento para contratar con DESCOCENTRO; el aviso se refiere a «el o la profesional a cargo» (un responsable). Perfil: título en ciencias, ciencias de la salud, ingeniería o afines; maestría en ciencias o ingeniería (se valora gestión de CTI, innovación o emprendimiento); 8+ años de experiencia general, docencia universitaria o de posgrado y 5+ años en CTI, I+D+i o transferencia tecnológica; deseable desarrollo curricular.",
+     "topic": "Diseño de módulos y herramientas pedagógicas sobre innovación y emprendimiento en las Áreas de Especialización Inteligente de Huancavelica (bioeconomía altoandina, fibras finas y textilería andina, turismo de experiencias), con seguimiento a su implementación",
+     "scope": "Huancavelica (virtual; presencial si es necesario)",
+     "deadline": "2026-11-19",
+     "deadlineNote": "URGENTE: cierra HOY jueves 19 nov (sin hora indicada: enviar esta mañana). CV documentado con diplomas, certificados y experiencia acreditada (contratos, órdenes de servicio con conformidad o constancias) a mesadepartes@descocentro.org.pe, asistenteuothvca@descocentro.org.pe y bgomez@descocentro.org.pe, asunto «DER HVCA – Modulo Aprendizaje Formación de Formadores». TdR en Google Drive (no leído desde aquí). Sin cambios.",
+     "why": "Tema de desarrollo económico regional y emprendimiento en Huancavelica y admite persona jurídica. Encaje parcial: el responsable debe tener maestría y larga trayectoria en ciencia, tecnología e innovación, así que solo conviene si el equipo cuenta con ese perfil.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1_igN5uoul3LiBadrqoLkexBMsRu4cFai/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/17/peru-contratacion-del-servicio-de-desarrollo-de-modulos-de-aprendizaje-del-curso-de-formacion-de-formadores-para-el-proyecto-der-huancavelica/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Solicitud de cotización 4470687: servicio de capacitación en habilidades blandas y competencias emprendedoras para 300 emprendedores de artesanía textil (proyecto «Tejiendo Futuro»)",
+     "isNew": false,
+     "donor": "World Vision Perú – Oficina Regional Huancavelica, proyecto «Tejiendo Futuro» financiado por FONDOEMPLEO (Línea 3: promoción y fortalecimiento de emprendimientos); publicado 12 nov, aviso en COEECI",
+     "type": "Solicitud de cotización / servicio especializado (proveedor con RUC; 2 especialistas)",
+     "amount": "No indicado (cotización con impuestos en el formato COTIZACIÓN.xlsx; la propuesta económica es el criterio de mayor peso); pago único al final, con factura",
+     "eligibility": "Proveedor con razón social y RUC registrado en Coupa (el TdR no precisa persona natural o jurídica; pide 2 especialistas, cada uno para 6 grupos, más al menos un asistente técnico o universitario). Formación en emprendimiento, administración, gestión empresarial, psicología, educación o afines; 3+ años de experiencia general y 2+ en capacitación o asistencia técnica a emprendedores; metodología CEFE o equivalente; deseable experiencia con artesanos y quechua. Incumplir el TdR o la declaración jurada de entregables descalifica.",
+     "topic": "Emprendimiento y habilidades socioemocionales: 3 temas (perfil emprendedor y oportunidades; riesgo, resiliencia y calidad; metas, planificación y decisiones), 36 talleres de 4 h para 12 grupos de 25 artesanas y artesanos textiles",
+     "scope": "Huancavelica: distritos de Yauli (Ccasapata, Ambato, Yauli, Castillapata) y Paucará (Chopccapampa, Tinquerccasa, Paucará); 45 días desde el 30 nov",
+     "deadline": "2026-11-20",
+     "deadlineNote": "URGENTE: cierra MAÑANA viernes 20 nov (sin hora indicada: subir la propuesta HOY jueves 19), en 1 día; consultas ya cerradas. Si aún no se hizo, enviar hoy temprano razón social, RUC y correo de contacto a compras_wvperu@wvi.org (asunto «Solicitud de cotización 4470687_SERVICIOS PROFESIONALES ESPECIALIZADOS») para el registro en Coupa; la propuesta se sube por el módulo de eventos de Coupa: propuesta técnica (metodología, cronograma, logística y declaración jurada), CV documentado con referencias y propuesta económica en el formato COTIZACIÓN.xlsx. Entrevistas 23 nov; inicio 30 nov. Aviso sigue hoy en COEECI pág. 1.",
+     "why": "La única convocatoria vigente de una organización prioritaria (World Vision) y de lleno en emprendimiento: pide dos especialistas y un asistente, justo el formato de un equipo consultor. Compite sobre todo por precio, así que conviene una cotización ajustada con facilitadores quechuahablantes.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (PDF en COEECI)",
+       "url": "https://coeeci.org.pe/uploads/media/2026/11/b1d786a5da1c95806aee3d56d56ebcb9.pdf",
+       "linkedin": false
+      },
+      {
+       "label": "Formato de cotización (Excel, COEECI)",
+       "url": "https://coeeci.org.pe/uploads/media/2026/11/9259b837e166d78685e628a3d12a7275.xlsx",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en COEECI (fuente: agregador)",
+       "url": "https://coeeci.org.pe/oferta/servicio-de-capacitacion-en-habilidades-blandas-y-competencias-emprendedoras-dirigido-a-emprendedores-de-artesania-textil",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría para un estudio de mercado e identificación de compradores de cacao y derivados en Canadá – Proyecto CACAO+",
+     "isNew": false,
+     "donor": "SOCODEVI – Proyecto CACAO+ (Affaires mondiales Canada), con comité de Agromercado, PromPerú y APPCACAO",
+     "type": "Consultoría para firma o consultor (persona natural o jurídica)",
+     "amount": "No indicado; propuesta económica en dólares canadienses a todo costo; 120 días de servicio (contrato de 140); pagos 10/30/40/20%",
+     "eligibility": "Personas naturales o jurídicas (el TdR pide CV del consultor principal y del equipo de apoyo). Requisito excluyente: al menos 3 servicios en los últimos 5 años de estudios de mercado de cacao o derivados en Canadá o Norteamérica, acreditados. Evaluación: experiencia 50%, propuesta técnica 30%, precio 20%.",
+     "topic": "Cadena de valor del cacao y articulación comercial: base de 40 compradores canadienses, 20 entrevistas en profundidad (preferentemente presenciales en Canadá) y 20 perfiles; estudio de mercado completo para cooperativas",
+     "scope": "Cooperativas de San Martín, Amazonas y Cajamarca; trabajo de campo en Canadá",
+     "deadline": "2026-11-20",
+     "deadlineNote": "URGENTE: cierra MAÑANA viernes 20 nov (sin hora indicada: enviar HOY jueves 19), en 1 día; consultas ya cerradas. Propuesta técnica, económica en CAD a todo costo y CV del consultor principal y del equipo a peru@socodevi.org con asunto «Análisis de mercado Cacao y derivados Canadá». Evaluación 27 nov; adjudicación y firma 4 dic. Sin cambios.",
+     "why": "Encaja con cadenas de valor y articulación comercial de cooperativas, pero exige experiencia acreditada en el mercado norteamericano y trabajo de campo en Canadá: solo en consorcio con una firma de comercio exterior que la tenga.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1fKB29ZrnubAPiPgJPj7vHdXfLqnJQXTn/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/05/peru-consultoria-para-la-realizacion-de-un-estudio-de-mercado-e-identificacion-de-compradores-para-cacao-y-derivados-en-canada-proyecto-cacao/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: estudio para la revalorización de la cáscara de café (economía circular y reducción de emisiones)",
+     "isNew": false,
+     "donor": "Central de Organizaciones Productoras de Café y Cacao del Perú (CCCP); TdR publicado el 16 nov, aviso en REDINFOR el 17 nov (financiador no indicado)",
+     "type": "Consultoría para consultor o equipo multidisciplinario (acepta CV institucional)",
+     "amount": "No indicado (propuesta técnico-económica)",
+     "eligibility": "Admite equipo multidisciplinario si se identifica al responsable principal y las funciones de cada integrante; pide CV institucional y/o personal (persona jurídica implícita, por confirmar). Indispensable: formación en ingeniería ambiental, química, agroindustrial, agrícola, ciencias ambientales, economía ambiental o afines; experiencia en valorización de residuos o economía circular, evaluación técnico-económica de aprovechamiento de residuos orgánicos y cuantificación de GEI o huella de carbono. Deseable: cadenas de café o cacao y trabajo con organizaciones de productores.",
+     "topic": "Cadena de valor del café: caracterizar la generación y manejo de la cáscara, comparar alternativas de aprovechamiento, línea base, emisiones evitadas, costos, barreras y hoja de ruta para organizaciones de productores",
+     "scope": "Perú (organizaciones socias de la CCCP)",
+     "deadline": "2026-11-22",
+     "deadlineNote": "URGENTE: cierra el domingo 22 nov (sin hora indicada: enviar a más tardar MAÑANA viernes 20), en 3 días. CV institucional y/o personal con referencias y celular, y propuesta técnico-económica a convocatorias@centralcafeycacao.org con copia a wortiz@centralcafeycacao.org y apoma@centralcafeycacao.org, asunto «ESTUDIO DE MERCADO.VALORIZACION CASCARA». Revisión 23 nov, entrevista 24 nov y comunicación 25 nov. TdR en Google Drive (no leído desde aquí). Aviso sigue en REDINFOR pág. 3.",
+     "why": "Estudio de cadena de valor con cooperativas cafetaleras, abierto a equipo y de la misma Central que ya convoca a menudo. El componente ambiental (GEI, ciclo de vida) es excluyente: viable si el equipo suma un ingeniero ambiental y aporta el análisis económico y de mercado.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1pwJXKBmnFHSCgEG-NeOOUQSw0DJXJupu/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/17/peru-consultoria-estudio-para-la-revalorizacion-de-la-cascara-de-cafe/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en UNGM (nivel 2) y en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-23",
+     "deadlineNote": "URGENTE: cierra el lunes 23 nov a las 17:00 (GMT-5), según el encabezado de UNGM, en 4 días; la Sección 2 aún muestra HOY 19 nov a las 17:00 y rige el «Corrigendum No. 1» (adjunto no abierto). Por prudencia, si una ONG aliada se presenta, subir la oferta HOY antes de las 17:00. Se postula solo por el Portal de Proveedores del ACNUR (supplier-portal.unhcr.org); contacto adquisiciones.peru@unhcr.org.",
+     "why": "Solo interesa si una ONG aliada con servicio de orientación a migrantes (o un consorcio con operador de call center) quiere presentarse; el equipo podría aportar contenidos sobre rutas de empleo y emprendimiento. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 7 millones (S/ 250.000–700.000 por proyecto, hasta 10 meses); Línea 6 Fortalecimiento organizacional S/ 3 millones (S/ 150.000–400.000, hasta 6 meses); contrapartida mínima 10%",
+     "eligibility": "Solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones). Una ONG o consultora no puede postular como proponente; las bases prevén «aliados» (Formato 06), posible rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea del sábado 21 nov al viernes 4 dic 2026 (sin hora indicada), por formulario Google más los Formatos 01–07; la ventana abre en 2 días y cierra en 15. Consultas ya cerradas. Evaluación 5–14 dic. Sin cambios.",
+     "why": "Encaje limitado: solo sirve si el equipo entra como aliado técnico de un sindicato o federación que postule.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: sistematización de «El camino hacia la autorización del CR SGP Áncash» (Consejo Regional del Sistema de Garantía Participativo)",
+     "isNew": false,
+     "donor": "IDMA – Instituto de Desarrollo y Medio Ambiente (según los correos de contacto @idmaperu.org); publicado en REDINFOR el 16 nov",
+     "type": "Consultoría para persona natural o jurídica",
+     "amount": "No indicado (propuesta económica a todo costo)",
+     "eligibility": "Persona natural y/o jurídica. Perfil: ciencias agrarias, ambientales, sociales, desarrollo rural, economía, gestión de proyectos o afines; experiencia en sistematización de experiencias (deseable conocimiento del SGP); metodologías participativas, entrevistas, revisión documental y redacción de informes.",
+     "topic": "Sistematización del fortalecimiento institucional del sistema regional de certificación participativa de pequeños productores ecológicos de Áncash (hitos, actores, dificultades y aprendizajes) para su sostenibilidad y réplica",
+     "scope": "Áncash",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: el aviso no la indica; publicado el 16 nov.) Enviar CV y carta de interés con propuesta técnica y económica a todo costo a maribel.flores@idmaperu.org y duvert.ventocilla@idmaperu.org; conviene escribir hoy para confirmar el plazo. TdR en Google Drive (no leído desde aquí).",
+     "why": "Sistematización de una experiencia de organizaciones de productores, abierta a persona jurídica y con un perfil (economía, desarrollo rural) que el equipo cubre bien.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/12SYpFfLWRQldrH9ZlVykb1-LXAQXG18x/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/16/peru-consultoria-sistematizacion-del-el-camino-hacia-la-autorizacion-del-cr-sgp-ancash/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar el equipamiento de una iniciativa de cadena productiva que el equipo acompañe con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy tampoco hay consultorías vigentes de Ayuda en Acción en Perú: talentclue solo muestra la consultoría CETPRO (Lima y Pucallpa, selección 21 oct, vencida); COEECI y REDINFOR sin avisos nuevos.",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF; reabiertos hoy turismo Bajo Tambopata y ELDRBE Padre Abad, vencidos en dic 2024 y ago 2025; sin convocatorias vigentes); World Vision Perú (COEECI pág. 1: cotización 4470687 Huancavelica, incluida; worldvision.pe: 4 puestos y una práctica, sin consultorías); CID (Google, REDINFOR, COEECI: sin avisos); CARE Perú (portal de compras y care.org.pe/consultorias sin contenido; REDINFOR sin procesos nuevos); Ayuda en Acción (talentclue: solo CETPRO, vencida; COEECI y REDINFOR: sin consultorías vigentes en Perú; roster incluido); CEDEPAS Norte (pág. 1: todo vencido, último GRD Piura 12 nov); Acción contra el Hambre (licitaciones: SATI Amazonas cerró el 16 nov; nada vigente); Terra Nuova (COEECI: CONCAR Loreto, cerró el 15 nov); Helvetas, Plan International, Welthungerhilfe, CooperAcción, Cáritas, HIAS, Encuentros SJM, Cuso, Soluciones Prácticas, Heifer, TechnoServe, COPEME, CESAL, Rikolto, Save the Children, Asociación UNACEM (búsquedas: sin vigentes en tema). Agregadores: REDINFOR convoca págs. 1–3 (18 nov: IFEJANT/Save the Children diagnóstico OCA y Plan OCD 2027–2028 para «persona o equipo consultor», fecha «noviembre» sin día, fortalecimiento institucional de una ONG de niñez, fuera de tema; coordinador/a «Perspectivas económicas para juventudes» Chancay y asistentes técnico-financieros de «Territorios que Crecen», puestos en planilla, descartados; resto puestos o fuera del Perú; 17 nov: levantamiento socioeconómico Iberia e Iñapari, individuales, ya descartados), COEECI págs. 1–2 (World Vision Huancavelica; FONDEP Cusco y Huancavelica, educación; diseño gráfico; resto puestos), bidsfactory Perú (ACNUR 3838 sigue; ONUDI GEMINI y BID PE-L1268 educación superior: fuera de tema; plazos de pago), UNGM (OIT hoja de ruta migración laboral: individual, venció en jul). Donantes: OIT, PNUD, OIM, ACNUR, Fondoempleo: sin nuevas en tema.",
+    "failed": "TdR de IFEJANT, DESCOCENTRO, CCCP, IDMA y SOCODEVI (Google Drive, requiere sesión), adjunto del corrigendum de ACNUR, plazos de bidsfactory (de pago), portal de compras de CARE (JavaScript), DevelopmentAid, Idealist, UN Partner Portal, CEBEM, LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes en tema).",
+    "queries": "\"términos de referencia\" consultoría emprendedores Perú noviembre 2026 · \"persona jurídica\" consultoría \"línea de base\" OR \"evaluación final\" medios de vida Perú 2026 · site:redinfor.com.pe noviembre 2026 consultoría Perú emprendimiento OR empleabilidad OR migrantes · site:linkedin.com/posts consultoría \"términos de referencia\" Perú emprendimiento OR empleabilidad OR migrantes noviembre 2026 · site:empleoayudaenaccion.talentclue.com consultoría Perú · \"Colectivo Integral de Desarrollo\" convocatoria consultoría 2026"
+   }
+  },
+  {
    "date": "2026-11-18",
    "summary": "Dos oportunidades nuevas: la Central de Café y Cacao busca equipo para un estudio de revalorización de la cáscara de café (cierra el domingo 22 nov) y DESCOCENTRO, módulos de formación en innovación y emprendimiento para Huancavelica (cierra MAÑANA jueves 19). Urgentes: CCCP ELIDE cierra HOY (enviar esta mañana); World Vision Huancavelica y SOCODEVI CACAO+, el viernes 20 nov. ACNUR 3838 cierra el lunes 23 nov a las 17:00 (prudencia: 19 nov).",
    "items": [
