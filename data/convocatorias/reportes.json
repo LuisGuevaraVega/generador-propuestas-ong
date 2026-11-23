@@ -1,6 +1,314 @@
 {
  "reports": [
   {
+   "date": "2026-11-23",
+   "summary": "Lunes sin oportunidades nuevas en tema: REDINFOR y COEECI no publican nada desde el 20 nov. Siguen vigentes 12. Urgentes: ACNUR 3838 (HOY 17:00) y CEDEPAS Poquián (HOY 23:45); CODESPA FREES y ACCA CT22 y CT23 cierran MAÑANA martes 24 sin hora: enviar hoy. CLAC café sigue sin fecha confirmada (consultas hasta el 27). Fondoempleo cierra el 4 dic. Cerraron ayer CCCP cáscara de café y el facilitador C2516-FE.",
+   "items": [
+    {
+     "title": "Consultoría: diseño para el desarrollo e implementación del Sistema Integral de Gestión Cooperativa Agraria (Cooperativa Agraria Santiago de Poquián)",
+     "isNew": false,
+     "donor": "CEDEPAS Norte (financiador no indicado); publicado en cedepas.org.pe el 19 nov",
+     "type": "Consultoría / servicio de desarrollo de sistema (elegibilidad por confirmar)",
+     "amount": "No indicado en el aviso (ver bases)",
+     "eligibility": "(Elegibilidad por confirmar: el aviso no precisa persona natural o jurídica.) Perfil: profesional en ingeniería de sistemas, informática o afines; 3+ años diseñando e implementando sistemas de gestión; bases de datos, programación web y reportes; experiencia con cooperativas o asociaciones de productores y en capacitación de usuarios; disponibilidad inmediata.",
+     "topic": "Fortalecimiento de una cooperativa agraria: digitalizar aportes, inventarios, ventas y cuentas por cobrar de sus tres líneas de negocio (palta, aceite de palta y bioinsumos), reportes y capacitación del personal",
+     "scope": "Región Lima (Cooperativa Agraria Santiago de Poquián)",
+     "deadline": "2026-11-23",
+     "deadlineNote": "URGENTE: cierra HOY lunes 23 nov a las 23:45. Enviar la documentación de las bases a jleon@cedepas.org.pe y cedepaslima@cedepas.org.pe; consultas a cedepas@cedepas.org.pe o (044) 291651. Ficha de CEDEPAS reconfirmada hoy (ventana 19–23 nov). Bases en PDF (no leídas desde aquí).",
+     "why": "De CEDEPAS (organización prioritaria) y sobre gestión de una cooperativa, pero es sobre todo desarrollo de software: solo conviene si el equipo suma un desarrollador y aporta la parte de procesos y capacitación.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases (PDF, CEDEPAS)",
+       "url": "https://www.cedepas.org.pe/sites/default/files/tdr_sistema_de_gestion_de_poquian.pdf",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en CEDEPAS",
+       "url": "https://cedepas.org.pe/oportunidades/consultor%C3%ADa-servicio-de-dise%C3%B1o-para-el-desarrollo-e-implementaci%C3%B3n-del-sistema",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "PER-UNHCR-RFP 3838 (RFP-2026-003): Lote 1 línea telefónica gratuita y Lote 2 servicio de atención de llamadas para población refugiada y migrante",
+     "isNew": false,
+     "donor": "ACNUR Perú",
+     "type": "Licitación / RFP de servicios (firmas y consorcios)",
+     "amount": "No indicado",
+     "eligibility": "Empresas, consorcios u organizaciones con capacidad de operar un centro de llamadas, registradas en UNGM (nivel 2) y en el UNHCR Supplier Portal. No es para personas naturales.",
+     "topic": "Atención e información a población refugiada y migrante (principalmente venezolana); encaje temático parcial",
+     "scope": "Perú",
+     "deadline": "2026-11-23",
+     "deadlineNote": "URGENTE: cierra HOY lunes 23 nov a las 17:00 (GMT-5) según el encabezado de UNGM (rige el «Corrigendum No. 1», adjunto no abierto). Se postula solo por el Portal de Proveedores del ACNUR (supplier-portal.unhcr.org); contacto adquisiciones.peru@unhcr.org. Sigue listada hoy en bidsfactory.",
+     "why": "Solo interesa si una ONG aliada con orientación a migrantes (o un consorcio con operador de call center) se presenta. Encaje marginal.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Aviso en UNGM",
+       "url": "https://www.ungm.org/Public/Notice/319814",
+       "linkedin": false
+      },
+      {
+       "label": "Ficha en bidsfactory (fuente: agregador)",
+       "url": "https://bidsfactory.com/en/tenders/solicitud-de-propuesta-per-unhcr-rfp-3838-rfp-2026-319814",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: sistematización del Fondo FREES–Work4Progress Perú, proyecto «Promover productos financieros combinados (asistencia técnica + crédito) para el escalamiento de prototipos innovadores en áreas rurales de Perú»",
+     "isNew": false,
+     "donor": "Fundación CODESPA (Programa Work4Progress); publicado en REDINFOR el 20 nov",
+     "type": "Consultoría para profesional individual o firma",
+     "amount": "No indicado (propuesta técnica y económica)",
+     "eligibility": "El TdR admite expresamente «un profesional individual o una firma». Experiencia en desarrollo económico e inversión de impacto, en microfinanzas y emprendimientos y de trabajo en Perú; redacción de publicaciones, sistematizaciones o evaluaciones (enviar copias); capacidad analítica y de síntesis. Diseño y maquetación los asume CODESPA.",
+     "topic": "Inclusión financiera rural y emprendimiento: articulación entre asistencia técnica, crédito y garantías; roles de las entidades, resultados y aprendizajes de las tres fases del Fondo (2020 a la fecha); publicación externa, documento interno de recomendaciones, contenidos de difusión y banco fotográfico y audiovisual",
+     "scope": "Áreas rurales del Perú",
+     "deadline": "2026-11-24",
+     "deadlineNote": "URGENTE: cierra MAÑANA martes 24 nov (sin hora indicada: enviar HOY lunes 23), en 1 día. Propuesta técnica (metodología y plan de trabajo con actividades, subproductos y fechas), propuesta económica, CV detallado y publicaciones o sistematizaciones previas, en español, a llcaceres@codespa.org, jljimenez@codespa.org y peru@codespa.org (mismos correos para consultas). TdR en Google Drive (no leído desde aquí).",
+     "why": "La que mejor encaja hoy: sistematización de un fondo de inclusión financiera para emprendimientos rurales, abierta a firma y con un perfil (economía, microfinanzas, emprendimiento) muy cercano al del equipo.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1kGynWb7WY8RO1sijo22EOAHsuS5WKkjK/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/20/peru-consultoria-desarrollo-de-sistematizacion-en-el-marco-del-proyecto-promover-productos-financieros-combinados-asistencia-tecnica-credito-para-el-escalamiento-de-prototipos-innovador/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría CT22-2026: diseño e implementación de un programa de ideación y preincubación de emprendimientos juveniles en Madre de Dios",
+     "isNew": false,
+     "donor": "ACCA – Asociación para la Conservación de la Cuenca Amazónica (Conservación Amazónica), según el correo de postulación; financiador no indicado; publicado en REDINFOR el 19 nov",
+     "type": "Consultoría para entidad con equipo técnico multidisciplinario",
+     "amount": "No indicado (ver TdR)",
+     "eligibility": "El aviso se dirige a una «entidad postulante» con equipo técnico multidisciplinario (persona jurídica implícita; confirmar en el TdR). Experiencia comprobada en programas de emprendimiento, incubación, preincubación o aceleración; ideación, selección y acompañamiento; diseño y validación de MVP con usuarios; mentorías, bootcamps y articulación con clientes, inversionistas e instituciones. Se valoran bioeconomía o negocios sostenibles, jóvenes, pueblos indígenas y contexto amazónico.",
+     "topic": "Emprendimiento juvenil: ideación, selección, acompañamiento y validación comercial de modelos de negocio compatibles con la conservación de bosques",
+     "scope": "Madre de Dios",
+     "deadline": "2026-11-24",
+     "deadlineNote": "URGENTE: cierra MAÑANA martes 24 nov (sin hora indicada: enviar HOY lunes 23), en 1 día. Postular a talentos@conservacionamazonica.org con asunto «CT22-2026»; documentos según el TdR (Google Drive, no leído desde aquí).",
+     "why": "La que mejor encaja hoy: diseño e implementación de un programa de preincubación para jóvenes, pensado para una entidad con equipo, justo el formato de una consultora de desarrollo empresarial.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1OtpfPd2CcWQyD7WqERPgg8dL5eCSu4X0/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/19/peru-consultoria-diseno-e-implementacion-de-un-programa-de-ideacion-y-preincubacion-de-emprendimientos-juveniles-en-madre-de-dios/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría CT23-2026: recojo de información, elaboración y análisis de la línea de base de emprendimientos juveniles de Madre de Dios",
+     "isNew": false,
+     "donor": "ACCA – Asociación para la Conservación de la Cuenca Amazónica (Conservación Amazónica) y aliados; financiador no indicado; publicado en REDINFOR el 19 nov",
+     "type": "Consultoría (elegibilidad por confirmar)",
+     "amount": "No indicado (ver TdR)",
+     "eligibility": "(Elegibilidad por confirmar: el aviso habla de «el/la postulante».) Título en economía, administración, ingeniería económica o industrial, ciencias sociales, gestión empresarial, estadística o afines; 3+ años de experiencia general y 2+ en líneas de base, diagnósticos, caracterización socioeconómica o evaluación; diseño de instrumentos, encuestas, entrevistas, análisis de indicadores y bases de datos; experiencia en programas de emprendimiento o incubación.",
+     "topic": "Línea de base de emprendimientos juveniles y jóvenes líderes: capacidades empresariales, acceso a mercados, financiamiento y redes de apoyo",
+     "scope": "Madre de Dios",
+     "deadline": "2026-11-24",
+     "deadlineNote": "URGENTE: cierra MAÑANA martes 24 nov (sin hora indicada: enviar HOY lunes 23), en 1 día. Postular a talentos@conservacionamazonica.org con asunto «CT23-2026»; documentos según el TdR (Google Drive, no leído desde aquí).",
+     "why": "Línea de base de emprendimientos con perfil de economista y analista de datos, muy cercano al del equipo; se puede presentar junto con CT22 si el TdR lo permite.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1uzbm3ekA9bkV4M2QTDWoz9OCCdmGHH_S/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/19/peru-consultoria-recojo-de-informacion-elaboracion-y-el-analisis-de-la-linea-base-de-emprendimientos-juveniles-de-madre-dios/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 250.000–700.000 por proyecto; Línea 6 Fortalecimiento organizacional S/ 150.000–400.000; contrapartida mínima 10%",
+     "eligibility": "Solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones); las bases prevén «aliados» (Formato 06), posible rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea abierta hasta el viernes 4 dic 2026 (sin hora indicada), en 11 días; formulario Google más los Formatos 01–07. Evaluación 5–14 dic. Sin cambios.",
+     "why": "Encaje limitado: solo como aliado técnico de un sindicato o federación que postule.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: estudios de viabilidad y de mercado para iniciativas de valor agregado (café tostado y molido) con enfoque inclusivo e intergeneracional – proyecto «Preparando un futuro justo con café sostenible»",
+     "isNew": false,
+     "donor": "CLAC – Coordinadora Latinoamericana y del Caribe de Pequeños Productores y Trabajadores de Comercio Justo (según los correos de postulación); publicado en REDINFOR el 20 nov",
+     "type": "Consultoría para consultoría/agencia o consultor",
+     "amount": "No indicado (ver TdR)",
+     "eligibility": "El aviso titula el perfil «para consultoría/agencia» (admite firma). Título en economía, agronomía, administración, comercio internacional, agronegocios o afines; 3+ años elaborando estudios de viabilidad y de mercado, planes de negocio y proyectos de inversión agropecuarios; experiencia con organizaciones de pequeños productores de café o comercio justo; enfoques de género e inclusión de jóvenes; facilitación de talleres participativos; certificación en evaluación de proyectos o planes de negocio.",
+     "topic": "Planes de negocio y estudios de mercado para el valor agregado de dos organizaciones de pequeños productores de café, con inclusión de mujeres y jóvenes",
+     "scope": "Perú (dos OPP cafetaleras participantes del proyecto)",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: el aviso en REDINFOR no cargó hoy y el TdR en Google Drive tampoco se pudo leer; el TdR se titula «261026-TDR-Consultoria-de-Estudios-de-Viabilidad-y-de-Mercado-PFJCS-Peru» y el aviso mencionaba consultas hasta el «27», previsiblemente 27 nov.) Enviar la propuesta a marlon.m@clac-comerciojusto.org con copia a adquisiciones@clac-comerciojusto.org, asunto «Estudios de Viabilidad y de Mercado de café-Perú». Conviene escribir HOY para confirmar el plazo.",
+     "why": "Estudio de mercado y planes de negocio con organizaciones de productores, abierto a agencia consultora: encaja de lleno con cadenas de valor y articulación comercial.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1VHFHjLK0dVtahxXp0X5hCu2Xz6YB8HuO/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/20/peru-consultoria-estudios-de-viabilidad-y-de-mercado-para-iniciativas-de-actividades-productivas-con-enfoque-inclusivo-intergeneracional-en-el-marco-del-proyecto-preparando-un-futuro-justo/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: elaboración de la línea de base del proyecto «Siembra y cosecha de agua: un camino comunitario hacia la seguridad hídrica en los Andes peruanos»",
+     "isNew": false,
+     "donor": "Cáritas Abancay (recibe las propuestas); financiador no indicado; publicado en REDINFOR el 19 nov",
+     "type": "Consultoría para persona natural o jurídica (se valora empresa o equipo consultor)",
+     "amount": "No indicado (presupuesto propuesto por el postulante)",
+     "eligibility": "Personas naturales o jurídicas; se valora empresa o equipo consultor. 3+ años en líneas de base, evaluaciones o investigación aplicada; diseño muestral y análisis cuantitativo; métodos cualitativos; contextos rurales (agua, agricultura, recursos naturales, resiliencia climática); enfoque de género; quechua cuando sea necesario.",
+     "topic": "Línea de base con familias de pequeños agricultores (acceso al agua y calidad de vida); encaje temático parcial con medios de vida rurales",
+     "scope": "Cuenca de Challhuahuacho (Cotabambas, Apurímac)",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: el aviso no la indica; publicado el 19 nov; sin novedades hoy.) Enviar CV no documentado, perfil de ejecución de la consultoría y presupuesto a cabancay@caritas.org.pe y antonio.barazorda7@gmail.com o por mesa de partes de Cáritas Abancay; conviene escribir hoy para confirmar el plazo. TdR en Google Docs (no leído desde aquí).",
+     "why": "Línea de base abierta a equipo consultor, de la red Cáritas (organización listada); el tema es hídrico, así que conviene sumar a un especialista en agua y aportar el diseño muestral y el análisis socioeconómico.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Docs)",
+       "url": "https://docs.google.com/document/d/182h4O2pm3Vie3cJXV0HIZJxMn3nkr3U7/edit?usp=sharing&ouid=115402337450976249637&rtpof=true&sd=true",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/19/peru-consultoria-elaboracion-de-la-linea-de-base-proyecto-siembra-y-cosecha-de-agua-un-camino-comunitario-hacia-la-seguridad-hidrica-en-los-andes-peruanos/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: sistematización de «El camino hacia la autorización del CR SGP Áncash» (Consejo Regional del Sistema de Garantía Participativo)",
+     "isNew": false,
+     "donor": "IDMA – Instituto de Desarrollo y Medio Ambiente (según los correos de contacto); publicado en REDINFOR el 16 nov",
+     "type": "Consultoría para persona natural o jurídica",
+     "amount": "No indicado (propuesta económica a todo costo)",
+     "eligibility": "Persona natural y/o jurídica. Ciencias agrarias, ambientales, sociales, desarrollo rural, economía, gestión de proyectos o afines; experiencia en sistematización de experiencias y metodologías participativas.",
+     "topic": "Sistematización del fortalecimiento institucional del sistema regional de certificación participativa de pequeños productores ecológicos",
+     "scope": "Áncash",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: el aviso no la indica; publicado el 16 nov, hace 7 días; sin novedades hoy.) CV y carta de interés con propuesta técnica y económica a maribel.flores@idmaperu.org y duvert.ventocilla@idmaperu.org; conviene escribir hoy para confirmar que sigue abierta. TdR en Google Drive (no leído desde aquí).",
+     "why": "Sistematización con organizaciones de productores, abierta a persona jurídica y con un perfil (economía, desarrollo rural) que el equipo cubre.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/12SYpFfLWRQldrH9ZlVykb1-LXAQXG18x/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/16/peru-consultoria-sistematizacion-del-el-camino-hacia-la-autorizacion-del-cr-sgp-ancash/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: servicio especializado para la mejora de la calidad de la producción de berries (fresa, aguaymanto y arándano)",
+     "isNew": false,
+     "donor": "Asociación Los Andes (según los correos @losandes.org.pe); financiador no indicado; publicado en REDINFOR el 20 nov",
+     "type": "Servicio especializado con personal técnico (elegibilidad por confirmar)",
+     "amount": "No indicado (ver TdR)",
+     "eligibility": "(Elegibilidad por confirmar: el aviso describe el «perfil profesional del personal técnico», lo que sugiere un proveedor con equipo.) Ingeniería agronómica, agrícola, agroindustrial o de industrias alimentarias; 5+ años en proyectos de desarrollo productivo o cadenas agropecuarias; 2+ servicios en berries, calidad y poscosecha, BPA o GLOBALG.A.P., o 2+ años de manejo de berries.",
+     "topic": "Cadena productiva de berries: estándares de calidad por cultivo, asistencia técnica en campo y evaluación de cambios en al menos 96 productores",
+     "scope": "Perú (zona del proyecto según TdR; probablemente Cajamarca)",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: el aviso no la indica; publicado el 20 nov; sin novedades hoy.) Consultas y propuestas a adrian.linares@losandes.org.pe con copia a luz.ramos@losandes.org.pe. TdR en Google Drive (no leído desde aquí).",
+     "why": "Asistencia técnica a productores en una cadena de valor; el núcleo es agronómico, así que solo conviene si el equipo suma un ingeniero agrónomo especialista en frutales y aporta la medición de resultados.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/15YYAo2KWBKnSMPzin5aj0QaE14_QWb0A/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/20/peru-consultoria-servicio-especializado-para-la-mejora-de-la-calidad-de-la-produccion-de-berries-fresa-aguaymanto-y-arandano/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar el equipamiento de una iniciativa de cadena productiva que el equipo acompañe con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy tampoco hay consultorías vigentes de Ayuda en Acción en Perú (site:talentclue, COEECI, REDINFOR y CEBEM: lo único nuevo, del 20 nov, es un protocolo de atención a NNA en emergencias en La Paz, Bolivia, que cierra el 24 nov, fuera del Perú y del tema).",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (página de Perú: los mismos 5 PDF ya verificados como vencidos o puestos; TdR de contenidos digitales hallado por buscador cerró el 22 may y era individual; sin convocatorias vigentes); World Vision Perú (worldvision.pe: 4 puestos y una práctica, sin consultorías; perutrabajos: sin avisos vigentes; REDINFOR 20 nov: promotores en Piura y Cusco, puestos); CID (Google, REDINFOR, COEECI: sin avisos); CARE Perú (Google: solo PDF de puestos y voluntariados antiguos; sin procesos COT2026 vigentes); Ayuda en Acción (site:talentclue, COEECI, REDINFOR, CEBEM: sin consultorías en Perú; CEBEM 20 nov: protocolo NNA en La Paz, Bolivia; roster incluido); CEDEPAS Norte (pág. 1: Poquián vigente hasta HOY 23:45, incluida; resto vencido; TdR planes de negocio La Libertad hallado por buscador cerró el 18 may); Acción contra el Hambre (proveedores: nada vigente, último SATI 16 nov); Save the Children (página de convocatorias: lo de nov es mapeo de ecosistema para la localización y facilitación del encuentro BCRIP, fuera de tema, sin fechas); Cáritas (Cáritas Abancay, incluida); Plan International, Welthungerhilfe, Helvetas, CooperAcción, HIAS, Encuentros SJM, Cuso, Soluciones Prácticas, Heifer, TechnoServe, COPEME, CESAL, Rikolto, Asociación UNACEM (búsquedas: sin vigentes en tema). Agregadores: REDINFOR convoca pág. 1 y etiqueta consultorías (sin entradas desde el 20 nov; Sparkassenstiftung género en finanzas sostenibles, 4 dic, persona consultora individual, descartada), COEECI pág. 1 (Autre Terre evaluación de residuos sólidos Arequipa, fuera de tema; coordinador «Perspectivas económicas para juventudes» Chancay, puesto; resto puestos y prácticas), bidsfactory Perú (ACNUR 3838 sigue; OIT, PNUD, FAO y SEACE: servicios de oficina y obras, fuera de tema), CEBEM Redesma (20 nov: Ayuda en Acción, CODESPA AGRONATUR y Conservación Internacional, todos Bolivia), perutrabajos, DevelopmentAid vía buscador (SERFOR plantaciones forestales, ya adjudicada). Donantes: GIZ (avisos recientes en Colombia y México, fuera del Perú), PNUD, OIT, OIM, ACNUR, Fondoempleo: sin nuevas en tema.",
+    "failed": "TdR de CODESPA, CLAC, Los Andes, ACCA, IDMA y Cáritas Abancay (Google Drive/Docs, sin texto legible), aviso de CLAC en REDINFOR (verificación anti-bots), bases PDF de CEDEPAS (no abiertas), ficha de DevelopmentAid de OIT (error del sitio), portal de compras de CARE (JavaScript), plazos de bidsfactory (de pago), Idealist, UN Partner Portal, LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes en tema).",
+    "queries": "\"términos de referencia\" consultoría emprendimiento OR \"planes de negocio\" OR \"asociaciones de productores\" Perú noviembre 2026 · \"request for proposals\" OR \"request for quotation\" Peru livelihoods OR \"value chain\" OR migrants consulting firm 2026 · site:linkedin.com/posts consultoría \"términos de referencia\" / \"persona jurídica\" Perú noviembre 2026 · consultoría población refugiada migrante Perú \"persona jurídica\" medios de vida noviembre 2026 · \"solicitud de cotización\" OR \"invitación a presentar propuestas\" Perú MYPE OR cooperativas diciembre 2026 · CARE Perú COT2026 / site:empleoayudaenaccion.talentclue.com / \"Colectivo Integral de Desarrollo\" 2026"
+   }
+  },
+  {
    "date": "2026-11-22",
    "summary": "Domingo sin oportunidades nuevas en tema: REDINFOR y COEECI no publican desde el 20 nov. Siguen vigentes 14. Urgentes: CCCP cáscara de café (HOY, sin hora) y facilitador en gestión de negocios C2516-FE (HOY 23:59); CEDEPAS Poquián (lunes 23, 23:45) y ACNUR 3838 (lunes 23, 17:00); CODESPA FREES y ACCA CT22 y CT23 (martes 24, sin hora: enviar el lunes). CLAC café sigue sin fecha confirmada (consultas hasta el 27). Fondoempleo cierra el 4 dic.",
    "items": [
