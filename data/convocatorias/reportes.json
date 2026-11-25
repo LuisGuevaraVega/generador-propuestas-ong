@@ -1,6 +1,205 @@
 {
  "reports": [
   {
+   "date": "2026-11-25",
+   "summary": "Miércoles sin oportunidades nuevas en tema: REDINFOR solo sumó puestos y una consulta a niñez (24 nov), y COEECI y CEBEM nada para el Perú. Siguen vigentes 8; no hay urgentes. Cerraron ayer CODESPA FREES y ACCA CT22 y CT23. Lo más útil hoy: enviar consultas a la CLAC (estudio de mercado de café) antes del viernes 27 y confirmar plazos con IDMA y Cáritas Abancay. Fondoempleo cierra el 4 dic.",
+   "items": [
+    {
+     "title": "Consultoría: estudios de viabilidad y de mercado para iniciativas de valor agregado (café tostado y molido) con enfoque inclusivo e intergeneracional – proyecto «Preparando un futuro justo con café sostenible»",
+     "isNew": false,
+     "donor": "CLAC – Coordinadora Latinoamericana y del Caribe de Pequeños Productores y Trabajadores de Comercio Justo (según los correos de postulación); publicado en REDINFOR el 20 nov",
+     "type": "Consultoría para consultoría/agencia o consultor",
+     "amount": "No indicado (ver TdR)",
+     "eligibility": "El aviso admite consultorías o agencias. Título en economía, agronomía, administración, comercio internacional, agronegocios o afines; 3+ años elaborando estudios de viabilidad y de mercado, planes de negocio y proyectos de inversión agropecuarios; experiencia con organizaciones de pequeños productores de café o comercio justo; enfoques de género e inclusión de jóvenes; facilitación de talleres participativos; certificación en evaluación de proyectos o planes de negocio.",
+     "topic": "Planes de negocio y estudios de mercado para el valor agregado de dos organizaciones de pequeños productores de café, con inclusión de mujeres y jóvenes",
+     "scope": "Perú (dos OPP cafetaleras participantes del proyecto)",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: el aviso de REDINFOR, reabierto hoy, solo dice que las consultas se reciben hasta el «27», es decir el viernes 27 nov, en 2 días; la fecha de propuestas está en el TdR de Google Drive, que no se pudo leer.) Enviar consultas y propuesta a marlon.m@clac-comerciojusto.org con copia a adquisiciones@clac-comerciojusto.org, asunto «Estudios de Viabilidad y de Mercado de café-Perú».",
+     "why": "La que mejor encaja hoy: estudio de mercado y planes de negocio con organizaciones de productores, abierto a agencia consultora, de lleno en cadenas de valor y articulación comercial.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/1VHFHjLK0dVtahxXp0X5hCu2Xz6YB8HuO/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/20/peru-consultoria-estudios-de-viabilidad-y-de-mercado-para-iniciativas-de-actividades-productivas-con-enfoque-inclusivo-intergeneracional-en-el-marco-del-proyecto-preparando-un-futuro-justo/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Concurso Fondoempleo «Apoyo a Trabajadores de Empresas de Sectores Aportantes 2026» (postulación 21 nov–4 dic)",
+     "isNew": false,
+     "donor": "Fondoempleo – Ministerio de Trabajo y Promoción del Empleo",
+     "type": "Fondo concursable (proyectos de capacitación)",
+     "amount": "S/ 10 millones: Línea 5 Capacitación laboral S/ 250.000–700.000 por proyecto; Línea 6 Fortalecimiento organizacional S/ 150.000–400.000; contrapartida mínima 10%",
+     "eligibility": "Solo pueden ser proponentes organizaciones de trabajadores sin fines de lucro (sindicatos y sus asociaciones); las bases prevén «aliados» (Formato 06), posible rol de socio técnico (por confirmar).",
+     "topic": "Capacitación laboral y fortalecimiento organizacional de trabajadores operativos de sectores aportantes",
+     "scope": "Nacional",
+     "deadline": "2026-12-04",
+     "deadlineNote": "Postulación en línea abierta hasta el viernes 4 dic 2026 (sin hora indicada), en 9 días; formulario Google más los Formatos 01–07. Evaluación 5–14 dic. Sin cambios.",
+     "why": "Encaje limitado: solo como aliado técnico de un sindicato o federación que postule.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Bases y formatos (Fondoempleo)",
+       "url": "https://fondoempleo.com.pe/proyecto/apoyo-a-trabajadores-de-empresas-de-sectores-aportantes-2026/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: sistematización de «El camino hacia la autorización del CR SGP Áncash» (Consejo Regional del Sistema de Garantía Participativo)",
+     "isNew": false,
+     "donor": "IDMA – Instituto de Desarrollo y Medio Ambiente (según los correos de contacto); publicado en REDINFOR el 16 nov",
+     "type": "Consultoría para persona natural o jurídica",
+     "amount": "No indicado (propuesta económica a todo costo)",
+     "eligibility": "Persona natural y/o jurídica. Ciencias agrarias, ambientales, sociales, desarrollo rural, economía, gestión de proyectos o afines; experiencia en sistematización de experiencias y metodologías participativas.",
+     "topic": "Sistematización del fortalecimiento institucional del sistema regional de certificación participativa de pequeños productores ecológicos",
+     "scope": "Áncash",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: el aviso no la indica; publicado el 16 nov, hace 9 días.) CV y carta de interés con propuesta técnica y económica a maribel.flores@idmaperu.org y duvert.ventocilla@idmaperu.org; conviene escribir hoy para confirmar que sigue abierta. TdR en Google Drive (no leído desde aquí).",
+     "why": "Sistematización con organizaciones de productores, abierta a persona jurídica y con un perfil (economía, desarrollo rural) que el equipo cubre.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/12SYpFfLWRQldrH9ZlVykb1-LXAQXG18x/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador)",
+       "url": "https://redinfor.com.pe/portal/2026/11/16/peru-consultoria-sistematizacion-del-el-camino-hacia-la-autorizacion-del-cr-sgp-ancash/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: elaboración de la línea de base del proyecto «Siembra y cosecha de agua: un camino comunitario hacia la seguridad hídrica en los Andes peruanos»",
+     "isNew": false,
+     "donor": "Cáritas Abancay (recibe las propuestas); financiador no indicado; publicado en REDINFOR el 19 nov",
+     "type": "Consultoría para persona natural o jurídica (se valora empresa o equipo consultor)",
+     "amount": "No indicado (presupuesto propuesto por el postulante)",
+     "eligibility": "Personas naturales o jurídicas; se valora empresa o equipo consultor. 3+ años en líneas de base, evaluaciones o investigación aplicada; diseño muestral y análisis cuantitativo; métodos cualitativos; contextos rurales (agua, agricultura, recursos naturales, resiliencia climática); enfoque de género; quechua cuando sea necesario.",
+     "topic": "Línea de base con familias de pequeños agricultores (acceso al agua y calidad de vida); encaje temático parcial con medios de vida rurales",
+     "scope": "Cuenca de Challhuahuacho (Cotabambas, Apurímac)",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: el aviso no la indica; publicado el 19 nov; sin novedades hoy.) Enviar CV no documentado, perfil de ejecución de la consultoría y presupuesto a cabancay@caritas.org.pe y antonio.barazorda7@gmail.com o por mesa de partes de Cáritas Abancay; conviene escribir hoy para confirmar el plazo. TdR en Google Docs (no leído desde aquí).",
+     "why": "Línea de base abierta a equipo consultor, de la red Cáritas (organización listada); el tema es hídrico, así que conviene sumar a un especialista en agua y aportar el diseño muestral y el análisis socioeconómico.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Docs)",
+       "url": "https://docs.google.com/document/d/182h4O2pm3Vie3cJXV0HIZJxMn3nkr3U7/edit?usp=sharing&ouid=115402337450976249637&rtpof=true&sd=true",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/19/peru-consultoria-elaboracion-de-la-linea-de-base-proyecto-siembra-y-cosecha-de-agua-un-camino-comunitario-hacia-la-seguridad-hidrica-en-los-andes-peruanos/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: evaluación técnica especializada de la capacidad de Producers Direct para adquirir y gestionar soluciones tecnológicas (piloto de análisis de suelos para pequeños productores)",
+     "isNew": false,
+     "donor": "Producers Direct (ONG), con financiamiento del BID según DevelopmentAid; publicado el 4 nov",
+     "type": "Consultoría para consultor individual o firma consultora",
+     "amount": "No indicado",
+     "eligibility": "Abierta a organizaciones y personas (consultores individuales o firmas, según la ficha). Consultor líder con título en ingeniería de sistemas, informática, ciencia de datos, gestión tecnológica, economía o afines; maestría deseable. El resto del perfil está tras el muro de pago.",
+     "topic": "Productividad de pequeños productores peruanos y prácticas climáticamente inteligentes: evaluación independiente de un modelo de negocio con análisis de suelos y lecciones para proyectos digitales",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: la ficha de DevelopmentAid la muestra solo a miembros; publicada hace 21 días, así que puede estar por cerrar.) Buscar el aviso original de Producers Direct o del BID antes de preparar nada.",
+     "why": "Encaje parcial: evaluación con pequeños productores que admite firma y acepta un líder economista o de ciencia de datos, perfil cercano al del equipo; el núcleo es tecnológico.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Ficha en DevelopmentAid (fuente: agregador; verificar en la fuente original)",
+       "url": "https://www.developmentaid.org/tenders/view/1742108/consultoria-evaluacion-tecnica-especializada",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Consultoría: servicio especializado para la mejora de la calidad de la producción de berries (fresa, aguaymanto y arándano)",
+     "isNew": false,
+     "donor": "Asociación Los Andes (según los correos @losandes.org.pe); financiador no indicado; publicado en REDINFOR el 20 nov",
+     "type": "Servicio especializado con personal técnico (elegibilidad por confirmar)",
+     "amount": "No indicado (ver TdR)",
+     "eligibility": "(Elegibilidad por confirmar: el aviso describe el «perfil profesional del personal técnico», lo que sugiere un proveedor con equipo.) Ingeniería agronómica, agrícola, agroindustrial o de industrias alimentarias; 5+ años en proyectos de desarrollo productivo o cadenas agropecuarias; 2+ servicios en berries, calidad y poscosecha, BPA o GLOBALG.A.P., o 2+ años de manejo de berries.",
+     "topic": "Cadena productiva de berries: estándares de calidad por cultivo, asistencia técnica en campo y evaluación de cambios en al menos 96 productores",
+     "scope": "Perú (zona del proyecto según TdR; probablemente Cajamarca)",
+     "deadline": "",
+     "deadlineNote": "(Fecha límite por confirmar: el aviso no la indica; publicado el 20 nov; sin novedades hoy.) Consultas y propuestas a adrian.linares@losandes.org.pe con copia a luz.ramos@losandes.org.pe. TdR en Google Drive (no leído desde aquí).",
+     "why": "Asistencia técnica a productores en una cadena de valor; el núcleo es agronómico, así que solo conviene si el equipo suma un ingeniero agrónomo especialista en frutales y aporta la medición de resultados.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "TdR (Google Drive)",
+       "url": "https://drive.google.com/file/d/15YYAo2KWBKnSMPzin5aj0QaE14_QWb0A/view?usp=sharing",
+       "linkedin": false
+      },
+      {
+       "label": "Aviso en REDINFOR (fuente: agregador; verificar en la fuente original)",
+       "url": "https://redinfor.com.pe/portal/2026/11/20/peru-consultoria-servicio-especializado-para-la-mejora-de-la-calidad-de-la-produccion-de-berries-fresa-aguaymanto-y-arandano/",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Programa APC – Asistencia para Proyectos Comunitarios de Seguridad Humana",
+     "isNew": false,
+     "donor": "Embajada del Japón en el Perú",
+     "type": "Subvención (ventanilla permanente)",
+     "amount": "Hasta 10 millones de yenes por proyecto",
+     "eligibility": "ONG inscritas en APCI, asociaciones sin fines de lucro y gobiernos locales o regionales. No pueden postular empresas.",
+     "topic": "Incluye proyectos generadores de ingresos (equipamiento e infraestructura productiva para asociaciones)",
+     "scope": "Perú",
+     "deadline": "",
+     "deadlineNote": "Recepción todo el año; la evaluación tarda cerca de un año. No financia estudios técnicos, IGV ni gastos administrativos.",
+     "why": "Complemento para financiar el equipamiento de una iniciativa de cadena productiva que el equipo acompañe con una ONG aliada.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Programa APC (Embajada del Japón)",
+       "url": "https://www.pe.emb-japan.go.jp/itpr_ja/00_000307.html",
+       "linkedin": false
+      }
+     ]
+    },
+    {
+     "title": "Roster internacional de personas expertas en desarrollo y acción humanitaria (consultores, firmas y ONG)",
+     "isNew": false,
+     "donor": "Fundación Ayuda en Acción",
+     "type": "Registro permanente de proveedores (consultoras, firmas, ONG)",
+     "amount": "Según cada encargo",
+     "eligibility": "Consultores, firmas consultoras y ONG, para diseño de proyectos, evaluaciones y estudios.",
+     "topic": "Desarrollo y acción humanitaria (incluye evaluaciones y estudios de medios de vida y emprendimiento)",
+     "scope": "Países donde trabaja Ayuda en Acción, incluido Perú",
+     "deadline": "",
+     "deadlineNote": "Inscripción abierta sin fecha límite. Hoy tampoco hay consultorías vigentes de Ayuda en Acción en Perú (site:talentclue, COEECI, REDINFOR y CEBEM).",
+     "why": "Registrar a la firma deja al equipo en la lista corta de Ayuda en Acción (organización prioritaria), que publica consultorías con plazos de pocos días.",
+     "linkedin": false,
+     "links": [
+      {
+       "label": "Roster en talentclue (Ayuda en Acción)",
+       "url": "https://empleoayudaenaccion.talentclue.com/en/job/105211201",
+       "linkedin": false
+      }
+     ]
+    }
+   ],
+   "sources": {
+    "checked": "Organizaciones prioritarias: Swisscontact Perú (buscador: solo PDF de TdR antiguos, ninguno vigente); World Vision Perú (worldvision.pe: 4 puestos y una práctica, sin consultorías; REDINFOR 24 nov: facilitador e-commerce Cusco y asistentes en Piura y La Libertad, puestos; COEECI: cotización 4470687 Huancavelica, TdR reabierto hoy, cerró el 20 nov); CID (Google, REDINFOR, COEECI: sin avisos); CARE Perú (Google y DevelopmentAid: solo PDF de puestos antiguos; sin procesos COT2026 vigentes); Ayuda en Acción (site:talentclue, COEECI, REDINFOR, CEBEM: sin consultorías en Perú; roster incluido); CEDEPAS Norte (págs. 1–2: Poquián cerró el 23 nov; resto vencido); Acción contra el Hambre (proveedores: todo vencido, último SATI 16 nov); Helvetas (PDF de 2026 vía buscador: nada nuevo en tema); Cáritas (Cáritas Abancay, incluida); Plan International, Welthungerhilfe, CooperAcción, HIAS, Encuentros SJM, Cuso, Soluciones Prácticas, Heifer, TechnoServe, COPEME, CESAL, Rikolto, Save the Children, Asociación UNACEM (búsquedas: sin vigentes en tema). Agregadores: REDINFOR convoca págs. 1–2 (24 nov: consulta nacional a niñas, niños y adolescentes, fuera de tema; resto puestos o Ecuador; CODESPA FREES reconfirmado como cerrado el 24; Sparkassenstiftung género en finanzas sostenibles, 4 dic, persona consultora con tarifa por hora, descartada), COEECI págs. 1–2 (Autre Terre evaluación de residuos sólidos Arequipa, fuera de tema; resto puestos y prácticas), bidsfactory Perú (ONUDI GEMINI, OIT, FAO y SEACE: servicios de oficina, obras o fuera de tema), UNGM (OIT articulación productiva MYPE en construcción y trabajadoras del hogar: individuales y vencidas), CEBEM Redesma (24 nov: Global Communities estudio de mercado para firmas, 4 dic, pero en Bolivia), DevelopmentAid vía buscador (Producers Direct incluida; CIPCA evaluación Alto Piura, de septiembre, plazo no visible; protocolo de regeneración natural cerró el 23 nov). Donantes: GIZ, PNUD, OIT, OIM, ACNUR, Fondoempleo: sin nuevas en tema.",
+    "failed": "TdR de CLAC, Los Andes, IDMA y Cáritas Abancay (Google Drive/Docs, sin texto legible), plazos de DevelopmentAid y bidsfactory (de pago), portal de compras de CARE (sin contenido, JavaScript), Idealist, UN Partner Portal, LinkedIn y Facebook (solo vía buscador, sin publicaciones recientes en tema).",
+    "queries": "\"términos de referencia\" consultoría emprendedores OR \"planes de negocio\" OR \"articulación comercial\" Perú diciembre 2026 · site:linkedin.com/posts consultoría \"términos de referencia\" Perú emprendimiento OR \"medios de vida\" OR migrantes OR \"línea de base\" noviembre 2026 · \"request for proposals\" OR \"request for quotation\" Peru livelihoods OR \"economic inclusion\" OR \"value chain\" OR migrants consulting firm December 2026 · \"evaluación final\" OR sistematización consultoría Perú empleabilidad OR migrantes \"persona jurídica\" noviembre 2026 · site:developmentaid.org/tenders Peru consultoría emprendimiento OR MYPE OR \"cadena de valor\" 2026 · Swisscontact / CARE COT2026 / \"Colectivo Integral de Desarrollo\" / site:empleoayudaenaccion.talentclue.com"
+   }
+  },
+  {
    "date": "2026-11-24",
    "summary": "Martes sin oportunidades nuevas en tema: REDINFOR, COEECI y CEBEM no publican nada desde el 20 nov. Siguen vigentes 10. Urgentes: CODESPA FREES (inclusión financiera rural) y ACCA CT22 y CT23 (emprendimiento juvenil, Madre de Dios) cierran HOY sin hora: enviar esta mañana. CLAC café sigue sin fecha (consultas hasta el 27). Fondoempleo cierra el 4 dic. Cerraron ayer CEDEPAS Poquián y ACNUR 3838.",
    "items": [
